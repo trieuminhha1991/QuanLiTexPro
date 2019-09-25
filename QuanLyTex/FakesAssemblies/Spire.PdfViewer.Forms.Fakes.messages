@@ -1,0 +1,79 @@
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for DotfuscatorAttribute: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.DocumentOpenedEventHandler: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕈: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕉: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕊: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕋: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕌: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕍: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕎: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕏: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕐: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕑: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕒: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕓: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕔: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕕: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕖: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for sprb: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕗: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕘: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕙: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕚: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for spr䕛: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.DocumentClosedEventHandler: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.PageNumberChangedEventHandler: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.ZoomChangedEventHandler: type is sealed.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentAttachmentIcon: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentAttachment: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentAttachmentAnnotation: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentBookmark: type has no family visible contructors.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentTextStyle: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentInfo: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PageLayoutMode: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.RotateAngle: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfDocumentViewer: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfViewer: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.ZoomMode: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.Properties.Resources: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate stub for Spire.PdfViewer.Forms.PdfViewerMode.PdfViewerMode: type is a value type.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for DotfuscatorAttribute: type is not supported because of internal limitations.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.DocumentOpenedEventHandler: type is a delegate.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕈: type is a delegate.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕉: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕊: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕋: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕌: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕍: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕎: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕏: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕐: type is an interface.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕑: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕒: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕓: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕔: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕕: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕖: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for sprb: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕗: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕘: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕙: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕚: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for spr䕛: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.DocumentClosedEventHandler: type is a delegate.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.PageNumberChangedEventHandler: type is a delegate.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.ZoomChangedEventHandler: type is a delegate.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Drawing.IPdfDocumentViewer: type is an interface.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentAttachmentIcon: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentAttachment: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentAttachmentAnnotation: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentBookmark: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentTextStyle: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentInfo: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PageLayoutMode: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.RotateAngle: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfDocumentViewer: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfViewer: Could not resolve assembly 'Spire.Pdf, Version=5.1.17.18046, Culture=neutral, PublicKeyToken=663f351905198cb3'. Are you missing an assembly reference?.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.ZoomMode: type is an enum.
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.Properties.Resources: type is not visible to exported or assembly(Spire.PdfViewer.Forms.Fakes).
+D:\Project\QuanLiTex\QuanLyTex\Fakes\Spire.PdfViewer.Forms.fakes : warning : Cannot generate shim for Spire.PdfViewer.Forms.PdfViewerMode.PdfViewerMode: type is an enum.

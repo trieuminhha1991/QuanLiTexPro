@@ -1,0 +1,11 @@
+E:\Project\QuanLiTex\appdll\bin\Debug\appdll.dll
+E:\Project\QuanLiTex\appdll\bin\Debug\appdll.pdb
+E:\Project\QuanLiTex\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
+E:\Project\QuanLiTex\appdll\obj\Debug\appdll.dll
+E:\Project\QuanLiTex\appdll\obj\Debug\appdll.pdb
+D:\Project\QuanLiTex\appdll\bin\Debug\appdll.dll
+D:\Project\QuanLiTex\appdll\bin\Debug\appdll.pdb
+D:\Project\QuanLiTex\appdll\obj\Debug\appdll.csprojAssemblyReference.cache
+D:\Project\QuanLiTex\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
+D:\Project\QuanLiTex\appdll\obj\Debug\appdll.dll
+D:\Project\QuanLiTex\appdll\obj\Debug\appdll.pdb
