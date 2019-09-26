@@ -1,0 +1,5 @@
+D:\Project\QuanLiTex\appdll\bin\Release\appdll.dll
+D:\Project\QuanLiTex\appdll\bin\Release\appdll.pdb
+D:\Project\QuanLiTex\appdll\obj\Release\appdll.csproj.CoreCompileInputs.cache
+D:\Project\QuanLiTex\appdll\obj\Release\appdll.dll
+D:\Project\QuanLiTex\appdll\obj\Release\appdll.pdb

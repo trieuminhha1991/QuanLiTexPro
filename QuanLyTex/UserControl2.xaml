@@ -1,0 +1,368 @@
+﻿<UserControl x:Class="QuanLyTex.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             Height="600" Background="#FFFFFEFE" Width="1200" >
+
+	<Grid x:Name="GridTotal">
+		<Grid.Resources>
+			<ResourceDictionary>
+				<ResourceDictionary.MergedDictionaries>
+					<ResourceDictionary Source="Dictionary2.xaml" />
+				</ResourceDictionary.MergedDictionaries>
+				<xcdg:DataGridCollectionViewSource x:Key="cvsDataGrid">
+					<xcdg:DataGridCollectionViewSource.GroupDescriptions>
+						<PropertyGroupDescription PropertyName="ClassName" />
+						<PropertyGroupDescription PropertyName="ChapterName" />
+					</xcdg:DataGridCollectionViewSource.GroupDescriptions>
+					<xcdg:DataGridCollectionViewSource.SortDescriptions>
+						<scm:SortDescription PropertyName="ChapterName" Direction="Ascending"/>
+						<scm:SortDescription PropertyName="SectionName" Direction="Ascending"/>
+						<scm:SortDescription PropertyName="CodeId" Direction="Ascending"/>
+					</xcdg:DataGridCollectionViewSource.SortDescriptions>
+				</xcdg:DataGridCollectionViewSource>
+			</ResourceDictionary>
+		</Grid.Resources>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="141*" />
+			<ColumnDefinition Width="147*" />
+			<ColumnDefinition Width="146*" />
+			<ColumnDefinition Width="166*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="45*" />
+			<RowDefinition Height="57*" />
+			<RowDefinition Height="98*" />
+		</Grid.RowDefinitions>
+		<GroupBox Grid.Row="0" Grid.Column="0" Header="Công cụ liên quan đến app (Tác động Process)" Margin="5,5,11.6,9.6"  Background="#FFBBDCC1" Grid.RowSpan="3">
+			<StackPanel>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="CloseAllWord"
+                                 Content="Đóng toàn bộ các app word chạy ngầm" Height="23"  Width="250" Background="Aqua"/>
+				</TextBlock>
+				<TextBlock Text="Đôi khi chạy nhiều sẽ để lại file exe chạy khiến máy chạy chậm, dùng button này để thoát hết toàn bộ Word.ex(Chú ý nhớ lưu file word lại)" TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="OpenWord"
+                                 Content="Mở một word" Height="23"  Width="250">
+				</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="OpenWords"
+                                 Content="Mở nhiều word trong một thư mục" Height="23"  Width="250">
+				</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Text="Nếu đang thực hiện các chức năng word hóa, thì mở một file word bình thường sẽ dẫn đến lỗi(VD Như là đang toolge tex sẽ tootgle tex với cả file này), lỗi này là do WORD.EXE của office, sử dụng button này để mở một file word có thể làm việc bình thường." TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="MaterialButton_Click_3"
+                                 Content="Đóng công cụ mathtype.exe đang chạy" Height="23"  Width="250">
+				</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Text="Trong một số trường hợp, vì chạy nhiều quá, Mathtype có thể không thực hiện được chức năng của nó (Ví dụ tootgle chẳng hạn), giải pháp là tắt nó đi và bật lại, thầy cô có thể dùng button này." TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="MaterialButton_Click_11"
+                                 Content="Đóng app quanlitex" Height="23"  Width="250">
+				</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Text="Trong một số trường hợp, nếu muốn tắt ứng dụng lập tức, thì có thể dùng button này." TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Row="0" Grid.Column="1" Header="Tạo file pdf và ghép file" Margin="5,1,10,232"  Background="#FFBBDCC1" Grid.RowSpan="3">
+			<StackPanel>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect1"  GroupName="FileSelectRadio2A" Content="Chọn một File" IsChecked="True"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect2"  GroupName="FileSelectRadio2A" Content="Chọn nhiều File"  Width="144"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect3"  GroupName="FileSelectRadio2A" Content="Chọn cả thư mục" Width="133"/>
+					<xctk:MaterialButton MaterialAccentBrush="#FFEA9E85"  Click="SelectFilePdf"
+                                 Content="Chọn File " Height="17" Width="65"  Canvas.Left="435"/>
+					<xctk:MaterialButton MaterialAccentBrush="#FFF9F98D"
+									 Content="Reset File" Height="15" Width="60" Click="MaterialButton_Click"/>
+				</TextBlock>
+				<TextBlock Height="125">
+					<ListBox Name="ListBoxFileSelect" Height="124" Width="262">
+
+					</ListBox>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="CreatPdfCheck"  GroupName="FilePdf" Content="Tạo file pdf" IsChecked="True">
+						<xctk:MaterialRadioButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Tạo file Pdf từ file word, file sẽ được lưu trong folder LuuFile trong thư mục app." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialRadioButton.ToolTip>
+					</xctk:MaterialRadioButton>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="MatchFile"  GroupName="FilePdf" Content="Ghép file"  Width="144">
+						<xctk:MaterialRadioButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Ghép nhiều file lại thành một file duy nhất, file sẽ được lưu trong folder LuuFile trong thư mục app." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialRadioButton.ToolTip>
+					</xctk:MaterialRadioButton>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A" Click="CreatPdf"
+                                 Content="Chuyển" Height="29" Width="112"  Canvas.Left="435" Background="#FF7AEDD6">
+						<xctk:MaterialButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Nhấn vào để thực hiện chức năng." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialButton.ToolTip>
+					</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock>
+					<xctk:WatermarkTextBox x:Name="FolderSaveFile2A"
+									   MinWidth="200"
+									   Watermark="FolderLuu"
+									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Width="187" Height="30" Background="#FFD8D5D5"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialButton MaterialAccentBrush="#FFEAEB38" Click="MaterialButton_Click_6"
+                                 Content="Đến Folder" Height="29" Width="112"  Canvas.Left="435" />
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Row="0" Grid.Column="2" Header="1.Công cụ hay dùng cho file word" Margin="5,0,326,-0.4"  Background="#FFBBDCC1" Grid.RowSpan="3" Grid.ColumnSpan="2">
+			<StackPanel Margin="0,0,0.2,1.4">
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect1C"  GroupName="FileSelectRadio2C" Content="Chọn một File" IsChecked="True"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect2C"  GroupName="FileSelectRadio2C" Content="Chọn nhiều File"  Width="144"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="FileSelect3C"  GroupName="FileSelectRadio2C" Content="Chọn cả thư mục" Width="132"/>
+					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A"  Click="SelectFileTool"
+                                 Content="Chọn File " Height="17" Width="71"  Canvas.Left="435" Background="#FFFFB3A2"/>
+                					<xctk:MaterialButton MaterialAccentBrush="#FFF9F98D"
+									 Content="Reset File" Height="18" Width="67" Click="MaterialButton_Click_2"/>
+				</TextBlock>
+				<TextBlock>
+					<ListBox Name="ListBoxFileSelectC" Height="112" Width="283">
+
+					</ListBox>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="Question" GroupName="ToolWord2" Content="Tách ra file đề bài(Mục 2A)" IsChecked="True"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="Proof" GroupName="ToolWord2" Content="Tách ra file lời giải(Mục 2A)"  />
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="TableCheck" GroupName="ToolWord2" Content="Tạo bảng đáp án trắc nghiệm(Mục 2A)" />
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="BTN" GroupName="ToolWord2" Content="Chuyển về dạng BTN(Mục 2A)"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="AddHeaderFooter" GroupName="ToolWord2" Content="Thêm Header, Footer, Trang đầu(Mục 2B)"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialCheckBox x:Name="AddPdf" Content="Thêm file pdf.">
+						<xctk:MaterialCheckBox.ToolTip>
+							<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Thêm file Pdf cho các tùy chọn thực hiện bên trên." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+								</StackPanel>
+							</xctk:MaterialToolTip>
+						</xctk:MaterialCheckBox.ToolTip>
+					</xctk:MaterialCheckBox>
+				</TextBlock>
+				<TextBlock>
+					<StackPanel>
+					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+                                    Content="Số lượng file chạy cũng lúc" Height="18" Width="271" />
+					 <TextBlock Text="Tùy vào cấu hình máy, ta chọn số file chạy cũng lúc phù hợp" TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+					<xctk:MaterialRadioButton x:Name="number1" GroupName="number2A" Content="1 file/1 lần."/>
+					<xctk:MaterialRadioButton x:Name="number2" GroupName="number2A" Content="3 file/1 lần." IsChecked="True"/>
+					<xctk:MaterialRadioButton x:Name="number3" GroupName="number2A" Content="5 file/1 lần."/>
+					<xctk:MaterialRadioButton x:Name="number4" GroupName="number2A" Content="7 file/1 lần."/>
+
+					</StackPanel>
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Row="0"  Header="2A.Nhận Diện Môi trường chuyển (Kí tự đứng đầu)" Background="#FF0F0F0F" FontSize="13" Margin="6,0,10,0" Grid.Column="3" Grid.RowSpan="2">
+			<StackPanel>
+				<TextBlock Width="290">
+					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+                                    Content="Mở đầu 1" Height="18" Width="85" />
+					<xctk:AutoSelectTextBox x:Name="ExString" Text="Câu" Height="19" FontFamily="Times New Roman" Background="#FFFDEFDF" Width="61"/>
+					<xctk:MaterialCheckBox x:Name="CauHoi" Height="15" Width="17" IsChecked="True">
+						<xctk:MaterialCheckBox.ToolTip>
+								<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Check để lấy phần mở đầu, nhớ thứ tự phải đánh số, không được dùng kí hiệu La Mã hay kí hiệu khác, có thể chỉnh sửa phần này." FontSize="10" Margin="5,0,0,0" Width="80" TextWrapping="WrapWithOverflow"/>
+								</StackPanel>
+								</xctk:MaterialToolTip>
+						</xctk:MaterialCheckBox.ToolTip>
+					</xctk:MaterialCheckBox>
+				</TextBlock>
+				<TextBlock Width="290">
+					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+                                    Content="Mở đầu 2" Height="18" Width="85" />
+					<xctk:AutoSelectTextBox x:Name="BtString" Text="Bài" Height="19" FontFamily="Times New Roman" Background="#FFFDEFDF" Width="61"/>
+					<xctk:MaterialCheckBox x:Name="BaiTap" Height="15" Width="17" IsChecked="True">
+						<xctk:MaterialCheckBox.ToolTip>
+								<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Check để lấy phần mở đầu, nhớ thứ tự phải đánh số, không được dùng kí hiệu La Mã hay kí hiệu khác, có thể chỉnh sửa phần này." FontSize="10" Margin="5,0,0,0" Width="80" TextWrapping="WrapWithOverflow"/>
+								</StackPanel>
+								</xctk:MaterialToolTip>
+						</xctk:MaterialCheckBox.ToolTip>
+					</xctk:MaterialCheckBox>
+				</TextBlock>
+				<TextBlock Width="290">
+						<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+							Content="Mở đầu 3" Height="18" Width="85" />
+						<xctk:AutoSelectTextBox x:Name="VdString" Text="Ví dụ" Height="19" FontFamily="Times New Roman" Background="#FFFDEFDF" Width="61"/>
+						<xctk:MaterialCheckBox x:Name="Vidu" Height="15" Width="17" IsChecked="True">
+							<xctk:MaterialCheckBox.ToolTip>
+								<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Check để lấy phần mở đầu, nhớ thứ tự phải đánh số, không được dùng kí hiệu La Mã hay kí hiệu khác, có thể chỉnh sửa phần này." FontSize="10" Margin="5,0,0,0" Width="80" TextWrapping="WrapWithOverflow"/>
+								</StackPanel>
+								</xctk:MaterialToolTip>
+						</xctk:MaterialCheckBox.ToolTip>
+						</xctk:MaterialCheckBox>
+				</TextBlock>
+				<TextBlock Width="290">
+						<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+							Content="Nhận diện mở đầu môi trường" Height="18" Width="237">
+						</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Width="290">
+							<xctk:MaterialCheckBox x:Name="ColorOne" Content="Có màu"  FontSize="10"/>
+							<xctk:MaterialCheckBox x:Name="BoldOne" Content="Bôi đậm"  FontSize="10" IsChecked="true"/>
+							<xctk:MaterialCheckBox x:Name="ItalicOne" Content="In nghiêng"  FontSize="10" Width="82">
+								<xctk:MaterialCheckBox.ToolTip>
+										<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+																MaterialAccentBrush="{Binding MaterialAccentBrush}">
+										<StackPanel Orientation="Horizontal">
+											<TextBlock Text="Thêm option nhận diện mở đầu môi trường." FontSize="10" Margin="5,0,0,0" Width="80" TextWrapping="WrapWithOverflow"/>
+										</StackPanel>
+										</xctk:MaterialToolTip>
+								</xctk:MaterialCheckBox.ToolTip>
+							</xctk:MaterialCheckBox>
+				</TextBlock>
+				<TextBlock Width="290">
+						<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+							Content="Từ mở đầu phần giải" Height="18" Width="149">
+							<xctk:MaterialButton.ToolTip>
+							<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Nhận diện phần lời giải, phần này chú ý in đậm, nếu dùng tự khác xin chỉnh sửa chỉnh xác phần bên cạnh" FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialButton.ToolTip>
+						</xctk:MaterialButton>
+						<xctk:AutoSelectTextBox x:Name="StartProof" Text="Lời giải" Height="19" FontFamily="Times New Roman" Background="#FFFDEFDF" Width="84"/>
+				</TextBlock>
+
+				<TextBlock Width="290">
+						<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+							Content="Nhận diện đáp án" Height="18" Width="149">
+							<xctk:MaterialButton.ToolTip>
+							<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Mở đầu là A.,B.,C.,D.. Đáp án phải in đậm, thêm tùy chọn có màu bên dưới (Chỉ dùng màu đỏ đánh dấu đáp án đúng)" FontSize="10" Margin="5,0,0,0"/>
+								</StackPanel>
+							</xctk:MaterialToolTip>
+							</xctk:MaterialButton.ToolTip>
+						</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Width="290">
+						<xctk:MaterialCheckBox x:Name="ColorThree" Content="có màu (không được màu đỏ)"  FontSize="10"/>
+				</TextBlock>
+				<TextBlock Canvas.Top="179" Width="290">
+						<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+							Content="Nhận diện đáp án đúng" Height="18" Width="149">
+						</xctk:MaterialButton>
+				</TextBlock>
+				<TextBlock Width="290">
+						<xctk:MaterialCheckBox x:Name="UnderLineTwo" Content="có gạch ngang"  FontSize="10"/>
+						<xctk:MaterialCheckBox x:Name="ColorTwo" Content="có màu đỏ"  FontSize="10" IsChecked="True"/>
+						<xctk:MaterialCheckBox x:Name="HghtlightTwo" Content="Highlight vàng"  FontSize="10"/>
+				</TextBlock>
+
+				<TextBlock Width="290">
+					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A" Click="ToolWord"
+                                 Content="Chuyển" Height="29" Width="92"  Canvas.Left="435" Background="#FFA6E47A" />
+				</TextBlock>
+				<TextBlock Width="290">
+					<xctk:WatermarkTextBox x:Name="FolderSaveFileC"
+									   MinWidth="200"
+									   Watermark="FolderLuu"
+									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Width="268" Height="30" Background="#FFD8D5D5"/>
+				</TextBlock>
+				<TextBlock Width="290">
+					<xctk:MaterialButton MaterialAccentBrush="#FF7AE4D7" Click="MaterialButton_Click_8"
+                                 Content="Đến Folder" Height="29" Width="112"  Canvas.Left="435" />
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Column="3"  Header="2B.Tùy chọn HearderFooter và trang đầu" Background="#FF0F0F0F" FontSize="12" Margin="5,0,10,-0.4" Grid.Row="2">
+			<StackPanel Margin="0,0,0.2,6.6">
+				<TextBlock>
+					<xctk:MaterialCheckBox x:Name="HeaderFooter" Content="Thêm HeaderFooter"  FontSize="10"/>
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFD6C452"> Header Trái</TextBox>
+					<xctk:MaterialTextField x:Name="HeaderLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="192"/>
+
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFF39C60"> Footer giữa</TextBox>
+					<xctk:MaterialTextField x:Name="FooterLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="189"/>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialCheckBox x:Name="AddPage1" Content="Thêm trang đầu"  FontSize="10"/>
+				</TextBlock>
+				<TextBlock Width="290" Canvas.Top="274">
+					<xctk:MaterialButton MaterialAccentBrush="#FFF7F35B" Click="MaterialButton_Click_9"
+                                 Content="Thêm một trang đầu" Height="29" Width="143"  Canvas.Left="435"/>
+					<xctk:WatermarkTextBox x:Name="FilePage"
+									   Watermark="Trang mẫu"
+									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Height="30" Background="#FFD8D5D5" Width="121"/>
+				</TextBlock>
+				<TextBlock Width="290" Canvas.Top="274">
+					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A" Click="FormSelect"
+                                 Content="Chuyển" Height="29" Width="106"  Canvas.Left="435" Background="#FFA6E47A" />
+					<xctk:WatermarkTextBox x:Name="FolderSaveFileB"
+									   Watermark="FolderLuu"
+									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Width="287" Height="30" Background="#FFD8D5D5"/>
+				</TextBlock>
+				<TextBlock Width="280" Canvas.Top="333">
+					<xctk:MaterialButton MaterialAccentBrush="#FF7AE4D7" Click="MaterialButton_Click_10"
+                                 Content="Đến Folder" Height="29" Width="112"  Canvas.Left="435" />
+				</TextBlock>
+
+			</StackPanel>
+		</GroupBox>
+	</Grid>
+</UserControl>

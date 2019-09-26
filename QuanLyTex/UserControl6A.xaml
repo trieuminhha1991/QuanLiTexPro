@@ -1,0 +1,192 @@
+﻿<UserControl x:Class="QuanLyTex.UserControl6A"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:local="clr-namespace:QuanLyTex"
+             Height="700" Background="#FFFFFEFE" Width="1300"  >
+	<Grid x:Name="GridTotal">
+		<Grid.Resources>
+			<ResourceDictionary>
+
+			</ResourceDictionary>
+		</Grid.Resources>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="192*" />
+			<ColumnDefinition Width="200*" />
+			<ColumnDefinition Width="459*" />
+			<ColumnDefinition Width="449*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="182*"  />
+			<RowDefinition Height="126*" />
+			<RowDefinition Height="167*"  />
+			<RowDefinition Height="224*"  />
+		</Grid.RowDefinitions>
+		<GroupBox Grid.Column="0" Header="Tùy chọn mẫu sẵn"  Margin="2,0,10,103.4"  Background="#FFEEE8DF" Grid.Row="0" >
+			<StackPanel>
+				<TextBlock>
+                      <Label FrameworkElement.Height="26" Width="68">Mẫu</Label>
+                      <ComboBox Width="97">
+							  <ComboBox.Background>
+								  <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+									  <GradientStop Color="#FFF3F3F3" Offset="0"/>
+									  <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+									  <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+									  <GradientStop Color="#FFE69E9E" Offset="1"/>
+								  </LinearGradientBrush>
+							  </ComboBox.Background>
+							<ComboBoxItem>Mẫu đề thi</ComboBoxItem>
+							<ComboBoxItem>Mẫu chuyên đề</ComboBoxItem>
+							<ComboBoxItem>Mẫu giáo án</ComboBoxItem>
+							<ComboBoxItem IsSelected="True">Mẫu cơ bản</ComboBoxItem>
+						</ComboBox>
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Column="1" Header="Khung giấy"  Margin="2,0,10,103.4"  Background="#FFEEE8DF" Grid.Row="0" >
+			<StackPanel>
+				<TextBlock>
+                      <Label FrameworkElement.Height="26" Width="72">Mẫu</Label>
+                      <ComboBox Width="97">
+							  <ComboBox.Background>
+								  <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+									  <GradientStop Color="#FFF3F3F3" Offset="0"/>
+									  <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+									  <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+									  <GradientStop Color="#FFADE69E" Offset="1"/>
+								  </LinearGradientBrush>
+							  </ComboBox.Background>
+							<ComboBoxItem IsSelected="True">Giấy A4</ComboBoxItem>
+							<ComboBoxItem>Giấy A5</ComboBoxItem>
+						</ComboBox>
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.ColumnSpan="2"   Header="Tùy chọn khung văn bản" Background="#FF0F0F0F" FontSize="12" Margin="5,84,10,0.8" Grid.RowSpan="2">
+			<StackPanel Margin="0,0,0.4,-5.6">
+				<TextBlock>
+					 <Label  Height="26"  Width="120" Background="#FF8CF2F4">Sử dụng package</Label>
+					 <xctk:CheckComboBox  x:Name="BoxClass" ItemsSource="{Binding classList}"
+                                DisplayMemberPath="className" ValueMemberPath="classId"
+                                IsEditable="False" IsDropDownOpen="false" Width="108" />
+					  <xctk:MaterialButton MaterialAccentBrush="Aqua"  Name="FormSelect" 
+                                 Content="Xem mẫu" Height="23" Width="111" Click="FormSelect_Click_1"/>
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFD6C452"> Header Phải</TextBox>
+					<xctk:MaterialTextField x:Name="HeaderRight"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFD6C452"> Header Trái</TextBox>
+					<xctk:MaterialTextField x:Name="HeaderLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFF39C60"> Footer Phải</TextBox>
+					<xctk:MaterialTextField x:Name="FooterRight"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+				</TextBlock>
+				<TextBlock>
+                           <TextBox Width="79" Background="#FFF39C60"> Footer Trái</TextBox>
+					<xctk:MaterialTextField x:Name="FooterLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+				</TextBlock>
+				<TextBlock>
+						<xctk:MaterialCheckBox x:Name="HeaderFooter" Content="Có thêm  số trang." Height="22" Width="146"  />
+						<Label FrameworkElement.Height="26" FrameworkElement.Width="120" Background="#FFFCD2CB">
+                            Vị trí thêm số trang.
+                         </Label>
+                          <xctk:CheckComboBox  x:Name="BoxSubject" ItemsSource="{Binding ojectList}"
+                                DisplayMemberPath="ojectName" ValueMemberPath="ojectId"
+                                IsEditable="False" IsDropDownOpen="false" Width="92" />
+				</TextBlock>
+				<TextBlock>
+					<TextBox Text="Chiều cao Header" Height="23" Width="105" IsReadOnly="True" Background="#FFF9EE90"/>
+					<xctk:DoubleUpDown  Value="{Binding DefaultValue, ElementName=_doubleUpDown}"
+									 AllowInputSpecialValues="Any" VerticalAlignment="Center" Height="23" Width="67"/>
+					<TextBox Text="Chiều cao Footer" Height="23" Width="105" IsReadOnly="True" Background="#FFEEAD7C"/>
+					<xctk:DoubleUpDown  Value="{Binding DefaultValue, ElementName=_doubleUpDown}"
+									AllowInputSpecialValues="Any" VerticalAlignment="Center" Height="23" Width="71"/>
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.ColumnSpan="2"   Header="Tùy chọn BackGround" Background="#FF0F0F0F" FontSize="12" Margin="5,0.2,10,0" Grid.Row="2">
+			<StackPanel Margin="0,0,0.4,-5.6">
+				<TextBlock>
+						<xctk:MaterialCheckBox  Content="Dùng hình ảnh." Height="22" Width="146"  />
+                        <xctk:MaterialButton  MaterialAccentBrush="#FFF3F37A"
+                                         Content="Chọn Hình Ảnh" Height="23" Width="87"  FontSize="12"/>
+				</TextBlock>
+				<TextBlock>
+						<xctk:MaterialCheckBox  Content="Dùng Chữ." Height="22" Width="146"  />
+						<Label  Height="26"  Width="120">Sử dụng package</Label>
+                        <xctk:CheckComboBox  ItemsSource="{Binding classList}"
+                                DisplayMemberPath="className" ValueMemberPath="classId"
+                                IsEditable="False" IsDropDownOpen="false" Width="89" />
+				</TextBlock>
+				<TextBlock>
+                        <TextBox Width="79" Background="#FFD6C452">Chữ</TextBox>
+						<xctk:MaterialTextField 
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+
+				</TextBlock>
+				<TextBlock>
+                        <TextBox Width="79" Background="#FFF39C60">Vị trí đặt chữ</TextBox>
+						<xctk:CheckComboBox  ItemsSource="{Binding classList}"
+                                DisplayMemberPath="className" ValueMemberPath="classId"
+                                IsEditable="False" IsDropDownOpen="false" Width="108" />
+				</TextBlock>
+				<TextBlock>
+					<TextBox Text="Cỡ chữ" Height="23" Width="105" IsReadOnly="True" Background="#FFF9EE90"/>
+					<xctk:DoubleUpDown  Value="{Binding DefaultValue, ElementName=_doubleUpDown}"
+									 AllowInputSpecialValues="Any" VerticalAlignment="Center" Height="23" Width="67"/>
+					<TextBox Text="Font Chữ" Height="23" Width="105" IsReadOnly="True" Background="#FFEEAD7C"/>
+					<xctk:CheckComboBox  ItemsSource="{Binding classList}"
+                                DisplayMemberPath="className" ValueMemberPath="classId"
+                                IsEditable="False" IsDropDownOpen="false" Width="73" />
+				</TextBlock>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.ColumnSpan="2"   Header="Tùy chọn tiêu đề đầu trang" Background="#FF0F0F0F" FontSize="12" Margin="5,0.2,10,0" Grid.Row="3">
+			<StackPanel Margin="0,0,0.4,-5.6">
+				<TextBlock>
+					 <Label  Height="26"  Width="120">Sử dụng package</Label>
+					 <xctk:CheckComboBox  ItemsSource="{Binding classList}"
+                                DisplayMemberPath="className" ValueMemberPath="classId"
+                                IsEditable="False" IsDropDownOpen="false" Width="108" />
+					  <xctk:MaterialButton MaterialAccentBrush="Aqua"
+                                 Content="Xem mẫu" Height="23" Width="111" Click="FormSelect_Click_1"/>
+				</TextBlock>
+				<ListBox>
+
+				</ListBox>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Column="2"  Header="Xem mẫu" Background="#FF0F0F0F" FontSize="12" Margin="0,0,10,10" Grid.ColumnSpan="2" Grid.RowSpan="4">
+			<Canvas>
+				<xctk:MaterialButton MaterialAccentBrush="#FFFF8101"
+                                 Content="Mẫu Tex" Height="23" Width="111" Click="FormSelect_Click_1"/>
+				<TextBlock Height="617" Background="#FFF0D7D7" Width="395" Canvas.Top="28">
+
+				</TextBlock>
+				<xctk:MaterialButton MaterialAccentBrush="#FF87FF01"
+                                 Content="Xem pdf" Height="23" Width="111" Click="FormSelect_Click_1" Canvas.Left="400"/>
+				<TextBlock Height="617" Background="#FFD7D4D4" Width="478" Canvas.Left="400" Foreground="Black" Canvas.Top="28">
+
+				</TextBlock>
+			</Canvas>
+		</GroupBox>
+	</Grid>
+</UserControl>
+

@@ -1,0 +1,194 @@
+﻿<UserControl x:Class="QuanLyTex.UserControl3B"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:local="clr-namespace:QuanLyTex"
+             Height="600" Background="#FFFFFEFE" Width="1200"  >
+    <Grid x:Name="GridTotal">
+        <Grid.Resources>
+
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="192*" />
+            <ColumnDefinition Width="200*" />
+            <ColumnDefinition Width="459*" />
+            <ColumnDefinition Width="449*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="92*"  />
+            <RowDefinition Height="89*" />
+            <RowDefinition Height="119*"  />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Grid.Column="0"  Header="Forder đề" Background="#FF0F0F0F" FontSize="13" Margin="0,0,10.4,9" Grid.ColumnSpan="2">
+            <StackPanel Margin="0,0,0,-5">
+                <TextBlock>
+                      <xctk:WatermarkTextBox x:Name="SaveFile"
+                                   MinWidth="200"
+                                   Watermark="Folder được chọn"
+                                   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Canvas.Top="33" Width="248" Height="29" Background="#FFD8D5D5"/>
+                       <xctk:MaterialButton  MaterialAccentBrush="#FFF3F37A" Click="SelectFile"
+                                         Content="Click để chọn" Height="23" Width="87"  FontSize="12">
+							<xctk:MaterialButton.ToolTip>
+							<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Nhấn vào để hiện thị các đề." FontSize="10" Margin="5,0,0,0"/>
+							</StackPanel>
+							</xctk:MaterialToolTip>
+							</xctk:MaterialButton.ToolTip>
+					   </xctk:MaterialButton>
+				</TextBlock>
+                <ListBox Name="ListBoxFileSelect" Height="113" Margin="0,0,-0.6,0">
+
+                </ListBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Header="Tùy chọn" Margin="5,2,2.6,235" Control.Background="#FFBBDCC1" Grid.RowSpan="2" Grid.Row="1">
+            <Canvas Margin="0,0,0,-6">
+                <xctk:MaterialButton  MaterialAccentBrush="#FFF3F37A"
+                                         Content="Chú ý" Height="18" Width="60"  FontSize="12" Canvas.Top="-272" Canvas.Left="177" Background="#FFF3957A"/>
+                <TextBox FontSize="9" TextWrapping="WrapWithOverflow" Height="40" Canvas.Top="-281" Width="141" Canvas.Left="237" Background="#FFDEF1F0">
+                    Chỉnh sửa chỉ áp dụng với Chọn mẫu mặc định, mẫu khác phải tự chỉnh sửa.</TextBox>
+                <TextBlock>
+					<StackPanel>
+							<xctk:MaterialCheckBox x:Name="MaTrix" Content="Tạo ma trận đề Word" Canvas.Top="42" Width="173"  >
+								<xctk:MaterialCheckBox.ToolTip>
+								<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="Tạo ma trận đề bằng word" FontSize="10" Margin="5,0,0,0"/>
+								</StackPanel>
+								</xctk:MaterialToolTip>
+								</xctk:MaterialCheckBox.ToolTip>
+							</xctk:MaterialCheckBox>
+							<xctk:MaterialCheckBox x:Name="WordToTex" Content="Chuyển đề sang Word" Canvas.Top="42" Width="173"  >
+								<xctk:MaterialCheckBox.ToolTip>
+								<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+														MaterialAccentBrush="{Binding MaterialAccentBrush}">
+								</xctk:MaterialToolTip>
+								</xctk:MaterialCheckBox.ToolTip>
+							</xctk:MaterialCheckBox>
+					</StackPanel>
+				</TextBlock>
+                <xctk:MaterialCheckBox x:Name="Form" Content="Thêm mẫu file Tex." Canvas.Top="42" IsChecked="True" />
+                <TextBlock Height="22" Canvas.Top="64" Width="174">
+                          <xctk:MaterialRadioButton  x:Name="Form1" GroupName="Form3B" IsChecked="True"  Content="Mặc Định" Width="90" />
+                          <xctk:MaterialRadioButton  x:Name="Form2" GroupName="Form3B"  Content="Tùy chọn" Width="146" Checked="Form2_Checked"/>
+                </TextBlock>
+                <xctk:WatermarkTextBox x:Name="FormFile" Watermark="Mẫu được chọn"
+                                   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Canvas.Top="91" Width="174" Height="29" Background="#FFD8D5D5"/>
+                <xctk:MaterialButton  MaterialAccentBrush="#FFF3F37A" Click="SeeForm"
+                                         Content="Xem mẫu" Height="23" Width="76"  FontSize="12" Canvas.Top="125"/>
+                <xctk:MaterialButton  MaterialAccentBrush="#FFF3F37A" Click="EditForm"
+                                         Content="Sửa mẫu" Height="23" Width="83"  FontSize="12" Canvas.Top="125" Canvas.Left="81"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Header="Phiếu trả lời"  Margin="2.4,4,10.4,235"  Background="#FFEEE8DF" Grid.Row="1" Grid.RowSpan="2" >
+            <StackPanel>
+                <TextBlock>
+					<StackPanel>
+                      <Label FrameworkElement.Height="26" Width="175">Mẫu phiếu</Label>
+						<ComboBox>
+							  <ComboBox.Background>
+								  <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+									  <GradientStop Color="#FFF3F3F3" Offset="0"/>
+									  <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+									  <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+									  <GradientStop Color="#FFE69E9E" Offset="1"/>
+								  </LinearGradientBrush>
+							  </ComboBox.Background>
+							<ComboBoxItem IsSelected="True">Mẫu exel</ComboBoxItem>
+							<ComboBoxItem >Mẫu Bộ</ComboBoxItem>
+							<ComboBoxItem>Zipgrade</ComboBoxItem>
+						</ComboBox>
+					</StackPanel>
+                </TextBlock>
+                <TextBlock>
+					<StackPanel>
+                       <Label FrameworkElement.Height="26" Width="174">Tùy chọn phiếu</Label>
+							<ComboBox>
+							   <ComboBox.Background>
+								   <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+									   <GradientStop Color="#FFF3F3F3" Offset="0"/>
+									   <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+									   <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+									   <GradientStop Color="#FFE8E876" Offset="1"/>
+								   </LinearGradientBrush>
+							   </ComboBox.Background>
+								<ComboBoxItem IsSelected="True">Phiếu riêng</ComboBoxItem>
+								<ComboBoxItem>Trên  cùng tờ giấy thi</ComboBoxItem>
+								<ComboBoxItem>Dưới tờ giấy thi</ComboBoxItem>
+							</ComboBox>
+						</StackPanel>
+                </TextBlock>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Header="Chỉnh sửa tiêu đề" Margin="5,2.4,10.4,0" Control.Background="#FFBBDCC1" Grid.Row="2" Grid.ColumnSpan="2">
+            <StackPanel Margin="0,0,-9.6,-5.6">
+                <TextBlock>
+						<TextBox Width="79" Background="#FFD9F13F" Text="Tên trường"/> 
+						<xctk:MaterialTextField x:Name="SchoolName"
+							Watermark="Trường"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+                </TextBlock>
+                <TextBlock>
+					<TextBox Width="79" Background="#FF89F1FB"> Tên lớp</TextBox>
+					<xctk:MaterialTextField x:Name="ClassName"
+							Watermark="Lớp"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="89"/>
+					<TextBox Width="79" Background="#FF89F1FB"> Tên kiểm tra</TextBox>
+					<xctk:MaterialTextField x:Name="ÊcreciseName"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="104"/>
+                </TextBlock>
+                <TextBlock>
+                           <TextBox Width="79" Background="#FF60F360"> Bộ môn</TextBox> 
+					<xctk:MaterialTextField x:Name="OjectName"
+							Watermark="Môn"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="89"/>
+					<TextBox Width="79" Background="#FF86B8F3"> Giáo viên</TextBox> 
+					<xctk:MaterialTextField x:Name="TeacherName"
+							Watermark="Giáo viên"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="102"/>
+                </TextBlock>
+                <TextBlock>
+                           <TextBox Width="79" Background="#FFD6C452"> Header Phải</TextBox>
+					<xctk:MaterialTextField x:Name="HeaderRight"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+                </TextBlock>
+                <TextBlock>
+                           <TextBox Width="79" Background="#FFD6C452"> Header Trái</TextBox>
+					<xctk:MaterialTextField x:Name="HeaderLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+
+                </TextBlock>
+                <TextBlock>
+                           <TextBox Width="79" Background="#FFF39C60"> Footer Phải</TextBox>
+					<xctk:MaterialTextField x:Name="FooterRight"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+                </TextBlock>
+                <TextBlock>
+                           <TextBox Width="79" Background="#FFF39C60"> Footer Trái</TextBox>
+					<xctk:MaterialTextField x:Name="FooterLeft"
+							WatermarkScaleFactor="0.7"
+							WatermarkMode="OnFocus" Width="280"/>
+                </TextBlock>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="1"  Header="Trình xem Pdf và ảnh." Background="#FF0F0F0F" FontSize="12" Margin="184.4,0,10,10" Grid.ColumnSpan="3" Grid.RowSpan="3">
+
+        </GroupBox>
+    </Grid>
+</UserControl>
+
