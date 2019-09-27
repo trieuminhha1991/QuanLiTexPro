@@ -143,31 +143,12 @@
     <Compile Include="User5Class\TexToWord.cs" />
     <Compile Include="User5Class\TreatTex.cs" />
     <Compile Include="User5Class\WordToTex.cs" />
-    <Compile Include="User7Class\CreatExamWord.cs" />
     <Compile Include="User8Class\User8MapId.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1B.xaml.cs">
-      <DependentUpon>UserControl1B.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl3A.xaml.cs">
-      <DependentUpon>UserControl3A.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl3B.xaml.cs">
-      <DependentUpon>UserControl3B.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl3C.xaml.cs">
-      <DependentUpon>UserControl3C.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl3D.xaml.cs">
-      <DependentUpon>UserControl3D.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl3E.xaml.cs">
-      <DependentUpon>UserControl3E.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl4.xaml.cs">
       <DependentUpon>UserControl4.xaml</DependentUpon>
@@ -177,27 +158,6 @@
     </Compile>
     <Compile Include="UserControl5A.xaml.cs">
       <DependentUpon>UserControl5A.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl5C.xaml.cs">
-      <DependentUpon>UserControl5C.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl5D.xaml.cs">
-      <DependentUpon>UserControl5D.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl6A.xaml.cs">
-      <DependentUpon>UserControl6A.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl6B.xaml.cs">
-      <DependentUpon>UserControl6B.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl6C.xaml.cs">
-      <DependentUpon>UserControl6C.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl6D.xaml.cs">
-      <DependentUpon>UserControl6D.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl7.xaml.cs">
-      <DependentUpon>UserControl7.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl8.xaml.cs">
       <DependentUpon>UserControl8.xaml</DependentUpon>
@@ -233,31 +193,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl1B.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControl2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl3A.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl3B.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl3C.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl3D.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl3E.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -270,34 +206,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl5A.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl5C.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControl5D.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControl6A.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl6B.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl6C.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl6D.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -336,7 +244,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -43,8 +43,8 @@ namespace appdll
 				new datacodelicensing(){Id= "02",IdPlace="028s8dj" },
 				new datacodelicensing(){Id= "03",IdPlace="1" },
 				new datacodelicensing(){Id= "04",IdPlace="12098" },
-				new datacodelicensing(){Id= "05",IdPlace="#mofih2" },
-				new datacodelicensing(){Id= "06",IdPlace="1-31=,c;ls" },
+				new datacodelicensing(){Id= "05",IdPlace="#mofi" },
+				new datacodelicensing(){Id= "06",IdPlace="1-31=" },
 				new datacodelicensing(){Id= "07",IdPlace="fs1" },
 				new datacodelicensing(){Id= "08",IdPlace="!_)#" },
 				new datacodelicensing(){Id= "09",IdPlace="f13u1" },
@@ -57,16 +57,16 @@ namespace appdll
 				new datacodelicensing(){Id= "66",IdPlace="jk23" },
 				new datacodelicensing(){Id= "77",IdPlace="oa%54" },
 				new datacodelicensing(){Id= "91",IdPlace="eut" },
-				new datacodelicensing(){Id= "0",IdPlace="klc0409" },
+				new datacodelicensing(){Id= "0",IdPlace="kl032" },
 				new datacodelicensing(){Id= "1",IdPlace="82sd" },
-				new datacodelicensing(){Id= "2",IdPlace="12,@#2avs" },
-				new datacodelicensing(){Id= "3",IdPlace="jk6324" },
+				new datacodelicensing(){Id= "2",IdPlace="1bc3" },
+				new datacodelicensing(){Id= "3",IdPlace="jk6h" },
 				new datacodelicensing(){Id= "4",IdPlace="usdkc" },
-				new datacodelicensing(){Id= "5",IdPlace="ha234d90823" },
-				new datacodelicensing(){Id= "6",IdPlace="r5@hcajs" },
-				new datacodelicensing(){Id= "7",IdPlace="1234093" },
-				new datacodelicensing(){Id= "8",IdPlace="rus2$kjr" },
-				new datacodelicensing(){Id= "9",IdPlace="ph$78@190" }
+				new datacodelicensing(){Id= "5",IdPlace="ha23" },
+				new datacodelicensing(){Id= "6",IdPlace="r5@hc@" },
+				new datacodelicensing(){Id= "7",IdPlace="f2@3a" },
+				new datacodelicensing(){Id= "8",IdPlace="ru9d" },
+				new datacodelicensing(){Id= "9",IdPlace="ki#01" }
 		};
 
 		public List<datacodelicensing> ClassList { get => _classList; }

@@ -181,10 +181,6 @@ namespace QuanLyTex.User5Class
 							input = input.Replace("&", "");
 							input = "{}" + input;
 						}
-						else
-						{
-							input = input.Replace(@"\begin{aligned}", "").Replace(@"\end{aligned}", "");
-						}
 						//if(input[13]=='1')
 						//{
 						//	input = input.Remove(13, 1);

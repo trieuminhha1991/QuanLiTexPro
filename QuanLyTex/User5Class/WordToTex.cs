@@ -16,8 +16,11 @@ namespace WpfApp1
 		public void startWordToTex(Application app,string pathFooter, string pathForm, string path, string pathTex, string pathDoc, string loigiai, List<string> listStr, bool? All, bool? fixHe, bool? ColorOne, bool? BoldOne, bool? ItalicOne, bool? UnderLineTwo, bool? HghtlightTwo, bool? ColorTwo, bool? ColorThree, bool? RunHide)
 		{
 			object missing = System.Reflection.Missing.Value;
-			var docOld = app.Documents.Open(path);
-			Document doc = app.Documents.Add();
+			var docOld1 = app.Documents.Open(path,ReadOnly:true);
+			Document docOld = app.Documents.Add();
+			Document doc= app.Documents.Add();
+			docOld.Content.FormattedText = docOld1.Content.FormattedText;
+			docOld1.Close();
 			if (RunHide == true)
 			{
 				docOld.Application.Visible = false;
@@ -127,6 +130,7 @@ namespace WpfApp1
 				}
 				catch { }
 			}
+			docOld.Close(SaveChanges:false);
 			range = doc.Content;
 			find = range.Find;
 			if (ColorTwo == true)
@@ -304,14 +308,16 @@ namespace WpfApp1
 			range = doc.Content;
 			find = range.Find;
 			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll);
+			range = doc.Content;
+			find = range.Find;
+			find.Execute(FindText: @"Nơi có hình}", ReplaceWith: @"Nơi có hình", Replace: WdReplace.wdReplaceAll);
 			doc.Content.Font.Name= "Times New Roman (Headings)";
 			string textHeader = File.ReadAllText(pathForm);
 			string Footer = File.ReadAllText(pathFooter);
 			string text = textHeader+doc.Content.Text+ Footer;
 			File.AppendAllText(pathTex, text);
 			doc.SaveAs(pathDoc, Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatDocumentDefault);
-			doc.Close(SaveChanges: false); ;
-			
+			doc.Close(); ;
 			//doc.Close(SaveChanges: false);
 			//string texAll = range.Text;
 			//List<string> listText = treat.FilterId(texAll, All, ex, baitap, vidu);

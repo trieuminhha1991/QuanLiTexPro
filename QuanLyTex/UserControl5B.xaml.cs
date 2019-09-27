@@ -151,7 +151,7 @@ namespace QuanLyTex
 						string pathDoc = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + TimeName + @".docx";
 						var app = new Application();
 						app.Visible = true;
-						if (ConfigurationManager.AppSettings["A"] != "0")
+						if (ConfigurationManager.AppSettings["A"] == "1")
 						{
 							WordToTex change = new WordToTex();
 							change.startWordToTex(app,pathFooter, FormFile, path, pathTex, pathDoc, StartProof, liststr, All, HevaHoac, ColorOne, BoldOne, ItalicOne, UnderLineTwo, HghtlightTwo, ColorTwo, ColorThree, RunTexToWord);
@@ -183,7 +183,7 @@ namespace QuanLyTex
 					if (CauHoi.IsChecked == true) { liststr.Add(ExString.Text); }
 					if (BaiTap.IsChecked == true) { liststr.Add(BtString.Text); }
 					if (Vidu.IsChecked == true) { liststr.Add(VdString.Text); }
-					if (ConfigurationManager.AppSettings["A"] != "0")
+					if (ConfigurationManager.AppSettings["A"] == "1")
 					{
 						startListTexToWord(pathFooter, FormFile.Text, listPath, Directory.GetCurrentDirectory(), StartProof.Text, liststr, All.IsChecked, HevaHoac.IsChecked, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, UnderLineTwo.IsChecked, HghtlightTwo.IsChecked, ColorTwo.IsChecked, ColorThree.IsChecked, RunTexToWord.IsChecked);
 						FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";

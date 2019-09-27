@@ -244,7 +244,7 @@ namespace QuanLyTex
 							strfile = str1name + str2name + str3name + "-" + str5name+"."+ str6name + "-" + str4name;
 						}
 					}
-					if (type1!=""&& Boxex.IsChecked== true&&ConfigurationManager.AppSettings["A"] != "0")
+					if (type1!=""&& Boxex.IsChecked== true&&ConfigurationManager.AppSettings["A"] == "1")
 					{
 						FilterBasic_Acynce(HideWord.IsChecked, listPath, strfile, str, type1, ColorOne.IsChecked, BoldOne.IsChecked,
 							ItalicOne.IsChecked, appPath, sortoder.IsChecked, Sort1.IsChecked, Sort2.IsChecked, Sort3.IsChecked, Sort4.IsChecked, Sort5.IsChecked, BankEx.IsChecked, selectId6.IsChecked, strId2.IsChecked);

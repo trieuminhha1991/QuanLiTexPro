@@ -340,7 +340,7 @@ namespace QuanLyTex
 				dic.Add("nx", NxString.Text);
 				dic.Add("dang", DangString.Text);
 				dic.Add("cy", CyString.Text);
-				if (ConfigurationManager.AppSettings["A"] != "0")
+				if (ConfigurationManager.AppSettings["A"] == "1")
 				{
 					startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic);
 					FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";

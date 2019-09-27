@@ -61,11 +61,11 @@ namespace QuanLyTex.User5Class
 				tex = tex.Replace(@"\immini", "");
 				tex = tex.Replace(@"\lbrace", "{").Replace(@"\rbrace", "}");
 				tex = tex.Replace(@"\left{", @"\left\{").Replace(@"\right}", @"\right\}");
-					Regex rx = new Regex(@"\$([ ]{0,2})(\[{0,1})([A-Za-z0-9'.,; ]{1,14})(]{0,1})([ ]{0,2})\$");
-					if (rx.IsMatch(tex))
-					{
-						tex = rx.Replace(tex, new MatchEvaluator(CapText));
-					}
+				Regex rx = new Regex(@"\$([ ]{0,2})(\[{0,1})([A-Za-z0-9'.,; ]{1,14})(]{0,1})([ ]{0,2})\$");
+				if (rx.IsMatch(tex))
+				{
+					tex = rx.Replace(tex, new MatchEvaluator(CapText));
+				}
 				tex = Regex.Replace(tex, "[ ]{2,}", " ");
 				while (tex.Contains("$$"))
 				{

@@ -318,11 +318,11 @@ namespace QuanLyTex
 					
 				}
 				string path = Directory.GetCurrentDirectory() + @"\LuuFile";
-				if (CreatPdfCheck.IsChecked == true&&ConfigurationManager.AppSettings["A"] != "0")
+				if (CreatPdfCheck.IsChecked == true&&ConfigurationManager.AppSettings["A"] == "1")
 				{
 						user.CreatPdf(list,path);
 				}
-				if(MatchFile.IsChecked==true && ConfigurationManager.AppSettings["A"] != "0")
+				if(MatchFile.IsChecked==true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.MatchFile(list, path);
 				}
@@ -362,19 +362,19 @@ namespace QuanLyTex
 				if (number1.IsChecked == true) { number = 1; }
 				if (number3.IsChecked == true) { number = 5; }
 				if (number4.IsChecked == true) { number = 7; }
-				if (Question.IsChecked == true && ConfigurationManager.AppSettings["A"] != "0")
+				if (Question.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.Question(list, liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, AddPdf.IsChecked,number);
 				}
-				if (Proof.IsChecked == true && ConfigurationManager.AppSettings["A"] != "0")
+				if (Proof.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.Proof(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, AddPdf.IsChecked, number);
 				}
-				if (TableCheck.IsChecked == true && ConfigurationManager.AppSettings["A"] != "0")
+				if (TableCheck.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.CreatTable(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, UnderLineTwo.IsChecked, ColorTwo.IsChecked, HghtlightTwo.IsChecked, number);
 				}
-				if (BTN.IsChecked == true && ConfigurationManager.AppSettings["A"] != "0")
+				if (BTN.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.BTNform(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, number);
 				}
@@ -434,11 +434,11 @@ namespace QuanLyTex
 				if (number1.IsChecked == true) { number = 1; }
 				if (number3.IsChecked == true) { number = 5; }
 				if (number4.IsChecked == true) { number = 7; }
-				if (AddPage1.IsChecked==true && ConfigurationManager.AppSettings["A"] != "0")
+				if (AddPage1.IsChecked==true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.AddPage(list, path, FilePage.Text,AddPdf.IsChecked,number);
 				}
-				if (HeaderFooter.IsChecked == true && ConfigurationManager.AppSettings["A"] != "0")
+				if (HeaderFooter.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
 				{
 					user.AddHeaderFooter(list, path, FilePage.Text, AddPdf.IsChecked, number,HeaderLeft.Text,FooterLeft.Text);
 				}

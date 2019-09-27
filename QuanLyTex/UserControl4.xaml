@@ -112,7 +112,7 @@
 				<TextBlock Width="270">
 					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395" Click="MaterialButton_Click"
                                     Content="Lấy mã máy" Height="18" Width="121" />
-					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395" Click="MaterialButton_Click_2"
                                     Content="Copy mã máy" Height="18" Width="129" />
 				</TextBlock>
 				<TextBox x:Name="MaId" TextWrapping="Wrap" FontSize="10" Background="#FFADF7F3" Height="31" Margin="0,0,-0.4,0" />

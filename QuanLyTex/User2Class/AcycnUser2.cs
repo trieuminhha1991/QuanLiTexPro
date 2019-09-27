@@ -138,7 +138,7 @@ namespace QuanLyTex.User2Class
 					{
 						try
 						{
-							Document document = app.Documents.Open(item, OpenAndRepair: false);
+							Document document = app.Documents.Open(item);
 							document.Application.Visible = false;
 							Range rangenew = document.Range(0, 0);
 							rangenew.FormattedText=doc.Content;
@@ -331,7 +331,10 @@ namespace QuanLyTex.User2Class
 						try
 						{
 							List<int> list = new List<int>();
-							var doc = app.Documents.Open(path);
+							var docOld = app.Documents.Open(path, ReadOnly: true);
+							Document doc = app.Documents.Add();
+							doc.Content.FormattedText = docOld.Content.FormattedText;
+							docOld.Close();
 							Range range = doc.Content;
 							range.ListFormat.ConvertNumbersToText();
 							range = doc.Content;
@@ -390,7 +393,7 @@ namespace QuanLyTex.User2Class
 
 								}
 							}
-							string pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + ".docx";
+							string pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + "DeBai.docx";
 							doc.Content.Font.Name = "Times New Roman (Headings)";
 							doc.SaveAs(pathitem, Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatDocumentDefault);
 							if (AddPdf == true)
@@ -398,7 +401,7 @@ namespace QuanLyTex.User2Class
 								pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + ".pdf";
 								doc.SaveAs2(pathitem, WdSaveFormat.wdFormatPDF);
 							}
-							doc.Close(SaveChanges: WdSaveOptions.wdDoNotSaveChanges);
+							doc.Close();
 						}
 						catch
 						{ }
@@ -480,7 +483,10 @@ namespace QuanLyTex.User2Class
 						{
 							List<int> list = new List<int>();
 							List<int> listend = new List<int>();
-							var doc = app.Documents.Open(path);
+							var docOld = app.Documents.Open(path, ReadOnly: true);
+							Document doc = app.Documents.Add();
+							doc.Content.FormattedText = docOld.Content.FormattedText;
+							docOld.Close();
 							Range range = doc.Content;
 							range.ListFormat.ConvertNumbersToText();
 							range = doc.Content;
@@ -541,7 +547,7 @@ namespace QuanLyTex.User2Class
 								}
 								catch { }
 							}
-							string pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + ".docx";
+							string pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + "LoiGiai.docx";
 							range = doc.Content;
 							Find find1 = range.Find;
 							find1.Execute(FindText: "^p.^p", Replace: WdReplace.wdReplaceAll, ReplaceWith: "^p");
@@ -552,7 +558,7 @@ namespace QuanLyTex.User2Class
 								pathitem = pathsave + @"\" + System.IO.Path.GetFileNameWithoutExtension(path) + ".pdf";
 								doc.SaveAs2(pathitem, WdSaveFormat.wdFormatPDF);
 							}
-							doc.Close(SaveChanges: WdSaveOptions.wdDoNotSaveChanges);
+							doc.Close();
 						}
 						catch { }
 					}

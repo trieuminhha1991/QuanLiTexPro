@@ -26,7 +26,7 @@ namespace QuanLyTex
 		{
 			InitializeComponent();
 			string sAttr = ConfigurationManager.AppSettings["A"];
-			if(sAttr!="0")
+			if(sAttr=="1")
 			{
 				try
 				{
@@ -47,40 +47,27 @@ namespace QuanLyTex
 
 		private void MaterialButton_Click(object sender, RoutedEventArgs e)
 		{
-			ListdataId list = new ListdataId();
-			List<dataId> listlic = list.ListId;
-			List<string> listId = (from p in listlic select p.Id).ToList();
 			Licensing lic = new Licensing();
 			string hardId = lic.getStringhardware() + lic.getHardDriverId();
-			if(!listId.Contains(hardId))
-			{
-				MaId.Text = "Máy của bạn không có quyền sử dụng Id";
-			}
-			else
-			{
-				MaId.Text = hardId;
-			}
+			MaId.Text = hardId;
 		}
 
 		private void MaterialButton_Click_1(object sender, RoutedEventArgs e)
 		{
 			try
 			{
-				ListdataId list = new ListdataId();
-				List<dataId> listlic = list.ListId;
-				string chechstring = liccensing.Text;
-				string hartID = MaId.Text;
-				List<dataId> datalist = (from p in listlic where p.Id == hartID select p).ToList();
-				dataId data = datalist[0];
 				Licensing lic = new Licensing();
+				string chechstring = liccensing.Text;
+				string hartID = lic.getStringhardware() + lic.getHardDriverId();
 				string licecstrue = lic.licensingFuntionTrailer(hartID);
-				if (chechstring == licecstrue)
+				if(chechstring == licecstrue)
 				{
 					Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-					config.AppSettings.Settings["A"].Value = "1";
+					config.AppSettings.Settings.Remove("A");
+					config.AppSettings.Settings.Add("A", "1");
 					DateTime timenow = DateTime.Now;
-					DateTime timestart = data.DateStart;
-					DateTime timeEnd = data.DateEnd;
+					DateTime timestart = timenow;
+					DateTime timeEnd = timenow.AddDays(15);
 					string TimeNameNow = timenow.ToString("MM/dd/yyyy");
 					string TimeNameStart = timestart.ToString("MM/dd/yyyy");
 					string TimeNameEnd = timeEnd.ToString("MM/dd/yyyy");
@@ -106,6 +93,10 @@ namespace QuanLyTex
 					DateEnd.Text = ConfigurationManager.AppSettings["D"];
 					BanQuyen.Visibility = Visibility.Visible;
 					KichHoat.Visibility = Visibility.Hidden;
+					Configuration con = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+					con.AppSettings.SectionInformation.ProtectSection("RsaProtectedConfigurationProvider");
+					con.Save(ConfigurationSaveMode.Full, true);
+					ConfigurationManager.RefreshSection("appSettings");
 					System.Windows.MessageBox.Show("Kích hoạt bản quyền thành công", "Thoát");
 				}
 				else
@@ -117,6 +108,11 @@ namespace QuanLyTex
 			{
 				System.Windows.MessageBox.Show("Kích hoạt bản quyền không thành công", "Thoát");
 			}
+		}
+
+		private void MaterialButton_Click_2(object sender, RoutedEventArgs e)
+		{
+			Clipboard.SetText(MaId.Text);
 		}
 	}
 }
