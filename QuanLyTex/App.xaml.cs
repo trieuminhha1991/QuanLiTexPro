@@ -16,6 +16,12 @@ namespace QuanLyTex
 		
 		protected override void OnStartup(StartupEventArgs e)
         {
+			if (!File.Exists(@"QuanLyTex.exe.config"))
+			{
+				System.Windows.MessageBox.Show("Bạn đã kích hoạt bản quyền không đúng theo quy trình, cám ơn bạn", "Thoát");
+				Application a = Application.Current;
+				a.Shutdown();
+			}
 			if (ConfigurationManager.AppSettings["A"] == "1")
 			{
 				string[] array = ConfigurationManager.AppSettings.AllKeys;

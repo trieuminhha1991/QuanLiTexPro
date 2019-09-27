@@ -829,7 +829,7 @@ namespace QuanLyTex.User5Class
 											{
 												if (i == 0 || i == 2)
 												{
-													range.Text = item2 + "\t";
+													range.Text = item2 + ".\t";
 												}
 												else
 												{
