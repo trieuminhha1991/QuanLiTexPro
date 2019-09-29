@@ -16,3 +16,9 @@ D:\Project\Trailer\QuanLiTexTrailer\appdll\obj\Debug\appdll.csprojAssemblyRefere
 D:\Project\Trailer\QuanLiTexTrailer\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
 D:\Project\Trailer\QuanLiTexTrailer\appdll\obj\Debug\appdll.dll
 D:\Project\Trailer\QuanLiTexTrailer\appdll\obj\Debug\appdll.pdb
+E:\Project\QuanLiTexTrailer\appdll\bin\Debug\appdll.dll
+E:\Project\QuanLiTexTrailer\appdll\bin\Debug\appdll.pdb
+E:\Project\QuanLiTexTrailer\appdll\obj\Debug\appdll.csprojAssemblyReference.cache
+E:\Project\QuanLiTexTrailer\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
+E:\Project\QuanLiTexTrailer\appdll\obj\Debug\appdll.dll
+E:\Project\QuanLiTexTrailer\appdll\obj\Debug\appdll.pdb

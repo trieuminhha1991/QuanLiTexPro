@@ -16,7 +16,7 @@ namespace WpfApp1
 		public void startWordToTex(Application app,string pathFooter, string pathForm, string path, string pathTex, string pathDoc, string loigiai, List<string> listStr, bool? All, bool? fixHe, bool? ColorOne, bool? BoldOne, bool? ItalicOne, bool? UnderLineTwo, bool? HghtlightTwo, bool? ColorTwo, bool? ColorThree, bool? RunHide)
 		{
 			object missing = System.Reflection.Missing.Value;
-			var docOld1 = app.Documents.Open(path,ReadOnly:true);
+			var docOld1 = app.Documents.Open(path);
 			Document docOld = app.Documents.Add();
 			Document doc= app.Documents.Add();
 			docOld.Content.FormattedText = docOld1.Content.FormattedText;
