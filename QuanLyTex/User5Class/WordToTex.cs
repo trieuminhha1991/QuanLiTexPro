@@ -223,7 +223,7 @@ namespace WpfApp1
 				find = range.Find;
 				find.Execute(FindText: @"\left\{ \begin{aligned}", ReplaceWith: @"\heva{", Replace: WdReplace.wdReplaceAll);
 				find.Execute(FindText: @"\left[ \begin{aligned}", ReplaceWith: @"\hoac{", Replace: WdReplace.wdReplaceAll);
-				find.Execute(FindText: @"\end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll);
+				find.Execute(FindText: @"\\ \end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll);
 			}
 			range = doc.Content;
 			find = range.Find;
@@ -267,13 +267,16 @@ namespace WpfApp1
 			find.Execute(FindText: @"~", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
 			find.Execute(FindText: @"\,", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
 			find.Execute(FindText: @"\And", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
+			find.Execute(FindText: @"\bot", ReplaceWith: @"\perp", Replace: WdReplace.wdReplaceAll);
+			find.Execute(FindText: @"big", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
 			range = doc.Content;
 			find = range.Find;
-			find.Execute(FindText: @"(^92)(\!)", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\)(\!)", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{\{)([a-zA-Z0-9])(\})(\^)([A-Za-z0-9])(\})", ReplaceWith: @"\2^\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"([^94_])(\{)([0-9a-zA-Z]{1,2})(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\text\{)([a-zA-Z ]{1,8})(\})", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll,MatchWildcards:true);
-			find.Execute(FindText: @"(\\left)([^40^92])([a-zA-Z0-9;+\- ]{1,8})(\\right)([^93^41])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9^59;+\- ]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)([|\(\[])([a-zA-Z0-9;+ \-]{1,8})(\\right)([|\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			doc.Content.Font.Name= "Times New Roman (Headings)";
 			string textHeader = File.ReadAllText(pathForm);
 			string Footer = File.ReadAllText(pathFooter);

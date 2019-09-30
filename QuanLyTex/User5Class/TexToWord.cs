@@ -25,24 +25,25 @@ namespace QuanLyTex.User5Class
 			x = x.Insert(x.Length - 1, "}").Insert(1, "{");
 			return x;
 		}
-		public int getIndexSign(List<int> list1, List<int> list2, int n)
+		public string fixEquationLong(Match m)
 		{
-			try
+			string input = m.Value;
+			if (!input.Contains(@"\begin{aligned}")&& input.Length > 300)
 			{
-				int m = 0;
-				for (int j = n; j < list2.Count; j++)
+				if(!input.Contains(@"\heva{") && !input.Contains(@"\hoac{") && !input.Contains(@"\begin{aligned}") && !input.Contains(@"\begin{aligned*}") && !input.Contains(@"\begin{case}") && !input.Contains(@"\begin{matrix}") && !input.Contains(@"\begin{array}"))
 				{
-					if (list2[j] < list1[j + 1])
-					{
-						m = j;
-						break;
-					}
+					input = input.Replace(@"\\", "$\r\n$");
+					return input;
 				}
-				return m;
+				else
+				{
+					input = input.Replace(@"\Leftrightarrow", "$\r\n$\\Leftrightarrow").Replace(@"\Rightarrow", "$\r\n$\\Rightarrow");
+					return input;
+				}
 			}
-			catch
+			else
 			{
-				return n;
+				return m.Value;
 			}
 		}
 		public string startTex(string tex)
@@ -84,6 +85,7 @@ namespace QuanLyTex.User5Class
 						}
 					}
 				}
+				tex = Regex.Replace(tex, @"\$(.|\s)+?\$", new MatchEvaluator(fixEquationLong));
 				tex = Regex.Replace(tex, @"\$[ ]{1}\$", "");
 				return tex;
 			}
@@ -98,7 +100,6 @@ namespace QuanLyTex.User5Class
 			tex = tex.Replace(" ", "!!");
 			tex = Regex.Replace(tex, @"\s+", "");
 			tex = tex.Replace("!!", " ");
-			tex = tex.Replace("$$", "");
 			tex = tex.Replace(@"\quad", "\t");
 			tex = Fix.fixAlignEqnarray(tex);
 			tex = Regex.Replace(tex, @"\$[ ]{1}\$", "$");

@@ -140,7 +140,6 @@ namespace QuanLyTex.User5Class
 						}
 						else if (input.Length > 250 && (input.Contains(@"\Leftrightarrow") || input.Contains(@"\Rightarrow")))
 						{
-							input = input.Replace(@"\\", "");
 							input = input.Replace(@"\begin{align}", "").Replace(@"\end{align}", "").Replace(@"\Leftrightarrow", "$\r\n$\\Leftrightarrow").Replace(@"\Rightarrow", "$\r\n$\\Rightarrow");
 							input = input.Replace("&", "");
 							input = "{}" + input;
@@ -177,7 +176,6 @@ namespace QuanLyTex.User5Class
 						else if (input.Length > 250 && (input.Contains(@"\Leftrightarrow") || input.Contains(@"\Rightarrow")))
 						{
 							input = input.Replace(@"\begin{aligned}", "").Replace(@"\end{aligned}", "").Replace(@"\Leftrightarrow", "$\r\n$\\Leftrightarrow").Replace(@"\Rightarrow", "$\r\n$\\Rightarrow");
-							input = input.Replace(@"\\", "");
 							input = input.Replace("&", "");
 							input = "{}" + input;
 						}
