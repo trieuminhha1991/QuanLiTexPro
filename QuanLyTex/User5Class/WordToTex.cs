@@ -205,7 +205,7 @@ namespace WpfApp1
 			{
 				find.Execute(FindText: @"\left\{ \begin{aligned}", ReplaceWith: @"\heva{", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 				find.Execute(FindText: @"\left[ \begin{aligned}", ReplaceWith: @"\hoac{", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-				find.Execute(FindText: @"\\ \end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false;
+				find.Execute(FindText: @"\\ \end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 				find.Execute(FindText: @"\\\end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			}
 			find.Execute(FindText: @"$\begin{aligned}", ReplaceWith: @"\begin{align*}^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
