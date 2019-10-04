@@ -1,0 +1,1022 @@
+\begin{ex}. 	Tìm t?p xác d?nh $D$ c?a hàm s? $y={{\left( x^2-3x-4 \right)}^{\sqrt{2-\sqrt{3}}}}$.\\
+\choice
+{ $D=\mathbb{R}\backslash \{ -1;4 \}$}
+{ $D=\left( -\infty ;-1 \right]\cup \left[ 4;+\infty  \right)$}
+{ $D=\mathbb{R}$}
+{\True $D=\left( -\infty ;-1 \right)\cup \left( 4;+\infty  \right)$.}
+\loigiai{
+Tác gi?:  Phùng Hoàng Cúc ; Fb: Phùng Hoàng Cúc                     \\
+Ch?n D\\
+Hàm s? xác d?nh khi $x^2-3x-4>0\Leftrightarrow \hoac{
+x<-1  \\
+x>4  \\\end{aligned} \right.$. \\
+V?y t?p xác d?nh $D$ c?a hàm s? là: $D=\left( -\infty ;-1 \right)\cup \left( 4;+\infty  \right)$}
+\end{ex}
+\begin{ex}.	Cho kh?i nón có bán kính dáy $r=\sqrt{3}$ và chi?u cao $h=4$. Tính th? tích $V$ c?a kh?i nón dã cho.\\
+\choice
+{ $V=4$}
+{\True $V=4\pi $}
+{ $V=12$}
+{ $V=12\pi $.}
+\loigiai{
+Tác gi?: Phùng Hoàng Cúc  ; Fb: Phùng Hoàng Cúc                     \\
+Ch?n B\\
+Ta có $V=\dfrac{1}{3}S.h$ $=\dfrac{1}{3}\pi r^2h$ $=\dfrac{1}{3}\pi {{\left( \sqrt{3} \right)}^2}.4$ $=4\pi $}
+\end{ex}
+\begin{ex}.	Cho $a>0$, $b>0$ th?a mãn $a^2+4b^2=5ab$. Kh?ng d?nh nào sau dây dúng?\\
+\choice
+{\True $\log \dfrac{a+2b}{3}=\dfrac{\log a+\log b}{2}$}
+{$5\log ( a+2b )=\log a-\log b$}
+{ $2\log ( a+2b )=5\left( \log a+\log b \right)$}
+{ $\log ( a+1 )+\log b=1$.}
+\loigiai{
+Tác gi?: Nguy?n Tr?ng Tú ; Fb: Anh Tú                    \\
+Ch?n A\\
+Cách 1:\\
+Ta có: $a^2+4b^2=5ab\Leftrightarrow {{( a+2b )}^2}=9ab\Leftrightarrow \log \left[ {{( a+2b )}^2} \right]=\log ( 9ab )$\\
+$\Leftrightarrow 2.\log ( a+2b )=2.\log 3+\log a+\log b\Leftrightarrow 2.\log \dfrac{a+2b}{3}=\log a+\log b$ $\Leftrightarrow \log \dfrac{a+2b}{3}=\dfrac{\log a+\log b}{2}$.\\
+Cách 2:\\
+Cho $a=b=1$, tho?a ma~n $a^2+4b^2=5ab$.\\
+? Xe´t A: $\log 1=0\Rightarrow $ Ðu´ng.\\
+? Xe´t B: $5\log 3=0\Rightarrow $ Sai.\\
+? Xe´t C: $2\log 3=0\Rightarrow $ Sai.\\
+? Xe´t D: $\log 2=1\Rightarrow $ Sai.\\
+Cho?n 
+\choice
+{}
+\end{ex}
+\begin{ex}.	Cho t? di?n $ABCD$, g?i $G_1,G_2$ l?n lu?t là tr?ng tâm tam giác $BCD$ và $ACD$. M?nh d? nào sau dây sai?\\
+\choice
+{ $G_1G_2\text{//}( ABD )$}
+{ Ba du?ng th?ng $BG_1,AG_2$ và $CD$d?ng quy}
+{ $G_1G_2\text{//}( ABC )$}
+{\True $G_1G_2=\dfrac{2}{3}AB$.}
+\loigiai{
+Tác gi?: Nguy?n Tr?ng Tú ; Fb: Anh Tú                     \\
+Ch?n D\\
+
+Noi có hình
+G?i $M$ là trung di?m c?a $CD$. \\
+Xét $\Delta ABM$ ta có: $\dfrac{MG_1}{MB}=\dfrac{MG_2}{MA}=\dfrac{1}{3}\Rightarrow \heva{
+& G_1G_2\text{//}AB \\
+& G_1G_2=\dfrac{1}{3}AB }$ $\Rightarrow $ D sai.\\
+Vì $G_1G_2\text{//}AB\Rightarrow G_1G_2\text{//}( ABD )$ $\Rightarrow $ A dúng.\\
+Vì $G_1G_2\text{//}AB\Rightarrow G_1G_2\text{//}( ABC )$ $\Rightarrow $ C dúng.\\
+Ba du?ng $BG_1,AG_2,CD$, d?ng quy t?i $M$ $\Rightarrow $ B dúng}
+\end{ex}
+\begin{ex}. 	Cho hàm s? $y=f( x )$ liên t?c trên $R$ và có d? th? nhu hình v?. M?nh d? nào sau dây SAI?\\
+
+Noi có hình
+\choice
+{ Giá tr? l?n nh?t c?a hàm s? $y=f( x )$ trên do?n $[ -2;2 ]$ b?ng 2 }
+{\True Hàm s? $y=f( x )$ có c?c ti?u b?ng $-1$}
+{ Hàm s? $y=f( x )$ có hai di?m c?c tr?}
+{ N?u $| m |>2$ thì phuong trình $f( x )=m$ có nghi?m duy nh?t.}
+\loigiai{
+Tác gi?: Ph?m Th? Phuong Thúy  ; Fb: thuypham                     \\
+Ch?n B\\
+D?a vào d? th? có BBT c?a hàm s? $y=f( x )$ trên $[ -2;2 ]$ nhu sau:\\
+
+Noi có hình
+? A dúng.\\
+? B sai vì hàm s? $y=f( x )$ có giá tr? c?c ti?u b?ng $-2$ hay c?c ti?u b?ng $-2$.\\
+? C dúng vì hàm s? $y=f( x )$ có hai di?m c?c tr? $x_CT=-1$, $x_C=1$.\\
+? D dúng vì $| m |>2\Leftrightarrow \hoac{
+& m>2 \\
+& m<-2 }$ , phuong trình $f( x )=m$ có nghi?m duy nh?t}
+\end{ex}
+\begin{ex}. 	Cho hàm s? $f( x )=2x+e^x$. Tìm m?t nguyên hàm $F( x )$ c?a hàm s? $f( x )$ th?a mãn $F( 0 )=2019$.\\
+\choice
+{\True $F( x )=x^2+e^x+2018$}
+{ $F( x )=x^2+e^x-2018$}
+{ $F( x )=x^2+e^x+2017$}
+{ $F( x )=e^x-2019$.}
+\loigiai{
+Tác gi?: Ph?m Th? Phuong Thúy  ; Fb: thuypham                     \\
+Ch?n A\\
+	Ta có $\int{f( x )dx=\int{\left( 2x+e^x \right)}dx}=x^2+e^x+C$. \\
+	Có $F( x )$ là m?t nguyên hàm c?a $f( x )$ và $F( 0 )=2019$.\\
+	Suy ra $\heva{
+& F( x )=x^2+e^x+C \\
+& F( 0 )=2019 }\Rightarrow 1+C=2019\Leftrightarrow C=2018$.\\
+V?y $F( x )=x^2+e^x+2018$}
+\end{ex}
+\begin{ex}.     Phuong trình ${{7}^{2x^2+5x+4}}=49$ có t?ng t?t c? các nghi?m b?ng\\
+\choice
+{\True $-\dfrac{5}{2}$}
+{ $1$}
+{ $-1$}
+{ $\dfrac{5}{2}$.\\
+L?igi?i\\
+Tácgi?:Tr?n Th? Thúy; Fb:Thúy Minh\\
+Ch?n A \\
+${{7}^{2x^2+5x+4}}=49\Leftrightarrow {{7}^{2x^2+5x+4}}=7^2\Leftrightarrow 2x^2+5x+4=2\Leftrightarrow 2x^2+5x+2=0\Leftrightarrow \hoac{
+& x=-2 \\
+& x=-\dfrac{1}{2} }$.\\
+V?y t?ng t?t c? các nghi?m c?a phuong trình b?ng: $-2+(-\dfrac{1}{2})=-\dfrac{5}{2}$}
+\end{ex}
+\begin{ex}. 	Cho $k$, $n$ $\left( k<n \right)$ là các s? nguyên duong. M?nh d? nào sau dây SAI?\\
+\choice
+{ $C_n^k=\dfrac{n}{k( n-k )}$}
+{ $C_n^k=C_n^{n-k}$}
+{\True $A_n^k=n.C_n^k$}
+{ $A_n^k=k.C_n^k$.\\
+L?igi?i\\
+Tácgi?:Tr?n Th? Thúy; Fb:Thúy Minh\\
+Ch?n C   \\
+Ta có $C_n^k=\dfrac{n}{k( n-k )}$ nên A dúng.\\
+Vì $C_n^k=C_n^{n-k}$ nên B dúng.\\
+Ta có $A_n^k=\dfrac{n}{( n-k )}=k\dfrac{n}{k( n-k )}=k.C_n^k$ nên D dúng và C sai}
+\end{ex}
+\begin{ex}. 	Cho t?p h?p $A$ có 26 ph?n t?. H?i $A$ có bao nhiêu t?p con g?m 6 ph?n t??\\
+\choice
+{\True $C_26^6$}
+{ 26}
+{ $P_6$}
+{ $A_26^6$.}
+\loigiai{
+Tác gi?: Ð? T?n B?o; Fb: Ð? T?n B?o \\
+Ch?n A\\
+S? t?p con có 6 ph?n t? c?a t?p $A$ là: $C_26^6$}
+\end{ex}
+\begin{ex}. 	S? giao di?m c?a d? th? hàm s? $y=x^4-5x^2+4$ v?i tr?c hoành là:\\
+\choice
+{ 1}
+{ 2}
+{ 3}
+{\True 4.}
+\loigiai{
+Tác gi?: Ð? T?n B?o; Fb: Ð? T?n B?o \\
+Ch?n D\\
+Phuong trình hoành d? giao di?m c?a d? th? hàm s? và tr?c $Ox$ là: \\
+$x^4-5x^2+4=0\Leftrightarrow \hoac{
+& x^2=1 \\
+& x^2=4 }\Leftrightarrow \hoac{
+& x=\pm 1 \\
+& x=\pm 2 }$.\\
+V?y s? di?m chung c?a d? th? hàm s? $y=x^4-5x^2+4$ v?i tr?c hoành là 4}
+\end{ex}
+\begin{ex}. 	Gieo m?t con súc s?c cân d?i và d?ng ch?t, xác su?t d? m?t có s? ch?m ch?n xu?t hi?n là: \\
+\choice
+{ $1$}
+{\True $\dfrac{1}{2}$}
+{ $\dfrac{1}{3}$.  }
+{ $\dfrac{2}{3}$.}
+\loigiai{
+Tác gi?: Nguy?n Tình ; Fb: Gia Su Toàn Tâm \\
+Ch?n B\\
+Không gian m?u là: $\Omega =\left\{ 1,2,3,4,5,6 \right\}\Rightarrow n\left( \Omega  \right)=6$. \\
+G?i $A$ là bi?n c?: “M?t có s? ch?m ch?n xu?t hi?n”.\\
+$\Rightarrow A=\left\{ 2,4,6 \right\}\Rightarrow n( A )=3$.\\
+Xác su?t d? m?t có s? ch?m ch?n xu?t hi?n là: $P( A )=\dfrac{n( A )}{n\left( \Omega  \right)}=\dfrac{3}{6}=\dfrac{1}{2}$}
+\end{ex}
+\begin{ex}. 	Cho hình lang tr? $ABC.{A}'{B}'{C}'$ có th? tích b?ng $V$. G?i $M$ là trung di?m c?nh $B{B}'$, di?m $N$ thu?c c?nh $C{C}'$ sao cho $CN=2{C}'N$. Tính th? tích kh?i chóp $A.BCNM$ theo $V$.      \\
+\choice
+{ ${{V}_{A.BCNM}}=\dfrac{7V}{12}$}
+{\True ${{V}_{A.BCNM}}=\dfrac{7V}{18}$.  }
+{ ${{V}_{A.BCNM}}=\dfrac{5V}{18}$.  }
+{ ${{V}_{A.BCNM}}=\dfrac{V}{3}$.}
+\loigiai{
+Tác gi?: Nguy?n Tình ; Fb: Gia Su Toàn Tâm \\
+Ch?n B\\
+
+Noi có hình
+Cách 1:\\
+Vì $BCNM$ là hình thang nên:  \\
+$S_{BCNM}=\dfrac{( BM+CN ).d\left( B;C{C}' \right)}{2}=\dfrac{\left( \dfrac{1}{2}C{C}'+\dfrac{2}{3}C{C}' \right).d\left( B;C{C}' \right)}{2}=\dfrac{7}{12}.C{C}'.d\left( B;C{C}' \right)=\dfrac{7}{12}{{S}_{BC{C}'{B}'}}$.\\
+Khi dó:  ${{V}_{A.BCNM}}=\dfrac{7}{12}{{V}_{A.BC{C}'{B}'}}=\dfrac{7}{12}\left( V-{{V}_{A.{A}'{B}'{C}'}} \right)=\dfrac{7}{12}\left( V-\dfrac{1}{3}.d\left( A;\left( {A}'{B}'{C}' \right) \right).{{S}_{{A}'{B}'{C}'}} \right)=\dfrac{7}{12}\left( V-\dfrac{1}{3}V \right)=\dfrac{7V}{18}$\\
+Cách 2: \\
+Ta có: $\dfrac{V_{ABCMN}}{{{V}_{ABC.{A}'{B}'{C}'}}}=\dfrac{1}{3}\left( \dfrac{CN}{C{C}'}+\dfrac{BM}{B{B}'}+\dfrac{AA}{A{A}'} \right)=\dfrac{1}{3}\left( \dfrac{2}{3}+\dfrac{1}{2}+0 \right)=\dfrac{7}{18}\Rightarrow V_{ABCNM}=\dfrac{7}{18}{{V}_{ABC.{A}'{B}'{C}'}}=\dfrac{7V}{18}$}
+\end{ex}
+\begin{ex}. 	Cho $a$ là s? th?c duong khác 5. Tính $I={{\log }_{\dfrac{a}{5}}}\left( \dfrac{a^3}{125} \right)$.\\
+\choice
+{\True $I=3$}
+{ $I=\dfrac{1}{3}$}
+{ $I=-3$}
+{ $I=-\dfrac{1}{3}$.}
+\loigiai{
+Tác gi?: Bùi Th? Kim Oanh  ; Fb: Bùi Th? Kim Oanh                     \\
+Ch?n A\\
+$I={{\log }_{\dfrac{a}{5}}}\left( \dfrac{a^3}{125} \right)=lo{{g}_{\dfrac{a}{5}}}{{\left( \dfrac{a}{5} \right)}^3}=3$}
+\end{ex}
+\begin{ex}. 	T?p nghi?m c?a b?t phuong trình ${{\log }_{\dfrac{1}{3}}}( x-1 )+{{\log }_3}( 11-2x )\ge 0$ là:\\
+\choice
+{ $S=\left( -\infty ;4 \right]$}
+{ $S=( 1;4 )$}
+{\True $S=( 1;4 ]$}
+{ $S=\left( 3;\dfrac{11}{2} \right)$.}
+\loigiai{
+Tác gi?: Bùi Th? Kim Oanh  ; Fb: Bùi Th? Kim Oanh                     \\
+Ch?n C\\
+${{\log }_{\dfrac{1}{3}}}( x-1 )+{{\log }_3}( 11-2x )\ge 0\Leftrightarrow {{\log }_3}( 11-2x )-{{\log }_3}( x-1 )\ge 0$\\
+$\Leftrightarrow {{\log }_3}( 11-2x )\ge {{\log }_3}( x-1 )\Leftrightarrow \heva{
+& 11-2x\ge x-1 \\
+& x-1>0 }\Leftrightarrow 1<x\le 4$.\\
+Suy ra t?p nghi?m c?a b?t phuong trình là $S=( 1;4 ]$}
+\end{ex}
+\begin{ex}. 	S? du?ng ti?m c?n c?a d? th? hàm s? $y=\dfrac{x^2-x+1}{x^2-x-2}$ là:\\
+\choice
+{\True $3$}
+{ $1$}
+{ $4$}
+{ $2$.}
+\loigiai{
+Tác gi?: Tr?n Qu?c Khang ; Fb: Bi Tran                  \\
+Ch?n A\\
+Tâ?p xa´c di?nh: $D=R\backslash \{ -1;2 \}$.\\
+$\lim\limits_{x\rightarrow {{( -1 )}^{+}}}y=\lim\limits_{x\rightarrow {{( -1 )}^{+}}}\dfrac{x^2-x+1}{x^2-x-2}=-\infty $ nên d? th? hàm s? có TCÐ: $x=-1$.\\
+$\lim\limits_{x\rightarrow {{2}^{+}}}y=\lim\limits_{x\rightarrow {{2}^{+}}}\dfrac{x^2-x+1}{x^2-x-2}=+\infty $nên d? th? hàm s? có TCÐ: $x=2$.\\
+$\lim\limits_{x\rightarrow \pm \infty }y=\lim\limits_{x\rightarrow \pm \infty }\dfrac{x^2-x+1}{x^2-x-2}=1$ nên d? th? hàm s? có TCN: $y=1$.\\
+V?y d? th? hàm s? có $3$ du?ng ti?m c?n.\\
+Chú ý: \\
+Có th? kh?ng d?nh d? th? hàm s? có 2 TCÐ: $x=-1;x=2$ t?  k?t qu? $\lim\limits_{x\rightarrow {{( -1 )}^{-}}}y=\lim\limits_{x\rightarrow {{( -1 )}^{-}}}\dfrac{x^2-x+1}{x^2-x-2}=+\infty $, $\lim\limits_{x\rightarrow {{2}^{-}}}y=\lim\limits_{x\rightarrow {{2}^{-}}}\dfrac{x^2-x+1}{x^2-x-2}=-\infty $}
+\end{ex}
+\begin{ex}. 	T?p t?t c? các giá tr? c?a tham s? $m$ d? hàm s? $y=x^3-3mx^2+3x+1$ d?ng bi?n trên $\mathbb{R}$ là:\\
+\choice
+{\True $m\in [ -1;1 ]$}
+{ $m\in \left( -\infty ;-1 \right]\cup \left[ 1;+\infty  \right)$}
+{ $m\in \left( -\infty ;-1 \right)\cup \left( 1;+\infty  \right)$}
+{ $m\in ( -1;1 )$.}
+\loigiai{
+Tác gi?: Tr?n Qu?c Khang; Fb: Bi Tran                   \\
+Ch?n A\\
+${y}'=3x^2-6mx+3$.\\
+Hàm s? d?ng bi?n trên $\mathbb{R}\Leftrightarrow {y}'\ge 0$ $\forall x\in R\Leftrightarrow \heva{
+& 3>0 \\
+& {{( -3m )}^2}-9\le 0 }\Leftrightarrow 9m^2-9\le 0\Leftrightarrow m\in [ -1;1 ]$}
+\end{ex}
+\begin{ex}.  	Tìm h? nguyên hàm c?a hàm s? $f( x )=x^2.{{e}^{x^3+1}}$.\\
+\choice
+{ $\int{f( x )dx=}\dfrac{x^3}{3}.{{e}^{x^3+1}}+C$}
+{ $\int{f( x )dx=}3{{e}^{x^3+1}}+C$}
+{ $\int{f( x )dx=}{{e}^{x^3+1}}+C$}
+{\True $\int{f( x )dx=}\dfrac{1}{3}{{e}^{x^3+1}}+C$.}
+\loigiai{
+Tác gi?: Minh Anh Phuc; Fb: Minh Anh Phuc\\
+Ch?n D\\
+$\int{f( x )dx}=\int{x^2{{e}^{x^3+1}}dx}=\dfrac{1}{3}\int{{{e}^{x^3+1}}d\left( x^3+1 \right)}=\dfrac{1}{3}{{e}^{x^3+1}}+C$}
+\end{ex}
+\begin{ex}. 	H? nguyên hàm c?a hàm s? $f( x )=\dfrac{1}{5x+4}$  là:\\
+\choice
+{ $\dfrac{1}{5}\ln ( 5x+4 )+C$}
+{ $\ln | 5x+4 |+C$}
+{ $\dfrac{1}{\ln 5}\ln | 5x+4 |+C$}
+{\True $\dfrac{1}{5}\ln | 5x+4 |+C$.}
+\loigiai{
+Tác gi?: Minh Anh Phuc; Fb: Minh Anh Phuc\\
+Ch?n D\\
+Ta có $\int{\dfrac{1}{5x+4}dx}=\dfrac{1}{5}\int{\dfrac{1}{5x+4}d( 5x+4 )}=\dfrac{1}{5}\ln | 5x+4 |+C$}
+\end{ex}
+\begin{ex} . 	C?t kh?i tr? b?i m?t m?t ph?ng qua tr?c ta du?c m?t thi?t di?n là hình ch? nh?t $ABCD$ và có $AB$ và $CD$ thu?c hai dáy c?a hình tr? $AB=4a$, $AC=5a$. Th? tích kh?i tr? là:\\
+\choice
+{\True $V=12\pi a^3$}
+{ $V=4\pi a^3$}
+{ $V=16\pi a^3$}
+{ $V=8\pi a^3$.}
+\loigiai{
+Tác gi?:Nguy?n Th? Thanh Huy?n; Fb: Huyen Nguyen                                         \\
+Ch?n A\\
+
+Noi có hình
+? Vì thi?t di?n qua tr?c là hình ch? nh?t $ABCD$có $AB=4a$; $AC=5a$ nên $BC=\sqrt{AC^2-AB^2}=3a$.\\
+? $V_t=\pi r^2h=\pi .{{\left( \dfrac{AB}{2} \right)}^2}.BC=\pi .4a^2.3a=12\pi a^3$}
+\end{ex}
+\begin{ex}. 	M?nh d? nào sau dây là dúng ?\\
+\choice
+{ $\int{xe^x}dx=e^x+xe^x+C$}
+{ $\int{xe^x}dx=\dfrac{x^2}{2}e^x+e^x+C$}
+{\True $\int{xe^xdx}=xe^x-e^x+C$}
+{ $\int{xe^x}dx=\dfrac{x^2}{2}e^x+C$.}
+\loigiai{
+Tác gi?: Nguy?n Th? Thanh Huy?n; Fb: Huyen Nguyen                    \\
+Ch?n C\\
+S? d?ng công th?c: $\int{udv=u.v-\int{vdu}}$.\\
+Ta có:$\int{xe^xdx}=\int{xd\left( e^x \right)=xe^x-\int{e^xdx}}=xe^x-e^x+C$}
+\end{ex}
+\begin{ex}. 	Cho hình chóp d?u $S.ABCD$ có c?nh $AB=a$, góc gi?a du?ng th?ng $SA$ và m?t ph?ng $( ABC )$b?ng $45{}^\circ $. Th? tích kh?i chóp $S.ABCD$ là: \\
+\choice
+{ $\dfrac{a^3}{3}$}
+{\True $\dfrac{a^3\sqrt{2}}{6}$}
+{ $\dfrac{a^3}{6}$}
+{ $\dfrac{a^3\sqrt{2}}{3}$.}
+\loigiai{
+Tác gi?: Hoàng Th? Ng?c Lan; Fb:  Ngoclan Hoang                   \\
+Ch?n B\\
+
+Noi có hình
+G?i $O$ là tâm hình vuông $ABCD$.\\
+Vì hình chóp $S.ABCD$ d?u nên ta có $SO\perp ( ABCD )$.\\
+Góc gi?a du?ng th?ng $SA$và m?t ph?ng $( ABC )$b?ng $45{}^\circ $ nên ta có $\widehat{SAO}=45{}^\circ $.\\
+Suy ra $\Delta SAO$ vuông cân t?i $O\Rightarrow SO=AO=\dfrac{1}{2}AC=\dfrac{1}{2}a\sqrt{2}=\dfrac{a\sqrt{2}}{2}$.\\
+$V_{SABCD}=\dfrac{1}{3}SO.S_{ABCD}=\dfrac{1}{3}\dfrac{a\sqrt{2}}{2}a^2=\dfrac{a^3\sqrt{2}}{6}$}
+\end{ex}
+\begin{ex}. 	Cho $a,b,c$ duong và khác 1. Các hàm s? $y={{\log }_a}x$, $y={{\log }_b}x$, $y={{\log }_c}x$ có d? th? nhu hình v?\\
+
+Noi có hình
+Kh?ng d?nh nào du?i dây dúng?\\
+\choice
+{\True $a>c>b$}
+{ $a>b>c$}
+{ $c>b>a$}
+{ $b>c>a$.}
+\loigiai{
+Tác gi?: Hoàng Th? Ng?c Lan; Fb: Ngoclan hoang                  \\
+Ch?n A\\
+
+Noi có hình
+K? du?ng th?ng $(d):y=1$. Hoành d? giao di?m c?a $(d)$ v?i các d? th? hàm s? $y={{\log }_a}x$,$y={{\log }_b}x$, $y={{\log }_c}x$ l?n lu?t là $a,b,c$. D?a vào d? th? hàm s? ta th?y $a>c>b$}
+\end{ex}
+\begin{ex}.  	Hàm s? nào sau dây không có di?m c?c tr??\\
+\choice
+{ $y=x^3-3x-1$}
+{\True $y=x^3+3x+1$}
+{ $y=x^4+4x^2+1$}
+{ $y=x^2-2x$ .}
+\loigiai{
+Tác gi?:Nguy?n Th? Huy?n Trang  ; Fb: Nguyen Trang                    \\
+Ch?n B \\
+Hàm s? $y=x^3+3x+1$ có tâ?p xa´c di?nh: $D=\mathbb{R}$.\\
+Có: ${y}'=3x^2+3>0$, $\forall x\in \mathbb{R}$. Suy ra hàm s? d?ng bi?n trên $\mathbb{R}$. \\
+V?y hàm s? $y=x^3+3x+1$ không có di?m c?c tr?}
+\end{ex}
+\begin{ex}.  	Kh?i da di?n nào có s? d?nh nhi?u nh?t?                                               \\
+\choice
+{ Kh?i bát di?n d?u (8 m?t d?u)}
+{ Kh?i nh? th?p di?n d?u (20 m?t d?u)}
+{\True Kh?i th?p nh? di?n d?u (12 m?t d?u)}
+{ Kh?i t? di?n d?u.}
+\loigiai{
+Tác gi?:Nguy?n Th? Huy?n Trang  ; Fb: Nguyen Trang                    \\
+Ch?n C \\
+
+Noi có hình
+? Kh?i bát di?n d?u thu?c lo?i $\{ 3;4 \}$ nên s? d?nh là: $\dfrac{8.3}{4}=6$ d?nh.\\
+? Kh?i 20 m?t d?u thu?c lo?i $\{ 3;5 \}$ nên s? d?nh là: $\dfrac{20.3}{5}=12$ d?nh.\\
+? Kh?i 12 m?t d?u thu?c lo?i $\{ 5;3 \}$ nên s? d?nh là: $\dfrac{12.5}{3}=20$ d?nh.\\
+? Kh?i t? di?n d?u có 4 d?nh.\\
+V?y kh?i 12 m?t d?u có nhi?u d?nh nh?t}
+\end{ex}
+\begin{ex}. 	Cho $a>0$, $b>0$, giá tr? c?a bi?u th?c $T=2{{( a+b )}^{-1}}.{{( ab )}^{\dfrac{1}{2}}}.{{\left[ 1+\dfrac{1}{4}{{\left( \sqrt{\dfrac{a}{b}}-\sqrt{\dfrac{b}{a}} \right)}^2} \right]}^{\dfrac{1}{2}}}$ b?ng\\
+\choice
+{\True $1$}
+{ $\dfrac{1}{2}$}
+{ $\dfrac{2}{3}$}
+{ $\dfrac{1}{3}$.	}
+\loigiai{
+Tác gi? : Vu Vi?t Ti?n, FB: Vu Vi?t Ti?n\\
+Ch?n A\\
+Cách 2:\\
+Ta có $T=2{{( a+b )}^{-1}}.{{( ab )}^{\dfrac{1}{2}}}.{{\left[ 1+\dfrac{1}{4}{{\left( \sqrt{\dfrac{a}{b}}-\sqrt{\dfrac{b}{a}} \right)}^2} \right]}^{\dfrac{1}{2}}}$\\
+$=2{{( a+b )}^{-1}}.{{( ab )}^{\dfrac{1}{2}}}.{{\left[ 1+\dfrac{1}{4}{{\left( \dfrac{a-b}{\sqrt{ab}} \right)}^2} \right]}^{\dfrac{1}{2}}}=2{{( a+b )}^{-1}}.{{( ab )}^{\dfrac{1}{2}}}.{{\left[ 1+\dfrac{{{( a-b )}^2}}{4ab} \right]}^{\dfrac{1}{2}}}$\\
+$=2{{( a+b )}^{-1}}.{{( ab )}^{\dfrac{1}{2}}}.{{\left[ \dfrac{{{( a+b )}^2}}{4ab} \right]}^{\dfrac{1}{2}}}=2\dfrac{1}{a+b}.{{( ab )}^{\dfrac{1}{2}}}.\dfrac{( a+b )}{2{{( ab )}^{\dfrac{1}{2}}}}=1$.\\
+Cách 2:\\
+Cho $a=b=1$.\\
+Khi do´ $T={{2.2}^{-1}}{{1}^{\dfrac{1}{2}}}{{1}^{\dfrac{1}{2}}}=1$. Cho?n 
+\choice
+{}
+\end{ex}
+\begin{ex}.	Ðu?ng cong nhu hình v? là d? th? c?a hàm s? nào?\\
+
+Noi có hình
+\choice
+{ $y=-x^3+3x^2+5$}
+{ $y=2x^3-6x^2+5$}
+{\True $y=x^3-3x^2+5$}
+{ $y=x^3-3x+5$.	}
+\loigiai{
+Tác gi? : Vu Vi?t Ti?n, FB: Vu Vi?t Ti?n\\
+Ch?n C\\
+T? dáng c?a d? th? hàm s? ta có h? s? $a>0$ do dó lo?i dáp án 
+\choice
+{\\
+Thay t?a d? di?m $M( 1;3 )$ vào các dáp án B, C, D ta lo?i du?c dáp án }
+{\\
+Thay t?a d? di?m $N( 2;1 )$ vào các dáp án C, D ta lo?i du?c dáp án }
+{\\
+V?y d? th? hàm s? dã cho là c?a hàm s? $y=x^3-3x^2+5$, dán án }
+{}
+\end{ex}
+\begin{ex}. 	Cho hi`nh cho´p $S.ABC$ co´ $SA$ vuông go´c vo´i da´y. Tam gia´c $ABC$ vuông cân ta?i $B$, $SA=AC=2a$. Thê? ti´ch khô´i cho´p $S.ABC$ la`      \\
+\choice
+{ ${{V}_{S.ABC}}=\dfrac{4a^3}{3}$}
+{\True ${{V}_{S.ABC}}=\dfrac{2a^3}{3}$}
+{ ${{V}_{S.ABC}}=2a^3$}
+{ ${{V}_{S.ABC}}=\dfrac{a^3}{3}$.}
+\loigiai{
+Tác gi?: Pha?m Chi´ Du~ng  ; Fb: Pha?m Chi´ Du~ng                     \\
+Ch?n B\\
+
+Noi có hình
+Ta co´: $\Delta ABC$ vuông cân $\Rightarrow BA=BC=\dfrac{AC}{\sqrt{2}}=\dfrac{2a}{\sqrt{2}}=a\sqrt{2}$.\\
+${{S}_{\Delta ABC}}=\dfrac{1}{2}.BA.BC=\dfrac{1}{2}.a\sqrt{2}.a\sqrt{2}=a^2$.\\
+	V?y ${{V}_{S.ABC}}=\dfrac{1}{3}.SA.{{S}_{\Delta ABC}}=\dfrac{1}{3}.2a.a^2=\dfrac{2a^3}{3}$}
+\end{ex}
+\begin{ex}.  	Cho ha`m sô´ $y=x^3-3x+1$. Mê?nh dê` na`o sau dây du´ng? \\
+\choice
+{ Ha`m sô´ da~ cho nghi?ch biê´n trên khoa?ng $( -2;1 )$}
+{ Ha`m sô´ da~ cho nghi?ch biê´n trên khoa?ng $( -1;3 )$}
+{ Ha`m sô´ da~ cho dô`ng biê´n trên khoa?ng $( -1;1 )$}
+{\True Ha`m sô´ da~ cho dô`ng biê´n trên khoa?ng $\left( -\infty ;-1 \right)$ va` khoa?ng $\left( 1;+\infty  \right)$.}
+\loigiai{
+Tác gi?: Pha?m Chi´ Du~ng  ; Fb: Pha?m Chi´ Du~ng                     \\
+Ch?n D\\
+${y}'=3x^2-3$. \\
+${y}'=0\Leftrightarrow \hoac{
+& x=1 \\
+& x=-1 }$.\\
+Ba?ng xe´t dâ´u \\
+
+Noi có hình
+Ha`m sô´ da~ cho dô`ng biê´n trên khoa?ng $\left( -\infty ;-1 \right)$ va` khoa?ng $\left( 1;+\infty  \right)$}
+\end{ex}
+\begin{ex}.	T?p xác d?nh c?a hàm s? $y=2\sin x$ là\\
+\choice
+{ $[ 0;2 ]$}
+{ $[ -1;1 ]$}
+{\True $\mathbb{R}$}
+{ $[ -2;2 ]$.}
+\loigiai{
+Tác gi?: Ph?m Th? Thu?n; Fb: Ph?m Thu?n\\
+Ch?n C\\
+Hàm s? $y=2\sin x$ có t?p xác d?nh là $\mathbb{R}$}
+\end{ex}
+\begin{ex}.	Cho hình chóp $S.ABC$ có dáy $ABC$ là tam giác vuông t?i$A$, $SA$ vuông góc v?i m?t ph?ng $( ABC )$ và $AB=2,AC=4,SA=\sqrt{5}$. M?t c?u di qua các d?nh c?a hình chóp $S.ABC$ có bán kính là:\\
+\choice
+{ $R=\dfrac{25}{2}$}
+{\True $R=\dfrac{5}{2}$}
+{ $R=5$}
+{ $R=\dfrac{10}{3}$.}
+\loigiai{
+Tác gi?: Ph?m Th? Thu?n; Fb:Ph?m Thu?n\\
+Ch?n B\\
+
+Noi có hình
+Cách 1.\\
+G?i $M,H$ l?n lu?t là trung di?m $BC,SA$.\\
+Ta có tam giác $ABC$ vuông t?i $A$ suy ra $M$ là tâm du?ng tròn ngo?i ti?p tam giác $ABC$.\\
+Qua $M$k? du?ng th?ng $d$ sao cho $d\perp ( ABC )$ $\Rightarrow d$ là tr?c du?ng tròn ngo?i ti?p tam giác $ABC$.\\
+Trong m?t ph?ng $( SAM )$ k? du?ng trung tr?c $\Delta $ c?a do?n $SA$, c?t $d$ t?i $I$\\
+$\Rightarrow \heva{
+& IA=IB=IC \\
+& IA=IS }\Rightarrow IA=IB=IC=IS$ $\Rightarrow I$ là tâm m?t c?u ngo?i ti?p hình chóp $S.ABC.$\\
+? $\heva{
+& HA\perp ( ABC ) \\
+& IM\perp ( ABC ) }\Rightarrow \heva{
+& HA\perp AM \\
+& HA\text{//}IM }$.\\
+? $\heva{
+& HI\perp SA \\
+& AM\perp SA \\
+& HI,SA,AM\subset ( SAM ) }\Rightarrow HI\text{//}AM$.\\
+Suy ra t? giác $HAMI$ là hình ch? nh?t.\\
+Ta có $AM=\dfrac{1}{2}BC=\dfrac{1}{2}\sqrt{2^2+4^2}=\sqrt{5}$, $IM=\dfrac{1}{2}SA=\dfrac{\sqrt{5}}{2}$.\\
+Bán kính m?t c?u ngo?i ti?p hình chóp $S.ABC$ là: $R=AI=\sqrt{AM^2+IM^2}=\sqrt{5+\dfrac{5}{4}}=\dfrac{5}{2}$.\\
+Cách 2. S? d?ng k?t qu?: N?u $SABC$ là m?t t? di?n vuông d?nh $A$ thì bán kính m?t c?u ngo?i ti?p t? di?n $SABC$ du?c tính b?i công th?c: $R=\dfrac{1}{2}\sqrt{AS^2+AB^2+AC^2}$\\
+Áp d?ng công th?c trên, ta có $R=\dfrac{1}{2}\sqrt{{{\left( \sqrt{5} \right)}^2}+2^2+4^2}=\dfrac{5}{2}$}
+\end{ex}
+\begin{ex}.	Cho hàm s? $y=\dfrac{x-3}{x^3-3mx^2+(2m^2+1)x-m}$. Có bao nhiêu giá tr? nguyên thu?c do?n $[ -6;6 ]$ c?a tham s? $m$ d? d? th? hàm s? có 4 du?ng ti?m c?n?\\
+\choice
+{ $8$}
+{\True $9$}
+{ $12$}
+{ $11$.}
+\loigiai{
+Tác gi?: Nguy?n Th? Ng?c Lan; Fb: Ngoclan Nguyen\\
+Ch?n B\\
+G?i $( C )$ là d? th? hàm s? $y=\dfrac{x-3}{x^3-3mx^2+(2m^2+1)x-m}$.\\
+Ta có: $\lim\limits_{x\rightarrow \pm \infty }y=\lim\limits_{x\rightarrow \pm \infty }\dfrac{x-3}{x^3-3mx^2+\left( 2m^2+1 \right)x-m}=0$ nên d? th? hàm s? có 1 du?ng ti?m c?n ngang là $y=0.$\\
+Do dó $( C )$ có 4 du?ng ti?m c?n khi và ch?  khi $( C )$có 3 du?ng ti?m c?n d?ng\\
+$\Leftrightarrow x^3-3mx^2+\left( 2m^2+1 \right)x-m=0( 1 )$ có 3 nghi?m phân bi?t khác $3$.\\
+Ta có $(1)\Leftrightarrow ( x-m )\left( x^2-2mx+1 \right)=0\Leftrightarrow \hoac{
+& x=m \\
+& x^2-2mx+1=0 }$.\\
+Phuong trình $(1)$ có 3 nghi?m phân bi?t khác $3\Leftrightarrow \heva{
+& m\ne 3 \\
+& m^2-1>0 \\
+& m^2-2m^2+1\ne 0 \\
+& 3^2-6m+1\ne 0 }\Leftrightarrow \heva{
+& m\ne 3 \\
+& \hoac{
+& m<-1 \\
+& m>1 } \\
+& m\ne \dfrac{5}{3} }\Leftrightarrow m\in \left( -\infty ;-1 \right)\cup \left( 1;\dfrac{5}{3} \right)\cup \left( \dfrac{5}{3};3 \right)\cup \left( 3;+\infty  \right)$.\\
+Do $m\in [ -6;6 ]$, $m$ nguyên nên $m\in \left\{ -6;-5;-4;-3;-2;2;4;5;6 \right\}$.\\
+V?y có $9$ giá tr? $m$ th?a mãn}
+\end{ex}
+\begin{ex}. 	T?p nghi?m c?a b?t phuong trình ${{\log }_2}\left( x\sqrt{x^2+2}+4-x^2 \right)+2x+\sqrt{x^2+2}\le 1$ là $\left( -\sqrt{a};-\sqrt{b} \right]$. \\
+Khi dó $a.b$ b?ng\\
+\choice
+{ $\dfrac{15}{16}$}
+{ $\dfrac{12}{5}$}
+{\True $\dfrac{16}{15}$}
+{ $\dfrac{5}{12}$.}
+\loigiai{
+Tác gi?:Nguy?n VanDi?u; Fb:dieuptnguyen\\
+Ch?n C\\
+Ta có: $x\sqrt{x^2+2}-x^2=x\left( \sqrt{x^2+2}-x \right)=\dfrac{2x}{\sqrt{x^2+2}+x}$.\\
+Ta có: ${{\log }_2}\left( x\sqrt{x^2+2}+4-x^2 \right)+2x+\sqrt{x^2+2}\le 1\Leftrightarrow {{\log }_2}\left( x\left( \sqrt{x^2+2}-x \right)+4 \right)+2x+\sqrt{x^2+2}\le 1$\\
+$\Leftrightarrow {{\log }_2}\left( \dfrac{2x}{\sqrt{x^2+2}+x}+4 \right)+2x+\sqrt{x^2+2}\le 1\Leftrightarrow {{\log }_2}\dfrac{2\left( 3x+2\sqrt{x^2+2} \right)}{\sqrt{x^2+2}+x}+2x+\sqrt{x^2+2}\le 1,( 1 )$\\
+Ta có $\sqrt{x^2+2}+x>0$, $\forall x\in \mathbb{R}$.\\
+Ðiê`u kiê?n: $3x+2\sqrt{x^2+2}>0\Leftrightarrow 2\sqrt{x^2+2}>-3x\Leftrightarrow \hoac{
+& x\ge 0 \\
+& \heva{
+& x<0 \\
+& 4x^2+8>9x^2 } }\Leftrightarrow x>-\sqrt{\dfrac{8}{5}},\left( * \right)$\\
+V?i di?u ki?n $\left( * \right)$, ta có \\
+$( 1 )\Leftrightarrow {{\log }_2}\left( 3x+2\sqrt{x^2+2} \right)+3x+2\sqrt{x^2+2}\le {{\log }_2}\left( \sqrt{x^2+2}+x \right)+\sqrt{x^2+2}+x, ( 2 )$\\
+Xét hàm s? $f( t )={{\log }_2}t+t$ v?i $t>0$. Có ${f}'( t )=\dfrac{1}{t.\ln 2}+1>0$, $\forall t\in \left( 0;+\infty  \right)$.\\
+Hàm s? $f( t )={{\log }_2}t+t$ d?ng bi?n trên $\left( 0;+\infty  \right),$ $\left( 3x+2\sqrt{x^2+2} \right)\in \left( 0;+\infty  \right)$và $\left( \sqrt{x^2+2}+x \right)\in \left( 0;+\infty  \right)$\\
+Nên $( 2 )\Leftrightarrow f\left( 3x+2\sqrt{x^2+2} \right)\le f\left( \sqrt{x^2+2}+x \right)$\\
+$\Leftrightarrow 3x+2\sqrt{x^2+2}\le \sqrt{x^2+2}+x\Leftrightarrow \sqrt{x^2+2}\le -2x\Leftrightarrow \heva{
+& -2x\ge 0 \\
+& x^2+2\le 4x^2 }\Leftrightarrow \heva{
+& x\le 0 \\
+& 3x^2\ge 2 }\Leftrightarrow x\le -\sqrt{\dfrac{2}{3}}$.\\
+K?t h?p v?i ÐK ta có t?p nghi?m b?t phuong trình là $\left( -\sqrt{\dfrac{8}{5}};-\sqrt{\dfrac{2}{3}} \right]$ hay$a.b=\dfrac{16}{15}$.\\
+Ch?n dáp án }
+{}
+\end{ex}
+\begin{ex}.	Cho hàm s? $f( x )$ liên t?c trên $R$ th?a mãn các di?u ki?n: $f( 0 )=2\sqrt{2},$ $f( x )>0,$ $\forall x\in \mathbb{R}$ và $f( x ).{f}'( x )=( 2x+1 )\sqrt{1+f^2( x )},$ $\forall x\in \mathbb{R}$. Khi dó giá tr? $f( 1 )$ b?ng\\
+\choice
+{ $\sqrt{26}$}
+{\True $\sqrt{24}$}
+{ $\sqrt{15}$}
+{ $\sqrt{23}$.}
+\loigiai{
+Tác gi? : Ngô Qu?c Tu?n, FB: Qu?c Tu?n \\
+Ch?n B\\
+Ta có $f( x ).{f}'( x )=( 2x+1 )\sqrt{1+f^2( x )}\Leftrightarrow \dfrac{f( x ).{f}'( x )}{\sqrt{1+f^2( x )}}=( 2x+1 )$.\\
+Suy ra $\int{\dfrac{f( x ).{f}'( x )}{\sqrt{1+f^2( x )}}dx}=\int{( 2x+1 )}dx\Leftrightarrow \int{\dfrac{d\left( 1+f^2( x ) \right)}{2\sqrt{1+f^2( x )}}}=\int{( 2x+1 )}dx\Leftrightarrow \sqrt{1+f^2( x )}=x^2+x+C$.\\
+Theo gi? thi?t $f( 0 )=2\sqrt{2}$, suy ra $\sqrt{1+{{\left( 2\sqrt{2} \right)}^2}}=C\Leftrightarrow C=3$.\\
+V?i $C=3$ thì $\sqrt{1+f^2( x )}=x^2+x+3\Rightarrow f( x )=\sqrt{{{\left( x^2+x+3 \right)}^2}-1}$. V?y $f( 1 )=\sqrt{24}$}
+\end{ex}
+\begin{ex}.	Cho $a,b$ là các s? duong th?a mãn ${{\log }_9}a={{\log }_16}b={{\log }_12}\dfrac{5b-a}{2}$. Tính giá tr? $\dfrac{a}{b}$.\\
+\choice
+{\True $\dfrac{a}{b}=7-2\sqrt{6}$}
+{ $\dfrac{a}{b}=\dfrac{3-\sqrt{6}}{4}$}
+{ $\dfrac{a}{b}=7+2\sqrt{6}$}
+{ $\dfrac{a}{b}=\dfrac{3+\sqrt{6}}{4}$.}
+\loigiai{
+Tác gi?: Tr?n Lê Huong Ly; Fb: Tr?n Lê Huong Ly                     \\
+Ch?n A\\
+Ð?t ${{\log }_9}a={{\log }_16}b={{\log }_12}\dfrac{5b-a}{2}=t,$ $t\in \mathbb{R}$. Ta có $a=9^t,$ $b=16^t,$ $\dfrac{5b-a}{2}=12^t$.\\
+Suy ra:\\
+${{5.16}^t}-9^t={{2.12}^t}\Leftrightarrow 5-{{\left( \dfrac{9}{16} \right)}^t}=2.{{\left( \dfrac{12}{16} \right)}^t}\Leftrightarrow 5-{{\left( \dfrac{3}{4} \right)}^2t}=2.{{\left( \dfrac{3}{4} \right)}^t}\Leftrightarrow {{\left( \dfrac{3}{4} \right)}^2t}+2.{{\left( \dfrac{3}{4} \right)}^t}-5=0$.\\
+Gi?i phuong trình, ta du?c ${{\left( \dfrac{3}{4} \right)}^t}=\sqrt{6}-1$, (nh?n)  ho?c ${{\left( \dfrac{3}{4} \right)}^t}=-\sqrt{6}-1$, (lo?i).\\
+Suy ra $\dfrac{a}{b}={{\left( \dfrac{9}{16} \right)}^t}={{\left( \dfrac{3}{4} \right)}^2t}={{\left( \sqrt{6}-1 \right)}^2}=7-2\sqrt{6}$}
+\end{ex}
+\begin{ex}.	Có bao nhiêu giá tr? c?a tham s? $m$ d? giá tr? l?n nh?t c?a hàm s? $y=\dfrac{x-m^2-2}{x-m}$ trên do?n $[ 0;4 ]$ b?ng $-1$.\\
+\choice
+{ $0$}
+{ $2$}
+{ $3$}
+{\True $1$.}
+\loigiai{
+				Tác gi?:Truong Thanh Nhàn  ; Fb: Truong Thanh Nhàn                   \\
+Ch?n D\\
+Ði?u ki?n: $x\ne m$.\\
+Hàm s? dã cho xác d?nh trên $[ 0;4 ]$ khi $m\notin [ 0;4 ]$ (*).\\
+Ta có ${y}'=\dfrac{m^2-m+2}{{{( x-m )}^2}}=\dfrac{{{\left( m-\dfrac{1}{2} \right)}^2}+\dfrac{7}{4}}{{{( x-m )}^2}}>0$ v?i $\forall x\in [ 0;4 ]$.\\
+Hàm s? d?ng bi?n trên do?n $[ 0;4 ]$ nên $\max\limits_{[ 0;4 ]}y=y( 4 )=\dfrac{2-m^2}{4-m}$. \\
+$\max\limits_{[ 0;4 ]}y=-1\Leftrightarrow \dfrac{2-m^2}{4-m}=-1\Leftrightarrow m^2+m-6=0\Leftrightarrow \hoac{
+& m=2 \\
+& m=-3 }$.\\
+K?t h?p v?i di?u ki?n (*) ta du?c $m=-3$. Do dó có m?t giá tr? c?a $m$ th?a yêu c?u bài toán}
+\end{ex}
+\begin{ex} .	Cho hàm s? $y=x^4-2x^2+m-2$ d? th? $( C )$. G?i $S$ là t?p các giá tr? $m$ sao cho d? th? $( C )$ có dúng m?t ti?p tuy?n song song v?i tr?c $Ox$. T?ng t?t c? các ph?n t? c?a $S$ là:\\
+\choice
+{\True $5$}
+{ $3$}
+{ $2$}
+{ $8$.}
+\loigiai{
+Tác gi?: Nguy?n Tuy?t Lê ; Fb:  Nguyen Tuyet Le.                   \\
+Ch?n A\\
+Ta có ${y}'=4x^3-4x=4x\left( x^2-1 \right)$, ${y}'=0\Leftrightarrow \hoac{
+& x=-1 \\
+& x=0 \\
+& x=1 }$.  \\
+Hàm s? dã cho có ba di?m c?c tr? . \\
+Gi? s? $A( 0;m-2 )$, $B( -1;m-3 )$, $C( 1;m-3 )$ là ba di?m c?c tr? c?a d? th? $( C )$.\\
+Ti?p tuy?n c?a d? th? $( C )$ t?i di?m $A( 0;m-2 )$ là $\left( d_1 \right):y=m-2$.\\
+Ti?p tuy?n c?a d? th? $( C )$ t?i di?m $B( -1;m-3 )$ và $C( 1;m-3 )$ là $\left( d_2 \right):y=m-3$.\\
+Ð? th? $( C )$ có dúng m?t ti?p tuy?n song song v?i tr?c $Ox$ khi và ch? khi $d_1$ ho?c $d_2$trùng v?i tr?c $Ox$, hay $m=2$ ho?c $m=3$. \\
+V?y $S=\{ 2;3 \}$, suy ra t?ng t?t c? các ph?n t? c?a  S  là $5$}
+\end{ex}
+\begin{ex}.	Cho phuong trình $\left( 2\sin x-1 \right)\left( \sqrt{3}\tan x+2\sin x \right)=3-4{{\cos }^2}x$. G?i $T$ là t?p h?p các nghi?m thu?c do?n $\left[ 0;20\pi  \right]$ c?a phuong trình trên. Tính t?ng các ph?n t? c?a $T$.\\
+\choice
+{ $\dfrac{570}{3}\pi $}
+{\True $\dfrac{875}{3}\pi $}
+{ $\dfrac{880}{3}\pi $}
+{ $\dfrac{1150}{3}\pi $.}
+\loigiai{
+Tác gi?:Vu Th? Thanh Huy?n; Fb: Vu Thi Thanh Huyen\\
+Ch?n B\\
+Ði?u ki?n: $x\ne \dfrac{\pi }{2}+k\pi ,k\in Z$.\\
+Phuong trình dã cho tuong duong v?i $\left( 2\sin x-1 \right)\left( \sqrt{3}\tan x+2\sin x \right)=4{{\sin }^2}x-1$.\\
+		$\Leftrightarrow \left( 2\sin x-1 \right)\left( \sqrt{3}\tan x-1 \right)=0$.\\
+$\Leftrightarrow \hoac{
+& \sin x=\dfrac{1}{2} \\
+& \tan x=\dfrac{1}{\sqrt{3}} }\Leftrightarrow \hoac{
+& x=\dfrac{\pi }{6}+k2\pi  \\
+& x=\dfrac{5\pi }{6}+k2\pi  \\
+& x=\dfrac{\pi }{6}+k\pi  }\Leftrightarrow \hoac{
+& x=\dfrac{5\pi }{6}+k2\pi  \\
+& x=\dfrac{\pi }{6}+k\pi  }$, $\left( k\in \mathbb{Z} \right)$ (th?a mãn di?u ki?n).\\
+*Tru?ng h?p 1: V?i $x=\dfrac{5\pi }{6}+k2\pi $, $\left( k\in \mathbb{Z} \right)$. $( 1 )$\\
+$x\in \left[ 0;20\pi  \right]\Leftrightarrow 0\le \dfrac{5\pi }{6}+k2\pi \le 20\pi \Leftrightarrow \dfrac{-5}{12}\le k\le \dfrac{115}{12}$. Mà $k\in \mathbb{Z}$ nên $k\in \left\{ 0;1;2....;9 \right\}$. \\
+$\Rightarrow $ T?ng t?t c? các nghi?m thu?c do?n $\left[ 0;20\pi  \right]$ c?a h? nghi?m $( 1 )$ là:\\
+$S_1=\sum\limits_{k=0}^9{\left( \dfrac{5\pi }{6}+k2\pi  \right)}=\dfrac{295\pi }{3}$.\\
+*Tru?ng h?p 2: V?i $x=\dfrac{\pi }{6}+k\pi $, $\left( k\in \mathbb{Z} \right)$. $( 2 )$\\
+$x\in \left[ 0;20\pi  \right]\Leftrightarrow 0\le \dfrac{\pi }{6}+k\pi \le 20\pi \Leftrightarrow \dfrac{-1}{6}\le k\le \dfrac{119}{6}$. Mà $k\in \mathbb{Z}$ nên $k\in \left\{ 0;1 & ;2....;19 \right\}$.\\
+$\Rightarrow $ T?ng t?t c? các nghi?m thu?c do?n $\left[ 0;20\pi  \right]$ c?a h? nghi?m $( 2 )$ là: \\
+$S_2=\sum\limits_{k=0}^19{\left( \dfrac{\pi }{6}+k\pi  \right)}=\dfrac{580\pi }{3}$.\\
+V?y t?ng các ph?n t? c?a $T$ là $S_1+S_2=\dfrac{875}{3}\pi $}
+\end{ex}
+\begin{ex}.	Cho s? nguyên duong $n$ th?a mãn di?u ki?n: $720\left( C_7^7+C_8^7+C_9^7+...+C_n^7 \right)=\dfrac{1}{4032}A_{n+1}^10$ . H? s? c?a $x^7$trong khai tri?n ${{\left( x-\dfrac{1}{x^2} \right)}^n}\left( x\ne 0 \right)$ b?ng:\\
+\choice
+{ $-120$}
+{\True $-560$}
+{ 120}
+{ 560.}
+\loigiai{
+Tác gi?: Luu Th? Th?y; Fb: Thuyluu\\
+Ch?n B\\
+Áp d?ng công th?c: $C_n^{k-1}+C_n^k=C_{n+1}^k\Leftrightarrow C_n^{k-1}=C_{n+1}^k-C_n^k,\forall k=\overline{1,n};k,n\in {{\mathbb{N}}^{*}}$, ta du?c:\\
+$C_7^7+C_8^7+C_9^7+...+C_n^7=C_7^7+\left( C_9^8-C_8^8 \right)+\left( C_10^8-C_9^8 \right)+...+\left( C_n^8-C_{n-1}^8 \right)+\left( C_{n+1}^8-C_n^8 \right)=C_{n+1}^8$.\\
+Do dó : $720\left( C_7^7+C_8^7+C_9^7+...+C_n^7 \right)=\dfrac{1}{4032}A_{n+1}^10\Leftrightarrow 720C_{n+1}^8=\dfrac{1}{4032}A_{n+1}^10\Leftrightarrow n=16$.\\
+Có: ${{\left( x-\dfrac{1}{x^2} \right)}^16}=\sum\limits_{k=0}^16{C_16^k{{( x )}^{16-k}}}{{\left( -\dfrac{1}{x^2} \right)}^k}=\sum\limits_{k=0}^16{C_16^k{{( -1 )}^k}}{{x}^{16-3k}}$  . \\
+S? h?ng trong khai tri?n ch?a $x^7$?ng v?i  $16-3k=7\Leftrightarrow k=3$. \\
+V?y h? s? c?a $x^7$là $C_16^3{{( -1 )}^3}=-560$}
+\end{ex}
+\begin{ex}. 	Cho phuong trình $m{{\ln }^2}( x+1 )-( x+2-m )\ln ( x+1 )-x-2=0( 1 ).$ T?p h?p t?t c? các giá tr? c?a tham s? $m$ d? phuong trình $( 1 )$ có hai nghi?m phân bi?t tho? mãn $0<x_1<2<4<x_2$ là kho?ng $\left( a;+\infty  \right)$. Khi dó $a$ thu?c kho?ng   \\
+\choice
+{ $\left( 3,8;3,9 \right)$}
+{ $\left( 3,6;3,7 \right)$}
+{\True $\left( 3,7;3,8 \right)$}
+{ $\left( 3,5;3,6 \right)$.}
+\loigiai{
+Tác gi?:Ðào Van Ti?n  ; Fb:Ðào Van Ti?n                     \\
+Ch?n C\\
+Ðiê`u kiê?n: $x>-1.$ \\
+Vì $x=0$ không th?a mãn phuong trình nên ta có \\
+$( 1 )\Leftrightarrow \left[ m\ln ( x+1 )-x-2 \right]\left[ \ln ( x+1 )+1 \right]=0\Leftrightarrow \hoac{
+& m\ln ( x+1 )=x+2 \\
+& \ln ( x+1 )=-1 }\Leftrightarrow \hoac{
+& m=\dfrac{x+2}{\ln (x+1)},( 2 ) \\
+& x=\dfrac{1}{e}-1 }$ .\\
+Do nghi?m $x=\dfrac{1}{e}-1<0$  nên phuong trình $( 1 )$ có hai nghi?m tho? mãn $0<x_1<2<4<x_2$ khi và ch? khi phuong trình $( 2 )$ có hai nghi?m phân bi?t sao cho $0<x_1<2<4<x_2$. \\
+Xét hàm s? $f( x )=\dfrac{x+2}{\ln ( x+1 )}$trên kho?ng $\left( 0\text{ ; +}\infty  \right)$ ta có ${f}'( x )=\dfrac{\ln ( x+1 )-\dfrac{x+2}{x+1}}{{{\ln }^2}( x+1 )}$.   ${f}'( x )=0\Leftrightarrow \ln ( x+1 )-\dfrac{x+2}{x+1}=0$, $( 3 )$.\\
+Xét hàm s? $h( x )=\ln ( x+1 )-\dfrac{x+2}{x+1}$ có ${h}'( x )=\dfrac{1}{x+1}+\dfrac{1}{{{( x+1 )}^2}}>0$, $\forall x>0$ nên $h( x )$ d?ng bi?n trên $\left( 0;+\infty  \right)$ do dó phuong trình ${f}'( x )=0$ có không quá m?t nghi?m. \\
+Mà ${f}'( 2 ).{f}'( 4 )<0$ và ${f}'( x )$  là hàm s? liên t?c trên $[ 2;4 ]$ suy ra phuong trình $( 3 )$ có duy nh?t m?t nghi?m $x_0\in ( 2;4 )$. T? dó ta có b?ng bi?n thiên\\
+
+Noi có hình
+T? b?ng bi?n thiên ta có phuong trình $( 1 )$ có hai nghi?m phân bi?t tho? mãn $0<x_1<2<4<x_2$ khi và ch? khi $m>\dfrac{6}{\ln 5}\Leftrightarrow m\in \left( \dfrac{6}{\ln 5};+\infty  \right)$. \\
+V?y $a=\dfrac{6}{\ln 5}\in \left( 3,7;3,8 \right)$}
+\end{ex}
+\begin{ex}:	Cho hình lang tr? d?ng $ABC.{A}'{B}'{C}'$ có dáy $ABC$ là tam giác vuông t?i $A$, $AB=a\sqrt{3}$, $BC=2a$ , du?ng th?ng $A{C}'$ t?o v?i m?t ph?ng $\left( BC{C}'{B}' \right)$ m?t góc $30{}^\circ $.  Di?n tích c?a m?t c?u ngo?i ti?p lang tr? dã cho b?ng:\\
+\choice
+{ $3\pi a^2$}
+{\True $6\pi a^2$}
+{ $4\pi a^2$}
+{ $24\pi a^2$ .}
+\loigiai{
+Tác gi?: Nguy?n Th? Ng?c Trinh; Fb: Ng?c Trinh\\
+Ch?n B\\
+
+Noi có hình
+G?i $H$ là hình chi?u vuông góc c?a $A$ trên $BC$ $\Rightarrow AH\perp \left( BC{C}'{B}' \right)$ .$\Rightarrow \widehat{\left( A{C}',\left( BC{C}'{B}' \right) \right)}=\widehat{H{C}'A}=30{}^\circ $ .\\
+$ABC$ là tam giác vuông t?i $A$, $AB=a\sqrt{3}$, $BC=2a$ suy ra $AC=a$.\\
+Ta có: $AH=\dfrac{AB.AC}{BC}=\dfrac{a\sqrt{3}}{2}\Rightarrow A{C}'=2AH=a\sqrt{3}\Rightarrow A{A}'==\sqrt{A{{{{C}'}}^2}-AC^2}=a\sqrt{2}$.\\
+G?i $I$, ${I}'$ l?n lu?t là trung di?m $BC$, ${B}'{C}'$. D? th?y $I$, ${I}'$ l?n lu?t là tâm du?ng tròn ngo?i ti?p $\Delta ABC$, $\Delta {A}'{B}'{C}'$.\\
+G?i $O$ là trung di?m c?a $I{I}'$ suy ra $O$ là tâm m?t c?u ngo?i ti?p lang tr? dã cho.\\
+Bán kính m?t c?u là : $R=OB=\sqrt{{{\left( \dfrac{BC}{2} \right)}^2}+{{\left( \dfrac{B{B}'}{2} \right)}^2}}=\dfrac{a\sqrt{6}}{2}$.\\
+Di?n tích c?a m?t c?u ngo?i ti?p lang tr? dã cho b?ng: $S=4\pi R^2=6\pi a^2$ }
+\end{ex}
+\begin{ex} .	Thi?t di?n c?a hình tr? và m?t ph?ng ch?a tr?c c?a hình tr? là hình ch? nh?t có chu vi là 12 $cm$. Giá tr? l?n nh?t c?a th? tích kh?i tr? là:\\
+\choice
+{ $64\pi c{{m}^3}$}
+{ $16\pi c{{m}^3}$}
+{\True $8\pi c{{m}^3}$}
+{ $32\pi c{{m}^3}$.}
+\loigiai{
+Tác gi?:Thu Trang; Fb: Nguy?n Th? Thu Trang                     \\
+Ch?n C\\
+G?i chi?u cao và bán kính dáy c?a hình tr? l?n lu?t là $x$, $y$ $\left( x,y>0 \right)$.\\
+Khi dó ta có thi?t di?n c?a hình tr? và m?t ph?ng ch?a tr?c c?a hình tr? là hình ch? nh?t có kích thu?c l?n lu?t là $x$, $2y$\\
+Theo gi? thi?t ta có $2.( x+2y )=12$ $\Leftrightarrow x+2y=6$. \\
+Cách 1. \\
+Th? tích kh?i tr?:  $V=\pi y^2.x$ $=\pi y^2( 6-2y )=2\pi \left( -y^3+3y^2 \right)$.\\
+Vì $x+2y=6$ $\Rightarrow 0<2y<6\Leftrightarrow 0<y<3.$\\
+Xét hàm s? $f( y )=-y^3+3y^2$ trên kho?ng $( 0;3 )$ \\
+Ta có ${f}'( y )=-3y^2+6y$ $\Rightarrow {f}'( y )=0\Leftrightarrow \hoac{
+& y=0 \\
+& y=2 }$.\\
+B?ng bi?n thiên: \\
+
+Noi có hình
+Suy ra $\max\limits_{( 0;3 )}f( y )=f( 2 )=4.$\\
+V?y giá tr? l?n nh?t c?a th? tích kh?i tr? b?ng $2\pi .4=8\pi c{{m}^3}$.\\
+Cách 2. \\
+Th? tích kh?i tr?: $V=\pi y^2x=\pi .x.y.y\le \pi {{\left( \dfrac{x+y+y}{3} \right)}^3}=\pi {{\left( \dfrac{x+2y}{3} \right)}^3}=\pi {{\left( \dfrac{6}{3} \right)}^3}=8\pi $\\
+D?u “=” x?y ra khi $x=y=2$.\\
+V?y giá tr? l?n nh?t c?a th? tích kh?i tr? b?ng $V=8\pi c{{m}^3}.$ }
+\end{ex}
+\begin{ex}.	Cho hai s? th?c $x$, $y$ th?a mãn $x^2+y^2-4x+6y+4+\sqrt{y^2+6y+10}=\sqrt{6+4x-x^2}$. G?i $M$, $m$ l?n lu?t là giá tr? l?n nh?t, giá tr? nh? nh?t c?a bi?u th?c $T=\left| \sqrt{x^2+y^2}-a \right|$. Có bao nhiêu giá tr? nguyên thu?c do?n $[ -10;10 ]$ c?a tham s? $a$ d? $M\ge 2m$?\\
+\choice
+{ 17}
+{ 15}
+{ 18}
+{\True 16.}
+\loigiai{
+Tácgi?: Nguy?n Th? Anh Ðào; Fb: Ðào Nguy?n \\
+Ch?n D\\
+Ta có $x^2+y^2-4x+6y+4+\sqrt{y^2+6y+10}=\sqrt{6+4x-x^2}$\\
+$\Leftrightarrow $ $y^2+6y+10+\sqrt{y^2+6y+10}=6+4x-x^2+\sqrt{6+4x-x^2}$. $\left( * \right)$\\
+Xét hàm $f( t )=t^2+t$, có ${f}'(t)=2t+1>0$, $\forall t>0$.\\
+Ta có hàm $y=f( t )$ d?ng bi?n trên $\left[ 0;+\infty  \right)$, $\sqrt{y^2+6y+10}\in \left[ 0;+\infty  \right)$, $\sqrt{6+4x-x^2}\in \left[ 0;+\infty  \right)$.\\
+Nên $\left( * \right)\Leftrightarrow $ $f\left( \sqrt{y^2+6y+10} \right)=f\left( \sqrt{6+4x-x^2} \right)\Leftrightarrow \sqrt{y^2+6y+10}=\sqrt{6+4x-x^2}$\\
+$\Leftrightarrow y^2+6y+10=6+4x-x^2\Leftrightarrow {{( x-2 )}^2}+{{( y+3 )}^2}=9$.\\
+Xét di?m $A( x;y )$ thu?c du?ng tròn $(C)$ có phuong trình  ${{( x-2 )}^2}+{{( y+3 )}^2}=9$.\\
+Ta có $OA=\sqrt{x^2+y^2}$.\\
+Ðu?ng tròn $(C)$ có tâm $I( 2;-3 )$, bán kính $R=3$ nên di?m $O( 0;0 )$ n?m ngoài $(C)$.\\
+
+Noi có hình
+G?i$A_1$, $A_2$ là giao di?m c?a du?ng th?ng $OI$v?i du?ng tròn $(C)$.\\
+$\forall A( x;y )\in (C)$: $OA_1\le OA\le OA_2$ , v?i $OA_1=OI-R=\sqrt{13}-3$ và $OA_2=OI+R=\sqrt{13}+3$.\\
+T?c là ta có $\sqrt{13}-3\le \sqrt{x^2+y^2}\le \sqrt{13}+3\Leftrightarrow \sqrt{13}-3-a\le \sqrt{x^2+y^2}-a\le \sqrt{13}+3-a$.\\
+Th1 : $\sqrt{13}-3-a\ge 0\Leftrightarrow a\le \sqrt{13}-3$, $( 1 )$\\
+Khi dó $M=\sqrt{13}+3-a$ và $m=\sqrt{13}-3-a$.\\
+$M\ge 2m\Leftrightarrow \sqrt{13}+3-a\ge 2\left( \sqrt{13}-3-a \right)\Leftrightarrow a\ge \sqrt{13}-9$.\\
+K?t h?p v?i di?u ki?n$( 1 )$ và $a$ nguyên thu?c do?n $[ -10;10 ]$ ta có $a\in \left\{ -5;-4 & ;-3;-2;-1;0 \right\}$.\\
+Th2:  $\sqrt{13}+3-a\le 0\Leftrightarrow a\ge \sqrt{13}+3$, $\left( ** \right)$\\
+Khi dó $M=a-\sqrt{13}+3$ và $m=a-\sqrt{13}-3$.\\
+$M\ge 2m\Leftrightarrow a-\sqrt{13}+3\ge 2\left( a-\sqrt{13}-3 \right)\Leftrightarrow a\le \sqrt{13}+9$.\\
+K?t h?p v?i di?u ki?n $\left( ** \right)$ và $a$ nguyên thu?c do?n $[ -10;10 ]$ ta có $a\in \left\{ 7;8;9;10 \right\}$.\\
+Th3: $\heva{
+& \sqrt{13}-3-a<0 \\
+& \sqrt{13}+3-a>0 }\Leftrightarrow \sqrt{13}-3<a<\sqrt{13}+3$,$\left( *** \right)$\\
+Khi dó $M>0$ và $m=0$ nên ta luôn có $M\ge 2m$\\
+K?t h?p di?u ki?n $\left( *** \right)$ và $a$ nguyên thu?c do?n $[ -10;10 ]$ ta có $a\in \left\{ 1;2;3;4;5;6 \right\}$.\\
+V?y  $a\in \left\{ -5;-4 & ;-3;-2;-1;0;1;2;3;4;5;6;7;8;9;10 \right\}$}
+\end{ex}
+\begin{ex}.	Cho hình chóp $O.ABC$ có ba c?nh $OA$, $OB$, $OC$ dôi m?t vuông góc và $OA=OB=OC=a$. G?i $M$ là trung di?m c?nh $AB$. Góc t?o b?i hai vecto $\overrightarrow{BC}$ và $\overrightarrow{OM}$ b?ng \\
+\choice
+{ $135{}^\circ $}
+{ $150{}^\circ $}
+{\True $120{}^\circ $}
+{ $60{}^\circ $.}
+\loigiai{
+Tác gi?: Vu Van B?c; Fb: vuvanbac.xy.abc \\
+Ch?n C\\
+
+Noi có hình
+Cách 1: \\
+Ta có $\heva{
+& \overrightarrow{OM}=\dfrac{1}{2}\left( \overrightarrow{OA}+\overrightarrow{OB} \right) \\
+& \overrightarrow{BC}=\overrightarrow{OC}-\overrightarrow{OB} }\Rightarrow \overrightarrow{OM}.\overrightarrow{BC}=-\dfrac{1}{2}OB^2=-\dfrac{a^2}{2}$.\\
+$BC=\sqrt{OB^2+OC^2}=a\sqrt{2}$ và $OM=\dfrac{1}{2}AB=\dfrac{1}{2}\sqrt{OA^2+OB^2}=\dfrac{a\sqrt{2}}{2}$.\\
+Do dó: $\cos \left( \overrightarrow{OM},\overrightarrow{BC} \right)=\dfrac{\overrightarrow{OM}.\overrightarrow{BC}}{OM.BC}=\dfrac{-\dfrac{a^2}{2}}{\dfrac{a\sqrt{2}}{2}.a\sqrt{2}}=-\dfrac{1}{2}\Rightarrow \left( \overrightarrow{OM}.\overrightarrow{BC} \right)=120{}^\circ $.\\
+Cách 2: \\
+Nguy?n Ng?c Th?o ; Fb: Nguy?n Ng?c Th?o \\
+
+Noi có hình
+Ch?n h? tr?c t?a d? $Oxyz$ nhu hình v?.\\
+Ta có: $O( 0;0;0 )$ , $A( 0;a;0 )$ , $B( a;0;0 )$ , $C( 0;0;a )$ , $M\left( \dfrac{a}{2};\dfrac{a}{2};0 \right)$ .\\
+Khi dó ta có: $\overrightarrow{BC}=( -a;0;a )$ ,$\overrightarrow{OM}=\left( \dfrac{a}{2};\dfrac{a}{2};0 \right)$ \\
+$\Rightarrow $ $\cos \widehat{\left( \overrightarrow{BC};\overrightarrow{OM} \right)}$ $=\dfrac{\overrightarrow{BC}.\overrightarrow{OM}}{BC.OM}=\dfrac{-\dfrac{a^2}{2}}{a.\sqrt{2}.\dfrac{a\sqrt{2}}{2}}=-\dfrac{1}{2}\Rightarrow \widehat{\left( \overrightarrow{BC};\overrightarrow{OM} \right)}=120{}^\circ $}
+\end{ex}
+\begin{ex}.	Cho hàm s? $y=f( x )$ liên t?c trên $\mathbb{R}$ và có d?o hàm ${f}'( x )=x^2( x-2 )\left( x^2-6x+m \right)$ v?i m?i $x\in \mathbb{R}$. Có bao nhiêu s? nguyên $m$ thu?c do?n $\left[ -2019;2019 \right]$ d? hàm s? $g( x )=f( 1-x )$  ngh?ch bi?n trên kho?ng $\left( -\infty ;-1 \right)$?\\
+\choice
+{ $2012$}
+{ $2009$}
+{\True $2011$}
+{ $2010$.}
+\loigiai{
+Tác gi?: Hà Lê; Fb: Ha Le\\
+Ch?n C\\
+${g}'( x )={f}'( 1-x )=-{{( 1-x )}^2}( -x-1 )\left[ {{( 1-x )}^2}-6( 1-x )+m \right]$          $={{( x-1 )}^2}( x+1 )\left( x^2+4x+m-5 \right)$. \\
+Hàm s? $g( x )$ ngh?ch bi?n trên kho?ng $\left( -\infty ;-1 \right)$\\
+$\Leftrightarrow {g}'( x )\le 0,\ \forall x<-1\ \ \left( * \right)$, (d?u $''=''$ x?y ra t?i h?u h?n di?m). \\
+V?i $x<-1$ thì ${{( x-1 )}^2}>0$ và $x+1<0$ nên  $\left( * \right)\Leftrightarrow x^2+4x+m-5\ge 0,\ \forall x<-1$\\
+$\Leftrightarrow m\ge -x^2-4x+5,\ \forall x<-1$.\\
+Xét hàm s? $y=-x^2-4x+5$ trên kho?ng $\left( -\infty ;-1 \right)$, ta có b?ng bi?n thiên:\\
+
+Noi có hình
+T? b?ng bi?n thiên suy ra $m\ge 9$. \\
+K?t h?p v?i $m$ thu?c do?n $\left[ -2019;2019 \right]$ và $m$ nguyên nên $m\in \left\{ 9;10;11;...;2019 \right\}$. \\
+V?y có 2011 s? nguyên $m$ th?a mãn d? bài}
+\end{ex}
+\begin{ex}.	Cho t? di?n $SABC$ có $G$ là tr?ng tâm t? di?n, m?t ph?ng quay quanh $AG$ c?t các c?nh $SB,SC$ l?n lu?t t?i $M,N$. Giá tr? nh? nh?t c?a t? s? $\dfrac{{{V}_{S.AMN}}}{{{V}_{S.ABC}}}$ là?  \\
+\choice
+{\True $\dfrac{4}{9}$}
+{ $\dfrac{3}{8}$}
+{ $\dfrac{1}{3}$}
+{ $\dfrac{1}{2}$.}
+\loigiai{
+Tác gi?: Hoàng Van Phiên; Fb: Phiên Van Hoàng                    \\
+Ch?n A\\
+
+Noi có hình
+
+Noi có hình
+G?i $E,F,G$ l?n lu?t là trung di?m $BC,SA,EF$ suy ra $G$ là tr?ng tâm t? di?n $SABC$. Ði?m $I$ là giao di?m c?a $AG$ và $SE$. Qua $I$ d?ng du?ng th?ng c?t các c?nh $SB,SC$ l?n lu?t t?i $M,N$. Suy ra $( AMN )$ là m?t ph?ng quay quanh $AG$ th?a mãn yêu c?u bài toán.\\
+K? $GK\text{ // }SE,\left( K\in SA \right)$ suy ra $K$ là trung di?m $FS$. \\
+$\Rightarrow \dfrac{KG}{SI}=\dfrac{AK}{AS}=\dfrac{3}{4}$. Mà $\dfrac{KG}{SE}=\dfrac{1}{2}\Rightarrow \dfrac{SI}{SE}=\dfrac{2}{3}$.\\
+Cách 1:\\
+K? $BP\text{ // }MN,CQ\text{ // }MN$; $\left( P,Q\in SE \right)$.\\
+Ta có: $\dfrac{SM}{SB}=\dfrac{SI}{SP};\dfrac{SN}{SC}=\dfrac{SI}{SQ}$.\\
+$\Rightarrow \Delta BEP=\Delta CEQ\Rightarrow E$ là trung di?m $PQ\Rightarrow SP+SQ=2SE$ (dúng c? trong tru?ng h?p $P\equiv Q\equiv E$).\\
+Ta có: $\dfrac{{{V}_{S.AMN}}}{{{V}_{S.ABC}}}=\dfrac{SA}{SA}.\dfrac{SM}{SB}.\dfrac{SN}{SC}=1.\dfrac{SI}{SP}.\dfrac{SI}{SQ}\overset{AM-GM}{\mathop{\ge }}\dfrac{SI^2}{\dfrac{{{( SP+SQ )}^2}}{4}}=\dfrac{SI^2}{SE^2}={{\left( \dfrac{SI}{SE} \right)}^2}=\dfrac{4}{9}$.\\
+D?u $''=''$ x?y ra khi và ch? khi $SP=SQ=SE$. Hay $P\equiv Q\equiv E\Leftrightarrow MN\text{ // }BC$.\\
+V?y t? s? nh? nh?t là $\dfrac{4}{9}$. Ch?n 
+\choice
+{\\
+Cách 2: \\
+Ta ch?ng minh du?c $\dfrac{SB}{SM}+\dfrac{SC}{SN}=3$. \\
+
+Noi có hình
+Th?t v?y, qua $I$ k? các du?ng th?ng l?n lu?t song song $SB,SC$ c?t $SC,SB$ tuong ?ng t?i $D,L$.\\
+Ta có:  $\left. \begin{aligned}
+& \dfrac{SB}{IQ}=\dfrac{DB}{DI}=3 \\
+& \dfrac{IQ}{SM}=\dfrac{NI}{NM} \\ \end{aligned} \right\}\Rightarrow \dfrac{SB}{IQ}.\dfrac{IQ}{SM}=3.\dfrac{NI}{NM}\Leftrightarrow \dfrac{SB}{SM}=\dfrac{3NI}{NM}$, $( 1 )$.\\
+L?i có: $\left. \begin{aligned}
+& \dfrac{SC}{IP}=\dfrac{LC}{LI}=3 \\
+& \dfrac{IP}{SN}=\dfrac{MI}{MN} \\ \end{aligned} \right\}\Rightarrow \dfrac{SC}{IP}.\dfrac{IP}{SN}=3.\dfrac{MI}{MN}\Leftrightarrow \dfrac{SC}{SN}=\dfrac{3MI}{MN}$, $( 2 )$.\\
+T? $( 1 )$ và $( 2 )$ ta có: $\dfrac{SB}{SM}+\dfrac{SC}{SN}=3\left( \dfrac{NI}{NM}+\dfrac{MI}{MN} \right)=3$.\\
+Ð?t $x=\dfrac{SB}{SM};y=\dfrac{SC}{SN}$. Suy ra $x+y=3$.\\
+Ta có: $\dfrac{{{V}_{S.AMN}}}{{{V}_{S.ABC}}}=\dfrac{SA}{SA}.\dfrac{SM}{SB}.\dfrac{SN}{SC}=\dfrac{1}{xy}\overset{AM-GM}{\mathop{\ge }}\dfrac{1}{\dfrac{{{( x+y )}^2}}{4}}=\dfrac{4}{9}$. \\
+D?u $''=''$ x?y ra khi và ch? khi $x=y=\dfrac{3}{2}\Leftrightarrow MN\text{ // }BC$.\\
+V?y t? s? nh? nh?t là $\dfrac{4}{9}$. Ch?n 
+\choice
+{\\
+Cách 3: Luu Thêm\\
+Ð?t $\dfrac{SB}{SM}=x$; $\dfrac{SC}{SN}=y$, v?i $x>0$, $y>0$.\\
+Ta có $\overrightarrow{SI}=\dfrac{2}{3}\overrightarrow{SE}=\dfrac{1}{3}(\overrightarrow{SB}+\overrightarrow{SC})=\dfrac{1}{3}(x\overrightarrow{SM}+y\overrightarrow{SN})=\dfrac{x}{3}\overrightarrow{SM}+\dfrac{y}{3}\overrightarrow{SN}$.\\
+Do $I$, $M$, $N$ th?ng hàng nên $\dfrac{x}{3}+\dfrac{y}{3}=1\Leftrightarrow x+y=3$.\\
+Ta có $\dfrac{{{V}_{S.AMN}}}{{{V}_{S.ABC}}}=\dfrac{SM}{SB}.\dfrac{SN}{SC}=\dfrac{1}{x}.\dfrac{1}{y}=\dfrac{1}{xy}\ge \dfrac{1}{{{(\dfrac{x+y}{2})}^2}}=\dfrac{4}{9}$.\\
+V?y $\dfrac{{{V}_{S.AMN}}}{{{V}_{S.ABC}}}$ d?t giá tr? nh? nh?t b?ng $\dfrac{4}{9}$ khi $x=y$, hay $MN$ di qua $I$và song song v?i $BC$}
+\end{ex}
+\begin{ex}.	Cho hình chóp $S.ABC$ có $AB=AC=4,BC=2,SA=4\sqrt{3},\widehat{SAB}=\widehat{SAC}=30{}^\circ $. Tính th? tích kh?i chóp $S.ABC$.\\
+\choice
+{ ${{V}_{S.ABC}}=12$}
+{ ${{V}_{S.ABC}}=6$}
+{ ${{V}_{S.ABC}}=8$}
+{\True ${{V}_{S.ABC}}=4$.}
+\loigiai{
+Tácgi?: Vu Th? Thúy; Fb: Vu Thi Thuy\\
+Ch?n D\\
+Cách 1:                                      
+Noi có hình
+Ta có $SB^2=SA^2+AB^2-2.SA.AB.\cos 30{}^\circ \Leftrightarrow SB^2=16\Leftrightarrow SB=4$.\\
+Tuong t? ta cung có $SC=4\Rightarrow \Delta SBC$ là tam giác cân d?nh $S$.\\
+G?i $M$ là trung di?m c?a $BC$. Suy ra $BC\perp SM$và $BC\perp AM$.\\
+Có  $\left. \begin{aligned}
+& BC\perp SM \\
+& BC\perp AM \\ \end{aligned} \right\}\Rightarrow BC\perp ( SAM )$. Suy ra ${{V}_{S.ABC}}=2{{V}_{S.ABM}}=2{{V}_{B.SAM}}=2.\dfrac{1}{3}.BM.{{S}_{\Delta SAM}}$\\
+$BM=1$, $SM=AM=\sqrt{SB^2-BM^2}=\sqrt{16-1}=\sqrt{15}$. \\
+G?i $H$ là trung di?m c?a $SA\Rightarrow MH\perp SA$ và $MH=\sqrt{{{\left( \sqrt{15} \right)}^2}-{{\left( 2\sqrt{3} \right)}^2}}=\sqrt{3}$ \\
+nên ${{S}_{\vartriangle SAM}}=\dfrac{1}{2}.\sqrt{3}.4\sqrt{3}=6$\\
+V?y ${{V}_{S.ABC}}=2.\dfrac{1}{3}.BM.{{S}_{\Delta SAM}}=\dfrac{2}{3}.1.6=4$.\\
+Cách 2: Luu Thêm\\
+Có  $\left. \begin{aligned}
+& BC\perp SM \\
+& BC\perp AM \\ \end{aligned} \right\}\Rightarrow BC\perp SA$.\\
+G?i $H$ là trung di?m c?a $SA$\\
+Ta có $\heva{
+& MH\perp SA \\
+& MH\perp BC }$ và $MH=\sqrt{{{\left( \sqrt{15} \right)}^2}-{{\left( 2\sqrt{3} \right)}^2}}=\sqrt{3}$ \\
+${{V}_{S.ABC}}=\dfrac{1}{6}.SA.BC.d\left( SA,BC \right).sin\widehat{\left( SA,BC \right)}=\dfrac{1}{6}.4\sqrt{3}.2.\sqrt{3}.sin90{}^\circ =4$\\
+Cách 3: Luu Thêm\\
+$AS=a=4\sqrt{3},AB=b=4,AC=c=4$.\\
+$\cos \alpha =\cos \widehat{SAB}=\cos 30{}^\circ =\dfrac{\sqrt{3}}{2}$.\\
+$\cos \beta =\cos \widehat{SAC}=\cos 30{}^\circ =\dfrac{\sqrt{3}}{2}$.\\
+$\cos \gamma =\cos \widehat{BAC}=\dfrac{AB^2+AC^2-BC^2}{2AB.AC}=\dfrac{16+16-4}{2.16}=\dfrac{7}{8}$.\\
+\begin{align*}
+& {{V}_{S.ABC}}=\dfrac{abc}{6}\sqrt{1+2\cos \alpha \cos \beta \cos \gamma -{{\cos }^2}\alpha -{{\cos }^2}\beta -{{\cos }^2}\gamma } \\
+& =\dfrac{4\sqrt{3}.4.4}{6}\sqrt{1+2.\dfrac{\sqrt{3}}{2}.\dfrac{\sqrt{3}}{2}.\dfrac{7}{8}-\dfrac{3}{4}-\dfrac{3}{4}-\dfrac{49}{64}}=4. \\ 
+\end{align*}}
+\end{ex}
+\begin{ex} .	Cho hàm s? $y=f( x )$ liên t?c trên $\mathbb{R}$ và có d? th? nhu hình v?. \\
+
+Noi có hình
+Có bao nhiêu giá tr? nguyên c?a tham s? $m$ d? phuong trình        $f\left( \left| \dfrac{3\sin x-\cos x-1}{2\cos x-\sin x+4} \right| \right)=f\left( m^2+4m+4 \right)$ $( 1 )$ có nghi?m?\\
+\choice
+{\True $3$}
+{ $4$}
+{ $5$}
+{ Vô s?.}
+\loigiai{
+Tác gi?:Lê Hoa  ; Fb:Lehoa                     \\
+Ch?n A\\
+Ð?t $t=\dfrac{3\sin x-\cos x-1}{2\cos x-\sin x+4}\Leftrightarrow ( 2t+1 )\cos x-( t+3 )\sin x=-1-4t$ $\left( * \right)$.\\
+Phuong trình $\left( * \right)$ có nghi?m $\Leftrightarrow {{( 2t+1 )}^2}+{{( t+3 )}^2}\ge {{( 4t+1 )}^2}\Leftrightarrow -\dfrac{9}{11}\le t\le 1$ .\\
+Suy ra $0\le | t |\le 1$.   \\
+T? d? th? $y=f( x )$ ta có    \\
+	* $y=f( x )$ d?ng bi?n trên $\left[ 0;+\infty  \right)$ \\
+	*$m^2+4m+4={{( m+2 )}^2}\in \left[ 0;+\infty  \right)$ .\\
+	*$| t |\in \left[ 0;+\infty  \right)$ \\
+Nên  $f\left( \left| \dfrac{3\sin x-\cos x-1}{2\cos x-\sin x+4} \right| \right)=f\left( m^2+4m+4 \right)\Leftrightarrow f\left( | t | \right)=f\left( m^2+4m+4 \right)\Leftrightarrow | t |=m^2+4m+4$ Phuong trình $( 1 )$ có nghi?m $\Leftrightarrow 0\le m^2+4m+4\le 1\Leftrightarrow m^2+4m+4\le 1$ $\Leftrightarrow $ $-3\le m\le -1$ .\\
+Do $m\in Z\Rightarrow m\in \left\{ -3;-2;-1 \right\}$}
+\end{ex}
+\begin{ex}. 	Cho hàm s? $y=f(x)$ có b?ng bi?n thiên nhu sau: \\
+
+Noi có hình
+Giá tr? l?n nh?t c?a $m$ d? phuong trình: ${{e}^{2f^3( x )-\dfrac{13}{2}f^2( x )+7f( x )+\dfrac{3}{2}}}=m$ có nghi?m trên do?n $[ 0;2 ]$.\\
+\choice
+{ ${{e}^5}$}
+{ ${{e}^{\dfrac{15}{13}}}$}
+{ ${{e}^3}$}
+{\True ${{e}^4}$.}
+\loigiai{
+Tác gi?: Tr?n Th? Thu Thanh  ; Fb: Thanh Tr?n                     \\
+Ch?n D\\
+Ta có: ${{e}^{2f^3( x )-\dfrac{13}{2}f^2( x )+7f( x )+\dfrac{3}{2}}}=m\Leftrightarrow 2f^3( x )-\dfrac{13}{2}f^2( x )+7f( x )+\dfrac{3}{2}=\ln m$.\\
+Ð?t $g( x )=2f^3( x )-\dfrac{13}{2}f^2( x )+7f( x )+\dfrac{3}{2}$ .\\
+$g'( x )=f'( x )\left[ 6f^2( x )-13f( x )+7 \right]$ .\\
+$g'( x )=0\Leftrightarrow \hoac{
+& f'( x )=0 \\
+& f( x )=1 \\
+& f( x )=\dfrac{7}{6} }\Leftrightarrow \hoac{
+& x=1;x=3 \\
+& x=1;x=a>3 \\
+& x=b<0 }$ .\\
+B?ng bi?n thiên trên do?n $[ 0;2 ]$ :\\
+
+Noi có hình
+Giá tr? l?n nh?t c?a $m$ d? phuong trình có nghi?m trên do?n $[ 0;2 ]$ là: $\ln m=4\Leftrightarrow m={{e}^4}$}
+\end{ex}
+\begin{ex}.	Cho hình chóp $S.ABCD$ có $SA$ vuông góc v?i m?t ph?ng $( ABCD )$, t? giác $ABCD$ là hình thang vuông v?i c?nh dáy $AD, BC$. $AD=3CB=3a$, $AB=a$, $SA=a\sqrt{3}$. Ði?m $I$ th?a mãn $\overrightarrow{AD}=3\overrightarrow{AI}$, $M$ là trung di?m $SD$, $H$ là giao di?m c?a $AM$ và $SI$. G?i $E, F$ l?n lu?t là hình chi?u c?a $A$ lên $SB, SC$. Tính th? tích $V$ c?a kh?i nón có dáy là du?ng tròn ngo?i ti?p tam giác $EFH$ và d?nh thu?c m?t ph?ng $( ABCD )$. \\
+\choice
+{ $V=\dfrac{\pi a^3}{5\sqrt{5}}$}
+{ $V=\dfrac{\pi a^3}{2\sqrt{5}}$}
+{ $V=\dfrac{\pi a^3}{\sqrt{5}}$}
+{\True $V=\dfrac{\pi a^3}{10\sqrt{5}}$.}
+\loigiai{
+Tác gi? : Ð?ng Ân, FB: Ð?ng Ân\\
+Ch?n D\\
+
+Noi có hình
+Nh?n xét: T? giác $ABCI$ là hình vuông. D? ch?ng minh $BC\perp ( SAB )$ và $BI\perp SC$. \\
+$\heva{
+& EA\perp SB \\
+& EA\perp BC }\Rightarrow EA\perp ( SBC )$ $\Rightarrow EA\perp SC$ .\\
+$\heva{
+& EA\perp SC \\
+& FA\perp SC }\Rightarrow SC\perp ( AEF )$.\\
+Trong tam giác vuông $SAB$ có $\dfrac{SE}{SB}=\dfrac{SA^2}{SB^2}=\dfrac{3}{4}$ .\\
+Trong tam giác $SAD$ có $\dfrac{HS}{HI}.\dfrac{AI}{AD}.\dfrac{MD}{MS}=1\Rightarrow \dfrac{HS}{HI}=3$ $\Rightarrow \dfrac{SH}{SI}=\dfrac{3}{4}$ .\\
+Trong tam giác $SBI$ có $\dfrac{SE}{SB}=\dfrac{SH}{SI}=\dfrac{3}{4}\Rightarrow EH\text{ //}BI$. Do $BI\perp SC$ nên $EH\perp SC$.\\
+Suy ra các di?m $A,E, F, H$ cùng thu?c m?t ph?ng di qua $A$  và vuông góc v?i $SC$ .\\
+G?i $K$ là trung di?m $AF$.\\
+Vì $\heva{
+& EA\perp EF \\
+& AH\perp FH }\Rightarrow K$ là tâm du?ng tròn ngo?i ti?p tam giác $\Delta EFH$.\\
+Ta có: $AF=\dfrac{SA.AC}{SC}$ $=\dfrac{a\sqrt{3}.a\sqrt{2}}{a\sqrt{5}}$ $=\dfrac{a\sqrt{6}}{\sqrt{5}}$.\\
+Suy ra bán kính dáy c?a kh?i nón là $R=\dfrac{1}{2}AF=\dfrac{a\sqrt{6}}{2\sqrt{5}}$.\\
+G?i $O$ là tâm hình vuông $ABCI$.\\
+Do $\heva{
+& SC\perp ( EFH ) \\
+& OK\text{ //}SC }\Rightarrow OK\perp ( EFH )\Rightarrow O$là d?nh c?a kh?i nón. \\
+Chi?u cao c?a kh?i nón là $h=\dfrac{1}{2}FC$ $=\dfrac{1}{2}\sqrt{AC^2-AF^2}$ $=\dfrac{1}{2}\sqrt{2a^2-\dfrac{6}{5}a^2}$ $=\dfrac{a}{\sqrt{5}}$.\\
+V?y th?  tích kh?i nón là $V=\dfrac{1}{3}.\pi R^2.h=\dfrac{1}{3}.\pi .{{\left( \dfrac{a\sqrt{6}}{2\sqrt{5}} \right)}^2}.\dfrac{a}{\sqrt{5}}=\dfrac{\pi a^3}{10\sqrt{5}}$}
+\end{ex}
+\begin{ex}.	Cho hình chóp $S.ABCD$ có dáy $ABCD$ là hình thoi c?nh $a$ và $\widehat{ABC}=60{}^\circ $. Hình chi?u vuông góc c?a di?m $S$ lên m?t ph?ng $( ABCD )$trùng v?i tr?ng tâm c?a tam giác $ABC$, g?i $\varphi $ là góc gi?a du?ng th?ng $SB$ và m?t ph?ng $( SCD )$, tính $\sin \varphi $ bi?t r?ng $SB=a$.	\\
+\choice
+{ $\sin \varphi =\dfrac{\sqrt{3}}{2}$}
+{ $\sin \varphi =\dfrac{1}{4}$}
+{ $\sin \varphi =\dfrac{1}{2}$}
+{\True $\sin \varphi =\dfrac{\sqrt{2}}{2}$.}
+\loigiai{
+Tác gi?: Mai Ti?n Linh  ; Fb: Mai Ti?n Linh                    \\
+Ch?n D\\
+
+Noi có hình
+Cách 1:\\
+? G?i $O$ là tr?ng tâm c?a tam giác $ABC$. D?ng du?ng th?ng $d$ qua $O$ và $d\text{//}SB$, $d$ c?t $SD$ t?i $K$. Khi dó góc gi?a $SB$ và $( SCD )$chính là góc gi?a $OK$ và $( SCD )$.\\
+? Vì $SO\perp (ABCD)\Rightarrow SO\perp CD$.\\
+Ta l?i có : $\Delta ABC$ d?u ( $\Delta ABC$ cân t?i $B$ và $\widehat{BAC}=60{}^\circ $).\\
+$\Rightarrow AB\perp CO\Rightarrow CD\perp CO$\\
+$\Rightarrow CD\perp (SCO)\Rightarrow (SCD)\perp (SCO)$.\\
+G?i $H$ là hình chi?u c?a $O$ trên $SC$, khi dó ta có:\\
+$\left. \begin{aligned}
+& OH\perp SC \\
+& OH\perp CD \\ \end{aligned} \right\}\Rightarrow OH\perp ( SCD )$. Do dó góc gi?a $SB$ và m?t ph?ng $( SCD )$ là : $\widehat{OKH}=\varphi $ .\\
+Ta có : $\sin \varphi =\sin \widehat{OKH}=\dfrac{OH}{OK}$. \\
+? T? di?n $S.ABC$ là t? di?n d?u c?nh $a$ nên ta tính du?c : \\
+$OC=\dfrac{a\sqrt{3}}{3}$, $SO=\dfrac{a\sqrt{6}}{3}$ $\Rightarrow OH=\dfrac{a\sqrt{2}}{3}$.\\
+Vì $OK\text{ // }SB\Rightarrow \dfrac{OK}{SB}=\dfrac{DO}{DB}=\dfrac{2}{3}\Rightarrow OK=\dfrac{2}{3}SB=\dfrac{2}{3}a$.\\
+V?y : $\sin \varphi =\dfrac{OH}{OK}=\dfrac{\sqrt{2}}{2}$.\\
+Cách 2:\\
+
+Noi có hình
+
+Noi có hình
+Tru?c h?t ta ch?ng minh du?c $\sin (SB;(SCD))=\dfrac{d(B,(SCD))}{SB}$ (nhu hình trên).\\
+G?i $O$ là tr?ng tâm tam giác $ABC$. Khi dó ta có $CO\perp CD$.\\
+D?ng $OH\perp SC$suy ra $OH\perp (SCD)$. Ta tính du?c $OC=\dfrac{a\sqrt{3}}{3},SO=\dfrac{a\sqrt{6}}{3}\Rightarrow OH=\dfrac{a\sqrt{2}}{3}$.\\
+Khi dó $d(B,(SCD))=\dfrac{3}{2}d(O,(SCD))=\dfrac{3}{2}OH=\dfrac{3}{2}\dfrac{a\sqrt{2}}{3}=\dfrac{a\sqrt{2}}{2}$.\\
+V?y $\sin (SB;(SCD))=\dfrac{\dfrac{a\sqrt{2}}{2}}{a}=\dfrac{\sqrt{2}}{2}$.\\
+Hê´t}
+\end{ex}
+

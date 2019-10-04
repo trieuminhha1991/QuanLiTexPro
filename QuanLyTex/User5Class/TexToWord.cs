@@ -945,14 +945,14 @@ namespace QuanLyTex.User5Class
 						{
 							range = document.Range(startitem, document.Content.End - 1);
 							range.Select();
-							range.Application.Run("Macro");
+							range.Application.Run("MTCommand_TeXToggle");
 						}
 					}
 					catch
 					{
 						Range range = document.Range(startitem, document.Content.End);
 						range.Select();
-						range.Application.Run("Macro");
+						range.Application.Run("MTCommand_TeXToggle");
 					}
 				}
 				Range rangeend = document.Content;
@@ -1186,8 +1186,8 @@ namespace QuanLyTex.User5Class
 				find.Execute(FindText: "^13{2,}", ReplaceWith: "^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 				rangeend = document.Content;
 				find = rangeend.Find;
-				find.Execute(FindText: "{", ReplaceWith: "", Replace: WdReplace.wdReplaceAll);
-				find.Execute(FindText: "}", ReplaceWith: "", Replace: WdReplace.wdReplaceAll);
+				find.Execute(FindText: "{", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+				find.Execute(FindText: "}", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 				find.Execute("$", false, false, false, false, false, missing, missing, missing, "", WdReplace.wdReplaceAll);
 				find.Execute("&", false, false, false, false, false, missing, missing, missing, "", WdReplace.wdReplaceAll);
 				rangeend = document.Content;

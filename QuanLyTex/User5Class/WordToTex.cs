@@ -92,7 +92,7 @@ namespace WpfApp1
 								range = doc.Range(docOld.Content.End - 1);
 								range.FormattedText = rangeOld.FormattedText;
 								range.Select();
-								range.Application.Run("Macro");
+								range.Application.Run("MTCommand_TeXToggle");
 							}
 						}
 					}
@@ -102,15 +102,13 @@ namespace WpfApp1
 						Range rangenew = doc.Range(doc.Content.End - 1);
 						rangenew.FormattedText = rangeOld.FormattedText;
 						rangenew.Select();
-						rangenew.Application.Run("Macro");
+						rangenew.Application.Run("MTCommand_TeXToggle");
 						rangenew.InsertAfter("}\r\n\\end{ex}\r\n");
 						Find find2 = rangenew.Find;
 						find2.Execute(FindText: @"([^t^13])([ ]{1,})", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1", MatchWildcards: true);
 						find2 = rangenew.Find;
-						find2.Replacement.Font.Bold = 1;
 						find2.Execute(FindText: @"([^t^13])([ABCD])(.)", Format: true, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"^p\2.");
 						find2 = rangenew.Find;
-						find2.Replacement.Font.Bold = 1;
 						find2.Execute(FindText: @"([^t^13])([ABCD])([ ]{1,})(.)", Format: true, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"^p\2.");
 						find2 = rangenew.Find;
 						find2.Execute(FindText: @"([ABCD])(.)", Format: true, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1.");
@@ -121,12 +119,13 @@ namespace WpfApp1
 							find2.Text = "([ABCD])(.)";
 							while (find2.Execute(Format: true, Wrap: WdFindWrap.wdFindStop, MatchWildcards: true))
 							{
-								if (rangenew.Font.Color != WdColor.wdColorAutomatic && rangenew.Font.Color != WdColor.wdColorRed)
+								if (rangenew.Font.Color != WdColor.wdColorRed)
 								{
 									rangenew.Font.Color = WdColor.wdColorDarkBlue;
 								}
 							}
 						}
+						
 					}
 				}
 				catch { }
@@ -150,10 +149,10 @@ namespace WpfApp1
 			find.MatchWildcards = true;
 			find.Font.Bold = 1;
 			find.Replacement.Font.Color = WdColor.wdColorDarkBlue;
-			find.Execute(ReplaceWith: @"\1^92True", Replace: WdReplace.wdReplaceAll,Format:true);
+			find.Execute(ReplaceWith: @"\1^92True", Replace: WdReplace.wdReplaceAll, Format: true);
 			range = doc.Content;
 			find = range.Find;
-			find.Text = "^13[A].";
+			find.Text = "[A].";
 			find.MatchWildcards = true;
 			find.Font.Bold = 1;
 			if (ColorThree == true)
@@ -161,9 +160,8 @@ namespace WpfApp1
 				find.Font.Color = WdColor.wdColorDarkBlue;
 			}
 			find.Execute(ReplaceWith: @"!!!^92choice!!!{", Replace: WdReplace.wdReplaceAll, Format: true);
-			range = doc.Content;
 			find = range.Find;
-			find.Text = @"^13[BCD].";
+			find.Text = @"[BCD].";
 			find.MatchWildcards = true;
 			find.Font.Bold = 1;
 			if (ColorThree == true)
@@ -173,77 +171,51 @@ namespace WpfApp1
 			find.Execute(ReplaceWith: @"}!!!{", Replace: WdReplace.wdReplaceAll, Format: true);
 			range = doc.Content;
 			find = range.Find;
-			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"^p}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"([^t^13])\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
+			find.Execute(FindText: @"\{[ ]{1,}.", ReplaceWith: @"{", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @".[ ]{1,}\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"\{[.]{1,}", ReplaceWith: @"{", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"[.]{1,}\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"[ ]{2,}", ReplaceWith: @" ", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find = range.Find;
-			find.Execute(FindText: @"^p", ReplaceWith: @"\\^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"!!!", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: "^p" + loigiai, ReplaceWith: @"}^p\loigiai{^p", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
+			find.Execute(FindText: @"^p", ReplaceWith: @"\\^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"!!!", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: "^p" + loigiai, ReplaceWith: @"}^p\loigiai{^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\frac", ReplaceWith: @"\dfrac", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find = range.Find;
 			find.Execute(FindText: @"(\{{2,})([A-Za-z0-9 ]{1,10})(\}{2,})", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards:true);
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9 ]{1,10})(\})([', ])(\})([', ])", ReplaceWith: @"\2\4\6", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"\frac", ReplaceWith: @"\dfrac", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"{.", ReplaceWith: @"{", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"\{[ ]{1,}.", ReplaceWith: @"{", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @".[ ]{1,}\}", ReplaceWith: @".}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"[.]{1,}\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"\[", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\]", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\leftrightarrow", ReplaceWith: @"\Leftrightarrow", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"begin{align}", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"begin{matrix}", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"begin{aligned}\\", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"end{align}", ReplaceWith: @"end{aligned}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"end{matrix}", ReplaceWith: @"end{aligned}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\\^p\end{aligned}", ReplaceWith: @"\end{aligned}", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
-			find = range.Find;
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9]{1,})(\})(?)(\{)([A-Za-z0-9])(\}{2})", ReplaceWith: @"\2\4\6", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9]{1,})(\})(?)(\{)([A-Za-z0-9]{2,})(\}{2})", ReplaceWith: @"\2\4{\6}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
+			find.Execute(FindText: @"(\\underset\{)(*)(\}\{\\mathop\{)(*)([ ]{1,}\}\})", ReplaceWith: @"\4^92limits_{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find = range.Find;
-			find.Execute(FindText: @"$$", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"(\\underset\{)(*)(\}\{\\mathop\{)(*)([ ]{1,}\}\})", ReplaceWith: @"\4^92limits_{\2}", Replace: WdReplace.wdReplaceAll,MatchWildcards:true);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"\to", ReplaceWith: @"\rightarrow", Replace: WdReplace.wdReplaceAll);
+			find.Execute(FindText: @"\[", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\]", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\leftrightarrow", ReplaceWith: @"\Leftrightarrow", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"begin{align}", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"begin{matrix}", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"begin{aligned}\\", ReplaceWith: @"begin{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"end{align}", ReplaceWith: @"end{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"end{matrix}", ReplaceWith: @"end{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\\^p\end{aligned}", ReplaceWith: @"\end{aligned}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"$$", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\to", ReplaceWith: @"\rightarrow", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			if (fixHe == true)
 			{
-				range = doc.Content;
-				find = range.Find;
-				find.Execute(FindText: @"\left\{ \begin{aligned}", ReplaceWith: @"\heva{", Replace: WdReplace.wdReplaceAll);
-				find.Execute(FindText: @"\left[ \begin{aligned}", ReplaceWith: @"\hoac{", Replace: WdReplace.wdReplaceAll);
-				find.Execute(FindText: @"\\ \end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll);
+				find.Execute(FindText: @"\left\{ \begin{aligned}", ReplaceWith: @"\heva{", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+				find.Execute(FindText: @"\left[ \begin{aligned}", ReplaceWith: @"\hoac{", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+				find.Execute(FindText: @"\\ \end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false;
+				find.Execute(FindText: @"\\\end{aligned} \right.", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			}
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"$\begin{aligned}", ReplaceWith: @"\begin{align*}^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\end{aligned}$", ReplaceWith: @"^p\end{align*}", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
+			find.Execute(FindText: @"$\begin{aligned}", ReplaceWith: @"\begin{align*}^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\end{aligned}$", ReplaceWith: @"^p\end{align*}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find = range.Find;
 			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"\\backslash", ReplaceWith: @"^92", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
-			find = range.Find;
-			find.Execute(FindText: @"\\\\", ReplaceWith: @"\\", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
-			find = range.Find;
 			find.Execute(FindText: @"([\\]{2})([ ]{1,})([\\]{2})", ReplaceWith: @"^92^92", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
 			find = range.Find;
-			find.Execute(FindText: @"\\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll);
-			range = doc.Content;
+			find.Execute(FindText: @"\\\\", ReplaceWith: @"\\", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find = range.Find;
 			find.Execute(FindText: @"([\\]{2})(^13)(\\end\{*\})([\\]{2})", ReplaceWith: @"^p\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			foreach (Microsoft.Office.Interop.Word.InlineShape item in doc.InlineShapes)
@@ -258,25 +230,39 @@ namespace WpfApp1
 			}
 			range = doc.Content;
 			find = range.Find;
-			find.Execute(FindText: @"\loigiai{^p.\\^p^p", ReplaceWith: @"\loigiai{^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\loigiai{^p.\\", ReplaceWith: @"\loigiai{^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\end{center}\\", ReplaceWith: @"\end{center}", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"^p\\^p", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"Nơi có hình}", ReplaceWith: @"Nơi có hình", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"~", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\,", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\And", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"\bot", ReplaceWith: @"\perp", Replace: WdReplace.wdReplaceAll);
-			find.Execute(FindText: @"big", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll);
+			find.Execute(FindText: @"\loigiai{^p.\\^p^p", ReplaceWith: @"\loigiai{^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\loigiai{^p.\\", ReplaceWith: @"\loigiai{^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\end{center}\\", ReplaceWith: @"\end{center}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"^p\\^p", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"Nơi có hình}", ReplaceWith: @"Nơi có hình", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"~", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\,", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\And", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\bot", ReplaceWith: @"\perp", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"big", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\text{//}", ReplaceWith: @"\parallel", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\int{", ReplaceWith: @"\displaystyle\int", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\lim", ReplaceWith: @"\displaystyle\lim", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"dx}", ReplaceWith: @"dx", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"dx", ReplaceWith: @"\mathrm{d}x", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"{}", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"(\([a-z]\))([ ]{1,2})(:)", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\([a-z]\))(:)", ReplaceWith: @"\1^92colon", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			range = doc.Content;
 			find = range.Find;
 			find.Execute(FindText: @"(\\)(\!)", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\{\{)([a-zA-Z0-9])(\})(\^)([A-Za-z0-9])(\})", ReplaceWith: @"\2^\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{\{)([a-zA-Z0-9])(\})([^94_])([A-Za-z0-9])(\})", ReplaceWith: @"\2\4\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"([^94_])(\{)([0-9a-zA-Z]{1,2})(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)([0-9a-zA-Z]{1,2})(\})([^94_])", ReplaceWith: @"\2\4", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\text\{)([a-zA-Z ]{1,8})(\})", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll,MatchWildcards:true);
 			find.Execute(FindText: @"(\\left)([|\(\[])([a-zA-Z0-9;+ \-]{1,8})(\\right)([|\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(P)(\([a-zA-Z0-9 ]{1,4}\))", ReplaceWith: @"^92mathrm^92{P}\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)([A-Za-z])(\}')", ReplaceWith: @"\2'", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"{V}_", ReplaceWith: @"V_'", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"{\log }", ReplaceWith: @"\log ", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+			find.Execute(FindText: @"\\^p\choice", ReplaceWith: @"^p\choice", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			doc.Content.Font.Name= "Times New Roman (Headings)";
 			string textHeader = File.ReadAllText(pathForm);
 			string Footer = File.ReadAllText(pathFooter);
