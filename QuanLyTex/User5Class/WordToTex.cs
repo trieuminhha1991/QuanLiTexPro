@@ -178,18 +178,15 @@ namespace WpfApp1
 			find.Execute(FindText: @"\{[.]{1,}", ReplaceWith: @"{", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"[.]{1,}\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"[ ]{2,}", ReplaceWith: @" ", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find = range.Find;
 			find.Execute(FindText: @"^p", ReplaceWith: @"\\^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"!!!", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: "^p" + loigiai, ReplaceWith: @"}^p\loigiai{^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\frac", ReplaceWith: @"\dfrac", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-			find = range.Find;
 			find.Execute(FindText: @"(\{{2,})([A-Za-z0-9 ]{1,10})(\}{2,})", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards:true);
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9 ]{1,10})(\})([', ])(\})([', ])", ReplaceWith: @"\2\4\6", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9]{1,})(\})(?)(\{)([A-Za-z0-9])(\}{2})", ReplaceWith: @"\2\4\6", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\{{2})([A-Za-z0-9]{1,})(\})(?)(\{)([A-Za-z0-9]{2,})(\}{2})", ReplaceWith: @"\2\4{\6}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\underset\{)(*)(\}\{\\mathop\{)(*)([ ]{1,}\}\})", ReplaceWith: @"\4^92limits_{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find = range.Find;
 			find.Execute(FindText: @"\[", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\]", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\leftrightarrow", ReplaceWith: @"\Leftrightarrow", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
@@ -210,13 +207,10 @@ namespace WpfApp1
 			}
 			find.Execute(FindText: @"$\begin{aligned}", ReplaceWith: @"\begin{align*}^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\end{aligned}$", ReplaceWith: @"^p\end{align*}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-			find = range.Find;
 			find.Execute(FindText: @"^13{1,}", ReplaceWith: @"^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"([\\]{2})([ ]{1,})([\\]{2})", ReplaceWith: @"^92^92", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find = range.Find;
 			find.Execute(FindText: @"\\\\", ReplaceWith: @"\\", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\\}", ReplaceWith: @"}", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-			find = range.Find;
 			find.Execute(FindText: @"([\\]{2})(^13)(\\end\{*\})([\\]{2})", ReplaceWith: @"^p\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			foreach (Microsoft.Office.Interop.Word.InlineShape item in doc.InlineShapes)
 			{
@@ -249,8 +243,6 @@ namespace WpfApp1
 			find.Execute(FindText: @"{}", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"(\([a-z]\))([ ]{1,2})(:)", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\([a-z]\))(:)", ReplaceWith: @"\1^92colon", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			range = doc.Content;
-			find = range.Find;
 			find.Execute(FindText: @"(\\)(\!)", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\{\{)([a-zA-Z0-9])(\})([^94_])([A-Za-z0-9])(\})", ReplaceWith: @"\2\4\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"([^94_])(\{)([0-9a-zA-Z]{1,2})(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
