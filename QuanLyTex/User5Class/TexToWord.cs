@@ -1177,25 +1177,21 @@ namespace QuanLyTex.User5Class
 				}
 				rangeend = document.Content;
 				find = rangeend.Find;
-				find.Execute(@"\dapso", false, false, false, false, false, missing, missing, true, "^pĐáp số", WdReplace.wdReplaceAll);
-				rangeend = document.Content;
-				find = rangeend.Find;
+				find.Execute(FindText:@"\dapso", ReplaceWith: "^pĐáp số",Replace: WdReplace.wdReplaceAll,MatchWildcards: false);
 				find.Execute(FindText: @"\\end\{*\}", ReplaceWith: "^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 				find.Execute(FindText:@"\\[A-Za-z0-9 ]{1,}\{*\}",ReplaceWith: "",Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 				find.Execute(FindText: @"\\[A-Z0-9a-z]{1,} ", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 				find.Execute(FindText: "^13{2,}", ReplaceWith: "^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-				rangeend = document.Content;
-				find = rangeend.Find;
 				find.Execute(FindText: "{", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 				find.Execute(FindText: "}", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-				find.Execute("$", false, false, false, false, false, missing, missing, missing, "", WdReplace.wdReplaceAll);
-				find.Execute("&", false, false, false, false, false, missing, missing, missing, "", WdReplace.wdReplaceAll);
+				find.Execute(FindText:"$", ReplaceWith: "",Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
+				find.Execute(FindText:"&", ReplaceWith: "", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 				rangeend = document.Content;
 				find = rangeend.Find;
 				find.Text = @"[a-z]{1}\).  ";
 				find.MatchWildcards = true;
 				find.Replacement.Font.Color = WdColor.wdColorDarkBlue;
-				find.Execute(Format:true);
+				find.Execute(Format:true,Replace:WdReplace.wdReplaceAll);
 				if (addTable == true)
 				{
 					try
