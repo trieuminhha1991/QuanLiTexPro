@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
+
 using Application = Microsoft.Office.Interop.Word.Application;
 using Orientation = System.Windows.Controls.Orientation;
 
@@ -89,8 +90,8 @@ namespace QuanLyTex
 		{
 			try
 			{
-				Process app = Process.GetCurrentProcess();
-				app.Kill();
+				System.Windows.Application a = System.Windows.Application.Current;
+				a.Shutdown();
 			}
 			catch
 			{

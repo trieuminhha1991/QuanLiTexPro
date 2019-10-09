@@ -319,6 +319,7 @@ namespace QuanLyTex
 						{
 							file.Delete();
 						}
+						System.Windows.Forms.MessageBoxEx.Show("Tex to word thành công file"+ fileName+", xem trong thư mục LuuFile", 2000);
 					}
 					System.Windows.MessageBox.Show("Chuyển file word thành công, xem trong thư mục LuuFile", "Thành công");
 				}

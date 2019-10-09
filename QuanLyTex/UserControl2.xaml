@@ -42,7 +42,7 @@
 					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="CloseAllWord"
                                  Content="Đóng toàn bộ các app word chạy ngầm" Height="23"  Width="250" Background="Aqua"/>
 				</TextBlock>
-				<TextBlock Text="Đôi khi chạy nhiều sẽ để lại file exe chạy khiến máy chạy chậm, dùng button này để thoát hết toàn bộ Word.ex(Chú ý nhớ lưu file word lại)" TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+				<TextBlock Text="Dùng button này để thoát hết toàn bộ Word.ex(Chú ý nhớ lưu file word lại)" TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
 				<TextBlock>
 					<xctk:MaterialButton MaterialAccentBrush="Aqua"  Click="OpenWord"
                                  Content="Mở một word" Height="23"  Width="250">

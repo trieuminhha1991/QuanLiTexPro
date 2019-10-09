@@ -25,6 +25,7 @@ namespace QuanLyTex.User8Class
 			{
 				List<dynamic> list = new List<dynamic>();
 				List<int> listindex = new List<int>();
+				string fileName = Path.GetFileName(path);
 				Document docOld = app.Documents.Open(FileName:path,Visible: !Hide,ReadOnly:true);
 				Document doc1 = app.Documents.Add(Visible: !Hide);
 				doc1.Content.FormattedText = docOld.Content.FormattedText;
@@ -99,6 +100,7 @@ namespace QuanLyTex.User8Class
 					}
 				}
 				doc1.Close(SaveChanges:WdSaveOptions.wdDoNotSaveChanges);
+				System.Windows.Forms.MessageBoxEx.Show("Xong file:" + fileName, 3000);
 			}
 			catch (Exception e)
 			{

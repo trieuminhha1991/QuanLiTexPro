@@ -139,11 +139,11 @@ namespace QuanLyTex.User1Class
 						AcynsUser1 TexTo = new AcynsUser1();
 						TexTo.startListTexToWord2(DicList, appPath, begin);
 					}
-					System.Windows.MessageBox.Show("Tách file thành công, file sẽ được lưu trong thư mục LuuFile", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tách các file thành công, file sẽ được lưu trong thư mục forder lọc file", 3000);
 				}
 				catch
 				{
-					System.Windows.MessageBox.Show("Tách file không thành công", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tách file không thành công", 2000);
 				}
 			});
 		}
@@ -200,7 +200,7 @@ namespace QuanLyTex.User1Class
 							DicList.Add(item.Codestr, listExNew2);
 						}
 					}
-					System.Windows.MessageBox.Show("Tách file thành công, file sẽ được lưu trong thư mục LuuFile", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tách các file thành công, file sẽ được lưu trong thư mục forder lọc file", 3000);
 					if (AutoWord == true)
 					{
 						string begin = "ex";
@@ -210,7 +210,7 @@ namespace QuanLyTex.User1Class
 				}
 				catch
 				{
-					System.Windows.MessageBox.Show("Tách file không thành công", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tách file không thành công", 2000);
 				}
 			});
 		}
@@ -260,7 +260,7 @@ namespace QuanLyTex.User1Class
 								
 							}
 						}
-						System.Windows.MessageBox.Show("Đưa vào ngân hàng tex thành công,Những file đã lọc trong quá khứ: " + texold, "Thoát");
+						System.Windows.Forms.MessageBoxEx.Show("Đưa vào ngân hàng tex thành công,Những file đã lọc trong quá khứ: " + texold, 3000);
 					}
 					if (id6 == true)
 					{
@@ -325,12 +325,12 @@ namespace QuanLyTex.User1Class
 								System.Windows.MessageBox.Show("Chưa có ID6 cho THCS", "Thoát");
 							}
 						}
-						System.Windows.MessageBox.Show("Đưa vào ngân hàng tex thành công,Những file đã lọc trong quá khứ: " + texold, "Thoát");
+						System.Windows.Forms.MessageBoxEx.Show("Đưa vào ngân hàng tex thành công,Những file đã lọc trong quá khứ: " + texold, 3000);
 					}
 				}
 				catch
 				{
-					System.Windows.MessageBox.Show("Đưa vào ngân hàng tex không thành công", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Đưa vào ngân hàng tex không thành công", 1000);
 				}
 			});
 		}

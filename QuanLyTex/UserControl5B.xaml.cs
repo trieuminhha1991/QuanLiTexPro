@@ -156,7 +156,7 @@ namespace QuanLyTex
 							WordToTex change = new WordToTex();
 							change.startWordToTex(app,pathFooter, FormFile, path, pathTex, pathDoc, StartProof, liststr, All, HevaHoac, ColorOne, BoldOne, ItalicOne, UnderLineTwo, HghtlightTwo, ColorTwo, ColorThree, RunTexToWord);
 							FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
-							System.Windows.MessageBox.Show("Chuyển thành công, file được lưu trong thư mục LuuFile trong thư mục app", "Thoát");
+							System.Windows.Forms.MessageBoxEx.Show("Chuyển thành công file"+ fileName+", file được lưu trong thư mục LuuFile", 2000);
 						}
 						if (ConfigurationManager.AppSettings["A"] == "0")
 						{

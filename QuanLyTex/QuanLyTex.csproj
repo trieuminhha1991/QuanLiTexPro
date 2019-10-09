@@ -126,6 +126,9 @@
     </ApplicationDefinition>
     <Compile Include="Datalicenseing.cs" />
     <Compile Include="Licensing.cs" />
+    <Compile Include="MessageBoxEx.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Unstaller.cs" />
     <Compile Include="User1Class\AcynsUser1.cs" />
     <Compile Include="User1Class\DataGrid1.cs" />

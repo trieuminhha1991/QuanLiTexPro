@@ -34,7 +34,7 @@ namespace QuanLyTex.User2Class
 						catch { }
 					}
 					app.Quit();
-
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf thành công", 2000);
 				}
 				catch
 				{ }
@@ -88,7 +88,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -118,7 +118,7 @@ namespace QuanLyTex.User2Class
 					}
 					doc.SaveAs2(pathend, WdSaveFormat.wdFormatDocumentDefault);
 					app.Quit();
-					System.Windows.MessageBox.Show("Ghép xong toàn bộ file", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Ghép xong toàn bộ file", 2000);
 				}
 				catch
 				{
@@ -152,6 +152,7 @@ namespace QuanLyTex.User2Class
 						catch { }
 					}
 					app.Quit();
+					System.Windows.Forms.MessageBoxEx.Show("Phần tạo trang đầu đã xong, xem trong folder LuuFile", 2000);
 				}
 				catch
 				{
@@ -210,7 +211,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Tạo trang đầu được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 					doc.Close();
 					app.Quit();
 				}
@@ -257,6 +258,7 @@ namespace QuanLyTex.User2Class
 						catch { }
 					}
 					app.Quit();
+					System.Windows.Forms.MessageBoxEx.Show("Một phần file đã thêm hearder, footer, xem trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -311,7 +313,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Tạo Hearder Footer được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Hearder Footer được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -407,6 +409,7 @@ namespace QuanLyTex.User2Class
 						{ }
 					}
 					app.Quit();
+					System.Windows.Forms.MessageBoxEx.Show("Một phần các file đã được lấy câu hỏi, xem trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -462,7 +465,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Lấy phần đề bài được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Lấy phần đề bài được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -559,6 +562,7 @@ namespace QuanLyTex.User2Class
 								doc.SaveAs2(pathitem, WdSaveFormat.wdFormatPDF);
 							}
 							doc.Close();
+							System.Windows.Forms.MessageBoxEx.Show("Một phần file lấy lời giải đã lấy xong, xem trong thư mục LuuFile", 2000);
 						}
 						catch { }
 					}
@@ -618,7 +622,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Lấy phần lời giải được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Lấy phần lời giải được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -748,6 +752,7 @@ namespace QuanLyTex.User2Class
 								}
 							doc.Content.Font.Name = "Times New Roman (Headings)";
 							doc.Close(SaveChanges: true);
+							System.Windows.Forms.MessageBoxEx.Show("Một phần các file tạo bảng đáp án đã xong, mở file đó để xem", 2000);
 						}
 						catch { }
 					}
@@ -807,7 +812,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Tạo bảng đáp án được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Tạo bảng đáp án được thực hiện bất đồng bộ, các file được lưu lại tại chính file đó", 2000);
 				}
 				catch
 				{
@@ -877,6 +882,7 @@ namespace QuanLyTex.User2Class
 								}
 							}
 							doc.Close(SaveChanges: true);
+							System.Windows.Forms.MessageBoxEx.Show("Một phần file đã BTN xong, mở file để xem", 2000);
 						}
 						catch { }
 					}
@@ -936,7 +942,7 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.MessageBox.Show("Chuyển về form BTN được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile, sẽ không có thông báo thành công hay không", "Thoát");
+					System.Windows.Forms.MessageBoxEx.Show("Chuyển về form BTN được thực hiện bất đồng bộ, Các file sẽ được lưu tại chình file đó", 2000);
 				}
 				catch
 				{

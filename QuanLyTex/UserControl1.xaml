@@ -99,7 +99,7 @@
 					</xctk:MaterialCheckBox>
 				</TextBlock>
 				<TextBlock>
-					<xctk:MaterialCheckBox x:Name="sortoder" Content="Sắp xếp các câu Id giống nhau." FontSize="14">
+					<xctk:MaterialCheckBox x:Name="sortoder" Content="Sắp xếp các câu Id giống nhau." FontSize="14" CheckMarkBrush="#FFFDFDFD" MaterialForeground="White">
 						<xctk:MaterialCheckBox.ToolTip>
 							<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
 															MaterialAccentBrush="AliceBlue">

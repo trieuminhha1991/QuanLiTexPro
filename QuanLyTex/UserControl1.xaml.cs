@@ -296,7 +296,7 @@ namespace QuanLyTex
 						{
 							
 						}
-						System.Windows.MessageBox.Show("Tạo file thành công, các chức năng BankEx, tách file, tex to word sẽ chạy bất đồng bộ, các file sẽ được lưu trong folder LuuFile, sẽ có thông báo khi thành công", "Thành công");
+						System.Windows.Forms.MessageBoxEx.Show("Các chức năng BankEx, tách file, tex to word sẽ chạy bất đồng bộ, các file sẽ được lưu trong folder lọc file hoặc folder LuuFile, sẽ có thông báo khi thành công", 4000);
 					}
 					else
 					{
@@ -567,7 +567,7 @@ namespace QuanLyTex
 							}
 						}
 					}
-					System.Windows.MessageBox.Show("Tạo file thành công, các chức năng BankEx sẽ ko sử dụng khi lọc nâng cao,chức năng tách file, tex to word sẽ chạy bất đồng bộ, các file sẽ được lưu trong folder LuuFile,sẽ có thông báo khi thành công", "Thành công");
+					System.Windows.Forms.MessageBoxEx.Show("Các chức năng BankEx sẽ ko sử dụng khi lọc nâng cao,chức năng tách file, tex to word sẽ chạy bất đồng bộ, các file sẽ được lưu trong folder lọc file hoặc folder LuuFile,sẽ có thông báo khi thành công", 4000);
 				}
 				else
 				{
