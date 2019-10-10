@@ -125,6 +125,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Datalicenseing.cs" />
+    <Compile Include="Frameword\TreatTex.cs" />
     <Compile Include="Licensing.cs" />
     <Compile Include="MessageBoxEx.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -144,7 +145,7 @@
     <Compile Include="User5Class\EndWordToTex.cs" />
     <Compile Include="User5Class\FixTexToWord.cs" />
     <Compile Include="User5Class\TexToWord.cs" />
-    <Compile Include="User5Class\TreatTex.cs" />
+    <Compile Include="User5Class\treatTex.cs" />
     <Compile Include="User5Class\WordToTex.cs" />
     <Compile Include="User8Class\User8MapId.cs" />
     <Compile Include="UserControl1.xaml.cs">

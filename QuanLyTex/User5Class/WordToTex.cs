@@ -7,6 +7,8 @@ using System.Drawing;
 using System.IO;
 using Microsoft.Office.Core;
 using System.Text;
+using System.Text.RegularExpressions;
+using QuanLyTex.Frameword;
 
 namespace WpfApp1
 {
@@ -183,9 +185,6 @@ namespace WpfApp1
 			find.Execute(FindText: "^p" + loigiai, ReplaceWith: @"}^p\loigiai{^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\frac", ReplaceWith: @"\dfrac", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"[‘’]", ReplaceWith: @"'", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"\int", ReplaceWith: @"\displaystyle\int", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-			
-			find.Execute(FindText: @"(\\underset\{)(*)(\}\{\\mathop\{)(*)([ ]{1,}\}\})", ReplaceWith: @"\4^92limits_{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"\[", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\]", ReplaceWith: @"$", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			find.Execute(FindText: @"\leftrightarrow", ReplaceWith: @"\Leftrightarrow", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
@@ -245,22 +244,28 @@ namespace WpfApp1
 			find.Execute(FindText: @"(\\ ){2,}", ReplaceWith: @"", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])(\{)(*)(\}\})", ReplaceWith: @"\2\4{\6}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])(\{)(*)(\}\})", ReplaceWith: @"\2\4{\6}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			//find.Execute(FindText: @"([^94_])(\{)(?)(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			//find.Execute(FindText: @"(\{)([!A-Z])(\})([^94_])", ReplaceWith: @"\2\4", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			//find.Execute(FindText: @"(\([a-z]\))([ ]{1,2})(:)", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			//find.Execute(FindText: @"(\([a-z]\))(:)", ReplaceWith: @"^92mathrm{\1}\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(?)(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)([!A-Z])(\})([^94_])", ReplaceWith: @"\2\4", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\([a-z]\))([ ]{1,2})(:)", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\([a-z]\))(:)", ReplaceWith: @"^92mathrm{\1}\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])([A-Za-z0-9 ])(\})", ReplaceWith: @"\2\4\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])([A-Za-z0-9]{2,})(\})", ReplaceWith: @"\2\4{\5}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])(\{)(?)(\}\})", ReplaceWith: @"\2\4\6", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{\{)(*)(\})([^94_])(\{)(?{2,})(\}\})", ReplaceWith: @"\2\4\5\6}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			//find.Execute(FindText: @"(\{)(*)([^94_])(\{)(?{2,})(\}\})", ReplaceWith: @"\2\3\4\5}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\\left)([|\(\[])([a-zA-Z0-9;+ \-]{1,8})(\\right)([|\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"([AC])([^94_])", ReplaceWith: @"^92mathrm{\1}\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(^94)(0)", ReplaceWith: @"^94^92circ", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"{\log }", ReplaceWith: @"\log ", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
-			find.Execute(FindText: @"(\{{2,})([a-zA-Z0-9;+ \-]{1,})(\}{2,})", ReplaceWith: @"{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			//find.Execute(FindText: @"(\{{2,})([a-zA-Z0-9;+ \-]{1,})(\}{2,})", ReplaceWith: @"{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\)(^13{2,})", ReplaceWith: @"^92^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(\\dfrac\{*\})(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)(\\dfrac\{*\})(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)(\\left[\(\[]*\\right[\)\]])(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(\\left[\(\[]*\\right[\)\]])(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(\\left\\\{*\\right\\\})(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)(\\left\\\{*\\right\\\})(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)([\(\[])([a-zA-Z0-9;+ \-]{1,8})(\\right)([\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			doc.Content.Font.Name= "Times New Roman (Headings)";
 			string textHeader = File.ReadAllText(pathForm);
 			string Footer = File.ReadAllText(pathFooter);
@@ -278,6 +283,40 @@ namespace WpfApp1
 			//	texnew = treat.startAllTex(texnew);
 			//	File.AppendAllText(pathTex, item);
 			//}
+		}
+		public string treatSubTexNgoac(string tex)
+		{
+			try
+			{
+				while(tex[tex.Length-2]=='}')
+				{
+					tex = tex.Remove(tex.Length - 1, 1).Remove(0, 1);
+				}
+				return tex;
+			}
+			catch
+			{
+				return tex;
+			}
+		}
+		public string treatTex(string tex)
+		{
+			try
+			{
+				
+				Regex rx = new Regex(@"\{{2,}");
+				foreach(Match item in rx.Matches(tex))
+				{
+					int i = item.Index;
+					int j = treat.treatNextNgoacKep(tex, i);
+					string subtex = tex.Substring(i, j);
+				}
+				return tex;
+			}
+			catch
+			{
+				return tex;
+			}
 		}
 	}
 }
