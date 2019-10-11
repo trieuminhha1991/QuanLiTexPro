@@ -319,11 +319,11 @@ namespace QuanLyTex
 					
 				}
 				string path = Directory.GetCurrentDirectory() + @"\LuuFile";
-				if (CreatPdfCheck.IsChecked == true&&ConfigurationManager.AppSettings["A"] == "1")
+				if (CreatPdfCheck.IsChecked == true)
 				{
 						user.CreatPdf(list,path);
 				}
-				if(MatchFile.IsChecked==true && ConfigurationManager.AppSettings["A"] == "1")
+				if(MatchFile.IsChecked==true )
 				{
 					user.MatchFile(list, path);
 				}
@@ -363,19 +363,19 @@ namespace QuanLyTex
 				if (number1.IsChecked == true) { number = 1; }
 				if (number3.IsChecked == true) { number = 5; }
 				if (number4.IsChecked == true) { number = 7; }
-				if (Question.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (Question.IsChecked == true )
 				{
 					user.Question(list, liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, AddPdf.IsChecked,number);
 				}
-				if (Proof.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (Proof.IsChecked == true )
 				{
 					user.Proof(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, AddPdf.IsChecked, number);
 				}
-				if (TableCheck.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (TableCheck.IsChecked == true )
 				{
 					user.CreatTable(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, UnderLineTwo.IsChecked, ColorTwo.IsChecked, HghtlightTwo.IsChecked, number);
 				}
-				if (BTN.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (BTN.IsChecked == true )
 				{
 					user.BTNform(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, number);
 				}
@@ -435,11 +435,11 @@ namespace QuanLyTex
 				if (number1.IsChecked == true) { number = 1; }
 				if (number3.IsChecked == true) { number = 5; }
 				if (number4.IsChecked == true) { number = 7; }
-				if (AddPage1.IsChecked==true && ConfigurationManager.AppSettings["A"] == "1")
+				if (AddPage1.IsChecked==true )
 				{
 					user.AddPage(list, path, FilePage.Text,AddPdf.IsChecked,number);
 				}
-				if (HeaderFooter.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (HeaderFooter.IsChecked == true )
 				{
 					user.AddHeaderFooter(list, path, FilePage.Text, AddPdf.IsChecked, number,HeaderLeft.Text,FooterLeft.Text);
 				}

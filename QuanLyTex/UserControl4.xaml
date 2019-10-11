@@ -107,7 +107,7 @@
 				</TextBlock>
 			</StackPanel>
 		</GroupBox>
-		<GroupBox  Header="Đăng kí bản quyền phần mềm" Background="#FF0F0F0F" FontSize="13" Margin="0,14.2,5.6,64" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+		<!--<GroupBox  Header="Đăng kí bản quyền phần mềm" Background="#FF0F0F0F" FontSize="13" Margin="0,14.2,5.6,64" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
 			<StackPanel x:Name="KichHoat">
 				<TextBlock Width="270">
 					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395" Click="MaterialButton_Click"
@@ -127,9 +127,9 @@
                                     Content="Kích hoạt" Height="18" Width="129" />
 				</TextBlock>
 			</StackPanel>
-		</GroupBox>
+		</GroupBox>-->
 		<GroupBox  Header="Bản quyền đã đăng kí" Background="#FF0F0F0F" FontSize="13" Margin="14.4,14.2,10,64" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1" >
-			<StackPanel x:Name="BanQuyen" Visibility="Hidden">
+			<StackPanel x:Name="BanQuyen">
 				<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395" Content="Kích hoạt bản quyền thành công" Height="52" Margin="10,0" FontSize="20"/>
 				<TextBlock Width="270" Height="236" HorizontalAlignment="Left">
 					<StackPanel>

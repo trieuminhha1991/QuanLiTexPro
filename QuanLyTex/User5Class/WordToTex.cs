@@ -15,12 +15,12 @@ namespace WpfApp1
 	class WordToTex
 	{
 		TreatTex treat = new TreatTex();
-		public void startWordToTex(Application app,string pathFooter, string pathForm, string path, string pathTex, string pathDoc, string loigiai, List<string> listStr, bool? All, bool? fixHe, bool? ColorOne, bool? BoldOne, bool? ItalicOne, bool? UnderLineTwo, bool? HghtlightTwo, bool? ColorTwo, bool? ColorThree, bool? RunHide)
+		public void startWordToTex(Application app, string pathFooter, string pathForm, string path, string pathTex, string pathDoc, string loigiai, List<string> listStr, bool? All, bool? fixHe, bool? ColorOne, bool? BoldOne, bool? ItalicOne, bool? UnderLineTwo, bool? HghtlightTwo, bool? ColorTwo, bool? ColorThree, bool? RunHide)
 		{
 			object missing = System.Reflection.Missing.Value;
 			var docOld1 = app.Documents.Open(path);
 			Document docOld = app.Documents.Add();
-			Document doc= app.Documents.Add();
+			Document doc = app.Documents.Add();
 			docOld.Content.FormattedText = docOld1.Content.FormattedText;
 			docOld1.Close();
 			if (RunHide == true)
@@ -38,9 +38,9 @@ namespace WpfApp1
 					item.Select();
 					item.ConvertToText();
 				}
-			} 
+			}
 			int indeximage = 0;
-			
+
 			List<int> list = new List<int>();
 			list.Add(0);
 			//find.Execute("(^13[ ]{1,})", false, false, true, false, false, false, WdFindWrap.wdFindAsk, false, "^p", WdReplace.wdReplaceAll);
@@ -48,7 +48,7 @@ namespace WpfApp1
 			{
 				range = docOld.Content;
 				Find find1 = range.Find;
-				find1.Execute(FindText: "(" + item + ")([ ]{1,})([0-9]{1,3})",Wrap: WdFindWrap.wdFindStop, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1 \3");
+				find1.Execute(FindText: "(" + item + ")([ ]{1,})([0-9]{1,3})", Wrap: WdFindWrap.wdFindStop, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1 \3");
 				find1.Execute(FindText: "(" + item + ")([0-9]{1,3})", Wrap: WdFindWrap.wdFindStop, MatchWildcards: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1 \2");
 				if (ColorOne == true)
 				{
@@ -70,17 +70,17 @@ namespace WpfApp1
 				if (ColorOne == true) { find1.Font.Color = WdColor.wdColorDarkBlue; }
 				if (BoldOne == true) { find1.Font.Bold = 1; }
 				if (ItalicOne == true) { find1.Font.Italic = 1; }
-				find1.Execute(Wrap: WdFindWrap.wdFindContinue, MatchWildcards: true, Format: true, Replace:WdReplace.wdReplaceAll, ReplaceWith: @"^92begin{ex}");
+				find1.Execute(Wrap: WdFindWrap.wdFindContinue, MatchWildcards: true, Format: true, Replace: WdReplace.wdReplaceAll, ReplaceWith: @"^92begin{ex}");
 			}
 			range = docOld.Content;
 			Find find = range.Find;
-			while(find.Execute(FindText:@"\begin{ex}",Wrap:WdFindWrap.wdFindStop))
+			while (find.Execute(FindText: @"\begin{ex}", Wrap: WdFindWrap.wdFindStop))
 			{
 				list.Add(range.Start);
 			}
 			list.Add(docOld.Content.End);
 			list.Sort();
-			for (int i =0; i< list.Count-1; i++)
+			for (int i = 0; i < list.Count - 1; i++)
 			{
 				try
 				{
@@ -127,12 +127,12 @@ namespace WpfApp1
 								}
 							}
 						}
-						
+
 					}
 				}
 				catch { }
 			}
-			docOld.Close(SaveChanges:false);
+			docOld.Close(SaveChanges: false);
 			range = doc.Content;
 			find = range.Find;
 			if (ColorTwo == true)
@@ -218,7 +218,7 @@ namespace WpfApp1
 					item.Select();
 					range.Text = "\r\nNơi có hình\r\n";
 				}
-				catch{ }
+				catch { }
 			}
 			range = doc.Content;
 			find = range.Find;
@@ -258,19 +258,17 @@ namespace WpfApp1
 			find.Execute(FindText: @"{\log }", ReplaceWith: @"\log ", Replace: WdReplace.wdReplaceAll, MatchWildcards: false);
 			//find.Execute(FindText: @"(\{{2,})([a-zA-Z0-9;+ \-]{1,})(\}{2,})", ReplaceWith: @"{\2}", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
 			find.Execute(FindText: @"(\\)(^13{2,})", ReplaceWith: @"^92^p", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"([^94_])(\{)(\\dfrac\{*\})(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\{)(\\dfrac\{*\})(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\{)(\\left[\(\[]*\\right[\)\]])(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"([^94_])(\{)(\\left[\(\[]*\\right[\)\]])(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"([^94_])(\{)(\\left\\\{*\\right\\\})(\})", ReplaceWith: @"\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\{)(\\left\\\{*\\right\\\})(\})([^94_])", ReplaceWith: @"\2", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\\left)([\(\[])([a-zA-Z0-9;+ \-]{1,8})(\\right)([\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,8})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
-			doc.Content.Font.Name= "Times New Roman (Headings)";
+			find.Execute(FindText: @"(\{)(\\dfrac\{[a-zA-Z0-9;+ \-]{1,15}\}\{[a-zA-Z0-9;+ \-]{1,15}\})(\})([^94_])", ReplaceWith: @"\2\4", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(\\dfrac\{[a-zA-Z0-9;+ \-]{1,15}\}\{[a-zA-Z0-9;+ \-]{1,15}\})(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\{)(\\left[\(\[][a-zA-Z0-9;+ \-]{1,15}\\right[\)\]])(\})([^94_])", ReplaceWith: @"\2\4", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"([^94_])(\{)(\\left[\(\[][a-zA-Z0-9;+ \-]{1,15}\\right[\)\]])(\})", ReplaceWith: @"\1\3", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)([\(\[])([a-zA-Z0-9;+ \-]{1,15})(\\right)([\)\]])", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			find.Execute(FindText: @"(\\left)(\\\{)([a-zA-Z0-9;+ \-]{1,15})(\\right)(\\\})", ReplaceWith: @"\2\3\5", Replace: WdReplace.wdReplaceAll, MatchWildcards: true);
+			doc.Content.Font.Name = "Times New Roman (Headings)";
 			string textHeader = File.ReadAllText(pathForm);
 			string Footer = File.ReadAllText(pathFooter);
-			string text = textHeader+doc.Content.Text+ Footer;
-			text = text.Replace("’", "'").Replace("‘","'");
+			string text = textHeader + doc.Content.Text + Footer;
+			text = text.Replace("’", "'").Replace("‘", "'");
 			File.AppendAllText(pathTex, text);
 			doc.SaveAs(pathDoc, Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatDocumentDefault);
 			doc.Close();
@@ -288,7 +286,7 @@ namespace WpfApp1
 		{
 			try
 			{
-				while(tex[tex.Length-2]=='}')
+				while (tex[tex.Length - 2] == '}')
 				{
 					tex = tex.Remove(tex.Length - 1, 1).Remove(0, 1);
 				}
@@ -303,9 +301,9 @@ namespace WpfApp1
 		{
 			try
 			{
-				
+
 				Regex rx = new Regex(@"\{{2,}");
-				foreach(Match item in rx.Matches(tex))
+				foreach (Match item in rx.Matches(tex))
 				{
 					int i = item.Index;
 					int j = treat.treatNextNgoacKep(tex, i);

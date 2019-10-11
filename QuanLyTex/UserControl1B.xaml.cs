@@ -208,7 +208,7 @@ namespace QuanLyTex
 					str = listregex[0];
 					strfile = listregex[1];
 					Regex rx = new Regex(str);
-					if (BankExcer.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+					if (BankExcer.IsChecked == true )
 					{
 						AcynsUser1 bank = new AcynsUser1();
 						bank.BankEcer(app, selectId5.IsChecked, selectId6.IsChecked, listPath, rx, type);
@@ -223,7 +223,7 @@ namespace QuanLyTex
 						string FooterPath = app + @"\MauFile\Footer.tex";
 						strFooter = File.ReadAllText(FooterPath);
 					}
-					if (sortoder.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+					if (sortoder.IsChecked == true )
 					{
 						mapEx = classlist.mapSort(listMapEx, type);
 						List<SortId> listsort = mapEx["listid"];
@@ -258,11 +258,11 @@ namespace QuanLyTex
 							listex.Add(strthu);
 						}
 					}
-					if (DevideFile.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+					if (DevideFile.IsChecked == true )
 					{
 						TexTo.DevideFile(type, listMapEx, appPath, strHeader, strFooter, Boxbt.IsChecked, AutoWord.IsChecked, Devide1.IsChecked, Devide2.IsChecked, Devide3.IsChecked, Devide4.IsChecked);
 					}
-					if (listex != null && listex.Count > 0 && ConfigurationManager.AppSettings["A"] == "1")
+					if (listex != null && listex.Count > 0 )
 					{
 						if (commentorder.IsChecked == true)
 						{
@@ -496,7 +496,7 @@ namespace QuanLyTex
 					}
 				}
 
-				if (sortoder.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (sortoder.IsChecked == true )
 				{
 					List<SortId> listsort = Dic["listid"];
 					if (Sort1.IsChecked == true)
@@ -535,11 +535,11 @@ namespace QuanLyTex
 					string FooterPath = app + @"\MauFile\Footer.tex";
 					strFooter = File.ReadAllText(FooterPath);
 				}
-				if (listend != null && listend.Count > 0 && DevideFile.IsChecked == true && ConfigurationManager.AppSettings["A"] == "1")
+				if (listend != null && listend.Count > 0 && DevideFile.IsChecked == true )
 				{
 					TexTo.DevideFile2("ex", mapEx, appPath, strHeader, strFooter, Boxbt.IsChecked, AutoWord.IsChecked, Devide1.IsChecked, Devide2.IsChecked, Devide3.IsChecked, Devide4.IsChecked);
 				}
-				if (listend != null && listend.Count > 0 && ConfigurationManager.AppSettings["A"] == "1")
+				if (listend != null && listend.Count > 0 )
 				{
 					if (commentorder.IsChecked == true)
 					{

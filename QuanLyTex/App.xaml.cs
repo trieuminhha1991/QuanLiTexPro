@@ -1,44 +1,67 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Net;
+using System.Net.Sockets;
 using System.Windows;
-using appdll;
+using Application = System.Windows.Application;
+
 namespace QuanLyTex
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-		
+	/// <summary>
+	/// Interaction logic for App.xaml
+	/// </summary>
+	public partial class App : Application
+	{
+
 		protected override void OnStartup(StartupEventArgs e)
-        {
-			if (!File.Exists(@"QuanLyTex.exe.config"))
+		{
+			if (!File.Exists(@"TexWordTrailer.exe.config"))
 			{
 				System.Windows.MessageBox.Show("Bạn đã kích hoạt bản quyền không đúng theo quy trình, cám ơn bạn", "Thoát");
-				Application a = Application.Current;
+				System.Windows.Application a = Application.Current;
 				a.Shutdown();
 			}
-			if (ConfigurationManager.AppSettings["K"] == "0")
+			if (ConfigurationManager.AppSettings["K"] == "0" && Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\window", "window", 0) == null)
 			{
-				string app = Directory.GetCurrentDirectory();
+				string appPath = Directory.GetCurrentDirectory();
+				string tex = File.ReadAllText(appPath + @"\Tex.txt");
 				string[] arraystring = Directory.GetFiles(@"C:\Program Files (x86)\MathType", "Texvc (base rules).tdl", SearchOption.AllDirectories);
-				foreach(string item in arraystring)
+				foreach (string item in arraystring)
 				{
-					File.Delete(item);
-					File.Move(app + @"\Texvc (base rules).tdl", item);
+					File.WriteAllText(item, tex);
 				}
 				try
 				{
-					var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.microsoft.com");
-					var response = myHttpWebRequest.GetResponse();
-					string todaysDates = response.Headers["date"];
-					DateTime time = DateTime.ParseExact(todaysDates, "MM/dd/yyyy", CultureInfo.InvariantCulture.DateTimeFormat, DateTimeStyles.AssumeUniversal);
+					var client = new TcpClient("time.nist.gov", 13);
+					var streamReader = new StreamReader(client.GetStream());
+					var response = streamReader.ReadToEnd();
+					var utcDateTimeString = response.Substring(7, 17);
+					var timenow = DateTime.ParseExact(utcDateTimeString, "yy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+					var timeEnd = timenow.AddDays(7);
+					string timenowstring = timenow.ToString("yy-MM-dd HH:mm:ss");
+					string timeEndstring = timeEnd.ToString("yy-MM-dd HH:mm:ss");
+					Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+					config.AppSettings.Settings.Remove("C");
+					config.AppSettings.Settings.Add("C", timenowstring);
+					config.AppSettings.Settings.Remove("D");
+					config.AppSettings.Settings.Add("D", timeEndstring);
+					config.AppSettings.Settings.Remove("K");
+					config.AppSettings.Settings.Add("K", "1");
+					config.Save();
+					ConfigurationManager.RefreshSection("appSettings");
+					Configuration con = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+					con.AppSettings.SectionInformation.ProtectSection("RsaProtectedConfigurationProvider");
+					con.Save(ConfigurationSaveMode.Full, true);
+					ConfigurationManager.RefreshSection("appSettings");
+					Microsoft.Win32.RegistryKey key;
+					key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("window");
+					key.SetValue("window", "1");
+					key.Close();
+					System.Windows.Forms.MessageBoxEx.Show("Đã có bản quyền, app sẽ tự động đóng lại, hãy chạy lại app", 3000);
+					Application a = Application.Current;
+					a.Shutdown();
 				}
 				catch
 				{
@@ -49,50 +72,34 @@ namespace QuanLyTex
 			}
 			else
 			{
-				System.Windows.MessageBox.Show("Bạn đã kích hoạt bản quyền không đúng theo quy trình, cám ơn bạn", "Thoát");
-				Application a = Application.Current;
-				a.Shutdown();
-			}
-			string[] array = ConfigurationManager.AppSettings.AllKeys;
-			if (Array.Exists(array, E => E == "C") && Array.Exists(array, E => E == "D") && Array.Exists(array, E => E == "E"))
-			{
-				Licensing lic = new Licensing();
-				string hardId = lic.getStringhardware() + lic.getHardDriverId();
-				string hardIdCheck = ConfigurationManager.AppSettings["B"];
-				string datestartstr = ConfigurationManager.AppSettings["C"];
-				string dateendstr = ConfigurationManager.AppSettings["D"];
-				string datecheckstr = ConfigurationManager.AppSettings["E"];
-				DateTime datestart = DateTime.ParseExact(datestartstr, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-				DateTime dateend = DateTime.ParseExact(dateendstr, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-				DateTime date = DateTime.ParseExact(datecheckstr, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-				DateTime datenow = DateTime.Now;
-				if (DateTime.Compare(date, datenow) > 0 || DateTime.Compare(datestart, datenow) > 0)
+				try
 				{
-					System.Windows.MessageBox.Show("Bản đã chỉnh sửa lại ngày tháng của máy mình đúng không, phần mềm sẽ tự động thoát, cám ơn bạn", "Thoát");
+					var client = new TcpClient("time.nist.gov", 13);
+					var streamReader = new StreamReader(client.GetStream());
+					var response = streamReader.ReadToEnd();
+					var utcDateTimeString = response.Substring(7, 17);
+					var timenow = DateTime.ParseExact(utcDateTimeString, "yy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+					string timestartstring = ConfigurationManager.AppSettings["C"];
+					string timesendstring = ConfigurationManager.AppSettings["D"];
+					DateTime timestart = DateTime.ParseExact(timestartstring, "yy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+					DateTime timesend = DateTime.ParseExact(timesendstring, "yy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+					if (DateTime.Compare(timestart, timenow) > 0 || DateTime.Compare(timenow, timesend) > 0)
+					{
+						System.Windows.MessageBox.Show("Thời gian sử dụng trailer đã kết thúc", "Thoát");
+						Application a = Application.Current;
+						a.Shutdown();
+					}
+				}
+				catch
+				{
+					System.Windows.MessageBox.Show("Chưa kết nối mạng hoặc kích hoạt bản quyền không đúng", "Thoát");
 					Application a = Application.Current;
 					a.Shutdown();
 				}
-				if (DateTime.Compare(datenow, dateend) > 0)
-				{
-					System.Windows.MessageBox.Show("Đã quá thời hạn sử dụng bản trailer, xin hãy cài lại bản Pro", "Thoát");
-					Application a = Application.Current;
-					a.Shutdown();
-				}
-				if (hardIdCheck != hardId)
-				{
-					System.Windows.MessageBox.Show("Bản quyền không đúng, xin lỗi bạn", "Thoát");
-					Application a = Application.Current;
-					a.Shutdown();
-				}
-				Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-				config.AppSettings.Settings.Remove("E");
-				config.AppSettings.Settings.Add("E", datenow.ToString("MM/dd/yyyy"));
-				config.Save();
-				ConfigurationManager.RefreshSection("appSettings");
 			}
-				Xceed.Wpf.Toolkit.Licenser.LicenseKey = "WTK38-1SF9R-3H0GS-0GFA";
-				Xceed.Wpf.DataGrid.Licenser.LicenseKey = "DGP67-FHP9Y-USSHH-E0LA";
-				base.OnStartup(e);
-			}
-    }
+			Xceed.Wpf.Toolkit.Licenser.LicenseKey = "WTK38-1SF9R-3H0GS-0GFA";
+			Xceed.Wpf.DataGrid.Licenser.LicenseKey = "DGP67-FHP9Y-USSHH-E0LA";
+			base.OnStartup(e);
+		}
+	}
 }
