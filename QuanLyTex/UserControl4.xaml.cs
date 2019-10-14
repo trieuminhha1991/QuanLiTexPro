@@ -25,22 +25,16 @@ namespace QuanLyTex
 		public UserControl4()
 		{
 			InitializeComponent();
-			try
-			{
-				Liccense.Text = "Trailer";
-				DateStart.Text = ConfigurationManager.AppSettings["C"];
-				DateEnd.Text = ConfigurationManager.AppSettings["D"];
-			}
-			catch
-			{
-
-			}
+			Liccense.Text = "Pro";
+			DateStart.Text = "Vĩnh viễn";
+			DateEnd.Text = "Vĩnh viễn";
 		}
 
 		//private void MaterialButton_Click(object sender, RoutedEventArgs e)
 		//{
 		//	Licensing lic = new Licensing();
 		//	string hardId = lic.getStringhardware() + lic.getHardDriverId();
+		//	MaId.Text = hardId;
 		//}
 
 		//private void MaterialButton_Click_1(object sender, RoutedEventArgs e)
@@ -48,8 +42,11 @@ namespace QuanLyTex
 		//	try
 		//	{
 		//		Licensing lic = new Licensing();
+		//		string chechstring = liccensing.Text;
 		//		string hartID = lic.getStringhardware() + lic.getHardDriverId();
 		//		string licecstrue = lic.licensingFuntionTrailer(hartID);
+		//		if(chechstring == licecstrue)
+		//		{
 		//			Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 		//			config.AppSettings.Settings.Remove("A");
 		//			config.AppSettings.Settings.Add("A", "1");
@@ -70,7 +67,7 @@ namespace QuanLyTex
 		//			config.AppSettings.Settings.Remove("F");
 		//			config.AppSettings.Settings.Add("F", "40");
 		//			config.AppSettings.Settings.Remove("H");
-		//			config.AppSettings.Settings.Add("H", "hehe");
+		//			config.AppSettings.Settings.Add("H", chechstring);
 		//			config.Save();
 		//			ConfigurationManager.RefreshSection("appSettings");
 		//			HardId.Text = ConfigurationManager.AppSettings["B"];
@@ -80,11 +77,17 @@ namespace QuanLyTex
 		//			DateStart.Text = ConfigurationManager.AppSettings["C"];
 		//			DateEnd.Text = ConfigurationManager.AppSettings["D"];
 		//			BanQuyen.Visibility = Visibility.Visible;
+		//			KichHoat.Visibility = Visibility.Hidden;
 		//			Configuration con = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 		//			con.AppSettings.SectionInformation.ProtectSection("RsaProtectedConfigurationProvider");
 		//			con.Save(ConfigurationSaveMode.Full, true);
 		//			ConfigurationManager.RefreshSection("appSettings");
 		//			System.Windows.MessageBox.Show("Kích hoạt bản quyền thành công", "Thoát");
+		//		}
+		//		else
+		//		{
+		//			System.Windows.MessageBox.Show("Kích hoạt bản quyền không thành công", "Thoát");
+		//		}
 		//	}
 		//	catch
 		//	{

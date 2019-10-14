@@ -302,10 +302,6 @@ namespace QuanLyTex
 					{
 						System.Windows.MessageBox.Show("Tạo file không thành công", "Thoát");
 					}
-					if (ConfigurationManager.AppSettings["A"] == "0")
-					{
-						System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
-					}
 				}
 			}
 			catch (Exception a)
@@ -572,10 +568,6 @@ namespace QuanLyTex
 				else
 				{
 					System.Windows.MessageBox.Show("Tạo file không thành công", "Thoát");
-				}
-				if (ConfigurationManager.AppSettings["A"] == "0")
-				{
-					System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
 				}
 			}
 			catch (Exception a)

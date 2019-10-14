@@ -303,9 +303,9 @@ namespace QuanLyTex
 						string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
 						string tex = getTex(path);
 						List<string> list = FilterId(tex, all,exString, btString, vdString,ex,bt,vd);
-						DateTime time = DateTime.Now;
-						string TimeName = time.ToString("h.mm.ss");
-						string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + TimeName;
+						//DateTime time = DateTime.Now;
+						//string TimeName = time.ToString("h.mm.ss");
+						string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName;
 						var app = new Application
 						{
 							Visible = true
@@ -341,16 +341,9 @@ namespace QuanLyTex
 				dic.Add("nx", NxString.Text);
 				dic.Add("dang", DangString.Text);
 				dic.Add("cy", CyString.Text);
-				if (ConfigurationManager.AppSettings["A"] == "1")
-				{
-					startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic);
-					FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
-					System.Windows.MessageBox.Show("Chức năng sẽ chạy theo phương thức bất đồng bộ, các thầy cô có thể thực hiện các chức năng khác trong lúc chờ chạy xong", "Thành công");
-				}
-				if (ConfigurationManager.AppSettings["A"] == "0")
-				{
-					System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
-				}
+				startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic);
+				FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
+				System.Windows.MessageBox.Show("Chức năng sẽ chạy theo phương thức bất đồng bộ, các thầy cô có thể thực hiện các chức năng khác trong lúc chờ chạy xong", "Thành công");
 			}
 			catch (Exception a)
 			{

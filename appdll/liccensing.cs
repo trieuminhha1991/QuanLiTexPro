@@ -20,12 +20,12 @@ namespace appdll
 	}
 	public class ListdataId
 	{
-		private List<dataId> _listId = new List<dataId>()
+		private List<string> _listId = new List<string>()
 		{
-			new dataId(){Id= "BFEBFBFF000306C3002543134BHD", DateStart=new DateTime(2019, 1, 1),DateEnd=new DateTime(2050, 1, 1) },
+			 "BFEBFBFF000306C3002543134BHD",
 		}
 		;
-		public List<dataId> ListId { get => _listId; }
+		public List<string> ListId { get => _listId; }
 	}
 	public class datacodelicensing
 	{

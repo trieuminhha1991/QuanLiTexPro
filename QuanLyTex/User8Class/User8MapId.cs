@@ -216,9 +216,9 @@ namespace QuanLyTex.User8Class
 								Document docnew = app.Documents.Add(Visible:!Hide);
 								string codeId = item.CodeId;
 								List<datalist> list = Dic[codeId];
-								DateTime time = DateTime.Now;
-								string TimeName = time.ToString("h.mm.ss");
-								string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\[" + codeId + "][" + TimeName + "].docx";
+								//DateTime time = DateTime.Now;
+								//string TimeName = time.ToString("h.mm.ss");
+								string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\[" + codeId + "].docx";
 								foreach (datalist data in list)
 								{
 									try

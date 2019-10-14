@@ -327,9 +327,13 @@ namespace QuanLyTex
 				{
 					user.MatchFile(list, path);
 				}
-				if (ConfigurationManager.AppSettings["A"] == "0")
+				if(ChangeName.IsChecked==true)
 				{
-					System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
+					user.ChangeName(list);
+				}
+				if(DeleteText.IsChecked==true)
+				{
+					user.DeleteText(list, TextString.Text);
 				}
 				FolderSaveFile2A.Text = path;
 			}catch
@@ -378,10 +382,6 @@ namespace QuanLyTex
 				if (BTN.IsChecked == true )
 				{
 					user.BTNform(list,liststr, path, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, StartProof.Text, number);
-				}
-				if (ConfigurationManager.AppSettings["A"] == "0")
-				{
-					System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
 				}
 				FolderSaveFileC.Text = path;
 			}
@@ -442,10 +442,6 @@ namespace QuanLyTex
 				if (HeaderFooter.IsChecked == true )
 				{
 					user.AddHeaderFooter(list, path, FilePage.Text, AddPdf.IsChecked, number,HeaderLeft.Text,FooterLeft.Text);
-				}
-				if (ConfigurationManager.AppSettings["A"] == "0")
-				{
-					System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
 				}
 				FolderSaveFileB.Text = path;
 			}

@@ -95,6 +95,168 @@ namespace QuanLyTex.User2Class
 				}
 			});
 		}
+		public async System.Threading.Tasks.Task DeleteTextItem(List<string> list, string text)
+		{
+			await System.Threading.Tasks.Task.Run(() =>
+			{
+				try
+				{
+					Application app = new Application();
+					app.Visible = false;
+					foreach (string item in list)
+					{
+						try
+						{
+							Document doc = app.Documents.Open(item);
+							doc.Content.Find.Execute(FindText: @"\[[A-Za-z0-9 ]{1,30}" + text + @"[A-Za-z0-9 ]{1,30}\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "",MatchWildcards:true);
+							doc.Content.Find.Execute(FindText: @"\[" + text + @"[A-Za-z0-9 ]{1,30}\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
+							doc.Content.Find.Execute(FindText: @"\[[A-Za-z0-9 ]{1,30}" + text + @"\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
+							doc.Close();
+						}
+						catch { }
+					}
+					app.Quit();
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf thành công", 2000);
+				}
+				catch
+				{ }
+			});
+		}
+		public async System.Threading.Tasks.Task DeleteText(List<string> listpath, string text)
+		{
+			await System.Threading.Tasks.Task.Run(() =>
+			{
+				try
+				{
+					int count = listpath.Count;
+					if (count < 3)
+					{
+						try
+						{
+							DeleteTextItem(listpath, text);
+						}
+						catch
+						{ }
+					}
+					if (count < 20 && count >= 3)
+					{
+						for (int i = 0; i <= 2; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % 3 == i)
+														.Select(pair => pair.value)
+														.ToList();
+								DeleteTextItem(listnew, text);
+							}
+							catch
+							{ }
+						}
+					}
+					if (count >= 20)
+					{
+						for (int i = 0; i <= 4; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % 5 == i)
+														.Select(pair => pair.value)
+														.ToList();
+								DeleteTextItem(listnew, text);
+							}
+							catch
+							{ }
+						}
+					}
+					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
+				}
+				catch
+				{
+				}
+			});
+		}
+		public async System.Threading.Tasks.Task ChangeNameItem(List<string> list)
+		{
+			await System.Threading.Tasks.Task.Run(() =>
+			{
+				try
+				{
+					foreach (string item in list)
+					{
+						try
+						{
+							string filename = Path.GetFileNameWithoutExtension(item);
+							string estension = Path.GetExtension(item);
+							string pathparren = Directory.GetParent(item).ToString();
+							string itemchange = filename.Remove(filename.Length - 7, 7);
+							if (itemchange[itemchange.Length - 1] == '1') { itemchange = itemchange.Remove(itemchange.Length - 2, 1); }
+							string pathchange = pathparren+@"\" + itemchange + estension;
+							File.Move(item, pathchange);
+						}
+						catch { }
+					}
+				}
+				catch
+				{ }
+			});
+		}
+		public async System.Threading.Tasks.Task ChangeName(List<string> listpath)
+		{
+			await System.Threading.Tasks.Task.Run(() =>
+			{
+				try
+				{
+					int count = listpath.Count;
+					if (count < 3)
+					{
+						try
+						{
+							ChangeNameItem(listpath);
+						}
+						catch
+						{ }
+					}
+					if (count < 20 && count >= 3)
+					{
+						for (int i = 0; i <= 2; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % 3 == i)
+														.Select(pair => pair.value)
+														.ToList();
+								ChangeNameItem(listnew);
+							}
+							catch
+							{ }
+						}
+					}
+					if (count >= 20)
+					{
+						for (int i = 0; i <= 4; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % 5 == i)
+														.Select(pair => pair.value)
+														.ToList();
+								ChangeNameItem(listnew);
+							}
+							catch
+							{ }
+						}
+					}
+					System.Windows.Forms.MessageBoxEx.Show("Thay đổi name thành công", 2000);
+				}
+				catch
+				{
+				}
+			});
+		}
 		public async System.Threading.Tasks.Task MatchFile(List<string> listpath,string path)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
@@ -126,13 +288,17 @@ namespace QuanLyTex.User2Class
 				}
 			});
 		}
-		public async System.Threading.Tasks.Task AddPageItem(List<string> list, string path, string pathpage, bool? AddPdf,Document doc)
+		public async System.Threading.Tasks.Task AddPageItem(List<string> list, string path, string pathpage, bool? AddPdf)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
 				try
 				{
 					Application app = new Application();
+					app.Visible = false;
+					Document doc = app.Documents.Open(FileName: pathpage, ReadOnly: true);
+					Range HearderOld = doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+					Range FooterOld = doc.Sections[1].Footers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
 					app.Visible = false;
 					foreach (string item in list)
 					{
@@ -142,6 +308,18 @@ namespace QuanLyTex.User2Class
 							document.Application.Visible = false;
 							Range rangenew = document.Range(0, 0);
 							rangenew.FormattedText=doc.Content;
+							foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
+							{
+								//Get the footer range and add the footer details.
+								Microsoft.Office.Interop.Word.Range footerRange = wordSection.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+								footerRange.FormattedText = HearderOld;
+							}
+							foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
+							{
+								//Get the footer range and add the footer details.
+								Microsoft.Office.Interop.Word.Range footerRange = wordSection.Footers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+								footerRange.FormattedText = FooterOld;
+							}
 							if (AddPdf == true)
 							{
 								string pathitem = path + @"\" + System.IO.Path.GetFileNameWithoutExtension(item) + ".pdf";
@@ -165,16 +343,12 @@ namespace QuanLyTex.User2Class
 			{
 				try
 				{
-					Application app = new Application();
-					app.Visible = false;
-					Document doc = app.Documents.Open(pathpage, ReadOnly: true);
-					doc.Application.Visible = false;
 					int count = listpath.Count;
 					if (count < 3)
 					{
 						try
 						{
-							AddPageItem(listpath, path, pathpage, AddPdf, doc);
+							AddPageItem(listpath, path, pathpage, AddPdf);
 						}
 						catch
 						{ }
@@ -189,7 +363,7 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % 3 == i)
 														.Select(pair => pair.value)
 														.ToList();
-								AddPageItem(listnew, path, pathpage, AddPdf,doc);
+								AddPageItem(listnew, path, pathpage, AddPdf);
 							}
 							catch
 							{ }
@@ -205,15 +379,13 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % number == i)
 														.Select(pair => pair.value)
 														.ToList();
-								AddPageItem(listnew, path, pathpage, AddPdf,doc);
+								AddPageItem(listnew, path, pathpage, AddPdf);
 							}
 							catch
 							{ }
 						}
 					}
 					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
-					doc.Close();
-					app.Quit();
 				}
 				catch
 				{

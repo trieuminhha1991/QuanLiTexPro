@@ -113,6 +113,33 @@
 					</xctk:MaterialRadioButton>
 				</TextBlock>
 				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="ChangeName"  GroupName="FilePdf" Content="Bỏ thời gian trong name"  Width="144">
+						<xctk:MaterialRadioButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Ghép nhiều file lại thành một file duy nhất, file sẽ được lưu trong folder LuuFile trong thư mục app." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialRadioButton.ToolTip>
+					</xctk:MaterialRadioButton>
+				</TextBlock>
+				<TextBlock>
+					<xctk:MaterialRadioButton x:Name="DeleteText"  GroupName="FilePdf" Content="Xóa trong ngoặc []"  Width="144">
+						<xctk:MaterialRadioButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Ghép nhiều file lại thành một file duy nhất, file sẽ được lưu trong folder LuuFile trong thư mục app." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialRadioButton.ToolTip>
+					</xctk:MaterialRadioButton>
+					<xctk:WatermarkTextBox x:Name="TextString"
+									   Watermark="Từ khóa trong ngoặc"
+									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Height="30" Background="#FFD8D5D5" Width="121"/>
+				</TextBlock>
+				<TextBlock>
 					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A" Click="CreatPdf"
                                  Content="Chuyển" Height="29" Width="112"  Canvas.Left="435" Background="#FF7AEDD6">
 						<xctk:MaterialButton.ToolTip>

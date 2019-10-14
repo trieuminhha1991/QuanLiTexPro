@@ -145,23 +145,16 @@ namespace QuanLyTex
 					try
 					{
 						string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
-						DateTime time = DateTime.Now;
-						string TimeName = time.ToString("h.mm.ss");
-						string pathTex = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + TimeName + @".tex";
-						string pathDoc = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + TimeName + @".docx";
+						//DateTime time = DateTime.Now;
+						//string TimeName = time.ToString("h.mm.ss");
+						string pathTex = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName  + @".tex";
+						string pathDoc = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName  + @".docx";
 						var app = new Application();
 						app.Visible = true;
-						if (ConfigurationManager.AppSettings["A"] == "1")
-						{
-							WordToTex change = new WordToTex();
-							change.startWordToTex(app,pathFooter, FormFile, path, pathTex, pathDoc, StartProof, liststr, All, HevaHoac, ColorOne, BoldOne, ItalicOne, UnderLineTwo, HghtlightTwo, ColorTwo, ColorThree, RunTexToWord);
-							FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
-							System.Windows.Forms.MessageBoxEx.Show("Chuyển thành công file"+ fileName+", file được lưu trong thư mục LuuFile", 2000);
-						}
-						if (ConfigurationManager.AppSettings["A"] == "0")
-						{
-							System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
-						}
+						WordToTex change = new WordToTex();
+						change.startWordToTex(app, pathFooter, FormFile, path, pathTex, pathDoc, StartProof, liststr, All, HevaHoac, ColorOne, BoldOne, ItalicOne, UnderLineTwo, HghtlightTwo, ColorTwo, ColorThree, RunTexToWord);
+						FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
+						System.Windows.Forms.MessageBoxEx.Show("Chuyển thành công file" + fileName + ", file được lưu trong thư mục LuuFile", 2000);
 						app.Quit();
 					}
 					catch
@@ -183,16 +176,9 @@ namespace QuanLyTex
 					if (CauHoi.IsChecked == true) { liststr.Add(ExString.Text); }
 					if (BaiTap.IsChecked == true) { liststr.Add(BtString.Text); }
 					if (Vidu.IsChecked == true) { liststr.Add(VdString.Text); }
-					if (ConfigurationManager.AppSettings["A"] == "1")
-					{
-						startListTexToWord(pathFooter, FormFile.Text, listPath, Directory.GetCurrentDirectory(), StartProof.Text, liststr, All.IsChecked, HevaHoac.IsChecked, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, UnderLineTwo.IsChecked, HghtlightTwo.IsChecked, ColorTwo.IsChecked, ColorThree.IsChecked, RunTexToWord.IsChecked);
-						FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
-						System.Windows.MessageBox.Show("Chức nang chạy bất đồng bộ, trong thời gian chờ đợi, thầy cô có thể thực hiện các chức năng khác", "Thoát");
-					}
-					if (ConfigurationManager.AppSettings["A"] == "0")
-					{
-						System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
-					}
+					startListTexToWord(pathFooter, FormFile.Text, listPath, Directory.GetCurrentDirectory(), StartProof.Text, liststr, All.IsChecked, HevaHoac.IsChecked, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, UnderLineTwo.IsChecked, HghtlightTwo.IsChecked, ColorTwo.IsChecked, ColorThree.IsChecked, RunTexToWord.IsChecked);
+					FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
+					System.Windows.MessageBox.Show("Chức nang chạy bất đồng bộ, trong thời gian chờ đợi, thầy cô có thể thực hiện các chức năng khác", "Thoát");
 				}
 				catch
 				{

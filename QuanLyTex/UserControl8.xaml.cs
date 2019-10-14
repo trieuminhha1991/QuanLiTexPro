@@ -250,10 +250,6 @@ namespace QuanLyTex
 							ItalicOne.IsChecked, appPath, sortoder.IsChecked, Sort1.IsChecked, Sort2.IsChecked, Sort3.IsChecked, Sort4.IsChecked, Sort5.IsChecked, BankEx.IsChecked, selectId6.IsChecked, strId2.IsChecked);
 						System.Windows.MessageBox.Show("Chức năng thực hiện theo phương thức bất đồng bộ hóa, khi nào thực hiện xong sẽ có thông báo, trong lúc chờ đợi, các thầy cô có thể sử dụng các chức năng khác", "Thoát");
 					}
-					if(ConfigurationManager.AppSettings["A"] == "0")
-					{
-						System.Windows.MessageBox.Show("Chưa đăng kí bản quyền", "Thoát");
-					}
 				}
 			}
 			catch (Exception a)
