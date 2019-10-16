@@ -108,9 +108,8 @@ namespace QuanLyTex.User2Class
 						try
 						{
 							Document doc = app.Documents.Open(item);
-							doc.Content.Find.Execute(FindText: @"\[" + text + @"[A-Za-z0-9, ]{1,30}\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
-							doc.Content.Find.Execute(FindText: @"\[[A-Za-z0-9, ]{1,30}" + text + @"\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
-							doc.Content.Find.Execute(FindText: @"\[[A-Za-z0-9, ]{1,30}" + text + @"[A-Za-z0-9, ]{1,30}\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "",MatchWildcards:true);
+							doc.Content.Find.Execute(FindText: @"(\[)([!\]]{1,15}"+text+@")(\])", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
+							doc.Content.Find.Execute(FindText: @"(\[)(" + text + @"[!\]]{1,15})(\])", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
 							doc.Close();
 						}
 						catch { }

@@ -143,8 +143,10 @@
     <Compile Include="User3Class\CreatExamTex.cs" />
     <Compile Include="User5BClass\TexToWors2.cs" />
     <Compile Include="User5Class\EndWordToTex.cs" />
+    <Compile Include="User5Class\FixTexToEquation2.cs" />
     <Compile Include="User5Class\FixTexToWord.cs" />
     <Compile Include="User5Class\TexToWord.cs" />
+    <Compile Include="User5Class\TexToWordEquation.cs" />
     <Compile Include="User5Class\treatTex.cs" />
     <Compile Include="User5Class\WordToTex.cs" />
     <Compile Include="User8Class\User8MapId.cs" />
@@ -165,6 +167,12 @@
     </Compile>
     <Compile Include="UserControl5A.xaml.cs">
       <DependentUpon>UserControl5A.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl5C.xaml.cs">
+      <DependentUpon>UserControl5C.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl5D.xaml.cs">
+      <DependentUpon>UserControl5D.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl8.xaml.cs">
       <DependentUpon>UserControl8.xaml</DependentUpon>
@@ -217,6 +225,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl5A.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl5C.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl5D.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
