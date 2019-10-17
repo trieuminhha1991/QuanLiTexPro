@@ -62,8 +62,8 @@ namespace QuanLyTex.User5Class
 							j = check + 1;
 						}
 						string texSub = tex.Substring(start + 6, end - start - 6);
-						texSub = texSub.Replace(@"\\", @"@").Replace("&", "#!").Replace("$", "");
-						texSub = @"\left\{\eqarray(" + texSub + @")\right.";
+						texSub = texSub.Replace(@"\\", @"~%").Replace("&", "#!").Replace("$", "");
+						texSub = @"\left\{ \eqarray{" + texSub + @"} \right.";
 						tex = tex.Remove(start, end + 1 - start).Insert(start, texSub);
 					}
 				}
@@ -95,7 +95,7 @@ namespace QuanLyTex.User5Class
 					}
 					string texSub = tex.Substring(start + 6, end - start - 6);
 					texSub = texSub.Replace(@"\\", @"~%").Replace("&", "#!");
-					texSub = @"\left[\eqarray(" + texSub + @")\right.";
+					texSub = @"\left[ \begin{align}" + texSub + @"\end{align} \right.";
 					tex = tex.Remove(start, end + 1 - start).Insert(start, texSub);
 				}
 				return tex;
@@ -133,77 +133,8 @@ namespace QuanLyTex.User5Class
 					{
 						string input = tex.Substring(list1[i], list2[i] + 11 - list1[i]);
 						input = input.Replace("$", "");
-						if (input.Length > 350 && !input.Contains(@"\heva{") && !input.Contains(@"\hoac{") && !input.Contains(@"\begin{aligned}") && !input.Contains(@"\begin{aligned*}") && !input.Contains(@"\begin{case}") && !input.Contains(@"\begin{matrix}") && !input.Contains(@"\begin{array}"))
-						{
-							input = input.Replace(@"\begin{align}", "").Replace(@"\end{align}", "").Replace(@"\\", "$\r\n$");
-							input = input.Replace("&", "");
-						}
-						else if (input.Length > 250 && (input.Contains(@"\Leftrightarrow") || input.Contains(@"\Rightarrow")))
-						{
-							input = input.Replace(@"\begin{align}", "").Replace(@"\end{align}", "").Replace(@"\Leftrightarrow", "$\r\n$\\Leftrightarrow").Replace(@"\Rightarrow", "$\r\n$\\Rightarrow");
-							input = input.Replace("&", "");
-							input = "{}" + input;
-						}
-						input = "\r\n$" + input.Replace(@"\\", "@").Replace("&", "#!").Replace("\begin{align}", @"\eqarray(").Replace("\begin{align}", @")") + "$\r\n";
+						input = "\r\n$" + input.Replace(@"\\", @"~%").Replace("&", "#!").Replace(@"\begin{align}", @"\eqarray{").Replace(@"\end{align}", @"}") + "$\r\n";
 						tex = tex.Remove(list1[i], list2[i] + 11 - list1[i]).Insert(list1[i], input);
-					}
-				}
-				int start2 = 0;
-				while (tex.IndexOf(@"\begin{aligned}", start2) > 0)
-				{
-					try
-					{
-						int m = tex.IndexOf(@"\begin{aligned}", start2);
-						int i = tex.IndexOf(@"\begin{aligned}", m + 1);
-						int n = tex.IndexOf(@"\end{aligned}", m);
-						int j = n;
-						while (j > 0 && i > 0 && i < j)
-						{
-							i = tex.IndexOf(@"\begin{aligned}", i + 1);
-							j = tex.IndexOf(@"\end{aligned}", j + 1);
-							if (j > 0)
-							{
-								n = j;
-							}
-						}
-						string input = tex.Substring(m, n + 13 - m);
-						input = input.Replace("$", "");
-						if (input.Length > 350 && !input.Contains(@"\heva{") && !input.Contains(@"\hoac{") && !input.Contains(@"\begin{case}") && !input.Contains(@"\begin{matrix}") && !input.Contains(@"\begin{array}"))
-						{
-							input = input.Replace(@"\begin{aligned}", "").Replace(@"\end{aligned}", "").Replace(@"\\", "$\r\n$");
-							input = input.Replace("&", "");
-						}
-						else if (input.Length > 250 && (input.Contains(@"\Leftrightarrow") || input.Contains(@"\Rightarrow")))
-						{
-							input = input.Replace(@"\begin{aligned}", "").Replace(@"\end{aligned}", "").Replace(@"\Leftrightarrow", "$\r\n$\\Leftrightarrow").Replace(@"\Rightarrow", "$\r\n$\\Rightarrow");
-							input = input.Replace("&", "");
-							input = "{}" + input;
-						}
-						//if(input[13]=='1')
-						//{
-						//	input = input.Remove(13, 1);
-						//	int starttab = 0;
-						//	int idex = 0;
-						//	while (tex.IndexOf(@"\\", starttab) > 0)
-						//	{
-						//		idex = starttab;
-						//		starttab = input.IndexOf("&", idex);
-						//		int startline = input.IndexOf(@"\\", starttab);
-						//		int starttab2 = input.IndexOf("&", starttab + 1);
-						//		if (starttab2 < startline)
-						//		{
-						//			input = input.Remove(idex, 1);
-						//		}
-						//		starttab = startline;
-						//	}
-						//}
-						input = input.Replace(@"\\", "@").Replace("&", "#!").Replace(@"\begin{aligned}",@"\eqarray(").Replace(@"\end{aligned}", @")");
-						tex = tex.Remove(m, n + 13 - m).Insert(m, input);
-						start2 = n;
-					}
-					catch
-					{
-						break;
 					}
 				}
 				return tex;

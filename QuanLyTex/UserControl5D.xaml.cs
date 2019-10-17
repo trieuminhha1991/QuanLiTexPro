@@ -24,7 +24,6 @@ namespace QuanLyTex
 		public UserControl5D()
 		{
 			InitializeComponent();
-			FormFile.Text = appPath + @"\MauFile\MacDinh\ChuyenDe.tex";
 		}
 		private void ListBoxSelectFileAdd(string path)
 		{
@@ -136,32 +135,23 @@ namespace QuanLyTex
 			}
 			return list;
 		}
-		public async void startListTexToWord(string pathFooter, string FormFile, List<string> listpath, string apppath, string StartProof, List<string> liststr, bool? All, bool? HevaHoac, bool? ColorOne, bool? BoldOne, bool? ItalicOne, bool? UnderLineTwo, bool? HghtlightTwo, bool? ColorTwo, bool? ColorThree, bool? RunTexToWord)
+		public async void startListTexToWord(List<string> listpath)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
+				var app = new Application();
 				foreach (string path in listpath)
 				{
 					try
 					{
-						string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
-						//DateTime time = DateTime.Now;
-						//string TimeName = time.ToString("h.mm.ss");
-						string pathTex = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + @".tex";
-						string pathDoc = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName + @".docx";
-						var app = new Application();
-						app.Visible = true;
-						WordToTex change = new WordToTex();
-						change.startWordToTex(app, pathFooter, FormFile, path, pathTex, pathDoc, StartProof, liststr, All, HevaHoac, ColorOne, BoldOne, ItalicOne, UnderLineTwo, HghtlightTwo, ColorTwo, ColorThree, RunTexToWord);
-						FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
-						System.Windows.Forms.MessageBoxEx.Show("Chuyển thành công file" + fileName + ", file được lưu trong thư mục LuuFile", 2000);
-						app.Quit();
+						
 					}
 					catch
 					{
 
 					}
 				}
+				app.Quit();
 			});
 		}
 		private void startWordToTex(object sender, RoutedEventArgs e)
@@ -171,13 +161,8 @@ namespace QuanLyTex
 				List<string> listPath = getListPath();
 				try
 				{
-					string pathFooter = Directory.GetCurrentDirectory() + @"\MauFile\Footer.tex";
 					List<string> liststr = new List<string>();
-					if (CauHoi.IsChecked == true) { liststr.Add(ExString.Text); }
-					if (BaiTap.IsChecked == true) { liststr.Add(BtString.Text); }
-					if (Vidu.IsChecked == true) { liststr.Add(VdString.Text); }
-					startListTexToWord(pathFooter, FormFile.Text, listPath, Directory.GetCurrentDirectory(), StartProof.Text, liststr, All.IsChecked, HevaHoac.IsChecked, ColorOne.IsChecked, BoldOne.IsChecked, ItalicOne.IsChecked, UnderLineTwo.IsChecked, HghtlightTwo.IsChecked, ColorTwo.IsChecked, ColorThree.IsChecked, RunTexToWord.IsChecked);
-					FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
+					startListTexToWord(listPath);
 					System.Windows.MessageBox.Show("Chức nang chạy bất đồng bộ, trong thời gian chờ đợi, thầy cô có thể thực hiện các chức năng khác", "Thoát");
 				}
 				catch

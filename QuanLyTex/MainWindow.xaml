@@ -65,6 +65,14 @@
 						</xctk:MaterialTabItem.Background>
 						<local:UserControl5A Margin="0,0,8,0"/>
 					</xctk:MaterialTabItem>
+					<xctk:MaterialTabItem  Header="Tex To Word(mathtype)(Trực tiếp mathtype)"  Width="232" Margin="0,0,0,-0.2">
+						<xctk:MaterialTabItem.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Black" Offset="0"/>
+								<GradientStop Color="#FFF4E584" Offset="0.337"/>
+							</LinearGradientBrush>
+						</xctk:MaterialTabItem.Background>
+					</xctk:MaterialTabItem>
 					<xctk:MaterialTabItem  Header="Tex To Word(equation)(Office 365)"  Width="232" Margin="0,0,0,-0.2">
 						<xctk:MaterialTabItem.Background>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -104,11 +112,19 @@
 				<xctk:MaterialTabControl TabStripPlacement="Top"  IsInkEffectActive="True"
                                         IsInkBarActive="True" Margin="19,0,0,10" 
 										 IsSlidingAnimationActive="False" HorizontalAlignment="Left">
-					<xctk:MaterialTabItem  Header="Word(Mathtype) To word(equation)"  Width="166" Margin="0,0,0,-0.2">
+					<xctk:MaterialTabItem  Header="Word(Mathtype) To word(Equation)"  Width="166" Margin="0,0,0,-0.2">
 						<xctk:MaterialTabItem.Background>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 								<GradientStop Color="Black" Offset="0"/>
 								<GradientStop Color="#FF9BF484" Offset="0.337"/>
+							</LinearGradientBrush>
+						</xctk:MaterialTabItem.Background>
+					</xctk:MaterialTabItem>
+					<xctk:MaterialTabItem  Header="Word(Equation) To word(Mathtype)"  Width="166" Margin="0,0,0,-0.2">
+						<xctk:MaterialTabItem.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Black" Offset="0"/>
+								<GradientStop Color="#FFF4D484" Offset="0.337"/>
 							</LinearGradientBrush>
 						</xctk:MaterialTabItem.Background>
 					</xctk:MaterialTabItem>

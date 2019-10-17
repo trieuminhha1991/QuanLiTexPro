@@ -102,7 +102,6 @@ namespace QuanLyTex.User5Class
 			tex = tex.Replace("!!", " ");
 			tex = tex.Replace(@"\quad", "\t");
 			tex = Fix.fixAlignEqnarray(tex);
-			tex = Regex.Replace(tex, @"\$[ ]{1}\$", "$");
 			tex = Regex.Replace(tex, @"(\\left[ ]{0,2}\[)", @"\left[");
 			tex = Regex.Replace(tex, @"(\\left[ ]{0,2}\\\{)", @"\left\{");
 			tex = tex.Replace(@"\begin{aligned}", @"\begin{align}").Replace(@"\end{aligned}", @"\end{align}");

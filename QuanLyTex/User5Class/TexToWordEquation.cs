@@ -22,6 +22,7 @@ namespace QuanLyTex.User5Class
 		{
 			try
 			{
+				tex = tex.Replace(@"\overrightarrow", @"\vec").Replace(@"\displaystyle","");
 				tex = tex.Replace(@"\lq", @"'").Replace(@"\rq", @"'");
 				tex = tex.Replace(@"\dfrac", @"\frac");
 				tex = tex.Replace(@"\allowdisplaybreaks", "").Replace(@"\enskip", "");
@@ -29,13 +30,32 @@ namespace QuanLyTex.User5Class
 				tex = tex.Replace(@"\tag", "").Replace(@"\wideparen", @"\overset\frown").Replace(@"longrightarrow", @"rightarrow");
 				tex = tex.Replace(@"\[", "$").Replace(@"\]", "$").Replace("{'}", "'");
 				tex = tex.Replace(@"\alignat*", "align").Replace(@"alignat", "align");
-				tex = tex.Replace("gathered", "align").Replace(@"eqnarray", @"align").Replace(@"equation", @"align").Replace(@"align*", @"align");
-				tex = tex.Replace(@"\begin{array}", @"\begin{aligned}").Replace(@"\end{array}", @"\end{aligned}");
+				tex = tex.Replace("gathered", "align").Replace(@"eqnarray", @"align").Replace(@"equation", @"align").Replace(@"align*", @"align").Replace(@"aligned", @"align").Replace(@"array", @"align");
 				tex = tex.Replace("{ll}", "").Replace("{l}", "").Replace(@"\,", "").Replace(@"\;", "");
 				tex = tex.Replace(@"\immini", "");
 				tex = tex.Replace(@"\lbrace", "{").Replace(@"\rbrace", "}");
 				tex = tex.Replace(@"\left{", @"\left\{").Replace(@"\right}", @"\right\}");
 				tex = Regex.Replace(tex, "[ ]{2,}", " ");
+				tex = Regex.Replace(tex, @"}[ ]{1,}\{", "}{");
+				tex = Regex.Replace(tex, @"[ ]{0,}_[ ]{0,}", "_");
+				tex = Regex.Replace(tex, @"([ ]{0,})(\^)([ ]{0,})", "^");
+				while (tex.Contains("$$"))
+				{
+					int start = tex.IndexOf("$$");
+					int end = tex.IndexOf("$$", start + 2);
+					if (end > 0)
+					{
+						if (tex.Substring(start + 2, end - start - 2).Contains("$"))
+						{
+							tex = tex.Remove(start, 2);
+						}
+						else
+						{
+							tex = tex.Remove(end, 2).Insert(end, @"$");
+							tex = tex.Remove(start, 2).Insert(start, @"\quad$");
+						}
+					}
+				}
 				return tex;
 			}
 			catch
@@ -51,13 +71,14 @@ namespace QuanLyTex.User5Class
 			tex = tex.Replace("!!", " ");
 			tex = tex.Replace(@"\quad", "\t");
 			tex = Fix.fixAlignEqnarray(tex);
-			tex = Regex.Replace(tex, @"\$[ ]{1}\$", "$");
-			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\[[ ]{0,3}", @"\left[");
-			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\\\{[ ]{0,3}", @"\left\{");
 			tex = Fix.changeHevaAndHoac(tex);
 			tex = Fix.fixEnumerateItemize(tex);
-			tex = tex.Replace(@"\left\{\eqarray(", @"{\eqarray(").Replace(@")\right.", @")");
+			tex = Regex.Replace(tex, @"\$[ ]{1}\$", "");
+			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\[[ ]{0,3}", @"\left[");
+			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\\\{[ ]{0,3}", @"\left\{");
+			tex = tex.Replace(@"\begin{aligned}", @"\eqarray(").Replace(@")\right.", @")");
 			tex = tex.Replace(@"\\", "\r\n");
+			tex = tex.Replace(@"~%", @"\\");
 			tex = tex.Replace(@"#!", "&");
 			return tex;
 		}
@@ -894,12 +915,19 @@ namespace QuanLyTex.User5Class
 							var math = document.OMaths;
 							range = document.Range(startitem, document.Content.End - 1);
 							Find findr = range.Find;
-							findr.Text = "$*$";
-							while(findr.Execute(MatchWildcards:true,Wrap:WdFindWrap.wdFindContinue))
+							findr.Text = "($)(*)($)";
+							while(findr.Execute(MatchWildcards:true,Wrap:WdFindWrap.wdFindContinue,ReplaceWith:@"\2"))
 							{
-								math.Add(range);
-								math.BuildUp();
+								try
+								{
+									math.Add(range);
+								}
+								catch
+								{
+
+								}
 							}
+							math.BuildUp();
 						}
 					}
 					catch
