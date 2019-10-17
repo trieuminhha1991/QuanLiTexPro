@@ -24,7 +24,7 @@ namespace QuanLyTex.User5Class
 			{
 				tex = tex.Replace(@"\overrightarrow", @"\vec").Replace(@"\displaystyle","");
 				tex = tex.Replace(@"\lq", @"'").Replace(@"\rq", @"'");
-				tex = tex.Replace(@"\dfrac", @"\frac");
+				tex = tex.Replace(@"\dfrac", @"\frac").Replace(@"\tfrac", @"\frac");
 				tex = tex.Replace(@"\allowdisplaybreaks", "").Replace(@"\enskip", "");
 				tex = tex.Replace(@"{,}", ",").Replace("’", "'").Replace(@"\noindent", "").Replace(@"\newline ", "\\").Replace(@"\hfill", @"\quad\quad");
 				tex = tex.Replace(@"\tag", "").Replace(@"\wideparen", @"\overset\frown").Replace(@"longrightarrow", @"rightarrow");
@@ -36,9 +36,7 @@ namespace QuanLyTex.User5Class
 				tex = tex.Replace(@"\lbrace", "{").Replace(@"\rbrace", "}");
 				tex = tex.Replace(@"\left{", @"\left\{").Replace(@"\right}", @"\right\}");
 				tex = Regex.Replace(tex, "[ ]{2,}", " ");
-				tex = Regex.Replace(tex, @"}[ ]{1,}\{", "}{");
-				tex = Regex.Replace(tex, @"[ ]{0,}_[ ]{0,}", "_");
-				tex = Regex.Replace(tex, @"([ ]{0,})(\^)([ ]{0,})", "^");
+				tex = Regex.Replace(tex, @"(\\text)([a-z]{1,2})\{", @"\text{");
 				while (tex.Contains("$$"))
 				{
 					int start = tex.IndexOf("$$");
@@ -912,8 +910,12 @@ namespace QuanLyTex.User5Class
 						}
 						if (ToogleTex1 == true)
 						{
-							var math = document.OMaths;
+							//var math = document.OMaths;
 							range = document.Range(startitem, document.Content.End - 1);
+							range.Find.Execute(MatchWildcards: true, FindText: @"([ ]{1})([_\^\{\}])", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\2");
+							range.Find.Execute(MatchWildcards: true, FindText: @"([_\^\{\}])([ ]{1})", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1");
+							range = document.Range(startitem, document.Content.End - 1);
+							var math = range.OMaths;
 							Find findr = range.Find;
 							findr.Text = "($)(*)($)";
 							while(findr.Execute(MatchWildcards:true,Wrap:WdFindWrap.wdFindContinue,ReplaceWith:@"\2"))

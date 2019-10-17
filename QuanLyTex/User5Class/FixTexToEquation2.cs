@@ -63,7 +63,7 @@ namespace QuanLyTex.User5Class
 						}
 						string texSub = tex.Substring(start + 6, end - start - 6);
 						texSub = texSub.Replace(@"\\", @"~%").Replace("&", "#!").Replace("$", "");
-						texSub = @"\left\{ \eqarray{" + texSub + @"} \right.";
+						texSub = @"\left\{\eqarray{" + texSub + @"}\right.";
 						tex = tex.Remove(start, end + 1 - start).Insert(start, texSub);
 					}
 				}
@@ -95,7 +95,7 @@ namespace QuanLyTex.User5Class
 					}
 					string texSub = tex.Substring(start + 6, end - start - 6);
 					texSub = texSub.Replace(@"\\", @"~%").Replace("&", "#!");
-					texSub = @"\left[ \begin{align}" + texSub + @"\end{align} \right.";
+					texSub = @"\left[\eqarray{" + texSub + @"}\right.";
 					tex = tex.Remove(start, end + 1 - start).Insert(start, texSub);
 				}
 				return tex;
