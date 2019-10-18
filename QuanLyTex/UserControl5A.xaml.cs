@@ -288,38 +288,42 @@ namespace QuanLyTex
 				{
 					for (int i=0;i< listPath.Count;i++)
 					{
-						if (i % 5 == 0)
+						try
 						{
-							Process[] appprocess = Process.GetProcessesByName("MATHTYPE");
-							if (appprocess != null && appprocess.Length > 0)
+							if (i % 5 == 0)
 							{
-								foreach (Process item in appprocess)
+								Process[] appprocess = Process.GetProcessesByName("MATHTYPE");
+								if (appprocess != null && appprocess.Length > 0)
 								{
-									item.Kill();
+									foreach (Process item in appprocess)
+									{
+										item.Kill();
+									}
 								}
 							}
+							string path = listPath[i];
+							string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
+							string tex = getTex(path);
+							List<string> list = FilterId(tex, all, exString, btString, vdString, ex, bt, vd);
+							//DateTime time = DateTime.Now;
+							//string TimeName = time.ToString("h.mm.ss");
+							string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName;
+							var app = new Application
+							{
+								Visible = true
+							};
+							TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, dic);
+							app.Quit();
+							string path3 = Directory.GetCurrentDirectory() + @"\Bat";
+							string path4 = Directory.GetCurrentDirectory();
+							System.IO.DirectoryInfo di = new DirectoryInfo(path3);
+							foreach (FileInfo file in di.GetFiles())
+							{
+								file.Delete();
+							}
+							System.Windows.Forms.MessageBoxEx.Show("Tex to word thành công file" + fileName + ", xem trong thư mục LuuFile", 2000);
 						}
-						string path = listPath[i];
-						string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
-						string tex = getTex(path);
-						List<string> list = FilterId(tex, all,exString, btString, vdString,ex,bt,vd);
-						//DateTime time = DateTime.Now;
-						//string TimeName = time.ToString("h.mm.ss");
-						string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName;
-						var app = new Application
-						{
-							Visible = true
-						};
-						TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName,DeleteSchool,DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, dic);
-						app.Quit();
-						string path3 = Directory.GetCurrentDirectory() + @"\Bat";
-						string path4 = Directory.GetCurrentDirectory();
-						System.IO.DirectoryInfo di = new DirectoryInfo(path3);
-						foreach (FileInfo file in di.GetFiles())
-						{
-							file.Delete();
-						}
-						System.Windows.Forms.MessageBoxEx.Show("Tex to word thành công file"+ fileName+", xem trong thư mục LuuFile", 2000);
+						catch { }
 					}
 					System.Windows.MessageBox.Show("Chuyển file word thành công, xem trong thư mục LuuFile", "Thành công");
 				}
@@ -329,6 +333,7 @@ namespace QuanLyTex
 				}
 			});
 		}
+
 		private async void startTexToWord(object sender, RoutedEventArgs e)
 		{
 			List<string> listPath = getListPath();

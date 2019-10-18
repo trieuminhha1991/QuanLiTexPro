@@ -40,11 +40,26 @@
 
 			</Canvas>
 		</GroupBox>
-		<GroupBox Grid.ColumnSpan="2" Grid.Row="1" Header="File Chuyển" Background="#FF0F0F0F" FontSize="13" Margin="0,5.4,10,5.8" >
+		<GroupBox Grid.ColumnSpan="2" Grid.Row="1" Header="File Chuyển" Background="#FF0F0F0F" FontSize="13" Margin="0,5.8,243,5.6" >
 			<StackPanel Margin="0,0,-0.2,-3.8">
 				<ListBox Name="ListBoxFileSelect" Height="157">
 
 				</ListBox>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Grid.Column="1" Header="Số lương file chuyển" Margin="73,9.8,10,256.4"  Background="#FFBBDCC1" Grid.RowSpan="2" Grid.Row="1">
+			<StackPanel Margin="0,0,0.2,1.4">
+				<TextBlock>
+					<StackPanel>
+					<xctk:MaterialButton  MaterialAccentBrush="#FFF3F395"
+                                    Content="Số lượng file chạy cũng lúc" Height="18" Width="271" />
+					 <TextBlock Text="Tùy vào cấu hình máy, ta chọn số file chạy cũng lúc phù hợp" TextWrapping="WrapWithOverflow" Margin="0,0,0.4,0" FontSize="11"/>
+					<xctk:MaterialRadioButton x:Name="number1" GroupName="number5C" Content="1 file/1 lần."/>
+					<xctk:MaterialRadioButton x:Name="number2" GroupName="number5C" Content="3 file/1 lần." IsChecked="True"/>
+					<xctk:MaterialRadioButton x:Name="number3" GroupName="number5C" Content="5 file/1 lần."/>
+					<xctk:MaterialRadioButton x:Name="number4" GroupName="number5C" Content="7 file/1 lần."/>
+					</StackPanel>
+				</TextBlock>
 			</StackPanel>
 		</GroupBox>
 		<GroupBox Grid.Row="1"  Header="Tùy chọn chuyển" Background="#FF0F0F0F" FontSize="13" Margin="0,166,10,23" Grid.RowSpan="2">

@@ -22,15 +22,15 @@ namespace QuanLyTex.User5Class
 		{
 			try
 			{
-				tex = tex.Replace(@"\overrightarrow", @"\vec").Replace(@"\displaystyle","");
-				tex = tex.Replace(@"\lq", @"'").Replace(@"\rq", @"'");
+				tex = tex.Replace(@"\overrightarrow", @"\vec").Replace(@"\displaystyle","").Replace(@"\varnothing", @"\emptyset").Replace(@"slant",@"").Replace(@"\backslash",@"\setminus").Replace(@"\tiny","");
+				tex = tex.Replace(@"\lq", @"'").Replace(@"\rq", @"'").Replace("}\text{","  \text{");
 				tex = tex.Replace(@"\dfrac", @"\frac").Replace(@"\tfrac", @"\frac");
 				tex = tex.Replace(@"\allowdisplaybreaks", "").Replace(@"\enskip", "");
 				tex = tex.Replace(@"{,}", ",").Replace("’", "'").Replace(@"\noindent", "").Replace(@"\newline ", "\\").Replace(@"\hfill", @"\quad\quad");
 				tex = tex.Replace(@"\tag", "").Replace(@"\wideparen", @"\overset\frown").Replace(@"longrightarrow", @"rightarrow");
 				tex = tex.Replace(@"\[", "$").Replace(@"\]", "$").Replace("{'}", "'");
 				tex = tex.Replace(@"\alignat*", "align").Replace(@"alignat", "align");
-				tex = tex.Replace("gathered", "align").Replace(@"eqnarray", @"align").Replace(@"equation", @"align").Replace(@"align*", @"align").Replace(@"aligned", @"align").Replace(@"array", @"align");
+				tex = tex.Replace("gathered", "align").Replace(@"eqnarray", @"align").Replace(@"equation", @"align").Replace(@"align*", @"align").Replace(@"aligned", @"align").Replace(@"array", @"align").Replace("vmatrix", "align");
 				tex = tex.Replace("{ll}", "").Replace("{l}", "").Replace(@"\,", "").Replace(@"\;", "");
 				tex = tex.Replace(@"\immini", "");
 				tex = tex.Replace(@"\lbrace", "{").Replace(@"\rbrace", "}");
@@ -71,7 +71,7 @@ namespace QuanLyTex.User5Class
 			tex = Fix.fixAlignEqnarray(tex);
 			tex = Fix.changeHevaAndHoac(tex);
 			tex = Fix.fixEnumerateItemize(tex);
-			tex = Regex.Replace(tex, @"\$[ ]{1}\$", "");
+			tex = Regex.Replace(tex, @"\$[ ]{0,}\$", "");
 			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\[[ ]{0,3}", @"\left[");
 			tex = Regex.Replace(tex, @"\\left[ ]{0,3}\\\{[ ]{0,3}", @"\left\{");
 			tex = tex.Replace(@"\begin{aligned}", @"\eqarray(").Replace(@")\right.", @")");
@@ -910,10 +910,11 @@ namespace QuanLyTex.User5Class
 						}
 						if (ToogleTex1 == true)
 						{
+							
 							//var math = document.OMaths;
 							range = document.Range(startitem, document.Content.End - 1);
-							range.Find.Execute(MatchWildcards: true, FindText: @"([ ]{1})([_\^\{\}])", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\2");
-							range.Find.Execute(MatchWildcards: true, FindText: @"([_\^\{\}])([ ]{1})", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1");
+							range.Find.Execute(MatchWildcards: true, FindText: @"([ ]{1})([_^94\{\}])", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\2");
+							range.Find.Execute(MatchWildcards: true, FindText: @"([_^94\{\}])([ ]{1})", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"\1");
 							range = document.Range(startitem, document.Content.End - 1);
 							var math = range.OMaths;
 							Find findr = range.Find;
@@ -929,7 +930,16 @@ namespace QuanLyTex.User5Class
 
 								}
 							}
-							math.BuildUp();
+							try
+							{
+								math.BuildUp();
+							}catch
+							{
+								range = document.Range(startitem, document.Content.End - 1);
+								range.Find.Execute(MatchWildcards: false, FindText: @"\", Replace: WdReplace.wdReplaceAll, ReplaceWith: @"");
+								math = range.OMaths;
+								math.BuildUp();
+							}
 						}
 					}
 					catch

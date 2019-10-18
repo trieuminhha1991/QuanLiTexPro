@@ -11,6 +11,7 @@ using Orientation = System.Windows.Controls.Orientation;
 using Application = Microsoft.Office.Interop.Word.Application;
 using System.Diagnostics;
 using System.Configuration;
+using System.Linq;
 
 namespace QuanLyTex
 {
@@ -280,7 +281,7 @@ namespace QuanLyTex
 				return list;
 			}
 		}
-		public async System.Threading.Tasks.Task startListTexToWord(List<string> listPath, string exString, string btString, string vdString, bool? ex, bool? bt, bool? vd, bool? toogleTex1, bool? toogleTex2, bool? Tiz, bool? all, bool? DeleteName, bool? DeleteSchool, bool? DeleteId, string NameDuAn, bool? AddTableCheck, bool? AddFilePdf, bool? RunTexToWord, Dictionary<string, string> dic)
+		public async System.Threading.Tasks.Task startListTexToWorditem(List<string> listPath, string exString, string btString, string vdString, bool? ex, bool? bt, bool? vd, bool? toogleTex1, bool? toogleTex2, bool? Tiz, bool? all, bool? DeleteName, bool? DeleteSchool, bool? DeleteId, string NameDuAn, bool? AddTableCheck, bool? AddFilePdf, bool? RunTexToWord, Dictionary<string, string> dic)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
@@ -288,44 +289,102 @@ namespace QuanLyTex
 				{
 					for (int i = 0; i < listPath.Count; i++)
 					{
-						if (i % 5 == 0)
+						try
 						{
-							Process[] appprocess = Process.GetProcessesByName("MATHTYPE");
-							if (appprocess != null && appprocess.Length > 0)
+							if (i % 5 == 0)
 							{
-								foreach (Process item in appprocess)
+								Process[] appprocess = Process.GetProcessesByName("MATHTYPE");
+								if (appprocess != null && appprocess.Length > 0)
 								{
-									item.Kill();
+									foreach (Process item in appprocess)
+									{
+										item.Kill();
+									}
 								}
 							}
+							string path = listPath[i];
+							string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
+							string tex = getTex(path);
+							List<string> list = FilterId(tex, all, exString, btString, vdString, ex, bt, vd);
+							//DateTime time = DateTime.Now;
+							//string TimeName = time.ToString("h.mm.ss");
+							string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName;
+							var app = new Application
+							{
+								Visible = true
+							};
+							TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, dic);
+							app.Quit();
+							string path3 = Directory.GetCurrentDirectory() + @"\Bat";
+							string path4 = Directory.GetCurrentDirectory();
+							System.IO.DirectoryInfo di = new DirectoryInfo(path3);
+							foreach (FileInfo file in di.GetFiles())
+							{
+								file.Delete();
+							}
+							System.Windows.Forms.MessageBoxEx.Show("Tex to word thành công file" + fileName + ", xem trong thư mục LuuFile", 2000);
 						}
-						string path = listPath[i];
-						string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
-						string tex = getTex(path);
-						List<string> list = FilterId(tex, all, exString, btString, vdString, ex, bt, vd);
-						//DateTime time = DateTime.Now;
-						//string TimeName = time.ToString("h.mm.ss");
-						string path2 = Directory.GetCurrentDirectory() + @"\LuuFile" + @"\" + fileName;
-						var app = new Application
-						{
-							Visible = true
-						};
-						TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, dic);
-						app.Quit();
-						string path3 = Directory.GetCurrentDirectory() + @"\Bat";
-						string path4 = Directory.GetCurrentDirectory();
-						System.IO.DirectoryInfo di = new DirectoryInfo(path3);
-						foreach (FileInfo file in di.GetFiles())
-						{
-							file.Delete();
-						}
-						System.Windows.Forms.MessageBoxEx.Show("Tex to word thành công file" + fileName + ", xem trong thư mục LuuFile", 2000);
+						catch { }
 					}
 					System.Windows.MessageBox.Show("Chuyển file word thành công, xem trong thư mục LuuFile", "Thành công");
 				}
 				catch
 				{
 					System.Windows.MessageBox.Show("Chuyển file không thành công", "Thành công");
+				}
+			});
+		}
+		public async System.Threading.Tasks.Task startListTexToWord(List<string> listpath, string exString, string btString, string vdString, bool? ex, bool? bt, bool? vd, bool? toogleTex1, bool? toogleTex2, bool? Tiz, bool? all, bool? DeleteName, bool? DeleteSchool, bool? DeleteId, string NameDuAn, bool? AddTableCheck, bool? AddFilePdf, bool? RunTexToWord, Dictionary<string, string> dic,int number)
+		{
+			await System.Threading.Tasks.Task.Run(() =>
+			{
+				try
+				{
+					int count = listpath.Count;
+					if (count < 3)
+					{
+						try
+						{
+							startListTexToWorditem(listpath, exString, btString, vdString, ex, bt, vd, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, dic);
+						}
+						catch
+						{ }
+					}
+					if (count < 10 && count >= 3)
+					{
+						for (int i = 0; i <= 2; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % 3 == i)
+														.Select(pair => pair.value)
+														.ToList();
+								startListTexToWorditem(listnew, exString, btString, vdString, ex, bt, vd, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, dic);
+							}
+							catch
+							{ }
+						}
+					}
+					if (count >= 10)
+					{
+						for (int i = 0; i < number; i++)
+						{
+							try
+							{
+								List<string> listnew = listpath.Select((value, index) => new { value, index })
+														.Where(pair => pair.index % number == i)
+														.Select(pair => pair.value)
+														.ToList();
+								startListTexToWorditem(listnew, exString, btString, vdString, ex, bt, vd, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, dic);
+							}
+							catch
+							{ }
+						}
+					}
+				}
+				catch
+				{
 				}
 			});
 		}
@@ -341,7 +400,11 @@ namespace QuanLyTex
 				dic.Add("nx", NxString.Text);
 				dic.Add("dang", DangString.Text);
 				dic.Add("cy", CyString.Text);
-				startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic);
+				int number = 3;
+				if (number1.IsChecked == true) { number = 1; }
+				if (number3.IsChecked == true) { number = 5; }
+				if (number4.IsChecked == true) { number = 7; }
+				startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic,number);
 				FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
 				System.Windows.MessageBox.Show("Chức năng sẽ chạy theo phương thức bất đồng bộ, các thầy cô có thể thực hiện các chức năng khác trong lúc chờ chạy xong", "Thành công");
 			}
