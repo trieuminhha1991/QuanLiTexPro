@@ -185,9 +185,9 @@ namespace QuanLyTex
 					};
 					if (dialog.ShowDialog().ToString().Equals("OK"))
 					{
-						IEnumerable<string> enumerable = Directory.EnumerateFiles(dialog.SelectedPath, "*.docx");
-						IEnumerable<string> enumerable2 = Directory.EnumerateFiles(dialog.SelectedPath, "*.doc");
-						if (enumerable != null)
+                        string[] enumerable = Directory.GetFiles(dialog.SelectedPath, "*.docx", SearchOption.AllDirectories);
+                        string[] enumerable2 = Directory.GetFiles(dialog.SelectedPath, "*.doc", SearchOption.AllDirectories);
+                        if (enumerable != null)
 						{
 							foreach (string str in enumerable)
 							{
@@ -249,9 +249,9 @@ namespace QuanLyTex
 					};
 					if (dialog.ShowDialog().ToString().Equals("OK"))
 					{
-						IEnumerable<string> enumerable = Directory.EnumerateFiles(dialog.SelectedPath, "*.docx");
-						IEnumerable<string> enumerable2 = Directory.EnumerateFiles(dialog.SelectedPath, "*.doc");
-						if (enumerable != null)
+                        string[] enumerable = Directory.GetFiles(dialog.SelectedPath, "*.docx", SearchOption.AllDirectories);
+                        string[] enumerable2 = Directory.GetFiles(dialog.SelectedPath, "*.doc", SearchOption.AllDirectories);
+                        if (enumerable != null)
 						{
 							foreach (string str in enumerable)
 							{
@@ -333,8 +333,12 @@ namespace QuanLyTex
 				}
 				if(DeleteText.IsChecked==true)
 				{
-					user.DeleteText(list, TextString.Text);
+					user.DeleteText(list);
 				}
+                if(DeleteTable.IsChecked==true)
+                {
+                    user.DeleteTable(list);
+                }
 				FolderSaveFile2A.Text = path;
 			}catch
 			{

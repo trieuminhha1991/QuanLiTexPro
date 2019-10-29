@@ -95,7 +95,7 @@ namespace QuanLyTex.User2Class
 				}
 			});
 		}
-		public async System.Threading.Tasks.Task DeleteTextItem(List<string> list, string text)
+		public async System.Threading.Tasks.Task DeleteTextItem(List<string> list)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
@@ -108,20 +108,19 @@ namespace QuanLyTex.User2Class
 						try
 						{
 							Document doc = app.Documents.Open(item);
-							doc.Content.Find.Execute(FindText: @"(\[)([!\]]{1,15}"+text+@")(\])", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
-							doc.Content.Find.Execute(FindText: @"(\[)(" + text + @"[!\]]{1,15})(\])", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
+							doc.Content.Find.Execute(FindText: @"\[*\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
 							doc.Close();
 						}
 						catch { }
 					}
 					app.Quit();
-					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf thành công", 2000);
+					System.Windows.Forms.MessageBoxEx.Show("Xóa text thành công", 2000);
 				}
 				catch
 				{ }
 			});
 		}
-		public async System.Threading.Tasks.Task DeleteText(List<string> listpath, string text)
+		public async System.Threading.Tasks.Task DeleteText(List<string> listpath)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
@@ -132,7 +131,7 @@ namespace QuanLyTex.User2Class
 					{
 						try
 						{
-							DeleteTextItem(listpath, text);
+							DeleteTextItem(listpath);
 						}
 						catch
 						{ }
@@ -147,7 +146,7 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % 3 == i)
 														.Select(pair => pair.value)
 														.ToList();
-								DeleteTextItem(listnew, text);
+								DeleteTextItem(listnew);
 							}
 							catch
 							{ }
@@ -163,7 +162,7 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % 5 == i)
 														.Select(pair => pair.value)
 														.ToList();
-								DeleteTextItem(listnew, text);
+								DeleteTextItem(listnew);
 							}
 							catch
 							{ }
@@ -176,7 +175,91 @@ namespace QuanLyTex.User2Class
 				}
 			});
 		}
-		public async System.Threading.Tasks.Task ChangeNameItem(List<string> list)
+        public async System.Threading.Tasks.Task DeleteTableItem(List<string> list)
+        {
+            await System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    Application app = new Application();
+                    app.Visible = false;
+                    foreach (string item in list)
+                    {
+                        try
+                        {
+                            Document doc = app.Documents.Open(item);
+                            Tables listTable=doc.Tables;
+                            foreach(Table item in listTable)
+                            {
+                                item.Delete();
+                            }
+                            doc.Close();
+                        }
+                        catch { }
+                    }
+                    app.Quit();
+                    System.Windows.Forms.MessageBoxEx.Show("Xóa bảng thành công", 2000);
+                }
+                catch
+                { }
+            });
+        }
+        public async System.Threading.Tasks.Task DeleteTable(List<string> listpath)
+        {
+            await System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    int count = listpath.Count;
+                    if (count < 3)
+                    {
+                        try
+                        {
+                            DeleteTableItem(listpath);
+                        }
+                        catch
+                        { }
+                    }
+                    if (count < 20 && count >= 3)
+                    {
+                        for (int i = 0; i <= 2; i++)
+                        {
+                            try
+                            {
+                                List<string> listnew = listpath.Select((value, index) => new { value, index })
+                                                        .Where(pair => pair.index % 3 == i)
+                                                        .Select(pair => pair.value)
+                                                        .ToList();
+                                DeleteTableItem(listnew);
+                            }
+                            catch
+                            { }
+                        }
+                    }
+                    if (count >= 20)
+                    {
+                        for (int i = 0; i <= 4; i++)
+                        {
+                            try
+                            {
+                                List<string> listnew = listpath.Select((value, index) => new { value, index })
+                                                        .Where(pair => pair.index % 5 == i)
+                                                        .Select(pair => pair.value)
+                                                        .ToList();
+                                DeleteTableItem(listnew);
+                            }
+                            catch
+                            { }
+                        }
+                    }
+                    System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
+                }
+                catch
+                {
+                }
+            });
+        }
+        public async System.Threading.Tasks.Task ChangeNameItem(List<string> list)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{

@@ -135,9 +135,18 @@
 						</xctk:MaterialToolTip>
 					</xctk:MaterialRadioButton.ToolTip>
 					</xctk:MaterialRadioButton>
-					<xctk:WatermarkTextBox x:Name="TextString"
-									   Watermark="Từ khóa trong ngoặc"
-									   KeepWatermarkOnGotFocus="{Binding IsChecked, ElementName=_keepWatermarkOnGotFocus}" Height="30" Background="#FFD8D5D5" Width="121"/>
+				</TextBlock>
+                <TextBlock>
+					<xctk:MaterialRadioButton x:Name="DeleteTable"  GroupName="FilePdf" Content="Bỏ bảng Table"  Width="144">
+						<xctk:MaterialRadioButton.ToolTip>
+						<xctk:MaterialToolTip Placement="Mouse" DataContext="{Binding Path=PlacementTarget, RelativeSource={RelativeSource Self}}"
+													MaterialAccentBrush="{Binding MaterialAccentBrush}">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="Ghép nhiều file lại thành một file duy nhất, file sẽ được lưu trong folder LuuFile trong thư mục app." FontSize="10" Margin="5,0,0,0" TextWrapping="WrapWithOverflow" Width="80"/>
+							</StackPanel>
+						</xctk:MaterialToolTip>
+					</xctk:MaterialRadioButton.ToolTip>
+					</xctk:MaterialRadioButton>
 				</TextBlock>
 				<TextBlock>
 					<xctk:MaterialButton MaterialAccentBrush="#FFE47F7A" Click="CreatPdf"

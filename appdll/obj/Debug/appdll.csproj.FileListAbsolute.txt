@@ -25,6 +25,5 @@ E:\Project\QuanLiTexTrailer\appdll\obj\Debug\appdll.pdb
 D:\Project\QuanLiTexPro\appdll\bin\Debug\appdll.dll
 D:\Project\QuanLiTexPro\appdll\bin\Debug\appdll.pdb
 D:\Project\QuanLiTexPro\appdll\obj\Debug\appdll.csprojAssemblyReference.cache
-D:\Project\QuanLiTexPro\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
 D:\Project\QuanLiTexPro\appdll\obj\Debug\appdll.dll
 D:\Project\QuanLiTexPro\appdll\obj\Debug\appdll.pdb
