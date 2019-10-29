@@ -10,14 +10,7 @@
 		<StackPanel>
 			<TextBox  Name="Id" TextWrapping="Wrap" FontSize="10" Background="#FFADF7F3" Height="62" />
 			<TextBlock Width="270">
-					<StackPanel>
-						<CheckBox Name="traler" Content="Đăng kí Bản Trailer(10 ngày)" Width="300" IsChecked="True"/>
-						<CheckBox Name="Pro" Content="Đăng kí Pro" Width="300"/>
-					</StackPanel>
-			</TextBlock>
-			<TextBox  Name="license" TextWrapping="WrapWithOverflow" FontSize="10" Background="#FFADF7F3" Height="132"/>
-			<TextBlock Width="270">
-					<Button  Content="Lấy mã liccense" Height="27" Width="129" Click="Button_Click"/>
+					<Button  Content="Lấy mã ID" Height="27" Width="129" Click="Button_Click"/>
 			</TextBlock>
 		</StackPanel>
     </Grid>

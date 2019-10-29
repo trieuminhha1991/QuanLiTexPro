@@ -30,7 +30,6 @@ D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\MainWindow.baml
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.g.resources
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.Properties.Resources.resources
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.csproj.GenerateResource.cache
-D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.csproj.CoreCompileInputs.cache
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.csproj.CopyComplete
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.exe
 D:\Project\QuanLiTexPro\CreatLicensing\obj\Debug\CreatLicensing.pdb

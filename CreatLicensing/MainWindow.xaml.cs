@@ -55,15 +55,8 @@ namespace CreatLicensing
 		}
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			if (traler.IsChecked==true)
-			{
-				license.Text = licensingFuntionTrailer(Id.Text);
-			}
-			if (Pro.IsChecked == true)
-			{
-				license.Text = licensingFuntionPro(Id.Text);
-			}
-		}
+            Id.Text = getStringhardware() + getHardDriverId();
+        }
 		public string licensingFuntionTrailer(string id)
 		{
 			string licensing = "";
