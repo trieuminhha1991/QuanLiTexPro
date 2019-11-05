@@ -38,7 +38,7 @@ namespace QuanLyTex.User1Class
 					dic.Add("cy", "cy");
 					dic.Add("nx", "nx");
 					dic.Add("dang", "dang");
-					TexTo.addTextToWord(list, path, true,false, true, false, true,false,false, "EX", true, true, true, app, dic);
+					TexTo.addTextToWord(list, path, true,false, true, false, true,false,false, "EX", true, true, true, app,false, dic);
 					app.Quit();
 				}
 				catch
@@ -68,7 +68,7 @@ namespace QuanLyTex.User1Class
 						dicnew.Add("cy", "cy");
 						dicnew.Add("nx", "nx");
 						dicnew.Add("dang", "dang");
-						TexTo.addTextToWord(list, pathnem2, true, false, true, false, true, false, false, "EX", true, true, true, app, dicnew);
+						TexTo.addTextToWord(list, pathnem2, true, false, true, false, true, false, false, "EX", true, true, true, app,false, dicnew);
 						app.Quit();
 					}
 					System.Windows.MessageBox.Show("Thực hiện chức năng tex to word thành công", "Thành công");

@@ -92,6 +92,9 @@
 						</xctk:MaterialToolTip>
 					</xctk:MaterialCheckBox.ToolTip>
 				</xctk:MaterialCheckBox>
+                <TextBlock>
+					<xctk:MaterialCheckBox Name="FileChoice"  ContentControl.Content="Trắc nghiệm 5 đáp án." Width="229" />
+				</TextBlock>
 			</StackPanel>
 		</GroupBox>
 		<GroupBox Grid.Row="2" Grid.Column="1"  Header="Môi trường chuyển \begin{+}" Background="#FF0F0F0F" FontSize="13" Margin="0,7.2,10,144.6">

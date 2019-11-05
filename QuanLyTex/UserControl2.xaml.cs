@@ -20,7 +20,8 @@ namespace QuanLyTex
 	/// </summary>
 	public partial class UserControl2 : System.Windows.Controls.UserControl
 	{
-		Application app;
+        string selectPath = "";
+        Application app;
 		int indexListBox;
 		AcycnUser2 user = new AcycnUser2();
 		bool check = false;
@@ -179,12 +180,14 @@ namespace QuanLyTex
 			{
 				if (FileSelect3.IsChecked == true)
 				{
+                    selectPath = "";
 					FolderBrowserDialog dialog = new FolderBrowserDialog
 					{
 						SelectedPath = @"C:\"
 					};
 					if (dialog.ShowDialog().ToString().Equals("OK"))
 					{
+                        selectPath = dialog.SelectedPath;
                         string[] enumerable = Directory.GetFiles(dialog.SelectedPath, "*.docx", SearchOption.AllDirectories);
                         string[] enumerable2 = Directory.GetFiles(dialog.SelectedPath, "*.doc", SearchOption.AllDirectories);
                         if (enumerable != null)
@@ -243,12 +246,14 @@ namespace QuanLyTex
 			{
 				if (FileSelect3C.IsChecked == true)
 				{
+                    selectPath = "";
 					FolderBrowserDialog dialog = new FolderBrowserDialog
 					{
 						SelectedPath = @"C:\"
 					};
 					if (dialog.ShowDialog().ToString().Equals("OK"))
 					{
+                        selectPath = dialog.SelectedPath;
                         string[] enumerable = Directory.GetFiles(dialog.SelectedPath, "*.docx", SearchOption.AllDirectories);
                         string[] enumerable2 = Directory.GetFiles(dialog.SelectedPath, "*.doc", SearchOption.AllDirectories);
                         if (enumerable != null)
@@ -321,7 +326,7 @@ namespace QuanLyTex
 				string path = Directory.GetCurrentDirectory() + @"\LuuFile";
 				if (CreatPdfCheck.IsChecked == true)
 				{
-						user.CreatPdf(list,path);
+						user.CreatPdf(list,path,selectPath);
 				}
 				if(MatchFile.IsChecked==true )
 				{

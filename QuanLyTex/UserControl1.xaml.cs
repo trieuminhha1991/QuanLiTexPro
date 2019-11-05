@@ -168,7 +168,7 @@ namespace QuanLyTex
 			};
 			if (BoxExerciseFormat.SelectedValue != "")
 			{
-				srt6 = "[" + BoxLesson.SelectedValue.Replace(BoxLesson.Delimiter, "") + "]";
+				srt6 = "[" + BoxExerciseFormat.SelectedValue.Replace(BoxExerciseFormat.Delimiter, "") + "]";
 				str6name = srt6;
 			}
 			else
@@ -185,7 +185,7 @@ namespace QuanLyTex
 			}
 			if (selectId6.IsChecked == true)
 			{
-				str = @"\[" + str1 + str2 + str3 + str4 + str5 + "-" + srt6 + "]";
+				str = @"\[" + str1 + str2 + str3 + str4 + str5 + "-" + srt6 + @"\]";
 				strfile = str1name + str2name + str3name + str4name + str5name + "-" + str6name;
 				array.Add(str);
 				array.Add(strfile);

@@ -528,7 +528,7 @@ namespace QuanLyTex.User5Class
 				return Dic;
 			}
 		}
-		public List<string> changeChoiceTexToWord(string tex)
+		public List<string> changeChoiceTexToWord(string tex,bool? five)
 		{
 			try
 			{
@@ -571,10 +571,14 @@ namespace QuanLyTex.User5Class
 					start = end;
 					indexChoice++;
 					dapan++;
-					if (indexChoice == 4)
+					if (indexChoice == 4&&five==false)
 					{
 						break;
 					}
+                    if(indexChoice==5 && five==true)
+                    {
+                        break;
+                    }
 				}
 				if (select == "")
 				{
@@ -595,17 +599,33 @@ namespace QuanLyTex.User5Class
 				{
 
 				}
-				if (list.Count == 4)
-				{
-					return list;
-				}
-				else
-				{
-					list = new List<string>() { "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}" };
-					listTableCheck.Add("NO");
-					return list;
-				}
-			}
+                if (five == false)
+                {
+                    if (list.Count == 4)
+                    {
+                        return list;
+                    }
+                    else
+                    {
+                        list = new List<string>() { "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}" };
+                        listTableCheck.Add("NO");
+                        return list;
+                    }
+                }
+                else
+                {
+                    if (list.Count == 5)
+                    {
+                        return list;
+                    }
+                    else
+                    {
+                        list = new List<string>() { "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}" };
+                        listTableCheck.Add("NO");
+                        return list;
+                    }
+                }
+            }
 			catch
 			{
 				List<string> list = new List<string>() { "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}", "Lỗi dấu {}" };
@@ -614,7 +634,7 @@ namespace QuanLyTex.User5Class
 			}
 		}
 
-		public void addTextToWord(List<string> list, string path, bool? ToogleTex1, bool? ToogleTex2, bool? fixImage, bool? selectFilter, bool? deleteName, bool? deleteSchool, bool? deleteId, string NameDuAn, bool? addTable, bool? addPdf, bool? Runword, Application app, Dictionary<string, string> dic)
+		public void addTextToWord(List<string> list, string path, bool? ToogleTex1, bool? ToogleTex2, bool? fixImage, bool? selectFilter, bool? deleteName, bool? deleteSchool, bool? deleteId, string NameDuAn, bool? addTable, bool? addPdf, bool? Runword, Application app,bool? five, Dictionary<string, string> dic)
 		{
 			listTableCheck = new List<string>();
 			try
@@ -750,113 +770,225 @@ namespace QuanLyTex.User5Class
 							{
 								range = document.Range(range.End - 1);
 								range.ParagraphFormat.LeftIndent = 60;
-								List<string> choice = changeChoiceTexToWord(Dic["choice"]);
+								List<string> choice = changeChoiceTexToWord(Dic["choice"],five);
 								int max = choice[1].Length;
-								for (int i = 1; i < 4; i++)
-								{
-									if (choice[i].Length > max)
-									{
-										max = choice[i].Length;
-									}
-								}
-								range.ParagraphFormat.TabStops.Add(60, WdTabAlignment.wdAlignTabLeft);
-								if (max <= 15 || max >= 40)
-								{
-									range.ParagraphFormat.TabStops.Add(170, WdTabAlignment.wdAlignTabLeft);
-								}
-								range.ParagraphFormat.TabStops.Add(280, WdTabAlignment.wdAlignTabLeft);
-								range.ParagraphFormat.TabStops.Add(390, WdTabAlignment.wdAlignTabLeft);
-								char ch = 'A';
-								for (int i = 0; i < 4; i++)
-								{
-									try
-									{
-										var item2 = choice[i];
-										range = document.Range(range.End - 1);
-										range.Text = ch + ". ";
-										range.Font.Bold = 1;
-										range.Font.Name = "Times New Roman(Headings)";
-										range.Font.Size = 12;
-										if (item2.Contains(@"\True"))
-										{
-											range.Font.Color = WdColor.wdColorRed;
-											chtrue = ch.ToString();
-										}
-										else
-										{
-											range.Font.Color = WdColor.wdColorDarkBlue;
-										}
-										if (item2.Contains("(img)"))
-										{
-											try
-											{
-												int start = item2.IndexOf("(img)");
-												int end = item2.IndexOf("(endimg)");
-												imagepath = item2.Substring(start + 5, end - start - 5);
-												range = document.Range(range.End - 1);
-												InlineShape shape = range.InlineShapes.AddPicture(imagepath);
-												shape.Width = shape.Width / 4;
-												shape.Height = shape.Height / 4;
-												if (i == 0 || i == 2)
-												{
-													range.InsertAfter("\t");
-												}
-												else
-												{
-													range.InsertAfter("\n");
-												}
-											}
-											catch
-											{
-												range = document.Range(range.End - 1);
-												range.Font.Bold = 0;
-												range.Font.Color = WdColor.wdColorBlack;
-												range.Text = item2 + ".\n";
-											}
-										}
-										else
-										{
-											if (item2.Contains(@"\True"))
-											{
-												item2 = item2.Substring(5);
-											}
-											range = document.Range(range.End - 1);
-											if (max >= 40)
-											{
-												range.Text = item2 + ".\n";
-											}
-											if (15 < max && max < 40)
-											{
-												if (i == 0 || i == 2)
-												{
-													range.Text = item2 + ".\t";
-												}
-												else
-												{
-													range.Text = item2 + ".\n";
-												}
-											}
-											if (max <= 15)
-											{
-												if (i < 3)
-												{
-													range.Text = item2 + ".\t";
-												}
-												if (i == 3)
-												{
-													range.Text = item2 + ".\n";
-												}
-											}
-											range.Font.Bold = 0;
-											range.Font.Color = WdColor.wdColorBlack;
-										}
-										ch++;
-									}
-									catch
-									{
+                                if (five == false)
+                                {
+                                    for (int i = 1; i < 4; i++)
+                                    {
+                                        if (choice[i].Length > max)
+                                        {
+                                            max = choice[i].Length;
+                                        }
+                                    }
+                                    range.ParagraphFormat.TabStops.Add(60, WdTabAlignment.wdAlignTabLeft);
+                                    if (max <= 15 || max >= 40)
+                                    {
+                                        range.ParagraphFormat.TabStops.Add(170, WdTabAlignment.wdAlignTabLeft);
+                                    }
+                                    range.ParagraphFormat.TabStops.Add(280, WdTabAlignment.wdAlignTabLeft);
+                                    range.ParagraphFormat.TabStops.Add(390, WdTabAlignment.wdAlignTabLeft);
+                                    char ch = 'A';
+                                    for (int i = 0; i < 4; i++)
+                                    {
+                                        try
+                                        {
+                                            var item2 = choice[i];
+                                            range = document.Range(range.End - 1);
+                                            range.Text = ch + ". ";
+                                            range.Font.Bold = 1;
+                                            range.Font.Name = "Times New Roman(Headings)";
+                                            range.Font.Size = 12;
+                                            if (item2.Contains(@"\True"))
+                                            {
+                                                range.Font.Color = WdColor.wdColorRed;
+                                                chtrue = ch.ToString();
+                                            }
+                                            else
+                                            {
+                                                range.Font.Color = WdColor.wdColorDarkBlue;
+                                            }
+                                            if (item2.Contains("(img)"))
+                                            {
+                                                try
+                                                {
+                                                    int start = item2.IndexOf("(img)");
+                                                    int end = item2.IndexOf("(endimg)");
+                                                    imagepath = item2.Substring(start + 5, end - start - 5);
+                                                    range = document.Range(range.End - 1);
+                                                    InlineShape shape = range.InlineShapes.AddPicture(imagepath);
+                                                    shape.Width = shape.Width / 4;
+                                                    shape.Height = shape.Height / 4;
+                                                    if (i == 0 || i == 2)
+                                                    {
+                                                        range.InsertAfter("\t");
+                                                    }
+                                                    else
+                                                    {
+                                                        range.InsertAfter("\n");
+                                                    }
+                                                }
+                                                catch
+                                                {
+                                                    range = document.Range(range.End - 1);
+                                                    range.Font.Bold = 0;
+                                                    range.Font.Color = WdColor.wdColorBlack;
+                                                    range.Text = item2 + ".\n";
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (item2.Contains(@"\True"))
+                                                {
+                                                    item2 = item2.Substring(5);
+                                                }
+                                                range = document.Range(range.End - 1);
+                                                if (max >= 40)
+                                                {
+                                                    range.Text = item2 + ".\n";
+                                                }
+                                                if (15 < max && max < 40)
+                                                {
+                                                    if (i == 0 || i == 2)
+                                                    {
+                                                        range.Text = item2 + ".\t";
+                                                    }
+                                                    else
+                                                    {
+                                                        range.Text = item2 + ".\n";
+                                                    }
+                                                }
+                                                if (max <= 15)
+                                                {
+                                                    if (i < 3)
+                                                    {
+                                                        range.Text = item2 + ".\t";
+                                                    }
+                                                    if (i == 3)
+                                                    {
+                                                        range.Text = item2 + ".\n";
+                                                    }
+                                                }
+                                                range.Font.Bold = 0;
+                                                range.Font.Color = WdColor.wdColorBlack;
+                                            }
+                                            ch++;
+                                        }
+                                        catch
+                                        {
 
-									}
-								}
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    for (int i = 1; i < 5; i++)
+                                    {
+                                        if (choice[i].Length > max)
+                                        {
+                                            max = choice[i].Length;
+                                        }
+                                    }
+                                    range.ParagraphFormat.TabStops.Add(60, WdTabAlignment.wdAlignTabLeft);
+                                    if (max <= 15 || max >= 40)
+                                    {
+                                        range.ParagraphFormat.TabStops.Add(140, WdTabAlignment.wdAlignTabLeft);
+                                    }
+                                    range.ParagraphFormat.TabStops.Add(220, WdTabAlignment.wdAlignTabLeft);
+                                    range.ParagraphFormat.TabStops.Add(300, WdTabAlignment.wdAlignTabLeft);
+                                    range.ParagraphFormat.TabStops.Add(380, WdTabAlignment.wdAlignTabLeft);
+                                    char ch = 'A';
+                                    for (int i = 0; i < 5; i++)
+                                    {
+                                        try
+                                        {
+                                            var item2 = choice[i];
+                                            range = document.Range(range.End - 1);
+                                            range.Text = ch + ". ";
+                                            range.Font.Bold = 1;
+                                            range.Font.Name = "Times New Roman(Headings)";
+                                            range.Font.Size = 12;
+                                            if (item2.Contains(@"\True"))
+                                            {
+                                                range.Font.Color = WdColor.wdColorRed;
+                                                chtrue = ch.ToString();
+                                            }
+                                            else
+                                            {
+                                                range.Font.Color = WdColor.wdColorDarkBlue;
+                                            }
+                                            if (item2.Contains("(img)"))
+                                            {
+                                                try
+                                                {
+                                                    int start = item2.IndexOf("(img)");
+                                                    int end = item2.IndexOf("(endimg)");
+                                                    imagepath = item2.Substring(start + 5, end - start - 5);
+                                                    range = document.Range(range.End - 1);
+                                                    InlineShape shape = range.InlineShapes.AddPicture(imagepath);
+                                                    shape.Width = shape.Width / 4;
+                                                    shape.Height = shape.Height / 4;
+                                                    if (i == 0 || i == 2)
+                                                    {
+                                                        range.InsertAfter("\t");
+                                                    }
+                                                    else
+                                                    {
+                                                        range.InsertAfter("\n");
+                                                    }
+                                                }
+                                                catch
+                                                {
+                                                    range = document.Range(range.End - 1);
+                                                    range.Font.Bold = 0;
+                                                    range.Font.Color = WdColor.wdColorBlack;
+                                                    range.Text = item2 + ".\n";
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (item2.Contains(@"\True"))
+                                                {
+                                                    item2 = item2.Substring(5);
+                                                }
+                                                range = document.Range(range.End - 1);
+                                                if (max >= 40)
+                                                {
+                                                    range.Text = item2 + ".\n";
+                                                }
+                                                if (15 < max && max < 40)
+                                                {
+                                                    if (i == 0 || i == 2)
+                                                    {
+                                                        range.Text = item2 + ".\t";
+                                                    }
+                                                    else
+                                                    {
+                                                        range.Text = item2 + ".\n";
+                                                    }
+                                                }
+                                                if (max <= 15)
+                                                {
+                                                    if (i < 4)
+                                                    {
+                                                        range.Text = item2 + ".\t";
+                                                    }
+                                                    if (i == 4)
+                                                    {
+                                                        range.Text = item2 + ".\n";
+                                                    }
+                                                }
+                                                range.Font.Bold = 0;
+                                                range.Font.Color = WdColor.wdColorBlack;
+                                            }
+                                            ch++;
+                                        }
+                                        catch
+                                        {
+
+                                        }
+                                    }
+                                }
 								if (imageAdd != "")
 								{
 									try

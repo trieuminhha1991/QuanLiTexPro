@@ -181,9 +181,6 @@
     <Compile Include="UserControl5D.xaml.cs">
       <DependentUpon>UserControl5D.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl5F.xaml.cs">
-      <DependentUpon>UserControl5F.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControl8.xaml.cs">
       <DependentUpon>UserControl8.xaml</DependentUpon>
     </Compile>
@@ -243,10 +240,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl5D.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl5F.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

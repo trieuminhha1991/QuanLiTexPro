@@ -78,7 +78,7 @@ namespace QuanLyTex
 					};
 					if (dialog.ShowDialog().ToString().Equals("OK"))
 					{
-						IEnumerable<string> enumerable = Directory.EnumerateFiles(dialog.SelectedPath, "*.tex");
+                        string[] enumerable = Directory.GetFiles(dialog.SelectedPath, "*.tex", SearchOption.AllDirectories);
 						if (enumerable != null)
 						{
 							foreach (string str in enumerable)
@@ -280,7 +280,7 @@ namespace QuanLyTex
 				return list;
 			}
 		}
-		public async System.Threading.Tasks.Task startListTexToWord(List<string> listPath,string exString,string btString,string vdString,bool?ex,bool? bt,bool?vd, bool? toogleTex1, bool? toogleTex2, bool? Tiz, bool? all, bool? DeleteName,bool?DeleteSchool, bool? DeleteId, string NameDuAn, bool? AddTableCheck, bool? AddFilePdf, bool? RunTexToWord,Dictionary<string,string> dic)
+		public async System.Threading.Tasks.Task startListTexToWord(List<string> listPath,string exString,string btString,string vdString,bool?ex,bool? bt,bool?vd, bool? toogleTex1, bool? toogleTex2, bool? Tiz, bool? all, bool? DeleteName,bool?DeleteSchool, bool? DeleteId, string NameDuAn, bool? AddTableCheck, bool? AddFilePdf, bool? RunTexToWord,bool? Five,Dictionary<string,string> dic)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
@@ -312,7 +312,7 @@ namespace QuanLyTex
 							{
 								Visible = true
 							};
-							TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, dic);
+							TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app,Five, dic);
 							app.Quit();
 							string path3 = Directory.GetCurrentDirectory() + @"\Bat";
 							string path4 = Directory.GetCurrentDirectory();
@@ -346,7 +346,7 @@ namespace QuanLyTex
 				dic.Add("nx", NxString.Text);
 				dic.Add("dang", DangString.Text);
 				dic.Add("cy", CyString.Text);
-				startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, dic);
+				startListTexToWord(listPath, ExString.Text, BtString.Text, VdString.Text, CauHoi.IsChecked, BaiTap.IsChecked, ViDu.IsChecked, true, false, Tiz.IsChecked, all.IsChecked, DeleteName.IsChecked, DeleteSchool.IsChecked, DeleteId.IsChecked, NameDuAn.Text, AddTableCheck.IsChecked, AddFilePdf.IsChecked, RunTexToWord.IsChecked, FileChoice.IsChecked, dic);
 				FolderSaveFile.Text = Directory.GetCurrentDirectory() + @"\LuuFile";
 				System.Windows.MessageBox.Show("Chức năng sẽ chạy theo phương thức bất đồng bộ, các thầy cô có thể thực hiện các chức năng khác trong lúc chờ chạy xong", "Thành công");
 			}

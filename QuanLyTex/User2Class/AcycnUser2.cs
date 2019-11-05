@@ -14,7 +14,7 @@ namespace QuanLyTex.User2Class
 {
 	class AcycnUser2
 	{
-		public async System.Threading.Tasks.Task CreatPdfItem(List<string> list, string path)
+		public async System.Threading.Tasks.Task CreatPdfItem(List<string> list, string path,string selectPath)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
@@ -26,10 +26,20 @@ namespace QuanLyTex.User2Class
 					{
 						try
 						{
-							string pathitem = path + @"\" + System.IO.Path.GetFileNameWithoutExtension(item) + ".pdf";
-							var document = app.Documents.Open(item,ReadOnly:true);
-							document.SaveAs(pathitem, WdSaveFormat.wdFormatPDF);
-							document.Close();
+							string itemname = System.IO.Path.GetFileNameWithoutExtension(item) + ".pdf";
+                            string pathFather = Directory.GetParent(item).FullName;
+                            string pathFather2=pathFather.Replace(selectPath, selectPath + "PDF");
+                            if (!File.Exists(pathFather2 + @"\" + itemname))
+                            {
+                                string pathitem = pathFather2 + @"\" + itemname;
+                                if (!Directory.Exists(pathFather2))
+                                {
+                                    Directory.CreateDirectory(pathFather2);
+                                }
+                                var document = app.Documents.Open(item, ReadOnly: true);
+                                document.SaveAs(pathitem, WdSaveFormat.wdFormatPDF);
+                                document.Close();
+                            }
 						}
 						catch { }
 					}
@@ -40,10 +50,11 @@ namespace QuanLyTex.User2Class
 				{ }
 			});
 		}
-		public async System.Threading.Tasks.Task CreatPdf(List<string> listpath,string path)
+		public async System.Threading.Tasks.Task CreatPdf(List<string> listpath,string path,string selectPath)
 		{
 			await System.Threading.Tasks.Task.Run(() =>
 			{
+                selectPath = Path.GetFileName(selectPath);
 				try
 				{
 					int count = listpath.Count;
@@ -51,7 +62,7 @@ namespace QuanLyTex.User2Class
 					{
 							try
 							{
-								CreatPdfItem(listpath, path);
+								CreatPdfItem(listpath, path,selectPath);
 							}
 							catch
 							{ }
@@ -66,7 +77,7 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % 3 == i)
 														.Select(pair => pair.value )
 														.ToList();
-								CreatPdfItem(listnew, path);
+								CreatPdfItem(listnew, path,selectPath);
 							}
 							catch
 							{ }
@@ -82,7 +93,7 @@ namespace QuanLyTex.User2Class
 														.Where(pair => pair.index % 5 == i)
 														.Select(pair => pair.value)
 														.ToList();
-								CreatPdfItem(listnew, path);
+								CreatPdfItem(listnew, path,selectPath);
 							}
 							catch
 							{ }
@@ -108,6 +119,7 @@ namespace QuanLyTex.User2Class
 						try
 						{
 							Document doc = app.Documents.Open(item);
+                            doc.Application.Visible = false;
 							doc.Content.Find.Execute(FindText: @"\[*\]", Replace: WdReplace.wdReplaceAll, ReplaceWith: "", MatchWildcards: true);
 							doc.Close();
 						}
@@ -168,7 +180,23 @@ namespace QuanLyTex.User2Class
 							{ }
 						}
 					}
-					System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
+                    if (count >= 30)
+                    {
+                        for (int i = 0; i <= 6; i++)
+                        {
+                            try
+                            {
+                                List<string> listnew = listpath.Select((value, index) => new { value, index })
+                                                        .Where(pair => pair.index % 7 == i)
+                                                        .Select(pair => pair.value)
+                                                        .ToList();
+                                DeleteTextItem(listnew);
+                            }
+                            catch
+                            { }
+                        }
+                    }
+                    System.Windows.Forms.MessageBoxEx.Show("Tạo Pdf được thực hiện bất đồng bộ, các file được lưu trong thư mục LuuFile", 2000);
 				}
 				catch
 				{
@@ -189,9 +217,9 @@ namespace QuanLyTex.User2Class
                         {
                             Document doc = app.Documents.Open(item);
                             Tables listTable=doc.Tables;
-                            foreach(Table item in listTable)
+                            foreach(Table item2 in listTable)
                             {
-                                item.Delete();
+                                item2.Delete();
                             }
                             doc.Close();
                         }
