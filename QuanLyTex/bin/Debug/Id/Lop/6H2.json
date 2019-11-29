@@ -1,0 +1,9 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Nửa mặt phẳng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Số đo góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Khi nào thì xOy+yOz=xOz ̂︂?" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Vẽ góc cho biết số đo" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Tia phân giác của góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Thực hành đo góc trên mặt đất" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 8, "SectionName" : "Đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 9, "SectionName" : "Tam giác" }

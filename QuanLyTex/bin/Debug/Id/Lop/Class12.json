@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ChapterName" : "Ứng dụng đạo hàm để khảo sát hàm số", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ChapterName" : "Hàm số lũy thừa- Hàm số mũ và Hàm số lô-ga-rít", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ChapterName" : "Nguyên hàm, tích phân và ứng dụng", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb77e3fb9391a74f275d0" }, "ChapterId" : 4, "ChapterName" : "Số phức", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ChapterName" : "Khối đa diện", "ObjectName" : "H" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ChapterName" : "Mặt nón, mặt trụ, mặt cầu", "ObjectName" : "H" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d5" }, "ChapterId" : 3, "ChapterName" : "Phương pháp tọa độ trong không gian", "ObjectName" : "H" }

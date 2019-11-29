@@ -1,0 +1,69 @@
+%!Cau!%
+\begin{ex}%[Nguyễn Tài Tuệ, Đề Thi THPT QG lần 4 trường THPT Yên Khánh A, Ninh Bình, Dự án 12EX8-2019]%[1D3K4-2] 
+	Cho dãy số $(u_n)$ xác định bởi $\left\{\begin{aligned}
+	& u_1=1 \\
+	& u_{n+1}=\dfrac{u_n+8}{5} \\
+	\end{aligned}\right. $ và dãy số $(v_n)$ xác định bởi $v_n=u_n-2$. Biết $(v_n)$ là cấp số nhân có công bội $q$. Khi đó
+	\choice
+	{$q=\dfrac{2}{5}$}
+	{$q=5$}
+	{$q=\dfrac{8}{5}$}
+	{\True $q=\dfrac{1}{5}$}
+	\loigiai{
+		Ta có $v_{n+1}=u_{n+1}-2=\dfrac{u_n+8}{5}-2=\dfrac{u_n-2}{5}=\dfrac{v_n}{5}.$\\
+		Suy ra $q=\dfrac{1}{5}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT Phan Đình Phùng - Đắc Lắc, 2019]%[Nguyễn Minh Hiếu, 12EX8]%[1D3K4-7]
+	Giả sử một người đi làm được lĩnh lương khởi điểm là $2.000.000$ đồng/tháng. Cứ $3$ năm người ấy lại được tăng lương một lần với mức tăng bằng $7\%$ của tháng trước đó. Hỏi sau $36$ năm làm việc người ấy lĩnh được tất cả bao nhiêu tiền?
+	\choice
+	{$ 7{,}068289036\cdot 10^8 $ đồng}
+	{\True $ 1.287.968.492 $ đồng}
+	{$ 10.721.769.110 $ đồng}
+	{$ 429.322.830{,}5 $ đồng}
+	\loigiai{
+		Ta có $36$ năm tương ứng với $12$ kỳ lương; mỗi kỳ lương có $36$ tháng và kỳ sau tăng $7\%$ so với kỳ trước. Do đó tổng số tiền mỗi kỳ lương là một cấp số nhân với $u_1=36\times 2=72$ (triệu đồng) và công bội $q=1{,}07$.\\
+		Vậy tổng số tiền sau $36$ năm là $T=\dfrac{72\cdot \left[(1{,}07)^{12}-1\right]}{1{,}07-1}=1287{,}968492$ (triệu đồng).
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán Học và Tuổi Trẻ (Đề số 3), 2019]%[Đặng Tân Hoài, 12-EX-6-2019]%[1D3K4-5]
+	Cho số nguyên dương $n$ và $n$ tam giác $A_1B_1C_1, ~ A_2B_2C_2, \ldots ,A_nB_nC_n$, trong đó các điểm $A_{i+1},B_{i+1},C_{i+1}$ lần lượt thuộc các đoạn thẳng $B_iC_i,~C_iA_i,~A_iB_i$ với $i=\overline{1,n-1}$ sao cho $A_{i+1}C_i=2A_{i+1}B_i$, $B_{i+1}A_i=2B_{i+1}C_i$, $C_{i+1}B_i=2C_{i+1}A_i$. Gọi $S$ là tổng tất cả diện tích của $n$ tam giác đó. Tìm số nguyên dương $n$ biết rằng $S=3\left(1-\dfrac{2^{2018}}{3^{2018}}\right)$ và tam giác $A_1B_1C_1$ có diện tích bằng $1$.
+	\choice
+	{$ n=6054 $}
+	{$ n=2027 $}
+	{$ n=2017 $}
+	{\True $ n=2018 $}
+	\loigiai{
+		\immini{
+			Gọi $S_1,S_2,\ldots,S_n$ lần lượt là diện tích các tam giác $A_1B_1C_1$, $A_2B_2C_2$, \ldots ,$A_nB_nC_n$.\\
+			Ta có $S_{B_1A_2C_2}=\dfrac{1}{2}B_1A_2 \cdot B_1C_2 \cdot \sin
+			B_1=\dfrac{1}{2}\cdot \dfrac{1}{3}B_1C_1 \cdot \dfrac{2}{3}B_1A_1 \cdot \sin
+			B_1=\dfrac{1}{9}S_1$.\\
+			Tương tự $S_{C_1B_2A_2}=S_{A_1C_2B_2}=\dfrac{1}{9}S_1$.\\
+			Suy ra $S_2=S_1-3\cdot \dfrac{1}{9}S_1=\dfrac{2}{3}S_1$.
+			Chứng minh tương tự ta được $S_n=\dfrac{2}{3}S_{n-1}$.\\
+			Do đó dãy $S_1,~S_2,\ldots,~S_n$ là một cấp số nhân với $S_1=1$ và công bội $q=\dfrac{2}{3}$.\\
+			Suy ra $S=\dfrac{1\left[1-\left(\dfrac{2}{3}\right)^n\right]}{1-\dfrac{2}{3}}=3\left(1-\dfrac{2^n}{3^{n}}\right)$.\\
+			Vậy $n=2018$ thì thỏa mãn yêu cầu bài toán.
+		}{
+		\begin{tikzpicture}[scale=0.8, font=\footnotesize,line join=round, line cap=round,>=stealth]
+		\tkzDefPoints{0/0/B_1,2/6/A_1,4/0/C_1}
+		\coordinate (A_2) at ($(B_1)!1/3!(C_1)$);
+		\coordinate (B_2) at ($(C_1)!1/3!(A_1)$);
+		\coordinate (C_2) at ($(A_1)!1/3!(B_1)$);
+		\coordinate (A_3) at ($(B_2)!1/3!(C_2)$);
+		\coordinate (B_3) at ($(C_2)!1/3!(A_2)$);
+		\coordinate (C_3) at ($(A_2)!1/3!(B_2)$);
+		\tkzDrawPolygon(A_1,B_1,C_1)
+		\tkzDrawPolygon(A_2,B_2,C_2)
+		\tkzDrawPolygon(A_3,B_3,C_3)
+		\tkzDrawPoints[fill=black](A_1,B_1,C_1,A_2,B_2,C_2,A_3,B_3,C_3)
+		\tkzLabelPoints[above](A_1,A_3)
+		\tkzLabelPoints[xshift=+0.2cm, below left](B_3)
+		\tkzLabelPoints[above left](C_2)
+		\tkzLabelPoints[above right](B_2)
+		\tkzLabelPoints[below right](C_3)
+		\tkzLabelPoints[below](B_1,C_1,A_2)
+		\end{tikzpicture}
+	}
+}
+\end{ex}

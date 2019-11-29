@@ -1,0 +1,123 @@
+%!Cau!%
+\begin{ex}%[2-DTH-14-NINHBINH-19]%[Nguyễn Thế Anh, dự án EX5]%[1H2K1-4]
+	Cho hình chóp $S.ABCD $ có đáy $ABCD$ là hình bình hành. Gọi $M,N,P$ lần lượt là trung điểm của
+$BC,CD,SA$. Mặt phẳng $(MNP)$ cắt hình chóp $S.ABCD$ theo thiết diện là
+	\choice
+	{Tam giác}
+	{Lục giác}
+	{\True Ngũ giác}
+	{Tứ giác}
+	\loigiai{
+		\immini
+		{
+			Gọi $ I , J $ là giao của đường thẳng $MN$ và $AB, AD$.\\
+Gọi $F$ là giao điểm của đường thẳng $SB$ và $PI.$ \\
+Gọi $E$ là giao điểm của đường thẳng $SD$ và $PJ.$ \\
+Khi đó thiết diện của hình chóp $S.ABCD$ cắt bởi mặt phẳng $(MNP)$ là ngũ giác $MNEPF$.
+		}
+		{
+		\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=.7]
+		\tkzDefPoints{0/0/A}
+		\coordinate (B) at ($(A)+(5,0)$);
+		\tkzDefShiftPoint[A](-140:2.5){D}
+		\coordinate (C) at ($(B)+(D)-(A)$);
+		\coordinate (S) at ($(A)+(1,4)$);
+		\coordinate (M) at ($(B)!0.5!(C)$);
+			\coordinate (N) at ($(C)!0.5!(D)$);
+				\coordinate (P) at ($(S)!0.5!(A)$);
+				\tkzInterLL(M,N)(A,B)    \tkzGetPoint{I}
+					\tkzInterLL(M,N)(A,D)    \tkzGetPoint{J}
+						\tkzInterLL(P,I)(S,B)    \tkzGetPoint{F}
+							\tkzInterLL(P,J)(S,D)    \tkzGetPoint{E}
+			\tkzDrawSegments(S,F M,C C,N S,E)
+			\tkzDrawPolygon[fill=blue!50,opacity=.5,draw=none](P,F,M,N,E)
+		\tkzDrawSegments(S,C E,J J,N N,E M,F M,I I,F)
+		\tkzDrawSegments[dashed](A,B A,S A,D P,E P,F M,N D,J B,I F,B B,M N,D D,E)
+		\tkzDrawPoints[fill=black](E,F,I,J,P,A,B,D,C,S,M,N)
+		\tkzLabelPoints[above](S,B)
+		\tkzLabelPoints[left](D,J,E)
+		\tkzLabelPoints[right](C,I,P,F)
+		\tkzLabelPoints[above left](A)
+		\tkzLabelPoints[below right](N,M)
+		\end{tikzpicture}
+		}
+	}
+	\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Vĩnh Phúc, 2019]%[Mai Sương, EX-5-2019]%[1H2K1-4]
+Cho hình chóp tam giác $S.ABC$ có tất cả các cạnh bằng $a$. Gọi $I$, $J$ lần lượt là trung điểm của $CA$, $CB$. $K$ là điểm trên cạnh $SA$ sao cho $KA=2KS$. Thiết diện của mặt phẳng $(IJK)$ với hình chóp có diện tích là
+	\choice
+	{$\dfrac{a^2\sqrt{51}}{144}$}
+	{$\dfrac{5a^2\sqrt{51}}{288}$}
+	{\True $\dfrac{5a^2\sqrt{51}}{144}$}
+	{$\dfrac{a^2\sqrt{51}}{288}$}
+	\loigiai{
+	\begin{center}
+	\begin{tikzpicture}[scale=1, line join=round, line cap=round,font=\footnotesize,>=stealth]%hình chóp đáy tam giác
+\tkzDefPoints{0/0/A, 6/0/C, 4/-2.5/B}
+\coordinate (S) at ($(A)+(2.5,4)$);
+\coordinate (I) at ($(A)!0.5!(C)$);
+\coordinate (J) at ($(C)!0.5!(B)$);
+\coordinate (H) at ($(S)!0.33!(B)$);
+\coordinate (K) at ($(S)!0.33!(A)$);
+\tkzDrawSegments(S,A S,B S,C A,B B,C H,J H,K)
+\tkzDrawSegments[dashed](A,C I,J K,I)
+\tkzDrawPoints[fill=black](S,A,B,C,H,K,I,J)
+\tkzLabelPoints[left](K)
+\tkzLabelPoints[below right](B,J,C)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[below left](A,I)
+\tkzLabelPoints[right](H)
+\end{tikzpicture}
+	\end{center}
+	Thiết diện là hình thang cân $IJHK$ có 
+\begin{itemize}
+\item Đáy lớn $IJ =\dfrac{a}{2}$.
+\item Đáy nhỏ $HK=\dfrac{a}{3}$.
+\item Cạnh bên $HJ^2= BH^2 + BJ^2 - 2BH\cdot BJ\cdot\cos 60^{\circ}=\dfrac{13a^2}{36}$.
+\item Chiều cao $h^2= HJ^2 - \left(\dfrac{IJ - HK}{2}\right)^2=\dfrac{13a^2}{36} - \dfrac{a^2}{144}=\dfrac{51a^2}{144}\Rightarrow h =\dfrac{a\sqrt{51}}{12}$.
+	\end{itemize}
+	Vậy diện tích thiết diện là $S =\dfrac{(HK + IJ) h}{2}=\dfrac{5a^2\sqrt{51}}{144}$.
+	}
+	
+	\end{ex}%!Cau!%
+\begin{ex}%[KSKT lần 2, Sở Vĩnh Phúc, 2019 ]%[Nguyễn Thế Anh, 12EX9-2019]%[1H2K1-4]
+		Cho hình chóp $S.ABC$ có đáy là tam giác $ABC$ thỏa mãn $AB =  
+		AC = 4$, $\widehat{BAC} = 30^\circ$. Mặt phẳng ($P$) song song 
+		với $(ABC)$ cắt đoạn thẳng $SA$ tại $M$ sao cho $SM =2MA$. Diện 
+		tích thiết diện của ($P$) và hình chóp$S.ABC$ bằng
+		\choice
+		{$\dfrac{25}{9} $}
+		{$\dfrac{14}{9} $}
+		{\True$\dfrac{16}{9}$}
+		{ $1$}
+		\loigiai{
+			\immini{	Qua $M$ dựng mặt phẳng song song với $(ABC)$ cắt $SB,~SC$ 
+			tại $N,~P$. \\
+			Khi đó $\dfrac{MN}{AB}=\dfrac{SM}{SA}=\dfrac{2}{3}$. Tương 
+			tự ta có 
+			$\dfrac{NP}{BC}=\dfrac{2}{3},\dfrac{MP}{AC}=\dfrac{2}{3}$.\\
+			$\triangle ABC$ và $\triangle MNP$ đồng dạng với tỉ số
+			$$k=\dfrac{2}{3}\Rightarrow S_{\Delta 
+				UNP}=\dfrac{4}{6}S_{\Delta 
+				ABC}=\dfrac{4}{9}\cdot\dfrac{1}{2}\cdot AB\cdot AC\cdot\sin 
+			BAC=\dfrac{16}{9}.$$}
+			{\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzDefPoints{0/0/A,1.2/-1.5/B,4/0/C}
+\coordinate (S) at ($(A)+(0,3)$);
+\tkzDrawPolygon(S,A,B,C)
+\tkzDrawSegments(S,B)
+\tkzDrawSegments[dashed](A,C)
+\tkzDrawPoints[fill=black,size=4](A,B,C,S)
+\coordinate (M) at ($(S)!0.6666!(A)$);
+\coordinate (N) at ($(S)!0.6666!(B)$);
+\coordinate (P) at ($(S)!0.6666!(C)$);
+\tkzDrawSegments[dashed](M,P)
+\tkzDrawSegments(M,N N,P)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[below right](N)
+\tkzLabelPoints[below](B)
+\tkzLabelPoints[left](A,M)
+\tkzLabelPoints[right](C,P)
+\end{tikzpicture}}
+		}
+	\end{ex}

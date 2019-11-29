@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tìm điều kiện xác định của bất phương trình - hệ phương trình" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Bất phương trình - hệ bất phương trình tương đương" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Giải bất phương trình bậc nhất một ẩn và biểu diễn tập nghiệm" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Giải hệ bất phương trình bậc nhất một ẩn và biểu diễn tập nghiệm" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Bất phương trình - hệ bất phương trình bậc nhất một ẩn chứa tham số" }
+{ "_id" : { "$oid" : "5d1cd8273fb939115cc7c1cb" }, "FormId" : 6, "FormName" : "Toán thực tế giải bất phương trình, hệ bất phương trình" }

@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Bài toán chỉ sử dụng P hoặc C hoặc A" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Bài toán kết hợp P, C và A" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Bài toán liên quan đến hình học" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Hoán vị bàn tròn" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Hoán vị lặp" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Giải phương trình, bất phương trình, hệ, chứng minh " }

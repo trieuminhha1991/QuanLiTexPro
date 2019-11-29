@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Định nghĩa, tính chất và tích phân cơ bản" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Phương pháp đổi biến số" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Phương pháp tích phân từng phần" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tích phân của hàm ẩn. Tích phân đặc biệt" }

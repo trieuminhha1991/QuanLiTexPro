@@ -1,0 +1,285 @@
+%UsePackage
+	\documentclass[10pt,a4paper,twoside]{extbook}
+	\usepackage{extsizes}
+	\usepackage{fouriernc}
+	\usepackage{amsmath,amssymb}
+	\usepackage{mathrsfs,xlop,polynom}
+	\usepackage{diagbox,makecell,slashbox,booktabs,pict2e} %kẻ bảng
+	\usepackage{fontawesome}
+	%\usepackage{maybemath}%tô đậm công thức trên tiêu đề
+	\usepackage{fancyhdr}
+	\usepackage{enumerate}
+	\renewcommand{\labelenumi}{\alph{enumi})}
+	\renewcommand\labelitemi{\textbullet}
+	\renewcommand\labelitemii{\faPlusSquareO}
+	\usepackage[svgnames,dvipsnames,table]{xcolor}
+	\usepackage{tkz-euclide}
+	\usepackage{tikz-3dplot}
+	\usepackage{tikz,tkz-tab,tkz-linknodes}
+	\usetikzlibrary{shapes.geometric,arrows,calc,intersections,angles,patterns,snakes,arrows,decorations.text,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+	\usetkzobj{all}
+	\usepackage{pgfplots}
+	\usepgfplotslibrary{fillbetween}
+	\pgfplotsset{compat=1.9}
+	\usepackage[top=2cm, bottom=2cm, left=2.2cm, right=1.3cm] {geometry}
+	\usepackage[unicode]{hyperref}
+	\usepackage{currfile}
+	\usepackage{longtable}
+	\usepackage{arydshln}%gạch dashed
+	\usepackage{colortbl}%tô màu row table
+	%\usepackage[dethi]{ex_test}
+	%\usepackage[loigiai]{ex_test}
+	%\usepackage[solcolor]{ex_test}
+	\usepackage[book]{ex_test}
+	%\def\loigiaiEX{\color{blue}\faShareSquareO~Lời giải.}
+	%\renewtheorem{Solbook}{\color{blue!40!black}Bài}
+	%CÁC GÓI, LỆNH VIẾT TẮT CẦN THÊM
+	\usepackage{esvect}
+	\usepackage{framed}
+	\usepackage[most]{tcolorbox}
+	\usepackage{varwidth}
+	\usepackage{stackengine}
+	\usepackage{scalerel}
+	\usepackage{titlesec}
+	\usepackage{fancyhdr,lastpage}
+%EndUsePackage
+%DefCommand
+	\def\vec{\vv}
+	\def\overrightarrow{\vv}
+	\def\thepart{\Roman{part}}
+		\titleformat{\part}[display]
+		{\large\bfseries\color{blue!40!black}}
+		{
+			\centering
+			\begin{tikzpicture}
+			\draw(0,1.5)node{\fontfamily{ccr}\selectfont\LARGE PHẦN};
+			\node[shape=diamond,draw,double,fill = blue!40!black,line width = 1pt]
+			(partnumber) at (0,-1) {\color{white}\fontsize{40pt}{1pt}\selectfont\thepart};
+			\end{tikzpicture}
+		}
+		{0.5em}
+		{
+			\setcounter{chapter}{0}
+			\titlerule[2.5pt]\vskip2pt\titlerule\vskip4pt\centering\fontsize{40pt}{1pt}\fontfamily{qhv}\selectfont\MakeUppercase
+		}
+	\def\thechapter{\arabic{chapter}}
+		\titleformat{\chapter}[frame]
+		{\color{blue!40!black}\fontfamily{pbk}\selectfont}
+		{\filright\normalsize\enspace \faFolderOpen~CHƯƠNG \LARGE\thechapter\enspace}
+		{.5cm}
+		{\Large\bfseries\filcenter\MakeUppercase}
+		\def\thesection{\arabic{section}}
+		\titleformat{\section}
+		{\fontfamily{put}\selectfont\color{blue!90!black}\Large}
+		{%\faBook~Vấn đề
+			\tikz[baseline=(char.base)]\node[shape=circle,draw,line width = 0.5pt,inner sep=1pt,fill=blue!90] (char){\Large\textcolor{white}{\textbf{\S\thesection}}};}
+		{0em}
+		{	
+			\LARGE\bfseries\filcenter
+			\setcounter{dn}{0}
+			\setcounter{dl}{0}\setcounter{md}{0}%
+			\setcounter{bd}{0}\setcounter{hq}{0}%
+			\setcounter{tc}{0}%
+			\setcounter{dang}{0}%
+			\setcounter{ex}{0}\setcounter{vd}{0}\setcounter{bt}{0}\setcounter{baitoan}{0}
+			\MakeUppercase
+		}
+	%%%%%%%%%%%%%%%%%%%%%%%%%TIÊU ĐỀ SUBSECTION%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\def\thesubsection{\Roman{subsection}}
+		\titleformat{\subsection}
+		{\fontfamily{pag}\selectfont\Large\bfseries\color{red}}
+		{
+			\hspace*{-2.2ex}\tikz[baseline=(char.base)]\node%[shape=circle,draw,inner sep=2pt,fill=blue!40!black]  
+			(char){\textcolor{red}{\thesubsection}.};
+		}
+		{.1em}
+		{
+			\setcounter{ex}{0}\setcounter{vd}{0}\setcounter{bt}{0}
+			\MakeUppercase
+		}
+		%%%%%%%%%%%%%%%%%%%%%%%%%TIÊU ĐỀ SUBSUBSECTION%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\def\thesubsubsection{\arabic{subsubsection}}
+		\titleformat{\subsubsection}
+		{\fontfamily{bch}\selectfont\Large\bfseries\color{cyan!5!blue}}
+		{
+			\hspace*{-1.5ex}\tikz[baseline=(char.base)]
+			\node[shape=circle,draw,inner sep=2pt,fill=blue!50!black]
+			(char) {\small\textcolor{white}{\thesubsubsection}};
+		}
+		{-0.3em}
+		{
+			%\setcounter{vd}{0}
+			\setcounter{ex}{0}
+			\setcounter{bt}{0}
+			%\setcounter{dl}{0}
+			%\setcounter{dn}{0}
+			%\setcounter{hq}{0}
+			%\setcounter{tc}{0}
+			%\MakeUppercase
+		}	
+%EndDefCommand
+%NewCommand
+	\newcommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+	\newcommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+	\newcommand{\BTVD}{\vspace{.5cm}\centerline{\color{magenta}\textbf{\faGg\faGg\faGg~BÀI TẬP VẬN DỤNG \faGg\faGg\faGg}}\setcounter{bt}{0}\vspace{.5cm}}
+	\newcommand{\dropsign}[1]{\smash{\llap{\raisebox{-.5\normalbaselineskip}{$#1$\hspace{2\arraycolsep}}}}}%
+	\newcommand{\cm}[1]{\newline{\bf Chứng minh.} #1 \hfill$\square$}
+	\newcommand{\DAPAN}{\centerline{\fontfamily{qhv}\selectfont\color{violet}\textbf{\faGg\faGg\faGg~BẢNG ĐÁP ÁN\ \faGg\faGg\faGg}}\vspace{.3cm}\boxans}
+	\newcommand{\indapan}[2]{\inputansbox{#1}{#2}}
+%EndNewCommand
+%ReCommand
+	\renewcommand{\tagEX}[1]{%
+		\hfill{\rm (#1)}\newline
+		\@ifnextchar\begin%
+		{\vspace{-\baselineskip}}
+		{}
+	}
+	\renewcommand{\thedang}{\arabic{dang}}
+	\renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{2.2em}}
+	\renewcommand*\l@subsubsection{\@dottedtocline{3}{6.0em}{2em}}
+	\renewcommand\arraystretch{1.4}%Giãn dòng bảng
+	\renewcommand{\labelenumi}{\circEX{\theenumi}}
+%EndReCommand
+%StyleTheorem
+	\theoremstyle{explain}
+%EndStyleTheorem
+%NewTheorem
+	\newtheorem{bt}{\fontfamily{pnc}\selectfont\color{violet}\faEdit~Bài}
+	\newtheorem{vd}{\fontfamily{pnc}\selectfont\color{violet}\faCubes~Ví dụ}
+	\newtheorem{baitoan}{\sffamily\color{violet}\faEdit~Bài toán}
+	\listtheorem{vd,bt,baitoan}
+	\theorembodyfont{\it}
+	\newtheorem{dl}{Định lí}
+	\newtheorem{md}{Mệnh đề}
+	\theoremseparator{.}
+	\theorembodyfont{\rm}
+	\newtheorem{hq}{Hệ quả}
+	\newtheorem{tc}{Tính chất}
+	\newtheorem{bd}{Bổ đề}
+	%\theoremstyle{nonumberplain}%không đánh số
+	\newtheorem{kn}{Khái niệm}
+	\newtheorem{dn}{Định nghĩa}
+	\newtheorem{nx}{Nhận xét}
+	\theoremseparator{}
+	\theorembodyfont{\it}
+	\listenumerate{vd,bt,dl,md,hq,tc,bd,kn,dn,nx}
+	\setcounter{subsubsection}{0}\setcounter{ex}{0}\setcounter{vd}{0}\setcounter{bt}{0}}
+%EndNewTheorem
+%ReTheorem
+	%\renewtheorem{ex}{\color{violet}Câu}
+	\renewtheorem{ex}{\fontfamily{pnc}\selectfont\color{violet}\faCubes~Câu}
+%EndReTheorem
+%NewCounter
+	\newcounter{dang}\setcounter{dang}{0}
+	\newtcolorbox{dang}[1]{enhanced, breakable,	before skip=2mm,after skip=2mm, colback=yellow!10, colframe=red!90!black,boxrule=0.5mm,
+		attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
+		varwidth boxed title*=-3cm,arc is angular,
+		boxed title style={frame code={
+				\path[fill=tcbcol@back!30!black]
+				([yshift=-1mm,xshift=-1mm]frame.north west)
+				arc[start angle=0,end angle=180,radius=1mm]
+				([yshift=-1mm,xshift=1mm]frame.north east)
+				arc[start angle=180,end angle=0,radius=1mm];
+				\path[left color=tcbcol@back!60!black,right color=tcbcol@back!60!black,
+				middle color=tcbcol@back!80!black]
+				([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+				[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+				-- (frame.south east) -- (frame.south west)
+				-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+				[sharp corners]-- cycle;
+			},interior engine=empty,
+		},colbacktitle=red!80,breakable,
+		fonttitle=\bfseries,
+		title={\fontfamily{pbk}\selectfont\faFolderOpen \ Dạng~\stepcounter{dang}\thedang.\ #1}
+		\addcontentsline{toc}{subsubsection}{\it \faFolderOpenO \ Dạng~\thedang.\ #1}
+	}
+	\AfterEndEnvironment{dang}{\centerline{\fontfamily{qhv}\selectfont\small\color{violet}\textbf{\faGg\faGg\faGg~VÍ DỤ MINH HỌA VÀ BÀI TẬP DẠNG \thedang\ \faGg\faGg\faGg}}
+		\newtcolorbox{note}[1][]{enhanced,breakable,
+			before skip=2mm,after skip=3mm,
+			boxrule=0.4pt,left=4mm,right=2mm,top=1mm,bottom=1mm,
+			colback=yellow!30,
+			colframe=yellow!20!black,
+			sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+			underlay={%
+				\path[fill=tcbcol@back!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+				\path[draw=tcbcol@frame,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+				\path[fill=yellow!50!black,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior.north west);
+			},
+			drop fuzzy shadow,#1}
+	\setcounter{secnumdepth}{3}
+	\setcounter{tocdepth}{3}
+%EndNewCounter
+%NewBegin
+	\def\beginbox{\begin{tcolorbox}[boxrule=.3mm,colframe=blue!40!black,colback=blue!5,breakable,arc is angular]}
+		\def\endbox{\end{tcolorbox}}
+	\AtBeginEnvironment{vd}{
+		\beginbox
+		\renewcommand{\loigiai}[1]{
+			\renewcommand{\immini}[2]{
+				\setbox\imbox=\vbox{\hbox{##2}}
+				\widthimmini=\wd\imbox
+				\IMleftright{##1}{##2}
+			}
+			\endbox
+			\begin{onlysolution}
+				{\color{blue}\faShareSquareO~\textbf{Lời giải.}} #1
+			\end{onlysolution}
+			\def\endbox{}
+		}
+	}
+	\AtEndEnvironment{vd}{
+		\endbox
+	}
+%EndNewBegin
+%HeaderFooter
+	\pagestyle{fancy}
+	\lhead{\scriptsize\color{black} \emph{Giáo án môn Toán 10}}
+	\rhead{\scriptsize\color{black} \rightmark}
+	\lfoot{\href{https://www.facebook.com/caothanhthai.ag}{{\color{blue!50!black}\faFacebookSquare}~Cao Thành Thái \faRegistered}}
+	\cfoot{\small {\thepage}}
+	\rfoot{{\color{black}\faPhone}~0939.855.004}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+%EndHeaderFooter
+%HẾT CẤU TRÚC TỰ LUẬN
+%\usepackage[final]{pdfpages}
+
+\newcommand*\CircLabel{%
+	\refstepcounter{CircLabel}%
+	\hskip1em\llap{\circled{\fontsize{8pt}{1pt}\fontfamily{lmss}\bfseries\selectfont\arabic{CircLabel}}}}%
+\NewEnviron{circ_enum}[1][]{%
+	\hfill
+	\setcounter{CircLabel}{0}
+	\def\tempbegin{\begin{taskEX}[label=\CircLabel](#1)}%
+		\expandafter\tempbegin\BODY
+	\end{taskEX}
+}
+
+\setlistsEX{label=\CircLabel}
+
+\AtBeginEnvironment{listEX}{\setcounter{CircLabel}{0}}
+\AtBeginEnvironment{enumEX}{\setcounter{CircLabel}{0}}
+
+\renewcommand\labelitemi{\color{blue!90!black}\faCheckCircle}
+\newcounter{hdong}
+\newcommand{\hdong}[1]{\stepcounter{hdong}{\color{violet!70!black}\bfseries\faBookmark~ Hoạt động \thehdong. #1}}
+\setcounter{hdong}{0}
+\newenvironment{tomtat}{
+	\begin{tcolorbox}[colback=green!10,colframe=violet!80!black,boxrule=1pt,arc=1mm,breakable]
+	}{\end{tcolorbox}}
+
+\usepackage[final]{pdfpages}
+\makeatother
+
+\begin{document}
+	%\hideenviron{ex*}\hideenviron{bt*}
+	%\pagenumbering{gobble}
+	%\includepdf{data/bia}
+	%\pagenumbering{arabic}
+	%\input{data/thanhvien}
+	%\hideansEX{bt}% luôn ẩn lời giải
+	%\hideansEX{ex}% luôn ẩn lời giải
+	%\dotlineans{10}{ex}% luôn ẩn lời giải và hiện 5 dòng kẻ
+	\dotlineans{5}{bt}% luôn ẩn lời giải và hiện 5 dòng kẻ
+	%\dotlinefull{ex}
+	

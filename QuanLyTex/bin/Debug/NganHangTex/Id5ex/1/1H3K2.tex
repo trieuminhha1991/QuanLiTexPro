@@ -1,0 +1,510 @@
+%!Cau!%
+\begin{ex}%[2-DTH-14-NINHBINH-19]%[Nguyễn Thế Anh, dự án EX5]%[1H3K2-3]
+	Cho hình lập phương $ABCD.A'B'C'D'$. Gọi $M$, $N$, $P$ lần lượt là trung điểm các cạnh $AB$, $AD$, $C'D'$. Tính cosin của góc giữa hai đường thẳng $MN$ và $CP$.
+	\choice
+	{$\dfrac{\sqrt{10}}{5}$}
+	{$\dfrac{\sqrt{15}}{5}$}
+	{\True $\dfrac{1}{\sqrt{10}}$}
+	{$\dfrac{3}{\sqrt{10}}$}
+	\loigiai{
+	\immini{
+	Giả sử độ dài cạnh hình lập phương là $a$.\\
+	Ta có
+		\begin{eqnarray*}
+			\vec{MN}\cdot \vec{CP}&=&\left(\vec{AN}-\vec{AM}\right)\cdot \left(\vec{CC'}+\vec{C'P}\right)\\&=&\left(\vec{AN}-\vec{AM}\right)\cdot\vec{C'P}\\&=&-\vec{AM}\cdot \vec{C'P}=-\dfrac{1}{2}\vec{AB}\cdot \dfrac{1}{2}\vec{CD'}=\dfrac{1}{4}AB^2.
+		\end{eqnarray*}
+		Do đó 
+		\begin{eqnarray*}
+		\cos(MN ; CP)&=&\dfrac{|\vec{MN}\cdot\vec{CP}|}{MN\cdot CP}\\
+		&=&\dfrac{\dfrac{1}{4}a^2}{a \dfrac{\sqrt{2}}{2}\cdot a \dfrac{\sqrt{5}}{2}}\\
+		&=&\dfrac{1}{\sqrt{10}}.
+		\end{eqnarray*}
+		}
+		{
+	
+			\begin{tikzpicture}[scale=.8, line join = round, line cap = round]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A',5/0/D',2/2/B'}
+			\coordinate (C') at ($(B')+(D')-(A')$);
+			\tkzDefSquare(A',D')    \tkzGetPoints{D}{A}
+			\tkzDefSquare(B',C')    \tkzGetPoints{C}{B}
+			\coordinate (M) at ($(A)!.5!(B)$);
+			\coordinate (N) at ($(A)!.5!(D)$);
+			\coordinate (E) at ($(C)!.5!(D)$);
+			\coordinate (F) at ($(C)!.5!(B)$);
+			\coordinate (P) at ($(C')!.5!(D')$);
+			\tkzDrawPolygon(B,C,C',D',A',A)
+			\tkzDrawSegments(D,C D,A D,D' M,N E,F E,D' C,P)
+			\tkzDrawSegments[dashed](B',B B',C' B',A' D',F)
+			\tkzDrawPoints[fill=black](B',C',D',A',D,A,C,B,M,N,E,F,P)
+			\tkzLabelPoints[above](B,C,M,N,E,F)
+			\tkzLabelPoints[below](A',D',P)
+			\tkzLabelPoints[left](B',A)
+			\tkzLabelPoints[right](D,C')
+			\end{tikzpicture}
+		}
+			}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Vĩnh Phúc, 2019]%[Mai Sương, EX-5-2019]%[1H3K2-3]
+Cho tứ diện $OABC$ có $OA$, $OB$, $OC$ đôi một vuông góc với nhau và $OA= OB= OC$. Gọi $M$ là trung điểm của $BC$. Góc giữa hai đường thẳng $OM$ và $AB$ bằng
+	\choice
+	{$90^{\circ}$}
+	{$30^{\circ}$}
+	{\True $60^{\circ}$}
+	{$45^{\circ}$}
+	\loigiai{
+	\immini{
+	Đặt $OA=OB=OC=a$, suy ra $AB=AC=BC=a\sqrt{2}$.\\
+	Gọi $N$ là trung điểm của $AC$, ta có $MN \parallel AB$ và $MN=\dfrac{a\sqrt{2}}{2}$.\\
+	Suy ra $(OM , AB) =(OM , MN)$.\\
+	Xét tam giác $OMN$ có $ON = OM = MN =\dfrac{a\sqrt{2}}{2}$ nên tam giác $OMN$ đều.\\
+	Vậy $(OM , AB) =(OM , MN)=\widehat{OMN} = 60^{\circ}$.
+	}{
+	\begin{tikzpicture}[scale=0.8, line join=round, line cap=round,font=\footnotesize,>=stealth]
+\tkzInit[ymin=-2.5,ymax=4.5,xmin=-0.1,xmax=6]
+\tkzClip[space=.5]
+\tkzDefPoints{0/0/O, 6/0/B, 2/-2.5/C}
+\tkzDefLine[perpendicular=through O,K=0.75](O,B)\tkzGetPoint{A}
+\coordinate (M) at ($(B)!0.5!(C)$);
+\coordinate (N) at ($(C)!0.5!(A)$);
+\tkzDrawSegments(A,O A,B A,C M,N O,N O,C B,C)
+\tkzDrawSegments[dashed](O,B O,M)
+\tkzDrawPoints[fill=black](O,A,B,C,M,N)
+\tkzLabelPoints[below right](B,M,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[above right](N)
+\tkzLabelPoints[below left](O)
+\end{tikzpicture}}	
+	}
+	
+	\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Vĩnh Phúc, 2019]%[Mai Sương, EX-5-2019]%[1H3K2-3]
+Cho tứ diện $ABCD$ có $AB= CD= a$. Gọi $M$ và $N$ lần lượt là trung điểm của $AD$ và $BC$. Xác định độ dài đoạn thẳng $MN$ để góc giữa hai đường thẳng $AB$ và $MN$ bằng $30^{\circ}$.
+	\choice
+	{$MN=\dfrac{a}{2}$}
+	{\True $MN=\dfrac{a\sqrt{3}}{2}$}
+	{$MN=\dfrac{a\sqrt{3}}{3}$}
+	{$MN=\dfrac{a}{4}$}
+	\loigiai{
+	\immini{Gọi $P$ là trung điểm của $AC$.\\
+	Khi đó $PM =\dfrac{1}{2}CD =\dfrac{1}{2}AB = PN$.\\
+	Ta có tam giác $PMN$ cân tại $P$. Lại có góc giữa $AB$ và $MN$ bằng $30^{\circ}$ nên góc giữa $MN$ và $PN$ bằng $30^{\circ}$. Do đó tam giác $PMN$ là tam giác cân có góc ở đỉnh bằng $120^{\circ}$.\\
+	Ta có $PN\sqrt{3}=MN \Rightarrow MN=\dfrac{a\sqrt{3}}{2}.$}{\begin{tikzpicture}[scale=0.8, line join=round, line cap=round,font=\footnotesize,>=stealth]%hình chóp đáy tam giác
+\tkzDefPoints{0/0/B, 6/0/D, 2/-2.5/C}
+\coordinate (A) at ($(B)+(2.5,4)$);
+\coordinate (N) at ($(B)!0.5!(C)$);
+\coordinate (P) at ($(A)!0.5!(C)$);
+\coordinate (M) at ($(A)!0.5!(D)$);
+\tkzDrawSegments(A,B A,C A,D B,C C,D N,P P,M)
+\tkzDrawSegments[dashed](M,N B,D)
+\tkzDrawPoints[fill=black](A,B,C,D,M,N,P)
+\tkzLabelPoints[left](P,B)
+\tkzLabelPoints[below](C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below left](N)
+\tkzLabelPoints[right](M,D)
+\end{tikzpicture}}
+	}
+	
+	\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn Sở Ninh Bình, 2019]%[Nguyễn Văn Hải, dự án(12EX-5-2019)]%[1H3K2-4]
+\immini{Cho hình lập phương $ABCD.A'B'C'D'$. Gọi $M$, $N$, $P$ lần lượt là trung điểm các cạnh $AB$, $AD$ và $C'D'$. Tính cosin góc giữa hai đường thẳng $MN$ và $CP$.
+\choice
+{$\dfrac{\sqrt{10}}5$}
+{$\dfrac{\sqrt{15}}5$}
+{\True $\dfrac1{\sqrt{10}}$}
+{$\dfrac3{\sqrt{10}}$}
+}
+{
+\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth,yscale=0.8, xscale=1.2]
+\tkzDefPoints{0/0/A,-1/-1/B,2/-1/C,3/0/D}
+\tkzDefPoints{0/3/A',-1/2/B',2/2/C',3/3/D'}
+\tkzDefMidPoint(A,B) \tkzGetPoint{M}
+\tkzDefMidPoint(A,D) \tkzGetPoint{N}
+\tkzDefMidPoint(C',D') \tkzGetPoint{P}
+% Nối các đoạn
+\tkzDrawPoints(A,B,C,D,M,N,P,A',B',C',D')
+\tkzDrawSegments[dashed](A,B A,D A,A' M,N)
+\tkzDrawSegments(C,B C,D C,C' B,B' D,D' A',B' B',C' C',D' D',A' C,P)
+\tkzLabelPoints[above](A',N) \tkzLabelPoints[left](B',B,P) \tkzLabelPoints[right](D,D')
+\tkzLabelPoints[above right](A) \tkzLabelPoints[above left](M,C')
+\tkzLabelPoints[below](C)
+\end{tikzpicture}
+}
+
+\loigiai{
+Có 
+\begin{align*}
+\overrightarrow{MN}\cdot\overrightarrow{CP}&=\overrightarrow{MN}\left(\overrightarrow{CC'}+\overrightarrow{C'P}\right)=\overrightarrow{MN}\cdot\overrightarrow{C'P}=\left(\overrightarrow{AN}-\overrightarrow{AM}\right)\cdot \overrightarrow{C'P}\\ 
+& =-\overrightarrow{AM}\cdot\overrightarrow{C'P}=-\dfrac{1}{2}\overrightarrow{AB}\cdot\dfrac{1}{2}\overrightarrow{CD}=\dfrac{1}{4} AB^2=\dfrac{1}{4}a^2.
+\end{align*}
+Có $MN=\dfrac12BD=a\dfrac{\sqrt2}2$ và $CP=\sqrt{CC'^2+C'P^2}=a\dfrac{\sqrt5}2$.\\
+Vậy $\cos{(MN,CP)}=\left|\dfrac{\overrightarrow{MN}\cdot\overrightarrow{CP}}{MN\cdot CP}\right|=\dfrac{\dfrac{1}{4}a^2}{a\dfrac{\sqrt{2}}{2}\cdot a\dfrac{\sqrt5}{2}}$ $=\dfrac1{\sqrt{10}}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Trị, 2018]%[Nguyễn Văn Nay, 12EX10]%[1H3K2-3]
+	Cho hình lập phương $ABCD.A'B'C'D'$. Tính góc giữa hai đường thẳng $AB'$ và $A'D$.
+	\choice
+	{$30^{\circ}$}
+	{$45^{\circ}$}
+	{\True $60^{\circ}$}
+	{$90^{\circ}$}
+	\loigiai{
+		\immini{Ta có $A{'}D \parallel B{'}C$ nên góc giữa $AB{'}$ và $A{'}D$ là góc giữa $AB{'}$ và $B{'}C$.\\
+			Vì tam giác $AB{'}C$ đều nên $(AB{'},B{'}C)=60^{\circ}$.\\
+			Vậy $(AB{'},A{'}D)=60^{\circ}$.}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A, 1/2/B, 5/2/C, 4/0/D}
+			\coordinate (A') at ($(A)+(0,4)$);
+			\tkzDefPointsBy[translation=from A to A'](B,C,D){B'}{C'}{D'}
+			\tkzDrawSegments(A,D A,A' A',B' B',C' C',D' C,C' D,D' C,D A',D')
+			\tkzDrawSegments[dashed](A,B B,C B,B' A,B' B',C C,A)
+			\tkzLabelPoints[left](A,A',B,B')
+			\tkzLabelPoints[right](C,C',D,D')
+			\end{tikzpicture}}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Hà Tĩnh, 2019]%[Đặng Tân Hoài, 12-EX-5-2019]%[1H3K2-3]
+	Cho hình lăng trụ tam giác đều $ABC.MNP$ có tất cả các cạnh bằng nhau. Gọi $I$ là trung điểm cạnh $MP$. Cô-sin của góc giữa hai đường thẳng $BP$ và $NI$ bằng 
+	\choice
+	{$\dfrac{\sqrt{15}}{5}$}
+	{\True $\dfrac{\sqrt{6}}{4}$}
+	{$\dfrac{\sqrt{6}}{2}$}
+	{$\dfrac{\sqrt{10}}{4}$}
+	\loigiai{
+	\immini{Giả sử tất cả các cạnh đều bằng $a$.
+	Hình lăng trụ tam giác đều là hình lăng trụ đứng có $2$ đáy là tam giác đều nên $BN \perp (MNP)$.\\
+	Ta có $\cos \left(\widehat{BP,NI}\right)=\left|\cos \left(\widehat{\overrightarrow{BP},\overrightarrow{NI}}\right)\right|=\dfrac{\left|\overrightarrow{BP}\cdot \overrightarrow{NI}\right|}{BP \cdot NI}$.\\
+	Mặt khác $BP=a\sqrt{2}$, $NI=\dfrac{a\sqrt{3}}{2}$,\\
+	$\overrightarrow{BP}\cdot \overrightarrow{NI}=\left(\overrightarrow{NP}-\overrightarrow{NB}\right)\cdot \overrightarrow{NI}=\overrightarrow{NP}\cdot \overrightarrow{NI}-\overrightarrow{NB} \cdot \overrightarrow{NI}$\\
+	$=NP\cdot NI \cdot \cos \widehat{PNI}-0=a \cdot \dfrac{a\sqrt{3}}{2} \cdot \cos 30^{\circ}=\dfrac{3a^2}{4}$.\\
+	Vậy $\cos \left(\widehat{BP,NI}\right)=\dfrac{\dfrac{3a^2}{4}}{a\sqrt{2} \cdot \dfrac{a\sqrt{3}}{2}}=\dfrac{\sqrt{6}}{4}$.
+	
+	}{
+		\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round,>=stealth]
+		\tkzDefPoints{0/0/A,3/0/C,1/-1/B}
+		\coordinate (M) at ($(A)+(0,2.5)$);
+		\coordinate (N) at ($(B)+(0,2.5)$);
+		\coordinate (P) at ($(C)+(0,2.5)$);
+		\coordinate (I) at ($(M)!1/2!(P)$);
+		\tkzDrawPolygon(A,B,C,P,N,M)
+		\tkzDrawSegments(M,P N,B B,P N,I)
+		\tkzDrawSegments[dashed](A,C)
+		\tkzDrawPoints[fill=black](A,B,C,M,N,P,I)
+		\tkzLabelPoints[above](M,P,I)
+		\tkzLabelPoints[below](B)
+		\tkzLabelPoints[left](A)
+		\tkzLabelPoints[below left](N)
+		\tkzLabelPoints[right](C)
+		\tkzMarkRightAngles(B,N,P M,N,B)
+		\end{tikzpicture}
+}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT chuyên KHTN Hà Nội, 2019]%[KV Thanh, 12EX5]%[1H3K2-3]
+	Cho tứ diện $ABCD$ có $AB = CD = a$. Gọi $M$, $N$ lần lượt là trung điểm của $AD$ và $BC$. Biết $MN = \sqrt{3}a$, góc giữa hai đường thẳng $AB$ và $CD$ bằng
+	\choice
+	{$45^{\circ}$}
+	{$90^{\circ}$}
+	{\True $60^{\circ}$}
+	{$30^{\circ}$}
+	\loigiai{
+\immini
+{
+Gọi $P$ là trung điểm của $AC$. Khi đó, ta có\\
+$PM\parallel CD$, $PN\parallel AB$. Suy ra góc giữa $AB$ và $CD$ bằng góc giữa $PM$ và $PN$.\\
+Ta có $PM=\dfrac{CD}{2}=\dfrac{a}{2},PN=\dfrac{AB}{2}=\dfrac{a}{2}$.\\
+Xét tam giác $PMN$ có\\
+$\cos\widehat{MPN}=\dfrac{PM^2+PN^2-MN^2}{2\cdot PM\cdot PN}$\\
+$=\dfrac{\dfrac{a^2}{4}+\dfrac{a^2}{4}-\dfrac{3a^2}{4}}{2\cdot\dfrac{a}{2}\cdot\dfrac{a}{2}}=-\dfrac{1}{2}$.\\
+Suy ra $\widehat{MPN}=120^{\circ}$.
+}
+{
+\begin{tikzpicture}[>=stealth]%Hình 3.4
+		\tkzDefPoint(0,0){B}
+		\tkzDefShiftPoint[B](0:5){D}
+		\tkzDefShiftPoint[B](-60:2){C}
+		\tkzDefShiftPoint[B](60:4){A}
+		\tkzDefMidPoint(A,D) \tkzGetPoint{M}
+		\tkzDefMidPoint(B,C) \tkzGetPoint{N}
+		\tkzDefMidPoint(A,C) \tkzGetPoint{P}
+		\tkzDrawSegments(A,B A,C A,D B,C C,D N,P M,P)
+		\tkzDrawSegments[dashed](B,D M,N)
+		\tkzLabelPoint[above](A){\footnotesize $A$}
+		\tkzLabelPoint[left](B){\footnotesize $B$}
+		\tkzLabelPoint[left](C){\footnotesize $C$}
+		\tkzLabelPoint[right](D){\footnotesize $D$}
+		\tkzLabelPoint[right](M){\footnotesize $M$}
+		\tkzLabelPoint[left](N){\footnotesize $N$}
+		\tkzLabelPoint[left](P){\footnotesize $P$}
+		\tkzDrawPoints[fill=black](A,B,C,D,M,N,P)
+		\end{tikzpicture}
+}	
+\noindent Suy ra góc giữa hai đường thẳng $PM$ và $PN$ bằng $180^{\circ}-120^{\circ}=60^{\circ}$. \\
+Vậy góc giữa hai đường thẳng $AB$ và $CD$ bằng $60^{\circ}$.
+	} 
+\end{ex}%!Cau!%
+\begin{ex}%[Dự án EX-7-2019]%[Phạm Tuấn]%[1H3K2-4]
+Cho hình lập phương $ABCD.A'B'C'D' $. Gọi $M$ là trung điểm của cạnh $DD' $. Tính cosin
+của góc giữa hai đường thẳng $B 'D$ và $CM$.
+\choice
+{\True $\dfrac{1}{\sqrt{15}}$}
+{$\dfrac{2}{\sqrt{15}}$}
+{$\dfrac{1}{2}$}
+{$\dfrac{\sqrt{15}}{4}$}
+\loigiai{
+\immini{
+Giả sử $AB=2\Rightarrow CM=\sqrt{5}$, $B'D =2\sqrt{3}$. \\
+Ta có 
+\begin{align*}
+\overrightarrow{B'D} \cdot \overrightarrow{CM}& = (\overrightarrow{B'B} + \overrightarrow{BC}+\overrightarrow{CD}) \cdot (\overrightarrow{CD} + \dfrac{1}{2}\overrightarrow{DD'})  \\ 
+& = -2 + 4 = 2.
+\end{align*}
+Suy ra $ \cos (B'D, CM) = \dfrac{|\overrightarrow{B'D} \cdot \overrightarrow{CM}|}{B'D \cdot CM}
+= \dfrac{1}{\sqrt{15}}.$
+}
+{
+\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzDefPoints{2/2/A,0/0/B,4/0/C,2/6/A'}
+\tkzDefPointBy[translation=from B to C](A) \tkzGetPoint{D}
+\tkzDefPointBy[translation=from A to A'](B) \tkzGetPoint{B'}
+\tkzDefPointBy[translation=from A to A'](C) \tkzGetPoint{C'}
+\tkzDefPointBy[translation=from A to A'](D) \tkzGetPoint{D'}
+\tkzDefMidPoint(D,D') \tkzGetPoint{M}
+\tkzDrawPolygon(A',B',C',D')
+\tkzDrawSegments(B,B' D,D' C,C' B,C C,D C,M)
+\tkzDrawSegments[dashed](A,B  B',D A,A' A,D)
+\tkzDrawPoints[fill=black,size=6](A,B,C,D,A',B',C',D',M)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A',D')
+\tkzLabelPoints[right](D,M,C')
+\tkzLabelPoints[left](B',A)
+\end{tikzpicture}
+}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, THPT Ngô Quyền - Hà Nội, 2019]%[Phan Ngọc Toàn, dự án EX7]%[1H3K2-3]
+	Cho lăng trụ tam giác đều $ABC.A'B'C'$ có $AB=a$ và $A A'=\sqrt{2} a$. Góc giữa hai đường thẳng $AB'$ và $BC'$ bằng
+	\choice
+	{$90^{\circ}$}
+	{$30^{\circ}$}
+	{\True $60^{\circ}$}
+	{$45^{\circ}$}
+	\loigiai{
+	\begin{center}
+	\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=1]
+	\tkzDefPoints{0/0/A}
+	\coordinate (C) at ($(A)+(8,0)$);
+	\tkzDefShiftPoint[A](-60:2.5){B}
+	\coordinate (A') at ($(A)+(0,6)$);
+	\tkzDefPointsBy[translation = from A to A'](B,C){B'}{C'}
+	\coordinate (M) at ($(B)!.5!(A)$);
+	\coordinate (N) at ($(B)!.5!(B')$);
+	\coordinate (P) at ($(B')!.5!(C')$);
+	\coordinate (E) at ($(B)!.5!(C)$);
+	\tkzDrawPolygon(A,B,C,C',B',A')
+	\tkzDrawSegments(A',C' B',B A,B' B,C' M,N N,P P,E)
+	\tkzDrawSegments[dashed](A,C M,P M,E)
+	\tkzDrawPoints[fill=black](A,C,B,A',B',C',M,N,P,E)
+	\tkzLabelPoints[above](P)
+	%\tkzLabelPoints[above right](B')
+	\tkzLabelPoints[above left](N)
+	\tkzLabelPoints[below left](M)
+	\tkzLabelPoints[below](B,E)
+	\tkzLabelPoints[left](A',A,B')
+	\tkzLabelPoints[right](C',C)
+	\tkzMarkRightAngles(A',A,B A',A,C P,E,M)
+	\end{tikzpicture}	
+	\end{center}
+		Gọi $M$, $N$, $P$, $E$ lần lượt là trung điểm của các đoạn thẳng $AB$, $BB'$, $B'C'$, $BC$. Suy ra $MN \parallel AB'$ và $NP \parallel BC'$. Khi đó $(AB',BC')=(MN,NP)$.\\
+		Ta có $MN=\dfrac{1}{2} AB'=\dfrac{a \sqrt{3}}{2}$, $NP=\dfrac{1}{2}BC'=\dfrac{a \sqrt{3}}{2}$.\\
+		Xét tam giác $PME$ vuông tại $E$ có $MP^2=PE^2+ME^2=\left(a\sqrt{2} \right)^2+\left(\dfrac{a}{2} \right)^2=\dfrac{9a^2}{4}$. \\
+		Theo định lý côsin trong tam giác $MNP$, ta có
+		$$\cos\widehat{MNP}=\dfrac{MN^2+NP^2-MP^2}{2 \cdot MN \cdot NP}=\dfrac{\dfrac{3a^2}{4}+\dfrac{3a^2}{4}-\dfrac{9a^2}{4}}{2 \cdot \dfrac{a \sqrt{3}}{2} \cdot \dfrac{a \sqrt{3}}{2}}=-\dfrac{1}{2}.$$
+		Suy ra $\widehat{MNP}=120^{\circ}$. \\
+		Vậy góc giữa hai đường thẳng $AB'$ và $BC'$ bằng $60^\circ$.
+		}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Chuyên Thái Nguyên-Thái Nguyên-Lần 2, 2019]%[Duong Xuan Loi, 12-EX-7-19]%[1H3K2-3]
+	Cho tứ diện $ABCD$ có $AB=AC=AD$ và $\widehat{BAC}=\widehat{BAD}=60^{\circ} $. Xác định góc giữa hai đường thẳng $AB$ và $CD$.
+	\choice
+	{$45^{\circ} $}
+	{$30^{\circ} $}
+	{$60^{\circ} $}
+	{\True $90^{\circ} $}
+	\loigiai{
+		\immini{
+			Ta có: 
+			\begin{eqnarray*}
+				\cos \left(\overrightarrow{AB},\overrightarrow{CD}\right)&=&\dfrac{\overrightarrow{AB}\cdot\overrightarrow{CD}}{AB\cdot CD}=\dfrac{\overrightarrow{AB}\cdot\left(\overrightarrow{AD}-\overrightarrow{AC}\right)}{AB\cdot CD}\\
+				&=&\dfrac{\overrightarrow{AB}\cdot\overrightarrow{AD}-\overrightarrow{AB}\cdot\overrightarrow{AC}}{AB\cdot CD}\\
+				&=&\dfrac{AB\cdot AD\cdot\cos 60^{\circ}-AB\cdot AC\cdot\cos 60^{\circ}}{AB\cdot CD}=0\\
+				&\Rightarrow& \left(\overrightarrow{AB},\overrightarrow{CD}\right)=90^{\circ}.
+			\end{eqnarray*}		
+			Vậy góc giữa hai đường thẳng $AB$ và $CD$ là $90^{\circ}$.
+		}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+			\tkzDefPoints{0/0/B,1.3/-1.6/C,4.5/0/D,1/3.5/A}
+			\tkzDrawPolygon(A,B,C,D)
+			\tkzDrawSegments(A,C)
+			\tkzDrawSegments[dashed](B,D)
+			\tkzDrawPoints[fill=black,size=4](A,B,C,D)
+			\tkzLabelPoints[above](A)
+			\tkzLabelPoints[below](C)
+			\tkzLabelPoints[left](B)
+			\tkzLabelPoints[right](D)
+			\tkzMarkSegments[mark=||](A,B A,C A,D)
+			\tkzMarkAngles[size=0.9cm,arc=l](B,A,C)			
+			\tkzMarkAngles[size=0.5cm,arc=l](B,A,D)
+			\end{tikzpicture}
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1H3K2-4] 
+	Cho hình chóp tứ giác đều $S.ABCD$ có đáy là hình vuông $ABCD$ cạnh $a$, độ dài cạnh bên cũng bằng $a$. Gọi $M$, $N$ lần lượt là trung điểm các cạnh $SA$ và $BC$. Góc giữa $MN$ và $SC$ bằng
+	\choice
+	{\True $30^\circ$}
+	{$45^\circ$}
+	{$60^\circ$}
+	{$90^\circ$}
+	\loigiai{
+		\immini{Gọi $O$ là tâm của hình vuông $ABCD$. Do đó $MO \parallel SC, NO \parallel CD$ và $MO=NO =\dfrac{a}{2}$. \\
+			Suy ra góc giữa hai đường thẳng $MN$ và $SC$ chính là góc giữa hai đường thẳng $MN$ và $MO$.\\
+			Ta có
+			\begin{eqnarray*}
+			&&2\overrightarrow{MN}=\overrightarrow{SC}+\overrightarrow{AB} \\&\Leftrightarrow& 4MN^2=SC^2+AB^2+2 \overrightarrow{AB} \cdot \overrightarrow{SC} \\&=& SC^2+AB^2+2 \overrightarrow{AB} \cdot \overrightarrow{OC} =2a^2+2 \cdot a \cdot \dfrac{a}{\sqrt{2}}\cdot \dfrac{\sqrt{2}}{2}\\&=&3a^2.
+			\end{eqnarray*} 
+		}{
+		\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+		\tkzDefPoints{0/0/A,-2/-1.6/B,1.6/-1.6/C}
+		\coordinate (D) at ($(A)+(C)-(B)$);
+		\coordinate (O) at ($(A)!1/2!(C)$);
+		\coordinate (S) at ($(O)+(0,4)$);
+		\coordinate (M) at ($(A)!0.5!(S)$);
+		\coordinate (N) at ($(C)!0.5!(B)$);
+		\tkzDrawPolygon(S,B,C,D)
+		\tkzDrawSegments(S,C)
+		\tkzDrawSegments[dashed](A,S A,B A,D A,C B,D S,O M,N M,O O,N)
+		\tkzDrawPoints[fill=black,size=4](D,C,A,B,S)
+		\tkzLabelPoints[above](S)
+		\tkzLabelPoints[below](B,C,O,N)
+		\tkzLabelPoints[right](D)
+		\tkzLabelPoints[left](A,M)
+		\end{tikzpicture}
+		}\noindent
+	Xét tam giác $MON$ ta có $\cos \widehat{OMN}=\dfrac{MO^2+MN^2-NO^2}{2MO\cdot MN}=\dfrac{\dfrac{3a^2}{4}}{2.\dfrac{a}{2} \cdot \dfrac{a\sqrt{3}}{2}}=\dfrac{\sqrt{3}}{2}$.\\
+	Suy ra góc giữa $MN$ và $MO$ bằng $30^\circ$ hay góc giữa hai đường thẳng $MN$ và $SC$ bằng  $30^\circ$ .	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử L1, Chuyên Lê Hồng Phong,Nam Đinh,2019]%[Nguyễn Đắc Giáp, dự án 12EX9]%[1H3K2-3]
+	Cho tứ diện gần đều $ABCD$, biết $AB=CD=5$, $AC=BD=\sqrt{34}$, $AD=BC=\sqrt{41}$. Tính sin của góc tạo bởi hai đường thẳng $AB$ và $CD$.
+	\choice
+	{$\dfrac{\sqrt{3}}{2}$}
+	{$\dfrac{7}{25}$}
+	{\True $\dfrac{24}{25}$}
+	{$\dfrac{1}{3}$}
+	\loigiai{
+		\immini{
+			Gọi $M,N,I$ lần lượt là trung điểm của $BC,AD,AC$.\\
+			Ta có $\Delta ABC=\Delta DCB\,\left(c.c.c \right)\Rightarrow AM=DM\Rightarrow MN\perp AD$.\\
+			Lại có $AM^2=\dfrac{AB^2+AC^2}{2}-\dfrac{BC^2}{4}=\dfrac{49}{2}$.\\
+			Suy ra $MN=\sqrt{AM^2-AN^2}=\sqrt{\dfrac{49}{2}-\dfrac{34}{4}}=4$ và $NI=\dfrac{5}{2}$, $MI=\dfrac{5}{2}$.\\
+			Ta có $\left(AB,CD \right)=\left(IM,IB \right)=\alpha$.\\
+			Trong tam giác $IMN$, ta có
+		$$\cos \widehat{MIN}=\dfrac{IM^2+IN^2-MN^2}{2IM\cdot IN}=-\dfrac{7}{25}.$$
+		Suy ra $\alpha = 180^\circ-\widehat{MIN}$ nên $\cos \alpha=-\cos \widehat{MIN}=\dfrac{7}{25}$.\\
+			Vậy $\sin \alpha =\sqrt{1-{\left(-\dfrac{7}{25} \right)^2}}=\dfrac{24}{25}$.
+		}
+		{
+			\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.8]
+			\tkzDefPoints{0/0/B,5/0/D,1/-2/C,2/4/A}
+			\tkzDefMidPoint(D,A)\tkzGetPoint{N}
+			\tkzDefMidPoint(A,C)\tkzGetPoint{I}
+			\tkzDefMidPoint(C,B)\tkzGetPoint{M}
+			\tkzDrawPolygon(A,B,C,D)
+			\tkzDrawSegments(A,C N,I M,I)
+			\tkzDrawSegments[dashed](B,D M,N)
+			\tkzDrawPoints[fill=black](B,C,A,D,M,N,I)
+			\tkzLabelPoints[above](A)
+			\tkzLabelPoints[below](C)
+			\tkzLabelPoints[below left](M)
+			\tkzLabelPoints[left](B,I)
+			\tkzLabelPoints[right](D,N)
+			\tkzMarkRightAngles(M,N,D)
+			
+			\end{tikzpicture}	
+			
+			
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề TT Chuyên LTV Đồng Nai, Dự án EX-9 2019]%[Phạm Tuấn]%[1H3K2-3]
+	Cho tứ diện $ABCD$ có $BD$ vuông góc $AB$ và $CD$. Gọi $P$ và $Q$ lần lượt là trung điểm của các cạnh $CD$ và $AB$ thỏa mãn $BD:CD:PQ:AB =3:4:5:6$. Gọi $\varphi$ là góc giữa hai đường thẳng $AB$ và $CD$. Giá trị của $\cos \varphi$ bằng
+	\choice
+	{$\dfrac{7}{8}$}
+	{$\dfrac{1}{2}$}
+	{$\dfrac{11}{16}$}
+	{\True $\dfrac{1}{4}$}
+	\loigiai{
+		\immini{
+			Do $AB$ vuông góc với  $BD$, nên $AB$ nằm trong mặt phẳng $(\alpha)$ chứa $AB$ và vuông góc với $BD$. 
+			Dựng hình chữ nhật $BDPR$, thì góc giữa hai đường thẳng $AB$ và $CD$ cũng là góc giữa hai đường thẳng $AB$ và $BR$. Ta có
+			\[
+			\cos \varphi = \dfrac{|BQ^2+BR^2-QR^2|}{2BQ \cdot BR} = \dfrac{|9+4-16|}{2 \cdot 3 \cdot 2} =\dfrac{1}{4}.
+			\]
+		}
+		{
+			\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{1/1/A,-1/3/B,3/6/C,-1/6/D,4/3/E,1/3/R}
+			\tkzDefMidPoint(C,D) \tkzGetPoint{P}
+			\tkzDefMidPoint(A,B) \tkzGetPoint{Q}
+			\tkzInterLL(B,E)(A,C) \tkzGetPoint{F}
+			\tkzDrawSegments[dashed](P,Q Q,R R,P B,C B,F)
+			\tkzDrawSegments(B,D D,C A,D A,B A,C E,F)
+			\tkzDrawPoints[fill=black,size=6](A,B,C,D,R,P,Q)
+			\tkzLabelPoints[below](B,Q,A,R)
+			\tkzLabelPoints[above](D,P,C)
+			\tkzMarkRightAngle(D,B,A)
+			\tkzMarkRightAngle(C,D,B)
+			\end{tikzpicture}
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử Lần 2, THPT Lương Thế Vinh - Hà Nội, 2019]%[Dương BùiĐức, dự án 12EX6]%[1H3K2-4]
+Cho lăng trụ tam giác đều $ABC.A'B'C'$ có đáy là tam giác đều cạnh $a$, $AA'=2a$. Gọi $\alpha$ là góc giữa $AB'$ và $BC'$. Tính $\cos\alpha$.
+\choice
+{$\cos\alpha=\dfrac{5}{8}$}
+{$\cos\alpha=\dfrac{\sqrt{51}}{10}$}
+{$\cos\alpha=\dfrac{\sqrt{39}}{8}$}
+{\True $\cos\alpha=\dfrac{7}{10}$}
+\loigiai{
+\immini{
+Ta có $ AB'=\sqrt{AB^{2}+BB'^{2}}=a\sqrt{5} $, $ BC'=\sqrt{BC^{2}+CC'^{2}}=a\sqrt{5} $.\\
+Xét
+\begin{eqnarray*}
+\overrightarrow{AB'}\cdot \overrightarrow{BC'}&=&(\overrightarrow{AB}+\overrightarrow{BB'})(\overrightarrow{BB'}+\overrightarrow{B'C'})=\overrightarrow{AB}\cdot \overrightarrow{B'C'}+\overrightarrow{BB'}^{2}\\
+&=&-\overrightarrow{BA}\cdot \overrightarrow{BC}+BB'^{2}=\dfrac{7a^{2}}{2}.
+\end{eqnarray*}
+Suy ra $ \cos(\overrightarrow{AB'},\overrightarrow{BC'})=\dfrac{7a^{2}}{2}\cdot \dfrac{1}{5a^{2}}=\dfrac{7}{10} $.\\
+Vậy $ \cos\alpha=\left|\cos(\overrightarrow{AB'},\overrightarrow{BC'})\right|=\dfrac{7}{10} $.
+}{
+\begin{tikzpicture}[line join=round,line cap=round]
+\tikzset{label style/.style={font=\footnotesize}}
+\pgfmathsetmacro\h{2}
+\pgfmathsetmacro\goc{90}
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](0:1.3*\h){B}
+\tkzDefShiftPoint[A](-0.3*\goc:0.8*\h){C}
+\tkzDefShiftPoint[A](\goc:1.2*\h){A'}
+\tkzDefPointsBy[translation = from A to A'](B,C){B',C'}
+\pgfresetboundingbox
+\tkzDrawSegments[dashed](A,B A,B')
+\tkzDrawSegments(B,C C,A C,C' B,B' A,A' A',B' B',C' C',A' B,C')
+\tkzDrawPoints[fill=black](A,B,C,A',B',C')
+\tkzLabelPoints[left](A,A')
+\tkzLabelPoints[right](B,B')
+\tkzLabelPoints[above](C')
+\tkzLabelPoints[below](C)
+\end{tikzpicture}
+}
+}
+\end{ex}

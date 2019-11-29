@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Phép biến hình" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Phép tịnh tiến" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Phép đối xứng trục " }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Phép đối xứng tâm" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Phép quay" }
+{ "_id" : { "$oid" : "5d1cca1c3fb939115cc7c14d" }, "SectionId" : 6, "SectionName" : "Khái niệm về phép dời hình và hai hình bằng nhau" }
+{ "_id" : { "$oid" : "5d1cca1c3fb939115cc7c14e" }, "SectionId" : 7, "SectionName" : "Phép vị tự" }
+{ "_id" : { "$oid" : "5d1cca1c3fb939115cc7c14f" }, "SectionId" : 8, "SectionName" : "Phép đồng dạng" }

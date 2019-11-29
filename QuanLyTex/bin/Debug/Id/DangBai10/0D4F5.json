@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Nhận dạng tam thức và xét dấu biểu thức" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Giải và các bài toán liên quan bất phương trình bậc hai" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Giải và các bài toán liên quan bất phương trình tích, thương" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Giải và các bài toán liên quan hệ bất phương bậc hai" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Phương trình và bất phương trình chứa dấu giá trị tuyệt đối" }
+{ "_id" : { "$oid" : "5d1cd8b63fb939115cc7c1cc" }, "FormId" : 6, "FormName" : "Phương trình và bất phương trình chứa căn thức" }
+{ "_id" : { "$oid" : "5d1cd8b63fb939115cc7c1cd" }, "FormId" : 6, "FormName" : "Phương trình và bất phương trình chứa dấu giá trị tuyệt đối có tham số" }
+{ "_id" : { "$oid" : "5d1cd8b63fb939115cc7c1ce" }, "FormId" : 6, "FormName" : "Phương trình và bất phương trình chứa căn thức có tham số" }

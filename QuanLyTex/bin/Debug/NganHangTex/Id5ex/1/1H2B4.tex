@@ -1,0 +1,111 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Ninh, 2019]%[Lê Hồng Phi, 12EX5]%[1H2B4-2]
+	Cho lăng trụ $ABC.A'B'C'$. Gọi $G$, $G'$ lần lượt là trọng tâm các tam giác $ABC$ và $A'B'C'$, $M$ là điểm trên cạnh $AC$ sao cho $AM=2MC$. Mệnh đề nào sau đây {\bf sai}?
+	\choice
+	{$GG'\parallel (ACC'A')$}
+	{$GG'\parallel (ABB'A')$}
+	{\True Đường thẳng $MG'$ cắt mặt phẳng $(BCC'B')$}
+	{$(MGG')\parallel (BCC'B')$}
+	\loigiai
+	{\immini{Ta có $GG'\parallel AA'$ và $MG\parallel BC$ nên \begin{itemize}
+		\item $GG'\parallel (ACC'A')$ là mệnh đề đúng,
+		\item $GG'\parallel (ABB'A')$ là mệnh đề đúng,
+		\item $(MGG')\parallel (BCC'B')$là mệnh đề đúng,
+		\item Đường thẳng $MG'$ cắt mặt phẳng $(BCC'B')$ là mệnh đề sai.
+	\end{itemize}}{\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+\tkzDefPoints{0/0/A, 5/0/C, 1.5/-1.7/B, -1/4/h};
+\coordinate (A') at ($(A)+(h)$);
+\tkzDefPointsBy[translation = from A to A'](B,C){B'}{C'};
+\coordinate (N) at ($(B)!0.5!(C)$);
+\coordinate (G) at ($(A)!0.67!(N)$);
+\coordinate (N') at ($(B')!0.5!(C')$);
+\coordinate (G') at ($(A')!0.67!(N')$);
+\coordinate (M) at ($(A)!0.67!(C)$);
+\tkzDrawPolygon(A',B',C');
+\tkzDrawSegments(A,A' B,B' C,C' A,B B,C);
+\tkzDrawSegments[dashed](A,C A,N G,G' G,M);
+\tkzDrawSegments(A',N' N,N');
+\tkzDrawPoints[fill=black](A,B,C,A',B',C',N,N',G,G',M);
+\tkzLabelPoints[above](B',N',M,G');
+\tkzLabelPoints[below right](N);
+\tkzLabelPoints[below](B,G);
+\tkzLabelPoints[left](A,A');
+\tkzLabelPoints[right](C,C');
+\end{tikzpicture}}
+		
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Lào Cai - Phú Thọ, 2019]%[Bùi Anh Tuấn, dự án (12EX-5)]%[1H2B4-1]
+	Cho đường thẳng $ a $ nằm trong mặt phẳng $ (\alpha) $ và đường thẳng $ b $ nằm trong mặt phẳng $ (\beta) $. Mệnh đề nào sau đây \textbf{sai}?
+	\choice
+	{\True $ (\alpha) \parallel (\beta)\Rightarrow a\parallel b $}
+	{$ (\alpha) \parallel (\beta)\Rightarrow a\parallel (\beta) $}
+	{$ (\alpha) \parallel (\beta)\Rightarrow b\parallel (\alpha) $}
+	{$ a $ và $ b $ hoặc song song hoặc chéo nhau}
+	\loigiai{
+		Nếu $ (\alpha)\parallel (\beta) $ thì ngoài trường hợp $ a\parallel b $ thì $ a $ và $ b $ có thể chéo nhau.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thủ SGD Bắc Ninh]%[Phan Anh - EX9]%[1H2B4-1]
+	Trong không gian, cho các mệnh đề sau
+	\begin{enumerate}[I.]
+		\item Hai đường thẳng phân biệt cùng song song với một mặt phẳng thì song song với nhau.
+		\item Hai mặt phẳng phân biệt chứa hai đường thẳng song song cắt nhau theo giao tuyến song song với hai đường thẳng đó.
+		\item Nếu đường thẳng $a$ song song với đường thẳng $b$, đường thẳng $b$ nằm trên mặt phẳng $(P)$ thì $a$ song song với $(P)$.
+		\item Qua điểm $A$ không thuộc mặt phẳng $(\alpha)$, kẻ được đúng một đường thẳng song song với $(\alpha)$.
+	\end{enumerate}
+	Số mệnh đề đúng là
+	\choice
+	{$2$}
+	{\True $0$}
+	{$1$}
+	{$3$}
+	\loigiai{Xét từng mệnh đề ta có
+		\begin{enumerate}[I.]
+			\item ``Hai đường thẳng phân biệt cùng song song với một mặt phẳng thì song song với nhau'' là mệnh đề sai, vì hai đường thẳng có thể chéo nhau.
+			\item ``Hai mặt phẳng phân biệt chứa hai đường thẳng song song cắt nhau theo giao tuyến song song với hai đường thẳng đó'' là mệnh đề sai, vì hai mặt phẳng đó có thể song song nhau.
+			\item ``Nếu đường thẳng $a$ song song với đường thẳng $b$, đường thẳng $b$ nằm trên mặt phẳng $(P)$ thì $a$ song song với $(P)$'' là mệnh đề sai, vì đường thẳng $a$ vẫn có thể nằm trong mặt phẳng $(P)$.
+			\item ``Qua điểm $A$ không thuộc mặt phẳng $(\alpha)$, kẻ được đúng một đường thẳng song song với $(\alpha)$'' là mệnh đề sai, vì có vô số đường thẳng đi qua điểm $A$ và song song với $(\alpha)$.
+		\end{enumerate}
+		Vậy không có mệnh đề nào đúng trong các mệnh đề nêu trên.}
+\end{ex}%!Cau!%
+\begin{ex}%[Nguyễn Trung Kiên, dự án 12-EX-6-2019]%[1H2B4-4]
+	Cho hình hộp $ABCD.A'B'C'D'$. Gọi $M$ là trung điểm của $AB$, mặt phẳng $(MA'C')$ cắt cạnh $BC$ tại $N$. Tính tỉ số $k=\dfrac{MN}{A'C'}$.
+	\choice
+	{\True $k=\dfrac{1}{2}$}
+	{$k=\dfrac{1}{3}$}
+	{$k=\dfrac{2}{3}$}
+	{$k=1$}
+	\loigiai
+	{\immini
+		{Ba mặt phẳng phân biệt $(ABCD)$, $(ACC'A')$, $(MA'C')$ đôi một cắt nhau theo ba giao tuyến $AC$, $A'C'$ và $MN$. Theo tính chất hình hộp ta có $AC\parallel A'C'$ nên $MN\parallel AC \parallel A'C'$.\\
+		Lại có $M$ là trung điểm của $AB$ nên $MN$ là đường trung bình trong tam giác $ABC$.\\
+		Vì vậy $MN=\dfrac{1}{2}AC=\dfrac{1}{2}A'C' \Rightarrow k=\dfrac{MN}{A'C'}=\dfrac{1}{2}$.}
+		{\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A,-1.3/-1.1/B,2/-1.1/C}
+			\coordinate (D) at ($(A)+(C)-(B)$);
+			\coordinate (A') at ($(A)+(1,3.5)$);
+			\coordinate (M) at ($(A)!1/2!(B)$);
+			\coordinate (N) at ($(B)!1/2!(C)$);
+			\tkzDefPointsBy[translation=from A to A'](B,C,D){B'}{C'}{D'}
+			\tkzDrawPolygon(A',B',B,C,D,D')
+			\tkzDrawSegments(B',C' C',D' C,C' A',C' N,C')
+			\tkzDrawSegments[dashed](A,B A,D A,A' M,A' A,C M,N)
+			\tkzDrawPoints[fill=black,size=4](A,B,D,C,A',B',C',D',M,N)
+			\tkzLabelPoints[above](A',D')
+			\tkzLabelPoints[below](B,C,N)
+			\tkzLabelPoints[xshift=-0.55cm,yshift=0.4cm](A,B',M)
+			\tkzLabelPoints[right](C',D)
+			\end{tikzpicture}}}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán Học và Tuổi Trẻ (Đề số 3), 2019]%[Đặng Tân Hoài, 12-EX-6-2019]%[1H2B4-1]
+	Cho ba mặt phẳng $(\alpha)$, $(\beta)$, $(\gamma)$ đôi một song song. Hai đường thẳng $d,~d'$ lần lượt cắt ba mặt phẳng này tại $A,~B,~C$ và $A',~B',~C'$ ($B$ nằm giữa $A$ và $C$, $B'$ nằm giữa $A'$ và $C'$). Giả sử $AB=5$, $BC=4$, $A'C'=8$. Tính độ dài hai đoạn thẳng $A'B'$, $B'C'$.
+	\choice
+	{\True $ A'B'=10,~B'C'=8 $}
+	{$ A'B'=8,~B'C'=10 $}
+	{$ A'B'=12,~B'C'=6 $}
+	{$ A'B'=6,~B'C'=12 $}
+	\loigiai{
+		Ta có $\dfrac{AB}{A'B'}=\dfrac{BC}{B'C'}=\dfrac{AB+BC}{A'B'+B'C'}	=\dfrac{AC}{A'C'} \Rightarrow A'B'=10,~B'C'=8$.
+	}
+\end{ex}

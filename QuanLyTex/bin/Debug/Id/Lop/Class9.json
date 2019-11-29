@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ObjectName" : "D", "ChapterName" : "Căn bậc hai. Căn bậc 3" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ObjectName" : "D", "ChapterName" : "Hàm số bậc nhất" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ObjectName" : "D", "ChapterName" : "Hệ hai phương trình bậc nhất hai ẩn" }
+{ "_id" : { "$oid" : "5d1cb77e3fb9391a74f275d0" }, "ChapterId" : 4, "ObjectName" : "D", "ChapterName" : "Hàm số 𝑦 = 𝑎𝑥2 (𝑎 ̸= 0). Phương trình bậc hai một ẩn" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ObjectName" : "H", "ChapterName" : "Hệ thức lượng trong tam giác vuông" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ObjectName" : "H", "ChapterName" : "Đường tròn" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d5" }, "ChapterId" : 3, "ObjectName" : "H", "ChapterName" : "Góc với đường tròn" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d6" }, "ChapterId" : 4, "ObjectName" : "H", "ChapterName" : "Hình trụ. Hình nón. Hình cầu" }

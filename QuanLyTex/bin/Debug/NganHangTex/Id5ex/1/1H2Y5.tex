@@ -1,0 +1,46 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT -Lạng Sơn, 2019]%[Trần Duy Khương, 12EX5-2019]%[1H2Y5-1]
+		Trong các hình sau, hình nào biểu diễn \textbf{đúng} hình chóp $S.ABCD$. 
+		\choice
+		{\begin{tikzpicture}[scale=0.5, font=\footnotesize,line join=round, line cap=round,>=stealth]
+				\tkzDefPoints{1/-3/B,4/-1/A,5/-3/C,8/-1/D,3/3/S}
+			\tkzDrawSegments(C,D S,D S,C S,B C,B A,S A,D)
+			\tkzDrawSegments[dashed](A,B)
+			\tkzDrawPoints[fill=black](A,B,C,S,D)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](B,A)
+			\tkzLabelPoints[right](D)
+			\tkzLabelPoints[below](C)
+			\end{tikzpicture}}
+		{\begin{tikzpicture}[scale=0.5, font=\footnotesize,line join=round, line cap=round,>=stealth]
+			\tkzDefPoints{1/-3/B,4/-1/A,5/-3/C,8/-1/D,3/3/S}
+			\tkzDrawSegments(C,D S,D S,C S,B C,B A,S)
+			\tkzDrawSegments[dashed](A,B A,D)
+			\tkzDrawPoints[fill=black](A,B,C,S,D)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](B,A)
+			\tkzLabelPoints[right](D)
+			\tkzLabelPoints[below](C)
+			\end{tikzpicture}}
+		{\begin{tikzpicture}[scale=0.5, font=\footnotesize,line join=round, line cap=round,>=stealth]
+			\tkzDefPoints{1/-3/B,4/-1/A,5/-3/C,8/-1/D,3/3/S}
+			\tkzDrawSegments(C,D S,D S,C S,B C,B A,S A,D A,B)
+			\tkzDrawPoints[fill=black](A,B,C,S,D)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](B,A)
+			\tkzLabelPoints[right](D)
+			\tkzLabelPoints[below](C)
+			\end{tikzpicture}}
+		{\True \begin{tikzpicture}[scale=0.5, font=\footnotesize,line join=round, line cap=round,>=stealth]
+			\tkzDefPoints{1/-3/B,4/-1/A,5/-3/C,8/-1/D,3/3/S}
+			\tkzDrawSegments(C,D S,D S,C S,B C,B)
+			\tkzDrawSegments[dashed](A,B S,A A,D)
+			\tkzDrawPoints[fill=black](A,B,C,S,D)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](B,A)
+			\tkzLabelPoints[right](D)
+			\tkzLabelPoints[below](C)
+			\end{tikzpicture}}
+		\loigiai{Theo quy tắc vẽ hình biểu diễn hình không gian, nét liền biểu thị đường nhìn thấy, nét đứt biểu thị đường không nhìn thấy.			
+		}
+	\end{ex}

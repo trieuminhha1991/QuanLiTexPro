@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Hai góc đối đỉnh" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Hai đường thẳng vuông góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Các góc tạo bởi một đường thẳng cắt hai đường thẳng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Hai đường thẳng song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Tiên đề Ơ-clit về đường thẳng song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Từ vuông góc đến song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Định lí" }

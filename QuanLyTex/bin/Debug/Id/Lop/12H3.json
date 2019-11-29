@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Hệ tọa độ trong không gian" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Phương trình mặt phẳng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Phương trình đường thẳng trong không gian" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Ứng dụng của phương pháp tọa độ " }

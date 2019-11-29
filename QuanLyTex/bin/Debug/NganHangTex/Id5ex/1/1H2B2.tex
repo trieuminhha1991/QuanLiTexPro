@@ -1,0 +1,27 @@
+%!Cau!%
+\begin{ex}%[KSCL, Sở GD và ĐT - Thanh Hóa, 2018]%[Bùi Ngọc Diệp, 12EX-5]%[1H2B2-4]
+	\immini{Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Tìm giao tuyến của hai mặt phẳng $(SAD)$ và $(SBC)$.
+		\choice
+		{Là đường thẳng đi qua đỉnh $S$ và tâm $O$ của đáy}
+		{\True Là đường thẳng đi qua đỉnh $S$ và song song với đường thẳng $BC$}
+		{ Là đường thẳng đi qua đỉnh $S$ và song song với đường thẳng $AB$}
+		{Là đường thẳng đi qua đỉnh $S$ và song song với đường thẳng $BD$}}
+	{
+		\begin{tikzpicture}[line cap=round, line join=round]%[Black Mild]
+		%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+		\tkzDefPoints{0/0/A, 5/0/B,  2/2/D, 3/6/S}
+		% C là điểm sao cho ABCD là hình thoi
+		\tkzDefPointsBy[translation= from A to B](D){C}
+		\tkzFillPolygon[white](S,A,B)
+		\tkzFillPolygon[white](S,B,C)
+		\tkzDrawPolygon(S,A,B)
+		\tkzDrawSegments[dashed](S,D C,D A,D)
+		\tkzDrawSegments(S,C B,C)
+		\tkzLabelPoints[below](A,B)
+		\tkzLabelPoints[right](C)
+		\tkzLabelPoints[above right](D)
+		\tkzLabelPoints[above](S)
+		\end{tikzpicture}}
+	\loigiai{
+		Do $AD \parallel BC$ và $S \in (SAD) \cap (SBC)$ nên giao tuyến của hai mặt phẳng $(SAD)$ và $(SBC)$ là đường thẳng đi qua đỉnh $S$ và song song với $BC$.}
+\end{ex}

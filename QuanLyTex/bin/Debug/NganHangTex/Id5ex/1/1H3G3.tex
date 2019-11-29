@@ -1,0 +1,55 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Ninh, 2019]%[Lê Hồng Phi, 12EX5]%[1H3G3-3]
+	\immini{Cho hình chóp tứ giác đều $S.ABCD$ với tất cả các cạnh bằng $a$. Gọi $G$ là trọng tâm tam giác $SCD$ (tham khảo hình vẽ bên). Giá trị tan góc giữa $AG$ và $(ABCD)$ bằng 
+		\choice
+		{\True $\dfrac{\sqrt{17}}{17}$}
+		{$\dfrac{\sqrt{5}}{3}$}
+		{$\sqrt{17}$}
+		{$\dfrac{\sqrt{5}}{5}$}}{\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+		\tkzDefPoints{0/0/B, 5/0/C, 7/1.5/D, 0/4/h};
+		\coordinate (A) at ($(B)+(D)-(C)$);
+		\coordinate (O) at ($(A)!0.5!(C)$);
+		\coordinate (S) at ($(O)+(h)$);
+		\coordinate (I) at ($(C)!0.5!(D)$);
+		\coordinate (G) at ($(S)!0.67!(I)$);	
+		\coordinate (Q) at ($(O)!0.67!(I)$);	
+		\tkzDrawPolygon(S,B,C,D);
+		\tkzDrawSegments(S,C S,I);
+		\tkzDrawSegments[dashed](S,A A,B A,D S,O O,I A,G A,C B,D G,Q);
+		\tkzDrawPoints[fill=black](S,A,B,C,D,O,I,G,Q);
+		\tkzLabelPoints[above](S);
+		\tkzLabelPoints[below](B,C,O,Q);
+		\tkzLabelPoints[right](D,G,I);
+		\tkzLabelPoints[above left](A);
+		\end{tikzpicture}}
+	\loigiai
+	{\immini{Gọi $O$ là tâm của hình vuông $ABCD$. Khi đó, $SO\perp (ABCD)$.\\
+			Gọi $I$ là trung điểm của $CD$. Ta tính được $SI=\dfrac{a\sqrt{3}}{2}$, $SG=\dfrac{2}{3}SI=\dfrac{a\sqrt{3}}{3}$ và $$SO=\sqrt{SI^2-OI^2}=\sqrt{\left(\dfrac{a\sqrt{3}}{2}\right)^2-\left(\dfrac{a}{2}\right)^2}=\dfrac{a\sqrt{2}}{2}.$$}{\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+			\tkzDefPoints{0/0/B, 5/0/C, 7/1.5/D, 0/4/h};
+			\coordinate (A) at ($(B)+(D)-(C)$);
+			\coordinate (O) at ($(A)!0.5!(C)$);
+			\coordinate (S) at ($(O)+(h)$);
+			\coordinate (I) at ($(C)!0.5!(D)$);
+			\coordinate (G) at ($(S)!0.67!(I)$);	
+			\coordinate (Q) at ($(O)!0.67!(I)$);	
+			\tkzDrawPolygon(S,B,C,D);
+			\tkzDrawSegments(S,C S,I);
+			\tkzDrawSegments[dashed](S,A A,B A,D S,O O,I A,G A,C B,D G,Q A,Q A,I);
+			\tkzDrawPoints[fill=black](S,A,B,C,D,O,I,G,Q);
+			\tkzLabelPoints[above](S);
+			\tkzLabelPoints[below](B,C,O,Q);
+			\tkzLabelPoints[right](D,G,I);
+			\tkzLabelPoints[above left](A);
+			\end{tikzpicture}}\noindent
+	Gọi $Q$ là hình chiếu vuông góc của $G$ trên $(ABCD)$. Ta có $Q\in OI$ và $GQ=\dfrac{1}{3}SO=\dfrac{a\sqrt{2}}{6}$.\\
+	Ta có 
+	\begin{align*}
+	AG^2&=SA^2+SG^2-2\cdot  SA\cdot SG\cdot\cos \widehat{ASG}=SA^2+SG^2-2\cdot SA\cdot SG\cdot\dfrac{SA^2+SI^2-AI^2}{2\cdot SA\cdot SI}\\
+	&=SA^2+SG^2-\dfrac{2(SA^2+SI^2-(AD^2+ID^2))}{3}\\
+	&=a^2+\dfrac{a^2}{3}-\dfrac{2\left(a^2+\dfrac{3a^2}{4}-a^2-\dfrac{a^2}{4}\right)}{3}=a^2.
+	\end{align*}
+	Khi đó, $AQ=\sqrt{AG^2-GQ^2}=\sqrt{a^2-\dfrac{2a^2}{36}}=\dfrac{a\sqrt{34}}{6}$.\\
+	Vì $AG\cap (ABCD)=A$ và $GQ\perp (ABCD)$ nên góc giữa $AG$ và $(ABCD)$ là $\widehat{GAQ}$.\\
+	Vậy $\tan\widehat{GAQ}=\dfrac{GQ}{AQ}=\dfrac{\dfrac{a\sqrt{2}}{6}}{\dfrac{a\sqrt{34}}{6}}=\dfrac{\sqrt{17}}{17}$.	
+	}
+\end{ex}

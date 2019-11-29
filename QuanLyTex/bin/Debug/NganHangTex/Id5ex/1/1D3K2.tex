@@ -1,0 +1,17 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1D3K2-5]
+	Cho dãy số $(u_n)$ thỏa mãn $u_1=1$ và $u_n=u_{n-1}+n$ với mọi $n \ge 2$. Khi đó $\lim \limits_{n \to +\infty} \dfrac{u_n}{n^2}$ bằng 
+	\choice
+	{$0$}
+	{$1$}
+	{$2$}
+	{\True $\dfrac{1}{2}$}
+	\loigiai{
+		Ta có 
+		\begin{eqnarray*}
+				u_n&=&u_n-u_{n-1}+u_{n-1}-u_{n-2}+\cdots +u_2-u_1+u_1\\&=&n+(n-1)+(n-2)+\cdots +2+1\\& =& \dfrac{n(n+1)}{2}
+		\end{eqnarray*}
+	
+		Do đó: $\lim \limits_{n \to +\infty} \dfrac{\dfrac{n(n+1)}{2}}{n^2}=\dfrac{1}{2}$
+	}
+\end{ex}

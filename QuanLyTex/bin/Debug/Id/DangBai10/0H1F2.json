@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tổng của hai véc-tơ, tổng của nhiều véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Chứng minh đẳng thức véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Xác định vị trí của một điểm nhờ đẳng thức véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tìm véc-tơ đối, hiệu của hai véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Tính độ dài của vectơ tổng hoặc vectơ hiệu" }

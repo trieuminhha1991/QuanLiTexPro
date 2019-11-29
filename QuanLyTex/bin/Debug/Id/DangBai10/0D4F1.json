@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Chứng minh BĐT dựa vào định nghĩa và tính chất" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Chứng minh BĐT dựa vào BĐT Cauchy" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Chứng minh BĐT dựa vào BĐT Bunhiacopxki" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Bất đẳng thức về giá trị tuyệt đối" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Ứng dụng BĐT để giải PT, HPT, BPT, tìm GTLN-GTNN" }

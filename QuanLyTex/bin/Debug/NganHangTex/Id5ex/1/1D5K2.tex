@@ -1,0 +1,120 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Ninh, 2019]%[Lê Hồng Phi, 12EX5]%[1D5K2-2]
+	Ký hiệu $d$ là tiếp tuyến  của đồ thị hàm số $y = x^4 - 4x^2 + 2m^2 + 1\quad (C)$ tại giao điểm của $(C)$ với trục hoành đồng thời $(C)$ đi qua điểm $A(1; 0)$. Hỏi có bao nhiêu đường thẳng $d$ thỏa mãn bài toán?
+	\choice
+	{$3$}
+	{$2$}
+	{$8$}
+	{\True $4$}
+	\loigiai
+	{Vì $(C)$ đi qua điểm $A(1; 0)$ nên $1-4+2m^2+1=0\Leftrightarrow m^2=1$. Do đó, $y=x^4-4x^2+3$.\\
+	Phương trình hoành độ giao điểm giữa $(C)$ và trục hoành là $$x^4-4x^2+3=0\Leftrightarrow\hoac{& x^2=1 \\ & x^2=3 }\Leftrightarrow\hoac{& x=\pm 1 \\ & x=\pm \sqrt{3}.}$$
+	Như thế đồ thị $(C)$ cắt trục hoành tại bốn điểm $M(x_0; 0)$ với $x_0\in\{\pm 1; \pm \sqrt{3}\}$.\\
+	Phương trình đường tiếp tuyến của đồ thị $(C)$ tại $M(x_0;0)$ là $y=y'\left(x_0\right)(x-x_0)+0$.\\
+	Ta có $y'\left(x_0\right)\in \{-4; 4; 4\sqrt{3}; -4\sqrt{3}\}$.\\
+	Vậy có tất cả $4$ đường thẳng $d$ thỏa mãn bài toán.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Tập huấn, Sở GD và ĐT - Bắc Giang, 2019]%[Nguyễn Anh Tuấn, 12EX5]%[1D5K2-1]
+	Cho khai triển $ (3x-2)^{2018}=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_{2018}x^{2018} $. Tính tổng $ S=a_1+2a_2+3a_3+\cdots+2018a_{2018} $.
+	\choice
+	{$ -6054 $}
+	{$  4036 $}
+	{$  1$}
+	{\True $  6054$}
+	\loigiai{
+		Lấy đạo hàm hai vế, ta có
+		$$2018\cdot (3x-2)^{2017} \cdot 3=a_1+2a_2x+3a_3x^2+\cdots+2018\cdot a_{2018}x^{2017} \quad (1).$$
+		Thay $ x=1 $ vào $ (1) $, suy ra $ S=2018 \cdot (3\cdot 1-2)^{2017} \cdot 3=2018\cdot 3=6054 $.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Lê Quý Đôn,Lai Châu, 2019]%[Nguyễn Tài Tuệ, dự án EX7]%[1D5K2-2]
+	Cho hàm số $f(x)=ax^3+bx^2+cx+d$ ($a$, $b$, $c$, $d$ là hằng số và $ a\ne 0 $). Biết $f(x)$ là hàm số lẻ, đồ thị của nó tiếp xúc với đường thẳng $y=9x-16$ tại điểm $A(2;2)$. Tính $f(3)$.
+	\choice
+	{$f(3)=-2$}
+	{$f(3)=36$}
+	{$f(3)=27$}
+	{\True $f(3)=18$}
+	\loigiai{
+		Hàm số $f(x)=ax^3+bx^2+cx+d$ là hàm số lẻ nên $b=d=0$.\\
+		Do đó $f(x)=ax^3+cx$.\\
+		Theo bài ra ta có
+		$\left \{\begin{aligned}
+		&f'(2)=9\\
+		&f(2)=2
+		\end{aligned}\right.\Rightarrow\left\{\begin{aligned}
+		&12a+c=9\\
+		&8a+2c=2
+		\end{aligned}\right.\Leftrightarrow \left\{\begin{aligned}
+		&a=1\\
+		&b=-3
+		\end{aligned}\right.\Rightarrow f(x)=x^3 - 3x$.\\
+		Vậy $f(3)=18$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[TT, THPT Chuyên Hà Tĩnh, 19]%[Trần Bá Huy, 12-EX-8-2019]%[1D5K2-4]
+Có bao nhiêu tiếp tuyến của đồ thị hàm số $y=x^3-3x^2+2$ đi qua điểm $A(3;2)$?
+\choice
+{$3$}
+{$0$}
+{$1$}
+{\True $2$}
+\loigiai{
+Xét điểm $M(x_0;x_0^3-3x_0^2+2)$ thuộc đồ thị hàm số. Phương trình tiếp tuyến tại điểm $M$ có dạng
+$$y=(3x_0^2-6x_0)(x-x_0)+x_0^3-3x_0^2+2.$$
+Tiếp tuyến này qua $A(3;2)$ khi và chỉ khi
+\begin{align*}
+&2=(3x_0^2-6x_0)(3-x_0)+x_0^3-3x_0^2+2\\
+\Leftrightarrow\ &-2x_0^3+12x_0^2-18x_0=0\Leftrightarrow\hoac{&x_0=0\\ &x_0=3.}
+\end{align*}
+Vậy có hai tiếp tuyến đi qua $A$ là $y=2$ và $y=9x-25$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[TT, THPT Chuyên Hà Tĩnh, 19]%[Trần Bá Huy, 12-EX-8-2019]%[1D5K2-5]
+Cho các hàm số $y=f(x)$, $y=g(x)$, $y=\dfrac{f(x)+3}{g(x)+1}$. Hệ số góc của các tiếp tuyến của các đồ thị hàm số đã cho tại điểm có hoành độ $x=1$ bằng nhau và khác $0$. Khẳng định nào dưới đây là khẳng định đúng?
+\choice
+{$f(1)>-3$}
+{$f(1)<-3$}
+{\True $f(1)\leq -\dfrac{11}{4}$}
+{$f(1)\geq -\dfrac{11}{4}$}
+\loigiai{
+Đặt $h(x)=\dfrac{f(x)+3}{g(x)+1}$. Ta có $h'(x)=\dfrac{f'(x)g(x)+f'(x)-g'(x)f(x)-3g'(x)}{\left[g(x)+1\right]^2}$.\\
+Theo giả thiết suy ra
+\begin{align*}
+&f'(1)=g'(1)=h'(1)\neq 0\\
+\Leftrightarrow\ &f'(1)=g'(1)=\dfrac{f'(1)g(1)+f'(1)-g'(1)f(1)-3g'(1)}{\left[g(1)+1\right]^2}\\
+\Leftrightarrow\ &\left[g(1)+1\right]^2=g(1)-f(1)-2\ (\text{do}\ g(1)+1\neq 0)\\
+\Leftrightarrow\ &f(1)=-g^2(1)-g(1)-3=-\left[g(1)+\dfrac{1}{2}\right]^2-\dfrac{11}{4}\leq -\dfrac{11}{4}.
+\end{align*}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[thi thử, THPT Triệu Thái, Vĩnh Phúc]%[Phan Quốc Trí, dự án 12EX-8-2019]%[1D5K2-6]
+	Một vật chuyển động theo quy luật $s= - \dfrac{1}{3}t^3 + 6t^2$ với $t$ (giây) là khoảng thời gian tính từ khi vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật di chuyển được trong khoảng thời gian đó. Hỏi trong khoảng thời gian $9$ giây, kể từ khi vật bắt đầu chuyển động, vận tốc lớn nhất của vật đạt được
+	bằng bao nhiêu? 
+	\choice
+	{$234$ m/s}
+	{$144$ m/s}
+	{$27$ m/s}
+	{\True $36$ m/s}
+	\loigiai{
+		Vận tốc $v(t)=\left(- \dfrac{1}{3}t^3 + 6t^2\right)' = -t^2 + 12 t = -(t-6)^2+36 \le 36 $. \\
+		Do đó trong $9$ giây chuyển động thì vận tốc lớn nhất của vật là $v=36$ m/s, đạt được tại thời điểm $t-6=0 \Leftrightarrow t= 6$ giây.	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Nguyễn Trãi, Hải Dương, 2019]%[Đinh Thanh Hoàng, dự án EX6]%[1D5K2-5]
+	Cho hàm số $y=\dfrac{1}{2}x^3-\dfrac{3}{2}x^2+2$ $(C)$. Xét hai điểm $A(a;y_A)$ và $B(b;y_B)$ phân biệt của đồ thị $(C)$ mà tiếp tuyến tại $A$ và $B$ song song. Biết rằng đường thẳng $AB$ đi qua $D(5;3)$. Phương trình của đường thẳng $AB$ là
+	\choice
+	{$x-y-2=0$}
+	{$x+y-8=0$}
+	{$x-3y+4=0$}
+	{\True $x-2y+1=0$}
+	\loigiai{
+		Ta có $y'=\dfrac{3}{2}x^2-3x$.\\		
+		Gọi $A\left(a;\dfrac{1}{2}a^3-\dfrac{3}{2}a^2+2\right)$ và $B\left(b;\dfrac{1}{2}b^3-\dfrac{3}{2}b^2+2\right)$ với $a\neq b$ là hai điểm phân biệt thuộc đồ thị $(C)$ mà tiếp tuyến tại $A$ và $B$ song song với nhau.\\
+		Ta có $y'(a)=y'(b)\Leftrightarrow \dfrac{3}{2}a^2-3a=\dfrac{3}{2}b^2-3b\Leftrightarrow a^2-b^2=2(a-b)\Leftrightarrow a+b=2$.\\
+		Gọi $I\left(\dfrac{a+b}{2};\dfrac{1}{4}(a^3+b^3)-\dfrac{3}{4}(a^2+b^2)+2\right)$ là trung điểm của đoạn $AB$.\\
+		Với $a+b=2$ ta có $I\left(1;\dfrac{8-6ab}{4}-\dfrac{3\left(4-2ab\right)}{4}+2\right)$ hay $I(1;1)$.\\
+		Đường thẳng $AB$ đi qua $I(1;1)$ và nhận $\overrightarrow{ID}=(4;2)$ làm véc-tơ chỉ phương nên có phương trình là
+		$$x-1-2(y-1)=0\Leftrightarrow x-2y+1=0.$$
+	}
+\end{ex}

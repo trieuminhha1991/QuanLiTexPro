@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Câu hỏi lý thuyết" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tìm ảnh hoặc tạo ảnh khi thực hiện phép đối xứng trục" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Xác định trục đối xứng và số trục đối xứng của một hình" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Ứng dụng phép đối xứng trục" }

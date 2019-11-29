@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ObjectName" : "D", "ChapterName" : "Số hữu tỉ. Số thực" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ObjectName" : "D", "ChapterName" : "Hàm số và đồ thị" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ObjectName" : "D", "ChapterName" : "Thống kê" }
+{ "_id" : { "$oid" : "5d1cb77e3fb9391a74f275d0" }, "ChapterId" : 4, "ObjectName" : "D", "ChapterName" : "Biểu thức đại số" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ObjectName" : "H", "ChapterName" : "Đường thẳng vuông góc. Đường thẳng song song" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ObjectName" : "H", "ChapterName" : "Tam giác" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d5" }, "ChapterId" : 3, "ObjectName" : "H", "ChapterName" : "Quan hệ giữa các yếu tố trong tam giác. Các đường đồng quy của tam giác" }

@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Lũy thừa" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Hàm số lũy thừa" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Hàm số mũ. Hàm số lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Phương trình mũ và phương trình lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1ccc9a3fb939115cc7c161" }, "SectionId" : 6, "SectionName" : "Bất phương trình mũ và lô-ga-rít" }

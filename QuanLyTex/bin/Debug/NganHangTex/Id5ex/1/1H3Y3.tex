@@ -1,0 +1,145 @@
+%!Cau!%
+\begin{ex}%[Hải Phòng, 2018]%[Phan Anh Tiến, 12-EX-05]%[1H3Y3-2]
+	Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông ở $B$, $SA\perp (ABC)$. Gọi $AH$ là đường cao của tam giác $SAB$. Khẳng định nào sau đây là \textbf{sai}?
+	\choice
+	{$ AH\perp SC $}
+	{$ AS\perp BC $}
+	{\True $ AH\perp AC $}
+	{$ AH\perp BC $}
+	\loigiai{\immini{Ta có $SA\perp (ABC)\Rightarrow SA\perp BC$.\\
+		$AH\perp (SBC)\Rightarrow \heva{&AH\perp BC\\&AH\perp SC}$.\\ Do đó, $AH\perp SC$ là sai.}
+		{\begin{tikzpicture}[scale=.7, line join = round, line cap = round]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A,5/0/C,2/-3/B}
+			\coordinate (S) at ($(A)+(0,5)$);
+			
+			\coordinate (H) at ($(S)!1/3!(B)$);
+			\tkzDrawPolygon(A,B,C,S)
+			\tkzDrawSegments(S,B A,H)
+			\tkzDrawSegments[dashed](A,C)
+			\tkzDrawPoints(A,B,C,S,H)
+			\tkzMarkRightAngle(A,B,C)
+			\tkzMarkRightAngle(A,H,B)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](B)
+			\tkzLabelPoints[left](A)
+			\tkzLabelPoints[right](C,H)
+		\end{tikzpicture}}	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[HK2, THPT Nguyễn Huệ, Vĩnh Phúc, 2019]%[Thịnh Trần, dự án(12EX-5-2019)]%[1H3Y3-2]
+	Cho hình chóp $S.ABCD$ có đáy là hình bình hành, hai đường chéo $AC$, $BD$ cắt nhau tại $O$ và $SA = SB = SC = SD$. Khi đó, khẳng định nào sau đây là \textbf{sai}?
+	\choice
+	{\True $AC\perp BD$}
+	{$SO\perp BD$}
+	{$SO\perp AC$}
+	{$SO\perp (ABCD)$}
+	\loigiai{
+		\immini{
+			\vspace*{-0.8cm}
+			\begin{itemize}
+				\item Vì $ABCD$ là hình bình hành nên khẳng định $AC\perp BD$ là sai.
+				\item Ta có $\triangle SAC$, $\triangle SBD$ cân tại $O$ có $SO$ là trung tuyến nên $SO$ đồng thời là đường cao $\Rightarrow SO\perp AC$, $SO\perp BD$.
+				\item Vì $SO\perp AC$, $SO\perp BD$ nên $SO\perp (ABCD)$.
+			\end{itemize}	
+		}{
+			\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/D,3.5/0/C,1.5/1.5/A}
+			\coordinate (B) at ($(A)+(C)-(D)$);
+			\tkzInterLL(A,C)(B,D)    \tkzGetPoint{O}
+			\coordinate (S) at ($(O)+(0,3.5)$);
+			\tkzDrawPolygon(S,B,C,D)
+			\tkzDrawSegments(S,C)
+			\tkzDrawSegments[dashed](A,S A,B A,D A,C B,D S,O)
+			
+			\tkzDrawPoints[fill=black](D,C,A,B,O,S)
+			\pgfresetboundingbox
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](A,D)
+			\tkzLabelPoints[right](B,C)
+			\tkzLabelPoints[above right](O)
+			\end{tikzpicture}
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Bắc Kạn, 2018-2019]%[Cao Thành Thái, 12EX5-2019]%[1H3Y3-1]
+ Trong không gian, số mặt phẳng đi qua điểm $M$ và vuông góc với đường thẳng $a$ là
+ \choice
+  {\True $1$}
+  {$2$}
+  {$0$}
+  {vô số}
+ \loigiai
+  {
+  Trong không gian, có một và chỉ một mặt phẳng đi qua điểm $M$ và vuông góc với đường thẳng $a$.
+  }
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn tỉnh Lai Châu,2019]%[Nguyễn Trung Kiên, dự án 12-EX-5-2019]%[1H3Y3-2]
+	Cho hình chóp $S.ABC$ có đáy là tam giác đều, biết $SA\perp (ABC)$. Khẳng định nào sau đây là khẳng định \textbf{đúng}?
+	\choice
+	{$AB\perp BC$}
+	{\True $SA\perp BC$}
+	{$SB\perp AB$}
+	{$SC\perp BC$}
+	\loigiai
+	{Vì $SA\perp (ABC)$ nên $SA\perp AB$, $SA\perp BC$ và $SA\perp AC$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử THPTQG lần 2 THPT Thoại Ngọc Hầu, An Giang, năm 2019]%[Nguyễn Thành Khang, dự án 2019-Ex-7]%[1H3Y3-2]
+	Cho hình chóp $S.ABCD$ có đáy là hình vuông $ABCD$, $SA$ vuông góc với đáy. Kẻ $AH$ vuông góc với $SB$ ($H\in SB$). Chọn mệnh đề đúng.
+	\choice
+	{\True $AH\perp SC$}
+	{$AH\perp (SBD)$}
+	{$AH\perp (SCD)$}
+	{$AH\perp SD$}
+	\loigiai{
+		\immini{
+			Ta có $\heva{&SA\perp BC \\ &AB\perp BC}\Rightarrow BC\perp (SAB)\Rightarrow BC\perp AH$.\\
+			Mà $AH\perp SB$ nên $AH\perp (SBC)\Rightarrow AH\perp SC$.
+		}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+			\tkzInit[xmin=-0.5, xmax=4.5, ymin=0, ymax=4.5]
+			\tkzClip
+			\tkzDefPoints{0/0.6/D,1.2/1.3/A,3.8/1.3/B,1.2/3.8/S}
+			\tkzDefPointBy[translation=from A to B](D)\tkzGetPoint{C}
+			\tkzDefPointBy[homothety=center S ratio 2/5](B)\tkzGetPoint{H}
+			\tkzDrawPoints[fill=black](A,B,C,D,S,H)
+			\tkzDrawSegments(B,C C,D S,B S,C S,D)
+			\tkzDrawSegments[dashed](A,B D,A A,H S,A)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](D,C,A)
+			\tkzLabelPoints[right](B)
+			\tkzLabelPoints[above right](H)
+			\tkzMarkRightAngles(A,H,B)
+			\end{tikzpicture}
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L2, THPT Nguyễn Trung Thiên - Hà Tĩnh, 2019]%[Nguyễn Thành Nhân,12EX7]%[1H3Y3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với $\left(ABCD\right)$. Góc giữa cạnh $SC$ và mặt $\left(SAD\right)$ là góc nào sau đây?
+	\choice
+	{$\widehat{SCA}$ }
+	{$\widehat{CSA}$  }
+	{$\widehat{SCD}$}
+	{\True $\widehat{CSD}$}
+		\loigiai{
+	\immini
+	{Ta có $\heva{&CD \perp SA\\&CD \perp AD \\} \Rightarrow CD\perp \left(SAD\right)$.\\
+	 Vậy góc giữa $SC$ và mặt $\left(SAD\right)$ là $\widehat{CSD}$.
+	}
+	{
+\begin{tikzpicture}[scale=1,font=\footnotesize,line join=round,line cap=round, >=stealth]
+\tkzDefPoints{0/0/A,4/0/B,1.5/-1/C,0/3/S}
+\tkzDefPointBy[translation = from B to A](C)\tkzGetPoint{D}
+\tkzDrawSegments(S,D S,C S,B B,C C,D)
+\tkzDrawSegments[dashed](A,B A,D S,A)
+\tkzMarkRightAngles(B,A,S)
+\tkzMarkRightAngles(A,D,C)
+\tkzDrawPoints(A,B,C,D,S)
+\tkzLabelPoints[left](D,S)
+\tkzLabelPoints[above left=-3pt](A)
+\tkzLabelPoints[below](C,B)
+\end{tikzpicture}
+	} 
+	}
+\end{ex}

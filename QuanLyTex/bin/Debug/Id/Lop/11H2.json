@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Đại cương về đường thẳng và mặt phẳng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Hai đường thẳng chéo nhau và hai đường thẳng song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Đường thẳng và mặt phẳng song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Hai mặt phẳng song song" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Phép chiếu song song. Hình biểu diễn của một hình không gian" }

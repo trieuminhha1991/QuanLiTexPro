@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Áp dụng công thức cộng" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Áp dụng công thức nhân đôi - hạ bậc" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Áp dụng công thức biến đổi tích thành tổng, tổng thành tích" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Kết hợp các công thức lượng giác" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Tìm giá trị lớn nhất, giá trị nhỏ nhất của biểu thức lượng giác" }
+{ "_id" : { "$oid" : "5d1cdb763fb939115cc7c1db" }, "FormId" : 6, "FormName" : "Nhận dạng tam giác" }
+{ "_id" : { "$oid" : "5d1cdb763fb939115cc7c1dc" }, "FormId" : 7, "FormName" : "Các bài toán có yếu tố thực tế, liên môn" }
+{ "_id" : { "$oid" : "5d1cdbcc3fb939115cc7c1df" }, "FormId" : 8, "FormName" : "Câu hỏi lý thuyết" }

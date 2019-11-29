@@ -1,0 +1,547 @@
+%!Cau!%
+\begin{ex}%[Thi thử lần I, Sở GD&ĐT Sơn La 2019]%[Nguyễn Anh Quốc,  dự án EX5]%[1H3K3-3]
+Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông tâm $O$, cạnh bằng $a$, $SA=a$ vuông góc với mặt phẳng đáy. Tang của góc giữa đường thẳng $SO$ và mặt phẳng $(SAB)$ bằng	
+	\choice
+	{$\sqrt{2}$}
+	{\True $\dfrac{\sqrt{5}}{5}$}
+	{$\sqrt{5}$}
+	{$\dfrac{\sqrt{2}}{2}$}
+	\loigiai{
+	\immini{Gọi $H$ là trung điểm của $AB$, ta có $OH\perp (SAB)$ \\(do $OH\perp AB$ và $OH\perp SA$).\\
+		Suy ra góc giữa $SO$ và $(SAB)$ là $\widehat{HSO}$.\\
+		Xét tam giác vuông $SHO$ ta có \\
+		$\tan \widehat{HSO}=\dfrac{OH}{SH}=\dfrac{OH}{\sqrt{SA^2+AH^2}}=\dfrac{\dfrac{a}{2}}{\sqrt{a^2+\dfrac{a^2}{4}}}=\dfrac{\sqrt{5}}{5}.$}
+	{\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
+		\tkzDefPoints{0/0/A,-1.3/-1.6/B,2.5/-1.6/C}
+		\coordinate (D) at ($(A)+(C)-(B)$);
+		\coordinate (S) at ($(A)+(0,3)$);
+		\tkzDrawPolygon(S,B,C,D)
+		\tkzDrawSegments(S,C)
+		\coordinate (H) at ($(A)!0.5!(B)$);
+		\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+		\tkzDrawSegments[dashed](A,S A,B A,D A,C B,D S,H O,H S,O)
+		\tkzDrawPoints[fill=black,size=4](D,C,A,B,S,H,O)
+		\tkzMarkRightAngles[size=0.16](S,A,B S,A,D)
+		\tkzLabelPoints[above](S)
+		\tkzLabelPoints[below](A,B,C,O)
+		\tkzLabelPoints[right](D)
+		\tkzLabelPoints[below right](H)
+		
+		\end{tikzpicture}}	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn số 2, Sở GD và ĐT Quảng Ninh, 2019]%[Đỗ Đường Hiếu, 12EX5-19]%[1H3K3-3]
+	\immini{Cho hình chóp tứ giác đều $S.ABCD$ với tất cả các cạnh bằng $a$. Gọi $G$ là trọng tâm tam giác $SCD$ (tham khảo hình vẽ bên). Tang góc giữa $AG$ và $(ABCD)$ bằng
+		\choice
+		{\True $\dfrac{\sqrt{17}}{7}$}
+		{$\dfrac{\sqrt{5}}{3}$}
+		{$\sqrt{17}$}
+		{$\dfrac{\sqrt{5}}{5}$}}
+	{\begin{tikzpicture}[line cap=round, line join=round,font=\footnotesize,>=stealth, scale=0.8]
+		\tikzset{label style/.style={font=\footnotesize}}
+		\tkzDefPoints{0/0/A, -1.5/-1.5/B, 4/0/D, 1/3/S}
+		\tkzDefPointBy[translation = from A to D](B)\tkzGetPoint{C}
+		\tkzDefMidPoint(C,D)\tkzGetPoint{I}
+		\tkzDefMidPoint(A,C)\tkzGetPoint{O}
+		\tkzCentroid(S,C,D)\tkzGetPoint{G}
+		\tkzCentroid(O,C,D)\tkzGetPoint{Q}
+		\tkzDrawSegments[dashed](A,B A,D B,D S,A A,G A,C O,I S,O G,Q)
+		\tkzDrawSegments(B,C C,D S,B S,C S,D S,I)
+		\tkzDrawPoints[fill=black](A,B,C,D,S,G,I,O,Q)
+		\tkzLabelPoints[above](S)
+		\tkzLabelPoints[right](G)
+		\tkzLabelPoints[below](A,B,C,D,I,Q,O)
+		%\tkzMarkRightAngles(S,A,B S,A,C A,B,C)
+		\end{tikzpicture}}
+	\loigiai{
+		\immini{Gọi $O$ là tâm hình vuông $ABCD$, $I$ là trung điểm $CD$, $Q$ là trọng tâm tam giác $OCD$. Khi đó $SO\perp (ABCD)$, $GQ\parallel SO\Rightarrow GQ\perp (ABCD)$.\\
+			Do đó góc giữa $AG$ và $(ABCD)$ bằng góc giữa $AG$ và $AQ$, bằng góc $\widehat{GAQ}$.\\
+			Ta có $SO=\sqrt{SA^2-OA^2}=\sqrt{a^2-\left(\dfrac{a\sqrt{2}}{2}\right)^2}=\dfrac{a\sqrt{2}}{2}$.\\
+			Nên suy ra $GQ=\dfrac{1}{3}SO=	\dfrac{a\sqrt{2}}{6}$.	
+		}		
+		{\begin{tikzpicture}[line cap=round, line join=round,font=\footnotesize,>=stealth, scale=1]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A, -1.5/-1.5/B, 4/0/D, 1/3/S}
+			\tkzDefPointBy[translation = from A to D](B)\tkzGetPoint{C}
+			\tkzDefMidPoint(C,D)\tkzGetPoint{I}
+			\tkzDefMidPoint(A,C)\tkzGetPoint{O}
+			\tkzCentroid(S,C,D)\tkzGetPoint{G}
+			\tkzCentroid(O,C,D)\tkzGetPoint{Q}
+			\tkzDrawSegments[dashed](A,B A,D B,D S,A A,G A,C O,I S,O G,Q A,Q)
+			\tkzDrawSegments(B,C C,D S,B S,C S,D S,I)
+			\tkzDrawPoints[fill=black](A,B,C,D,S,G,I,O,Q)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[right](G)
+			\tkzLabelPoints[below](A,B,C,D,I,Q,O)
+			\tkzMarkRightAngles(S,O,B S,O,C G,Q,A)
+			\end{tikzpicture}}
+		\noindent	
+		Tam giác $AOQ$ có $OA=\dfrac{a\sqrt{2}}{2}$, $OQ=\dfrac{2}{3}OI=\dfrac{a}{3}$ và $\widehat{AOQ}=135^\circ$ nên
+		$$AQ^2=OA^2+OQ^2-2OA\cdot OQ\cdot \cos 135^\circ=\dfrac{17a^2}{18}\Rightarrow AQ=\dfrac{a\sqrt{34}}{6}.$$
+		Do đó $\tan \widehat{GAQ}=\dfrac{GQ}{AQ}=\dfrac{a\sqrt{2}}{6}:\dfrac{a\sqrt{34}}{6}=\dfrac{\sqrt{17}}{7}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Chuyên Sơn La, 2018]%[Nguyễn Thanh Tâm, 12-EX-5-2019]%[1H3K3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông tâm $O$ cạnh bằng $a$, $SA=a$ và $SA$ vuông góc với mặt phẳng đáy. Tan của góc giữa đường thẳng $SO$ và mặt phẳng $(SAB)$ bằng
+	\choice
+	{$\sqrt{2}$}
+	{$\dfrac{\sqrt{2}}{2}$}
+	{$\sqrt{5}$}
+	{\True $\dfrac{\sqrt{5}}{5}$}
+	\loigiai{
+		\immini{
+			Ta có: $\left.\begin{aligned}
+			&DA\perp AB\\
+			&DA\perp SA\\
+			\end{aligned}\right\}\Rightarrow DA\perp (SAB)$.\\
+			Gọi $H$ là trung điểm của $AB$. Khi đó: $OH\parallel DA\\
+			\Rightarrow OH\perp(SAB)$.\\
+			Hình chiếu của $SO$ lên $(SAB)$ là $SH$ nên góc giữa $SO$ và mặt phẳng $(SAB)$ là $\widehat{OSH}$.\\
+			Ta có\\
+			$OH=\dfrac{AB}{2}=\dfrac{a}{2}$,\\
+			$SH=\sqrt{SA^2+AH^2}=\sqrt{a^2+\left(\dfrac{a}{2}\right)^2}=\dfrac{a\sqrt{5}}{2}.\\
+			\tan\widehat{OSH}=\dfrac{OH}{SH}=\dfrac{\dfrac{a}{2}}{\dfrac{a\sqrt{5}}{2}}=\dfrac{\sqrt{5}}{5}$.
+		}
+		{
+			\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=1]
+			%(GỌI ĐIỂM)
+			\tkzDefPoints{2/1.5/A,6/1.5/B,4/0/C,0/0/D,3/0.75/O,4/1.5/H,2/4.5/S};
+			
+			%(VẼ ĐIỂM)
+			%\tkzDrawPoints[fill=black](A,B,C,D,O,H,S);
+			%VẼ ĐOẠN THẲNG
+			\tkzDrawSegments[dashed](S,A A,B A,D S,O S,H A,C B,D H,O);
+			\tkzDrawSegments(S,D S,C S,B D,C C,B);
+			% VẼ DẤU GÓC VUÔNG
+			\tkzMarkRightAngles[size=0.2](S,A,D S,A,B D,A,B A,H,O);
+			\tkzMarkAngle(O,S,H)
+			% ĐÁNH DẤU CẠNH BẰNG NHAU
+			\tkzMarkSegments[mark=|](A,D D,C);
+			\tkzLabelLine[pos=0.5,below,black](C,B){a}
+			\tkzLabelLine[pos=0.5,left,black](S,A){a}
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](O)
+			\tkzLabelPoints[above right](H,B)
+			\tkzLabelPoints[below right](C)
+			\tkzLabelPoints[above left](A)
+			\tkzLabelPoints[below left](D)
+			\end{tikzpicture}}}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề Tập Huấn -4, Sở GD và ĐT - Hải Phòng, 2019]%[Trần Xuân Thiện, 12EX5]%[1H3K3-3]
+	Cho hình chóp đều $S.ABCD$ có cạnh đáy bằng $a$, cạnh bên bằng $a\sqrt{2}$. Góc giữa đường thẳng $SB$ và mặt phẳng $(ABCD)$ bằng bao nhiêu?
+	\choice
+	{$ 30^\circ $}
+	{$ 45^\circ $}
+	{\True $ 60^\circ $}
+	{$ 90^\circ $}
+	\loigiai{
+		\immini[0.05]{
+			Gọi $O$ là tâm hình vuông $ABCD$.\\
+			Ta có $SO \perp (ABCD)$.\\
+			Hay $BO$ là hình chiếu vuông góc của $SB$ lên $(ABCD)$.\\
+			Vậy $SBO = \varphi $ là góc giữa $SB$ và $(ABCD)$.\\
+			Xét $\Delta SBO$ vuông tại $O$.\\
+			Ta có $\cos \varphi = \dfrac{BO}{SB} = \dfrac{\dfrac{a\sqrt{2}}{2}}{a\sqrt{2}} = \dfrac{1}{2} \Rightarrow \varphi = 60^\circ$ ( với $BO = \dfrac{1}{2}BD = \dfrac{a\sqrt{2}}{2}$).
+		}{
+		\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/D,7/0/C,3/3/A}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\tkzInterLL(A,C)(B,D)    \tkzGetPoint{O}
+\coordinate (S) at ($(O)+(0,7)$);
+\tkzDrawPolygon(S,B,C,D)
+\tkzDrawSegments(S,C)
+\tkzDrawSegments[dashed](A,S A,B A,D A,C B,D S,O)
+\tkzDrawPoints(D,C,A,B,O,S)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\tkzLabelPoints[above right](O)
+\tkzMarkRightAngles[size=0.4](A,D,C)
+\end{tikzpicture}
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Tập huấn, Sở GD và ĐT - Bắc Giang, 2019]%[Nguyễn Anh Tuấn, 12EX5]%[1H3K3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật với $AB=a$, $AD=a\sqrt{3}$ . Cạnh bên $SA$ vuông góc với mặt phẳng đáy và $SA=a$. Gọi $ \varphi $ là góc giữa đường thẳng SD và mặt phẳng $ (SBC) $. Khẳng định nào dưới đây đúng?
+	\choice
+	{\True $\tan \varphi=\dfrac{\sqrt{7}}{7}  $}
+	{$ \tan \varphi=\dfrac{1}{7}  $}
+	{$ \tan \varphi=\sqrt{7}  $}
+	{$ \tan \varphi=-\dfrac{\sqrt{7}}{7}  $}
+	\loigiai{
+		\immini{Gọi $ K $ là trung điểm đoạn $ SB $. Vì $ AB=SA=a $ nên tam giác $ SAB $ vuông cân tại $ A $. Suy ra $ AK=\dfrac{SB}{2}=\dfrac{a\sqrt{2}}{2} $.\\
+			Mặt khác, lại có $ AK \perp SB$, $ BC\perp (SAB) $ nên $ AK\perp (SBC) $. Dựng hình bình hành $ AKHD $ như hình vẽ, suy ra $ HD\perp (SAC) $. Do đó, hình chiếu của $ SD $ trên $ (SBC) $ là $SH$. Góc $ \widehat{DSH} $ là góc giữa $ SD $ và mặt phẳng $ (SBC) $.\\
+			Xét tam giác $ SHD $ vuông tại $ H $, có $ HD=AK=\dfrac{a\sqrt{2}}{2} $, $ SD=2a $. Vậy
+		}
+		{\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize,scale=1]
+			\coordinate[label=below left:$B$] (B) at (0,0);
+			\coordinate[label=above right:$A$] (A) at (1,.8);
+			\coordinate[label=below right:$C$] (C) at (4,0);
+			\coordinate[label=above right:$D$] (D) at ($(C)-(B)+(A)$);
+			\coordinate[label=above left:$S$] (S) at ($(A)+(90:4)$);
+			\draw (C)--(S)--(B)--(C)--(D);
+			\draw[dashed] (A)--(D)--(S)--(A)--(B);
+			\draw ($ (A)!5pt!(D)$)--($(A)!2!($($(A)!5pt!(D)$)!.5!($(A)!5pt!(S)$)$)$)--($(A)!5pt!(S)$);
+			\tkzMarkRightAngles[size=.3,fill=green,opacity=.4,draw=black](S,D,C D,H,S)
+			\coordinate[label=left:$K$] (K) at ($(S)!0.5!(B)$);
+			\coordinate[label=above right:$H$] (H) at ($(D)-(A)+(K)$);
+			\draw (K)--(H)--(D) (S)--(H)--(C);
+			\draw[dashed] (K)--(A);
+			\fill (A)circle(2pt) (B)circle(2pt) (C)circle(2pt) (D)circle(2pt) (S)circle(2pt) (K)circle(2pt) (H)circle(2pt);
+			\end{tikzpicture}}
+		$$\tan \varphi =\tan \widehat{DSH}=\dfrac{HD}{SH}=\dfrac{HD}{\sqrt{SD^2-HD^2}}=\dfrac{a\sqrt{2}}{2} : \dfrac{\sqrt{7}}{\sqrt{2}a}=\dfrac{1}{\sqrt{7}}=\dfrac{\sqrt{7}}{7}.$$
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Hà Tĩnh, 2019]%[Đặng Tân Hoài, 12-EX-5-2019]%[1H3K3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Đường thẳng $SA$ vuông góc với mặt phẳng đáy và $SA=a$. Góc giữa đường thẳng $SC$ và mặt phẳng $(ABCD)$ là $\alpha$. Khi đó $\tan \alpha$ bằng
+	\choice
+	{$\sqrt{2}$}
+	{$\dfrac{1}{\sqrt{3}}$}
+	{$1$}
+	{\True $\dfrac{1}{\sqrt{2}}$}
+	\loigiai{
+	\immini{
+		Vì $SA \perp (ABCD)$ tại $A$ nên $AC$ là hình chiếu vuông góc của $SC$ lên $(ABCD)$. Do đó $$\left(\widehat{SC,(ABCD)}\right)=\left(\widehat{SC,AC}\right)= \widehat{SCA}.$$
+		Xét $\triangle SAC$ vuông tại $A$ có $SA=a$ và $AC=a\sqrt{2}$, suy ra $\tan \alpha=\tan \widehat{SCA}=\dfrac{SA}{AC}=\dfrac{1}{\sqrt{2}}$. 
+	}{
+	\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round,>=stealth]
+	\tkzDefPoints{0/0/B,3/0/C,1/1/A}
+	\coordinate (D) at ($(A)+(C)-(B)$);
+	\coordinate (S) at ($(A)+(0,2)$);
+	\tkzDrawPolygon(S,B,C,D)
+	\tkzDrawSegments(S,C)
+	\tkzDrawSegments[dashed](S,A A,B A,D A,C)
+	\tkzDrawPoints[fill=black](S,A,B,C,D)
+	\tkzLabelPoints[above](S)
+	\tkzLabelPoints[left](A,B)
+	\tkzLabelPoints[right](C,D)
+	\tkzMarkRightAngles[](S,A,B D,A,S)
+	\end{tikzpicture}
+}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[THPT Đức Thọ - Hà Tĩnh - Lần 1 - 2019]%[Phan Anh - EX7]%[1H3K3-3]
+	Cho hình chóp $S.ABC$ có đáy là tam giác vuông cân tại $A$ cạnh $AB=a$, $SA$ vuông góc với mặt đáy và $SA=a\sqrt{2}$. Gọi $M$ là trung điểm của $SA$, $\varphi$ là góc giữa $BM$ và mặt phẳng $(SBC)$. Tính $\sin\varphi$.
+	\choice
+	{$\sin\varphi=\dfrac{\sqrt{2}}{2\sqrt{15}}$}
+	{\True $\sin\varphi=\dfrac{1}{\sqrt{15}}$}
+	{$\sin\varphi=\dfrac{\sqrt{2}}{\sqrt{15}}$}
+	{$\sin\varphi=\dfrac{1}{2\sqrt{15}}$}
+	\loigiai{\immini{Gọi $N$ là trung điểm của $BC$, ta có $AN\perp BC$, mà $SA\perp BC$ nên suy ra $(SAN)\perp BC$.\\
+		Vậy $(SAN)$ vuông góc $(SBC)$ theo giao tuyến $SN$, kẻ $MH\perp SN$ tại $H$, khi đó $MH\perp (SBC)$.\\
+	Vậy góc giữa $BM$ và $(SBC)$ là góc $\widehat{MBH}$.\\
+	Ta có $AN=\dfrac{1}{2}BC=\dfrac{a\sqrt{2}}{2}$, $SN=\sqrt{SA^2+AN^2}=\dfrac{a\sqrt{10}}{2}$.\\
+Mặt khác ta có $\triangle SHM\backsim\triangle SAN$ nên $$\dfrac{MH}{AN}=\dfrac{SM}{SN}\Rightarrow MH=\dfrac{AN\cdot SM}{SN}=\dfrac{a\sqrt{10}}{10}.$$}{\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A,5/0/C,2/-1.5/B,0/4/S}
+			\coordinate (M) at ($(S)!0.5!(A)$);
+			\coordinate (N) at ($(B)!0.5!(C)$);
+			\coordinate (H) at ($(S)!0.3!(N)$);
+			\tkzDrawSegments(S,A A,B B,C S,B S,C B,M S,N B,H)
+			\tkzDrawSegments[dashed](A,C M,H A,N)
+			\tkzDrawPoints(S,A,B,C,M,N,H)
+			\tkzLabelPoints[above left](A)
+			\tkzLabelPoints[above right](C)
+			\tkzLabelPoints[below](B,N)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[left](M)
+			\tkzLabelPoints[right](H)
+			\tkzMarkRightAngle(M,H,B)
+			\end{tikzpicture}}
+		\noindent
+	Ta lại có $MB=\sqrt{AB^2+AM^2}=\dfrac{a\sqrt{6}}{2}$.\\
+	Xét $\triangle MBH$, có $\sin\widehat{MBH}=\dfrac{MH}{MB}=\dfrac{1}{\sqrt{15}}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Chuyên Đại học Vinh, 2019]%[Huỳnh Xuân Tín, 12EX7]%[1H3K3-3]
+	Cho hình lăng trụ đứng $ABC. A'B'C'$ có đáy $ABC$ là tam giác vuông tại $B$, $AC = 2$, $BC = 1$,
+	$AA' = 1$. Tính góc giữa $AB'$ và $(BCC'B')$.
+	\choice
+	{$45^\circ$}
+	{$90^\circ$}
+	{$30^\circ$}
+	{\True $60^\circ$}
+	\loigiai{\immini{
+			Ta có $\heva{&AB\perp BC\\&AB\perp BB'}\Leftrightarrow BA\perp (BCC'B')$. Khi đó $BB'$ là hình chiếu vuông góc của $AB'$ lên $(BCC'B')$. Hay góc giữa $AB'$ và $(BCC'B')$ là $\widehat{AB'B}$.\\
+			Ta có $AB=\sqrt{AC^2-BC^2}=\sqrt{s^2-1^2}=\sqrt{3}$.\\
+			$$\tan\widehat{AB'B}=\dfrac{AB}{BB'}=\sqrt{3}.$$
+			Vậy góc giữa $AB'$ và $(BCC'B')$ là $60^\circ$.
+		}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]%1
+			\tkzDefPoints{0/0/A, 4/0/C, 1.5/-2/B, 0/4/A'}
+			\tkzDefPointBy[translation=from A to A'](B) \tkzGetPoint{B'}
+			\tkzDefPointBy[translation=from A to A'](C) \tkzGetPoint{C'}
+			\tkzDrawSegments(A,B B,C A,A' B,B' C,C' A',B' B',C' A',C' A,B')
+			\tkzDrawSegments[dashed](A,C)
+			\tkzLabelPoints(C,B,C',B')
+			\tkzLabelPoints[above](A')
+			\tkzLabelPoints[left](A)
+			%\tkzMarkAngle[fill=black,size=0.5, opacity=0.25](B,A,C)
+			%\tkzLabelAngle[pos=1](B,A,C){\small $ 120^{\circ} $}
+			\tkzMarkRightAngles[size=0.4](A,B,C)
+			\tkzDrawPoints[size=2pt](A,B,C,A',B',C')
+			\tkzDrawPoints(A,B,C,A',B',C')
+			\end{tikzpicture}}}
+\end{ex}%!Cau!%
+\begin{ex}%[TT, THPT Chuyên Hà Tĩnh, 19]%[Trần Bá Huy, 12-EX-8-2019]%[1H3K3-3]
+Cho hình chóp $S.ABCD$ có đáy là hình thoi cạnh $2a$, $\widehat{ABC}=60^\circ$, $SA=a\sqrt{3}$ và $SA\perp (ABCD)$. Tính góc giữa đường thẳng $SA$ và mặt phẳng $(SBD)$.
+\choice
+{$60^\circ$}
+{$90^\circ$}
+{\True $30^\circ$}
+{$45^\circ$}
+\loigiai{
+\immini{
+Vì tam giác $ABC$ cân và có góc $60^\circ$ nên nó là tam giác đều. Gọi $O$ là trung điểm của $AC$. Ta có hai mặt phẳng $(SAC)$ và $(SBD)$ vuông góc nhau theo giao tuyến $SO$, suy ra hình chiếu vuông góc của $SA$ lên mặt phẳng $(SBD)$ là $SO$. Do đó 
+$$\left(SA,(SBD)\right)=\left(SA,SO\right)=\widehat{ASO}.$$
+Xét tam giác vuông $SAO$, có
+$$OA=\dfrac{AC}{2}=\dfrac{2a}{2}=a,\ SA=a\sqrt{3}.$$
+}{
+\begin{tikzpicture}[scale=0.6]
+\tkzDefPoints{0/0/A, -3/-2/x, 7/0/y, 0/5/z}
+\coordinate (B) at ($(A)+(x)$);
+\coordinate (D) at ($(A)+(y)$);
+\coordinate (C) at ($(B)+(D)$);
+\coordinate (S) at ($(A)+(z)$);
+\coordinate (O) at ($(A)!0.5!(C)$);
+\tkzDrawPoints[fill=black](A,B,C,D,S,O)
+\draw (S)--(B)--(C)--(D)--(S)--(C);
+\draw[dashed] (S)--(A)--(B)--(D)--(A)--(C) (S)--(O);
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[below](A,O)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](D)
+\tkzLabelPoints[below right](C)
+\tkzMarkAngle[size=1.5](A,S,O)
+\end{tikzpicture}
+}
+\noindent
+Suy ra
+$$\tan\widehat{ASO}=\dfrac{AO}{SA}=\dfrac{1}{\sqrt{3}}\Rightarrow \widehat{ASO}=30^\circ.$$
+Vậy góc giữa $SA$ và mặt phẳng $(SBD)$ bằng $30^\circ$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Kinh Môn - Hải Dương, 2019]%[Lê Vũ Hải, 12EX8]%[1H3K3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật. Cho $AB=a$, $AD=a\sqrt{3}$. Cạnh bên $SA \perp (ABCD)$ và $SA=a\sqrt{2}$. Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là
+	\choice
+	{$ 30^{\circ} $}
+	{$ 90^{\circ} $}
+	{\True $ 45^{\circ} $}
+	{$ 60^{\circ} $}
+	\loigiai{
+		\immini{
+			Do $SA \perp (ABCD) \Rightarrow SA \perp BC$.\\
+			Ta có $\heva{& BC \perp AB  \\& BC \perp SA  \\& AB, SA \subset (SAB) \\ & AB \cap SA = A} \Rightarrow BC \perp (SAB) $.\\
+			Suy ra $SB$ là hình chiếu của $SC$ lên $(SAB)$
+			 $\Rightarrow \widehat{\left[SC, (SAB)\right]} = \widehat{BSC}$.
+		}{
+			\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\begin{scope}[scale=0.8]
+			\clip (-2,-3) rectangle (6,6);
+			\tkzDefPoints{0/0/A, 5/0/D, -1.5/-2/B}
+			\tkzDefPointBy[translation=from A to D](B) \tkzGetPoint{C}
+			\tkzDefLine[perpendicular=through A](A,D)\tkzGetPoint{S}
+			
+			\tkzDrawSegments(B,C C,D S,B S,C S,D)
+			\tkzDrawSegments[dashed](A,B A,D S,A)   
+			\tkzMarkAngles(B,S,C)
+			\tkzMarkRightAngles[size=0.4](S,A,B S,A,D)
+			
+			\tkzLabelPoints[above left]()
+			\tkzLabelPoints[right](D)
+			\tkzLabelPoints[above right]()
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](B,C,A)
+			
+			\tkzDrawPoints[fill=black](A,B,C,D,S)
+			\end{scope}
+			\end{tikzpicture}
+		}
+		\noindent
+		Xét $\triangle SAB$ vuông ở $A$ có $SB^{2}=SA^{2}+AB^{2} = 2a^{2}+a^{2}=3a^{2}$.\\		 
+		$\Rightarrow SB = a\sqrt{3}$.\\
+		Xét $\triangle SBC$ vuông ở $B$ có $\tan \widehat{BSC} = \dfrac{BC}{SB}= \dfrac{a\sqrt{3}}{a\sqrt{3}} = 1$.\\
+		$\Rightarrow \widehat{BSC} = 45^{\circ}$. 
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Lê Quý Đôn - Quảng Trị, 2019]%[Nguyễn Tiến, dự án 12EX-8]%[1H3K3-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông tâm $O$, cạnh $a$ và $SO\perp (ABCD)$, $SA=2a\sqrt{2}$. Gọi $M$, $N$ lần lượt là trung điểm của $SA$, $BC$. Tính góc giữa đường thẳng $MN$ và mặt phẳng $(ABCD)$.
+	\choice
+	{$\dfrac{\pi}{6}$}
+	{\True $\dfrac{\pi}{3}$}
+	{$\arctan 2$}
+	{$\dfrac{\pi}{4}$}
+	\loigiai{
+		\immini{
+			\textbf{Cách 1:}\\
+			Gọi $H$ là trung điểm của $AO$. Ta có $HM\parallel SO$.\\
+			Mà $SO\perp (ABCD)\Rightarrow MH\perp (ABCD)$\\
+			$\Rightarrow H$ là hình chiếu vuông góc của $M$ trên mặt phẳng $(ABCD)$.\\
+			Suy ra $HN$ là hình chiếu vuông góc của $MN$ trên mặt phẳng $(ABCD)$.\\
+			Do đó $\widehat{(MN,(ABCD))}=\widehat{(MN,MH)}=\widehat{MNH}$.\\
+			Ta có $OA=\dfrac{1}{2}AC=\dfrac{a\sqrt{2}}{2}$, $HC=\dfrac{3}{4}AC=\dfrac{3a\sqrt{2}}{4}$.\\
+			$HM=\dfrac{1}{2}SO=\dfrac{1}{2}\sqrt{SA^2-OA^2}=\dfrac{1}{2}\sqrt{8a^2-\dfrac{a^2}{2}}=\dfrac{a\sqrt{30}}{4}$.
+		}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A}
+			\tkzDefShiftPoint[A](-135:2){D}
+			\tkzDefShiftPoint[A](0:5){B}
+			\coordinate (C) at ($(D)+(B)-(A)$);
+			\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+			\coordinate (S) at ($(O)+(0,5)$);
+			\tkzDefMidPoint(S,A)\tkzGetPoint{M}
+			\tkzDefMidPoint(B,C)\tkzGetPoint{N}
+			\tkzDefMidPoint(O,A)\tkzGetPoint{H}
+			\tkzDrawSegments[dashed](S,A A,B A,D A,C S,O B,D O,N M,H M,N)
+			\tkzDrawSegments(S,B S,C S,D B,C C,D)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](D,C,N,O)
+			\tkzLabelPoints[right](B,M)
+			\tkzLabelPoints[left](A)
+			\tkzLabelPoints[below left](H)
+			\tkzDrawPoints[fill=black](S,A,B,C,D,O,M,N,H)
+			\end{tikzpicture}
+		}
+		\noindent
+		Nên $HN^2=HC^2+NC^2-2\cdot HC\cdot NC\cdot \cos 45^\circ=\dfrac{5a^2}{8}\Rightarrow HN=\dfrac{a\sqrt{10}}{4}$.\\
+		Xét tam giác vuông $HMN$, ta có $\tan\widehat{MNH}=\dfrac{HM}{HN}=\sqrt{3}\Rightarrow \widehat{MNH}=\dfrac{\pi}{3}$.\\
+		\immini{
+			\textbf{Cách 2:}\\
+			Gọi $E=AN\cap CD$, suy ra $E$ đối xứng với $D$ qua $C$.\\
+			Ta có $MN\parallel SE$ nên
+			\begin{align*}
+			\widehat{(MN,(ABCD))}=\widehat{(SE,(ABCD))}=\widehat{(SE,OE)}=\widehat{SEO}.
+			\end{align*}
+			Nên $SO=\sqrt{SA^2-OA^2}=\dfrac{a\sqrt{30}}{2}$.\\
+			Gọi $K$ là trung điểm của $CD$.\\
+			Ta có $OE=\sqrt{OK^2+KE^2}=\sqrt{\left(\dfrac{a}{2}\right)^2+\left(\dfrac{3a}{2}\right)^2}=\dfrac{a\sqrt{10}}{2}$.
+		}{
+			\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A}
+			\tkzDefShiftPoint[A](-135:2){B}
+			\tkzDefShiftPoint[A](0:5){D}
+			\coordinate (C) at ($(B)+(D)-(A)$);
+			\tkzInterLL(A,C)(B,D)    \tkzGetPoint{O}
+			\coordinate (S) at ($(O)+(0,5)$);
+			\tkzDefMidPoint(S,A)\tkzGetPoint{M}
+			\tkzDefMidPoint(B,C)\tkzGetPoint{N}
+			\tkzDefPointBy[symmetry = center C](D)    \tkzGetPoint{E}
+			\tkzDrawSegments[dashed](S,A A,B A,D A,C S,O B,D O,N M,N A,N O,E)
+			\tkzDrawSegments(S,B S,C S,D B,C C,D N,E E,C S,E)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](B,C,N,O)
+			\tkzLabelPoints[right](D,M,E)
+			\tkzLabelPoints[left](A)
+			\tkzDrawPoints[fill=black](S,A,B,C,D,O,M,N,E)
+			\end{tikzpicture}
+		}
+		\noindent
+		Do đó $\tan \widehat{SEO}=\dfrac{SO}{OE}=\dfrac{a\sqrt{30}}{2}\cdot \dfrac{2}{a\sqrt{10}}=\sqrt{3}\Rightarrow \widehat{SEO}=\dfrac{\pi}{3}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex} %[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%[1H3K3-3]
+Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB=a$; $BC=a\sqrt{2}$ và 
+\immini{
+$AA'=a\sqrt{3}$. Gọi $\alpha$ là góc giữa hai mặt phẳng $(ACD')$ và $(ABCD)$ như hình vẽ bên. Giá trị $\tan\alpha$ bằng
+\choice
+{\True $\dfrac{3\sqrt{2}}{2}$}
+{$\dfrac{2\sqrt{6}}{3}$}
+{$2$}
+{$\dfrac{\sqrt{2}}{3}$}
+}{
+\begin{tikzpicture}[scale=0.5, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A, 8/0/D, -1/-3/B}
+\coordinate (C) at ($(B)-(A)+(D)$);
+\coordinate (A') at ($(A)+(0,7)$);
+\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+\tkzDrawSegments(A',B' B',C' C',D' D',A' B,B' C,C' D,D' B,C C,D C,D')
+\tkzDrawSegments[dashed](A,D A,B A,C A,D' A,A')
+\tkzDrawPoints[fill=black](A,B,C,D,A',B',C',D')
+\tkzLabelPoints[above](A',D')
+\tkzLabelPoints[left](A,B,B')
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[below left](C')
+\end{tikzpicture}
+}
+\loigiai{
+\immini{
+Gọi $O$ là giao điểm của $AC$ và $BD$, $H$ là hình chiếu của $D$ trên $AC$. 
+Khi đó $\heva{& AC\perp DH\\& DD'\perp AC}\Rightarrow AC\perp (DD'H)$, suy ra $DD'\perp AC$ mà $AC=(ABCD)\cap (ACD')$ nên góc giữa hai mặt phẳng $(ABCD)$ và $(ACD')$ là góc $\alpha=\widehat{D'HD}$.\\
+Xét $\triangle ADC$ có $DH=\dfrac{AD\cdot DC}{\sqrt{AC^2+CD^2}}=\dfrac{a\sqrt{6}}{3}$.\\
+Xét $\triangle DHD'$ có $\tan\alpha=\dfrac{DD'}{DH}=\dfrac{3\sqrt{2}}{2}$.
+}{
+\begin{tikzpicture}[scale=0.5, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A, 10/0/D, -1/-3/B}
+\coordinate (C) at ($(B)-(A)+(D)$);
+\coordinate (A') at ($(A)+(0,7)$);
+\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\coordinate (H) at ($(C)!0.6!(O)$);
+\tkzDrawSegments(A',B' B',C' C',D' D',A' B,B' C,C' D,D' B,C C,D C,D')
+\tkzDrawSegments[dashed](A,D A,B A,C A,D' A,A' D,B D',H H,D)
+\tkzDrawPoints[fill=black](A,B,C,D,A',B',C',D',O,H)
+\tkzLabelPoints[above](A',D')
+\tkzLabelPoints[left](A,B,B')
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[above left](C')
+\tkzLabelPoints[below](O,H)
+\tkzMarkRightAngles[scale=1.5](D,H,C)
+\end{tikzpicture}
+}
+}
+\end{ex}%!Cau!%
+\begin{ex} %[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%
+[1H3K3-3]
+Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB=a$; $BC=a\sqrt{2}$ và 
+\immini{
+$AA'=a\sqrt{3}$. Gọi $\alpha$ là góc giữa hai mặt phẳng $(ACD')$ và $(ABCD)$ như hình vẽ bên. Giá trị $\tan\alpha$ bằng
+\choice
+{\True $\dfrac{3\sqrt{2}}{2}$}
+{$\dfrac{2\sqrt{6}}{3}$}
+{$2$}
+{$\dfrac{\sqrt{2}}{3}$}
+}{
+\begin{tikzpicture}[scale=0.5, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A, 8/0/D, -1/-3/B}
+\coordinate (C) at ($(B)-(A)+(D)$);
+\coordinate (A') at ($(A)+(0,7)$);
+\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+\tkzDrawSegments(A',B' B',C' C',D' D',A' B,B' C,C' D,D' B,C C,D C,D')
+\tkzDrawSegments[dashed](A,D A,B A,C A,D' A,A')
+\tkzDrawPoints[fill=black](A,B,C,D,A',B',C',D')
+\tkzLabelPoints[above](A',D')
+\tkzLabelPoints[left](A,B,B')
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[below left](C')
+\end{tikzpicture}
+}
+\loigiai{
+\immini{
+Gọi $O$ là giao điểm của $AC$ và $BD$, $H$ là hình chiếu của $D$ trên $AC$. 
+Khi đó $\heva{& AC\perp DH\\& DD'\perp AC}\Rightarrow AC\perp (DD'H)$, suy ra $DD'\perp AC$ mà $AC=(ABCD)\cap (ACD')$ nên góc giữa hai mặt phẳng $(ABCD)$ và $(ACD')$ là góc $\alpha=\widehat{D'HD}$.\\
+Xét $\triangle ADC$ có $DH=\dfrac{AD\cdot DC}{\sqrt{AC^2+CD^2}}=\dfrac{a\sqrt{6}}{3}$.\\
+Xét $\triangle DHD'$ có $\tan\alpha=\dfrac{DD'}{DH}=\dfrac{3\sqrt{2}}{2}$.
+}{
+\begin{tikzpicture}[scale=0.5, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A, 10/0/D, -1/-3/B}
+\coordinate (C) at ($(B)-(A)+(D)$);
+\coordinate (A') at ($(A)+(0,7)$);
+\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\coordinate (H) at ($(C)!0.6!(O)$);
+\tkzDrawSegments(A',B' B',C' C',D' D',A' B,B' C,C' D,D' B,C C,D C,D')
+\tkzDrawSegments[dashed](A,D A,B A,C A,D' A,A' D,B D',H H,D)
+\tkzDrawPoints[fill=black](A,B,C,D,A',B',C',D',O,H)
+\tkzLabelPoints[above](A',D')
+\tkzLabelPoints[left](A,B,B')
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[above left](C')
+\tkzLabelPoints[below](O,H)
+\tkzMarkRightAngles[scale=1.5](D,H,C)
+\end{tikzpicture}
+}
+}
+\end{ex}

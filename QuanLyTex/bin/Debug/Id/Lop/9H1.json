@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Một số hệ thức về cạnh và đường cao trong tam giác vuông" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Tỉ số lượng giác của góc nhọn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Bảng lượng giác" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Một số hệ thức về cạnh và góc trong tam giác vuông" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Ứng dụng thực tế các tỉ số lượng giác của góc nhọn. Thực hành ngoài trời" }

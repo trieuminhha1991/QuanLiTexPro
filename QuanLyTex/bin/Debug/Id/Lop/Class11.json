@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ChapterName" : "Phương trình đường elip", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ChapterName" : "Tổ hợp. Xác suất. Nhị thức Newton", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ChapterName" : "Dãy số - Cấp số cộng- Cấp số nhân", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb77e3fb9391a74f275d0" }, "ChapterId" : 4, "ChapterName" : "Giới hạn", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d1" }, "ChapterId" : 5, "ChapterName" : "Đạo hàm", "ObjectName" : "D" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ChapterName" : "Phép dời hình và phép đồng dạng trong mặt phẳng", "ObjectName" : "H" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ChapterName" : "Quan hệ song song trong không gian", "ObjectName" : "H" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d5" }, "ChapterId" : 3, "ChapterName" : "Véc-tơ trong không gian. Quan hệ vuông góc trong không gian", "ObjectName" : "H" }

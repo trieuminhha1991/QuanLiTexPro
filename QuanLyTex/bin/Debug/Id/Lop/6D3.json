@@ -1,0 +1,17 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Mở rộng khái niệm phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Phân số bằng nhau" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Tính chất cơ bản của phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Rút gọn phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Quy đồng mẫu nhiều phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "So sánh phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Phép cộng phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 8, "SectionName" : "Tính chất cơ bản của phép cộng phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 9, "SectionName" : "Phép trừ phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 10, "SectionName" : "Phép nhân phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 11, "SectionName" : "Tính chất cơ bản của phép nhân phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 12, "SectionName" : "Phép chia phân số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 13, "SectionName" : "Hỗn số. Số thập phân. Phần trăm" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 14, "SectionName" : "Tìm giá trị phân số của một số cho trước" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 15, "SectionName" : "Tìm một số biết giá trị một phân số của nó" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 16, "SectionName" : "Tìm tỉ số của hai số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 17, "SectionName" : "Biểu đồ phần trăm" }

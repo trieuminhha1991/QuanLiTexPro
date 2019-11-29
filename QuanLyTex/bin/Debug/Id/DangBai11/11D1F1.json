@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tìm tập xác định" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Xét tính đơn điệu" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Xét tính chẵn, lẻ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Xét tính tuần hoàn, tìm chu kỳ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Tìm tập giá trị và min-max" }
+{ "_id" : { "$oid" : "5d1e0bd73fb9391a8c5b750e" }, "FormId" : 6, "FormName" : "Bảng biến thiên và đồ thị" }

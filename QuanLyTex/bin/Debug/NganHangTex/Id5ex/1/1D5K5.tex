@@ -1,0 +1,21 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1D5K5-2]
+	Cho hàm số $f(x)=\dfrac{1}{x^2-1}$. Giá trị của $f^{(n)}(0)$ bằng
+	\choice
+	{$0$}
+	{$1$}
+	{$\dfrac{n!(1+(-1)^n)}{2}$}
+	{\True $\dfrac{-n!(1+(-1)^n)}{2}$}
+	\loigiai{
+		Ta có $f(x)=\dfrac{1}{2}\left[ \dfrac{1}{x-1}-\dfrac{1}{x+1}\right] \Rrightarrow f'(x)= \dfrac{1}{2}\left[ -\dfrac{1}{(x-1)^2}+\dfrac{1}{(x+1)^2}\right]$.\\
+		Ta sẽ chứng minh bằng quy nạp $f^{(n)}(x)=\dfrac{1}{2}\left[ \dfrac{n!(-1)^n}{(x-1)^{n+1}}+\dfrac{n!(-1)^{n-1}}{(x+1)^{n+1}}\right], \forall n \in \mathbb{N}^{*} \quad (1)$.
+		\begin{itemize}
+			\item Với $n=1$, hiển nhiên $(1)$ đúng.
+			\item Giả sử $n=k$ thì $(1)$ đúng. Ta cần chứng minh $(1)$ đúng với $n=k+1$.\\
+			Thật vậy $f^{k+1}(x)=(f^{k}(x))'=\dfrac{1}{2}\left[ \dfrac{(k+1)!(-1)^{k+1}}{(x-1)^{k+2}}+\dfrac{(k+1)!(-1)^{k}}{(x+1)^{k+2}}\right]$.\\
+			Suy ra $n=k+1$ thì $(1)$ đúng.
+			\item Vậy $(1)$ đúng với mọi $n \in \mathbb{N}^{*}$.
+		\end{itemize}
+	Suy ra $f^{(n)}(0)=\dfrac{1}{2}\left[ \dfrac{n!(-1)^n}{(-1)^{n+1}}+\dfrac{n!(-1)^{n-1}}{(1)^{n+1}}\right]=\dfrac{-n!(1+(-1)^n)}{2}$. 
+	}
+\end{ex}

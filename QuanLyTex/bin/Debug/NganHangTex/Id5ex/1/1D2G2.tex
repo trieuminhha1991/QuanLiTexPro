@@ -1,0 +1,47 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT -Lạng Sơn, 2019]%[Trần Duy Khương, 12EX5-2019]%[1D2G2-3]
+	Có bao nhiêu cách phân phát $10$ phần quà giống nhau cho $6$ học sinh, sao cho mỗi học sinh có ít nhất một phần thưởng?
+	\choice
+	{$210$}
+	{\True $126$}
+	{$360$}
+	{$120$}
+	\loigiai{Ta sắp xếp $10$ phần quà thành hàng ngang, khi đó sẽ có $9$ chỗ trống giữa các phần quà. Mỗi cách chia quà tương ứng với một cách chọn ra $5$ chỗ trống từ $9$ chỗ trống giữa các phần quà. Như vậy có $\mathrm{C}_9^5=126$ (cách) chia quà.}
+\end{ex}%!Cau!%
+\begin{ex}%[2-DTH-14-NINHBINH-19]%[Nguyễn Thế Anh, dự án EX5]%[1D2G2-3]
+	Cho một đa giác đều $n$ đỉnh ($n$ lẻ, $n\geq 3$). Chọn ngẫu nhiên $3$ đỉnh của đa giác đều đó. Gọi $P$ là xác
+suất sao cho $3$ đỉnh đó tạo thành một tam giác tù. Biết $P=\dfrac{45}{62}$
+. Số các ước nguyên dương của $n$ là
+	\choice
+	{\True $4$}
+	{$3$}
+	{$6$}
+	{$5$}
+	\loigiai
+	{Đa giác đều n đỉnh nội tiếp được trong một đường tròn.\\
+Chọn đỉnh thứ nhất của tam giác. Có $n$ cách chọn. Sau khi chọn đỉnh thứ nhất, để tạo thành một tam giác
+tù, hai đỉnh còn lại được chọn trong số
+$\dfrac{n-1}{2}$
+đỉnh nằm trên cùng một nửa đường tròn với đỉnh đầu tiên,
+tức là có 
+$  \mathrm{C}_{\tfrac{n - 1}{2}}^2$
+cách chọn hai đỉnh còn lại (sở dĩ chọn như thế vì khi ba đỉnh của một tam giác nằm trên cùng một nửa đường tròn thì chắc chắn trong tam giác có một góc nội tiếp chắn một cung lớn hơn nửa
+đường tròn và do đó góc đó là góc tù).Và vì có hai nửa đường tròn nên có tất cả 
+	$ 2 \mathrm{C}_{\tfrac{n - 1}{2}}^2$	 cách chọn hai đỉnh còn lại, tức là có $ n \cdot 2 \mathrm{C}_{\tfrac{n - 1}{2}}^2$ tam giác tù. Tuy nhiên, do sự xoay chuyển các đỉnh nên mỗi tam giác được tính $2$ lần. Như vậy có tất cả
+	 $ n\cdot  \mathrm{C}_{\tfrac{m - 1}{2}}^2=\dfrac{n(n - 1)(n - 3)}{8}$ tam giác tù.\\ 
+	  Trong khi đó  có tất cả  $ \mathrm{C}_n^3=\dfrac{n(n - 1)(n - 2)}{6}$ tam giác.\\
+	 Vậy ta có $ P =\dfrac{3(n - 3)}{4(n - 2)}=\dfrac{45}{62}\Leftrightarrow n = 33\Rightarrow n $ có $4$ ước nguyên dương.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1D2G2-1]
+	Trên giá sách có $20$ cuốn sách. Số cách lấy ra $3$ cuốn sách sao cho giữa hai cuốn lấy được bất kì luôn có ít nhất hai cuốn không được lấy là
+	\choice
+	{\True $\mathrm{C}_{16}^3$}
+	{$\mathrm{A}_{16}^3$}
+	{$\mathrm{C}_{20}^3$}
+	{$\mathrm{A}_{20}^3$}
+	\loigiai{Đánh số thứ tự cho các cuốn sách lần lượt từ  $1$ đến $20$.\\
+		Việc chọn ra ba cuốn sách chính là việc chọn ra ba số $1 \le a_1 < a_2-2 <a_3-4\le 16$.\\
+		Vậy bài toán chính là việc chọn ra ba số nguyên phân biệt  $a_1,a_2-2,a_3-4 \in \left[ 1;16\right] $.\\
+		Do đó có $\mathrm{C}_{16}^3$  cách chọn thỏa mãn.}
+\end{ex}

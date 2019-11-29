@@ -1,0 +1,20 @@
+%!Cau!%
+\begin{ex}%[Thi thử L1, Star Education HCM, 2019]%[Nguyễn Ngọc Dũng, dự án 12EX6]%[1D3G3-6]
+Chọn ngẫu nhiên một số nhị phân có $10$ chữ số (các chữ số của số đó hoặc là 0 hoặc là $1$) có chữ số đầu tiên là $1$. Tính xác suất để số được chọn không có ba chữ số liên tiếp nào đều bằng $0$.
+\choice
+{$\dfrac{1}{2}$}
+{$\dfrac{137}{256}$}
+{\True$\dfrac {69}{128}$}
+{$\dfrac{273}{512}$}
+\loigiai{
+Gọi $u_n$ là số các dãy nhị phân có $n$ số hạng thỏa yêu cầu đề bài.\\
+Ta thấy các chữ số đầu tiên bên trái của số nhị phân đó phải có dạng 11; 101 hoặc 1001. \\
+Nên $u_{n+1}= u_n + u_{n-1} + u_{n-2}, \forall n \geq 3$. \\
+Ta tính trực tiếp \\
+$u_1 = 1; \; u_2=2 ; \; u_3 =4 $. \\
+Suy ra $u_4 =7 \Rightarrow u_5 =13; \; u_6=24; \; u_7=44; \; u_8 =81 ; \; u_9 =149$. \\
+Suy ra $u_{10} = 274$. \\
+Mà số phần tử của không gian mẫu là $\left| \Omega \right| =2^9$.\\
+Nên xác suất $\mathrm{P}= \dfrac{274}{2^9} = \dfrac{137}{256}$.
+}
+\end{ex}

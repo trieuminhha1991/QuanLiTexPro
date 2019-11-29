@@ -1,0 +1,16 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1D4K1-6]
+	Giá trị của giới hạn $\lim \limits_{n \to +\infty} \dfrac{9+99+\cdots + \overbrace{99\ldots 9}^n}{10^n}$ bằng
+	\choice
+	{$0$}
+	{$1$}
+	{\True $\dfrac{10}{9}$}
+	{$\dfrac{10}{81}$}
+	\loigiai{
+		Ta có: 
+		\begin{eqnarray*}
+			\lim \limits_{n \to +\infty} \dfrac{9+99+\cdots + \overbrace{99\ldots 9}^n}{10^n}&=&\lim \limits_{n \to +\infty} \dfrac{(10-1)+(10^2-1)+\cdots + (10^n-1)}{10^n}\\&=&\lim \limits_{n \to +\infty} \dfrac{(10+10^2+\cdots + 10^n)-n}{10^n}\\&=&\lim \limits_{n \to +\infty} \dfrac{\dfrac{10 \cdot ( 10^n-1)}{9}-n}{10^n}\\&=&\dfrac{10}{9}
+		\end{eqnarray*}
+		
+	}
+\end{ex}

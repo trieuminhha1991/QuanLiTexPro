@@ -1,0 +1,76 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Ninh, 2019]%[Lê Hồng Phi, 12EX5]%[1D3K3-6]
+	Sinh nhật bạn của An vào ngày $01$ tháng $5$. An muốn mua một món quà sinh nhật cho bạn nên quyết định bỏ ống heo $100$ đồng vào ngày $01$ tháng $01$ năm $2016$, sau đó cứ liên tục ngày sau hơn ngày trước $100$ đồng. Hỏi đến ngày sinh nhật bạn, An đã tích lũy được bao nhiêu tiền? (thời gian bỏ ống heo tính từ ngày $01$ tháng $01$ năm $2016$ đến ngày $30$ tháng $4$ năm $2016$).
+	\choice
+	{\True $738.100$ đồng}
+	{$726.000$ đồng}
+	{$714.000$ đồng}
+	{$750.300$ đồng}
+	\loigiai
+	{Năm $2016$ là năm nhuận nên tháng $02$ có $29$ ngày; tháng $01$ và tháng $3$ mỗi tháng có $31$ ngày; tháng $4$ có $30$ ngày.\\
+	Do đó, tổng số ngày bạn An bỏ tiền vào ống heo là $29+2\times 31+30=121$ ngày. 
+	Số tiền An tích lũy được chính là tổng của $121$ số hạng đầu của cấp số cộng với $u_1=100$ và công sai $d=100$.\\
+	Vậy số tiền An có được là $S_{121}=\dfrac{121}{2}\cdot (2\cdot 100+120\cdot 100)=738.100$ đồng.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Hà Tĩnh, 2019]%[Đặng Tân Hoài, 12-EX-5-2019]%[1D3K3-3]
+Cho $2$ cấp số cộng $(u_n) \colon 1;6;11; \ldots$ và $(v_n) \colon 4;7;10; \ldots$. Mỗi cấp số có $2018$ số. Hỏi có bao nhiêu số có mặt trong cả hai dãy số trên
+\choice
+{\True $403$}
+{$402$}
+{$672$}
+{$504$}
+\loigiai{
+Số hạng tổng quát của cấp số cộng $(u_n)$ là $u_i=1+(i-1)5=5i-4$ với $1 \le i \le 2018,~i \in \mathbb{N}^*$.\\
+Số hạng tổng quát của cấp số cộng $(v_n)$ là $v_j=4+(j-1)3=3j+1$ với $1 \le j \le 2018,~j \in \mathbb{N}^*$.\\
+Tồn tại số hạng chung của $2$ cấp số cộng trong $2018$ số hạng đầu của mỗi cấp số\\
+$\Leftrightarrow 5i-4=3j+1 \Leftrightarrow 3j=5(i-1)$\\
+$ \Rightarrow j \vdots 5 \Rightarrow j \in \{5;10;\ldots;2015\}$. Khi đó $3 \le i-1 <j$.\\
+Mặt khác dãy số $5;10;\ldots;2015$ cũng là một cấp số cộng có số hạng đầu $w_1=5$, số hạng cuối $w_n=2015$ và công sai $d=5$.\\
+Ta có $w_n=w_1+(n-1)d \Leftrightarrow 2015=5+(n-1)5 \Leftrightarrow n=403$.\\
+Vậy có $403$ số hạng chung cần tìm.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%[1D3K3-3]
+Biết $n$ là số nguyên dương thỏa mãn $3$ số $0$, $\mathrm{C}^1_n$, $\mathrm{C}^2_n$ theo thứ tự là số hạng đầu, số hạng thứ $3$ và số hạng thứ $10$ của một cấp số cộng. Hãy tìm số hạng không chứa $x$ trong khai triển của $\left(\sqrt{x}-\dfrac{1}{x^2}\right)^n$.
+\choice
+{\True $45$}
+{$-45$}
+{$90$}
+{$-90$}
+\loigiai{
+Gọi $u_1$, $d$ lần lượt là số hạng đầu và công sai của một cấp số cộng $(u_n)$ khi đó theo đề bài ta có $u_1=0$ và 
+\begin{eqnarray*}
+&& \heva{& u_3=\mathrm{C}^1_n\\& u_{10}=\mathrm{C}^2_n}
+\Leftrightarrow \heva{& 2d=\mathrm{C}^1_n\\& 9d=\mathrm{C}^2_n}
+\\&\Rightarrow & 9\mathrm{C}^1_n=2\mathrm{C}^2_n
+\Leftrightarrow 9\cdot\dfrac{n!}{(n-1)!}=2\cdot\dfrac{n!}{2(n-2)!}
+\\&\Leftrightarrow & 9=n-1\Leftrightarrow n=10.
+\end{eqnarray*}
+Khi đó $\left(\sqrt{x}-\dfrac{1}{x^2}\right)^n=\left(\sqrt{x}-\dfrac{1}{x^2}\right)^{10}=\displaystyle\sum\limits_{k=0}^{10}\mathrm{C}^k_{10}\cdot (\sqrt{x})^{10-k}\cdot\left(-\dfrac{1}{x^2}\right)^k$.\\
+Số hạng không chứa $x$ trong khai triển trên ứng với $\dfrac{10-k}{2}-2k=0\Leftrightarrow 10-5k=0\Leftrightarrow k=2$.\\
+Do đó hệ số không chứa $x$ trong khai triển đã cho là $\mathrm{C}^2_{10}=45$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%
+[1D3K3-3]
+Biết $n$ là số nguyên dương thỏa mãn $3$ số $0$, $\mathrm{C}^1_n$, $\mathrm{C}^2_n$ theo thứ tự là số hạng đầu, số hạng thứ $3$ và số hạng thứ $10$ của một cấp số cộng. Hãy tìm số hạng không chứa $x$ trong khai triển của $\left(\sqrt{x}-\dfrac{1}{x^2}\right)^n$.
+\choice
+{\True $45$}
+{$-45$}
+{$90$}
+{$-90$}
+\loigiai{
+Gọi $u_1$, $d$ lần lượt là số hạng đầu và công sai của một cấp số cộng $(u_n)$ khi đó theo đề bài ta có $u_1=0$ và 
+\begin{eqnarray*}
+&& \heva{& u_3=\mathrm{C}^1_n\\& u_{10}=\mathrm{C}^2_n}
+\Leftrightarrow \heva{& 2d=\mathrm{C}^1_n\\& 9d=\mathrm{C}^2_n}
+\\&\Rightarrow & 9\mathrm{C}^1_n=2\mathrm{C}^2_n
+\Leftrightarrow 9\cdot\dfrac{n!}{(n-1)!}=2\cdot\dfrac{n!}{2(n-2)!}
+\\&\Leftrightarrow & 9=n-1\Leftrightarrow n=10.
+\end{eqnarray*}
+Khi đó $\left(\sqrt{x}-\dfrac{1}{x^2}\right)^n=\left(\sqrt{x}-\dfrac{1}{x^2}\right)^{10}=\displaystyle\sum\limits_{k=0}^{10}\mathrm{C}^k_{10}\cdot (\sqrt{x})^{10-k}\cdot\left(-\dfrac{1}{x^2}\right)^k$.\\
+Số hạng không chứa $x$ trong khai triển trên ứng với $\dfrac{10-k}{2}-2k=0\Leftrightarrow 10-5k=0\Leftrightarrow k=2$.\\
+Do đó hệ số không chứa $x$ trong khai triển đã cho là $\mathrm{C}^2_{10}=45$.
+}
+\end{ex}

@@ -1,0 +1,9 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Định lí Ta-lét trong tam giác" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Định lí đảo và hệ quả của định lí Ta-lét" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Tính chất đường phân giác của tam giác" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Khái niệm hai tam giác đồng dạng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Trường hợp đồng dạng cạnh - cạnh - cạnh" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Trường hợp đồng dạng cạnh - góc - cạnh" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Trường hợp đồng dạng góc - góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 8, "SectionName" : "Các trường hợp đồng dạng của tam giác vuông" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 9, "SectionName" : "Ứng dụng thực tế của tam giác đồng dạng" }

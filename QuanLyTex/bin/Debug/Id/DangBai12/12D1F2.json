@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tìm cực trị của hàm số cho bởi công thức" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tìm cực trị dựa vào BBT, đồ thị" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Tìm m để hàm số đạt cực trị tại 1 điểm cho trước" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tìm m để hàm số, đồ thị hàm số bậc ba có cực trị thỏa mãn điều kiện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Tìm m để hàm số, đồ thị hàm số trùng phương có cực trị thỏa mãn điều kiện" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Tìm m để hàm số, đồ thị hàm số các hàm số khác có cực trị thỏa mãn điều kiện" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Câu hỏi lý thuyết" }

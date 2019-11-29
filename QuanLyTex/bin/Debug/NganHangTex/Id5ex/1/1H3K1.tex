@@ -1,0 +1,51 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1H3K1-4]
+	Cho tứ diện $SABC$ có trọng tâm $G$. Một mặt phẳng qua $G$ cắt các tia $SA$, $SB$, $SC$ theo thứ tự tại $A'$, $B'$, $C'$. Đặt $\dfrac{SA'}{SA}=m$, $\dfrac{SB'}{SB}=n$, $\dfrac{SC'}{SC}=p$. Đẳng thức nào dưới đây là đúng
+		\choice
+	{$\dfrac{1}{m^2}+\dfrac{1}{n^2}+\dfrac{1}{p^2}=4$}
+	{$\dfrac{1}{mn}+\dfrac{1}{np}+\dfrac{1}{pm}=4$}
+	{\True $\dfrac{1}{m}+\dfrac{1}{n}+\dfrac{1}{p}=4$}
+	{$m+n+p=4$}
+	\loigiai{
+			\immini{
+			Gọi $n$ là trọng tâm tam giác $ABC$.\\ Ta có: $3\overrightarrow{SN}=\overrightarrow{SA}+\overrightarrow{SB}+\overrightarrow{SC}$.\\
+			Do $G$ là trọng tâm tứ diện nên $\overrightarrow{SN}=\dfrac{4}{3}\overrightarrow{SG}$.\\
+			Vậy ta có $$4\overrightarrow{SG}=\overrightarrow{SA}+\overrightarrow{SB}+\overrightarrow{SC}=\dfrac{SA}{SA'}\overrightarrow{SA'}+\dfrac{SB}{SB'}\overrightarrow{SB'}+\dfrac{SC}{SC'}\overrightarrow{SC'}.$$
+			Do $A'$, $B'$, $C'$, $G$ đồng phẳng nên ta có: $\dfrac{SA}{SA'}+\dfrac{SB}{SB'}+\dfrac{SC}{SC'}=4$ hay $\dfrac{1}{m}+\dfrac{1}{n}+\dfrac{1}{p}=4$.
+		}{
+				\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]]
+			\tkzDefPoints{0/0/A,1.2/-1.6/B,4.5/0/C}
+			\tkzCentroid(A,B,C)\tkzGetPoint{N}
+			\coordinate (S) at ($(N)+(0,3.5)$);
+			\coordinate (M) at ($(B)!1/2!(C)$);
+			\coordinate (G) at ($(S)!0.75!(N)$);
+			\coordinate (A') at ($(S)!0.7!(A)$);
+			\coordinate (B') at ($(S)!0.8!(B)$);
+			\tkzInterLL(A',G)(S,M)\tkzGetPoint{I}
+			\tkzInterLL(B',I)(C,S)\tkzGetPoint{C'}
+			\tkzDrawPolygon(A,B,C,S)
+			\tkzDrawSegments(S,B A',B' B',C' S,M)
+			\tkzDrawSegments[dashed](M,A A,C S,N A',C' A',I)
+			\tkzDrawPoints[fill=black,size=4](A,B,C,S,N,M,G,A',B',C')
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](B,N,M)
+			\tkzLabelPoints[left](A,A',B')
+			\tkzLabelPoints[right](C,G,C')
+			\end{tikzpicture}
+		}\noindent	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1H3K1-4]
+	Cho hình chóp tam giác $S.ABC$ có $SA=a$, $SB=b$, $SC=c$ và $\widehat{BSC}=120^\circ$, $\widehat{CSA}=90^\circ$, $\widehat{ASB}=60^\circ$. Gọi $G$ là trọng tâm tam giác $ABC$. Độ dài của đoạn $SG$ bằng
+	\choice
+	{$\dfrac{1}{3}\sqrt{a^2+b^2+c^2+ab+bc+ca}$}
+	{ $\sqrt{a^2+b^2+c^2+ab-bc}$}
+	{$\dfrac{1}{3}\sqrt{a^2+b^2+c^2+ab-ca}$}
+	{\True $\dfrac{1}{3}\sqrt{a^2+b^2+c^2+ab-cb}$}
+	\loigiai{
+		Ta có \begin{eqnarray*}
+			&&3\overrightarrow{SG}=\overrightarrow{SA}+\overrightarrow{SB}+\overrightarrow{SC}\\&\Rightarrow& 9SG^2=SA^2+SB^2+SC^2+2\overrightarrow{SA}\cdot \overrightarrow{SB}+2\overrightarrow{SA} \cdot
+			\overrightarrow{SC}+2\overrightarrow{SB} \cdot \overrightarrow{SC}\\&\Rightarrow& 9SG^2	=a^2+b^2+c^2+2ab \cos 60^\circ	+2bc \cos 120^\circ=a^2+b^2+c^2+ab-bc \\&\Rightarrow& SG=\dfrac{1}{3}\sqrt{a^2+b^2+c^2+ab-bc} 
+		\end{eqnarray*} 
+	}
+\end{ex}

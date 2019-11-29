@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Nhận dạng đồ thị, bảng biến thiên" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Các phép biến đổi đồ thị" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Biện luận số giao điểm dựa vào đồ thị, bảng biến thiên" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Sự tương giao của hai đồ thị" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Đồ thị của hàm đạo hàm" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Phương trình tiếp tuyến của đồ thị hàm s" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Điểm đặc biệt của đồ thị hàm số" }
+{ "_id" : { "$oid" : "5d1e182c3fb9391a8c5b7549" }, "FormId" : 8, "FormName" : "Câu hỏi lý thuyết" }

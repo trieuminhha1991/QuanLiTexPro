@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Hàm số 𝑦 = 𝑎𝑥2" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Đồ thị của hàm số 𝑦 = 𝑎𝑥2" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Phương trình bậc hai một ẩn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Công thức nghiệm của phương trình bậc hai" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Công thức nghiệm thu gọn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 6, "SectionName" : "Hệ thức Vi-ét và ứng dụng" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 7, "SectionName" : "Phương trình quy về phương trình bậc hai" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 8, "SectionName" : "Giải bài toán bằng cách lập phương trình" }

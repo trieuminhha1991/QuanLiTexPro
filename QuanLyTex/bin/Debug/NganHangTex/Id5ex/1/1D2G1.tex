@@ -1,0 +1,27 @@
+%!Cau!%
+\begin{ex}%[Thi Thử Lần 2, THPT Lương Thế Vinh - Hà Nội, 2019]%[Dương BùiĐức, dự án 12EX6]%[1D2G1-3]
+Có bao nhiêu cách phân tích số $15^9$ thành tích của ba số nguyên dương, biết rằng các cách phân tích mà các nhân tử chỉ khác nhau về thứ tự thì chỉ được tính một lần?
+\choice
+{$493$}
+{$516$}
+{$492$}
+{\True $517$}
+\loigiai{
+Ta có $15^9=3^9\cdot 5^9$.\\
+Ba nhân tử có dạng $3^{a_1}\cdot 5^{a_1}$, $3^{a_2}\cdot 5^{a_2}$, $3^{a_3}\cdot 5^{a_3}$ trong đó $a_1+a_2+a_3=b_1+b_2+b_3=9$ và $a_i, b_i\in\{0;\ 1; \ldots; 9\}$.\\
+Chia ngẫu nhiên các bộ số mũ:
+\begin{itemize}
+\item chọn $a_1$ có $ 10 $ cách;
+\item chọn $a_2$ có $10-a_1$ cách;
+\item chọn $a_3$ có 1 cách.
+\end{itemize}
+Vậy có $\sum\limits_{a_1=0}^{10}(10-a_1)=55$ cách chọn các $a_i$ để $a_1+a_2+a_3=9$.\\
+Tương tự, có 55 cách chọn các bộ $b_i$, suy ra có $55\cdot 55$ cách chia ngẫu nhiên các bộ số mũ.\\
+Khi chia như trên thì xảy ra các trường hợp bộ số mũ trùng nhau hoặc các bộ số mũ chỉ là hoán vị của nhau.
+\begin{enumerate}[1)]
+\item Số cách chia mà cả ba bộ số mũ trùng nhau: chỉ có 1 cách, đó là $(3;3)$, $(3;3)$, $(3;3)$.
+\item Số cách chia mà chỉ có hai bộ số mũ trùng nhau: có 5 cách để chọn $a_i=a_j$ và 5 cách để chọn $b_i=b_i$ (cùng bằng từ 0 đến 4), do đó có $5\cdot 5=25$ cách, tuy nhiên ta phải trừ đi 1 cách khi cả ba bộ trùng nhau, do đó còn $24$ cách. Mỗi cách này ta có 3 hoán vị.
+\end{enumerate}
+Do mỗi cách chọn mà ba bộ $(a_i, b_i)$ khác nhau ta có $3!=6$ hoán vị, theo đề bài, 6 hoán vị này chỉ được tính 1 lần, do vậy số các cách thỏa mãn đề bài là $k=\dfrac{55\cdot 55-3\cdot 24-1}{6}+24+1=517$.
+}
+\end{ex}

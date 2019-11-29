@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Đại lượng tỉ lệ thuận" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Một số bài toán về đại lượng tỉ lệ thuận" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Đại lượng tỉ lệ nghịch" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Một số bài toán về đại lượng tỉ lệ nghịch" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Hàm số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Mặt phẳng tọa độ" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Đồ thị của hàm số 𝑦 = 𝑎𝑥 (𝑎 ̸= 0)" }

@@ -1,0 +1,12 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Nhân đơn thức với đa thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Nhân đa thức với đa thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "3 hằng đẳng thức bình phương" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "2 hằng đẳng thức lập phương của một tổng, hiệu" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "2 hằng đẳng thức tổng, hiệu hai lập phương" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Phân tích đa thức thành nhân tử bằng phương pháp đặt nhân tử chung" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Phân tích đa thức thành nhân tử bằng phương pháp dùng hằng đẳng thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 8, "SectionName" : "Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 9, "SectionName" : "Phân tích đa thức thành nhân tử bằng cách phối hợp nhiều phương pháp" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 10, "SectionName" : "Chia đơn thức cho đơn thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 11, "SectionName" : "Chia đa thức cho đơn thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 12, "SectionName" : "Chia đa thức một biến đã sắp xếp" }

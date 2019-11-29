@@ -1,0 +1,36 @@
+%!Cau!%
+\begin{ex}%[Đề ĐK 12 Nguyễn Khuyến, HCM, ngày 24 tháng 03 năm 2019]%[Vinh Vo, 12EX7-2019]%[1D4K3-4]
+	Cho hàm số $ f(x) = \heva{& \dfrac{ \sqrt{5x - 1} - 2 }{x - 1},\, \text{ nếu } x > 1  \\ &  m x + m + \dfrac{1}{4}, \, \text{ nếu } x \leq 1}, (m \text{ là tham số}) $. Giá trị $ m $ để hàm số liên tục trên $ \mathbb{R} $ là
+	\choice
+	{$ m = 0 $}
+	{\True $ m = \dfrac{1}{2} $}
+	{$ m = 2 $}
+	{$ m = 1 $}
+	\loigiai{
+		Tập xác định $ \mathscr{D} = \mathbb{R} $.\\
+		Trên $ (-\infty; 1) $, $ (1; + \infty) $ hàm số $ f(x) $ liên tục.\\
+		Xét tính liên tục  của $ f(x) $ tại $ x = 1 $.\\
+		Ta có $ f(1) = 2m + \dfrac{1}{4} $.\\
+		Ta thấy $ \lim \limits_{x \to 1^+} f(x) = \lim \limits_{x \to 1^+} \dfrac{ \sqrt{5x - 1} - 2 }{x -1} = \lim \limits_{x \to 1^+} \dfrac{5}{ \sqrt{5x - 1} + 2 } = \dfrac{5}{4} $.\\
+		Ta thấy $ \lim \limits_{x \to 1^-} f(x) = \lim \limits_{x \to 1^-}(mx + m + \dfrac{1}{4}) = 2m + \dfrac{1}{4} $.\\
+		Ta có $ f(x)  $ liên tục tại $ x = 1 \Leftrightarrow \lim \limits_{x \to 1^+} f(x) = \lim \limits_{x \to 1^-} f(x) = f(1) \Leftrightarrow 2m + \dfrac{1}{4} = \dfrac{5}{4} \Leftrightarrow m = \dfrac{1}{2}$.	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT Phan Đình Phùng - Đắc Lắc, 2019]%[Nguyễn Minh Hiếu, 12EX8]%[1D4K3-6]
+	Cho các số thực $a,b,c$ thỏa mãn $\heva{&-8+4a-2b+c>0\\&8+4a+2b+c<0}$. Khi đó số giao điểm của đồ thị hàm số $y=x^3+ax^2+bx+c$ với trục $Ox$ là
+	\choice
+	{$ 2 $}
+	{$ 1 $}
+	{$ 0 $}
+	{\True $ 3 $}
+	\loigiai{
+		Hàm số $y=x^3+ax^2+bx+c$ xác định, liên tục trên $\mathbb{R}$.\\
+		Hàm số $y=x^3+ax^2+bx+c$ bậc ba nên có đồ thị cắt $Ox$ tại nhiều nhất 3 điểm.$\quad (1)$\\
+		Ta có $\lim\limits_{x\to -\infty}y=-\infty$, suy ra $\exists \alpha <-2$ sao sao $f(\alpha)<0$.\\
+		Lại có $\lim\limits_{x\to +\infty}y=+\infty$, suy ra $\exists \beta >2$ sao sao $f(\beta)>0$.\\
+		Hơn nữa $y(-2)=-8+4a-2b+c>0$ và $y(2)=8+4a+2b+c<0$.\\
+		Từ đó suy ra $y(\alpha)\cdot y(-2)<0$, $y(-2)\cdot y(2)<0$, $y(2)\cdot y(\beta)<0$.\\
+		Do đó đồ thị hàm số cắt $Ox$ tại ít nhất 3 điểm. $\quad (2)$\\
+		Từ (1) và (2) suy ra đồ thị hàm số đã cho cắt $Ox$ tại đúng ba điểm.
+	}
+\end{ex}

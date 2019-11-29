@@ -1,0 +1,31 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn số 2, Sở GD và ĐT Quảng Ninh, 2019]%[Đỗ Đường Hiếu, 12EX5-19]%[1H2K4-6]
+	Cho lăng trụ $ABC.A'B'C'$. Gọi $G$, $G'$ lần lượt là trọng tâm các tam giác $ABC$, $A'B'C'$. $M$ là điểm trên cạnh $AC$ sao cho $AM=2MC$. Mệnh đề nào sau đây \textbf{sai}?
+	\choice
+	{$GG'\parallel (ACC'A')$}
+	{$GG'\parallel (ABB'A')$}
+	{\True Đường thẳng $MG'$ cắt mặt phẳng $(BCC'B')$}
+	{$(MGG')\parallel (BCC'B')$}
+	\loigiai{
+		\immini{
+			Vì $G$, $G'$ lần lượt là trọng tâm các tam giác $ABC$, $A'B'C'$ nên ta có $GG'\parallel (ACC'A')$, $GG'\parallel (ABB'A')$, $GG'\parallel (BCC'B')$.\\
+			Gọi $N$ là trung điểm $BC$, ta có $\dfrac{AG}{GN}=\dfrac{AM}{MC}=2$ nên suy ra $MG\parallel CN\Rightarrow MG\parallel (BCC'B')$.\\
+			Từ $GG'\parallel (BCC'B')$ và $MG\parallel (BCC'B')$ ta có $(MGG')\parallel (BCC'B')$. Do vậy $MG'\parallel (BCC'B')$.\\
+			Vậy, mệnh đề sai là: \lq\lq Đường thẳng $MG'$ cắt mặt phẳng $(BCC'B')$\rq\rq.}
+		{\begin{tikzpicture}[line cap=round, line join=round,font=\footnotesize,>=stealth, scale=1]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A, 1/-1.5/B, 4/0/C, 0.5/3/A'}
+			\tkzDefPointBy[translation = from A to A'](B)\tkzGetPoint{B'}
+			\tkzDefPointBy[translation = from A to A'](C)\tkzGetPoint{C'}
+			\tkzCentroid(A,B,C)\tkzGetPoint{G}
+			\tkzCentroid(A',B',C')\tkzGetPoint{G'}
+			\coordinate (M) at ($(A)!0.75!(C)$);
+			\tkzDefMidPoint(B,C)\tkzGetPoint{N}
+			\tkzDrawSegments[dashed](A,C G,G' A,N M,G M,G')
+			\tkzDrawSegments(A,B B,C A',B' B',C' C',A' A,A' B,B' C,C')
+			\tkzDrawPoints[fill=black](A,B,C,A',B',C',G,G',M,N)
+			\tkzLabelPoints[above](A',B',C',G')
+			\tkzLabelPoints[below](A,B,C,G,M,N)
+			\end{tikzpicture}}
+	}
+\end{ex}

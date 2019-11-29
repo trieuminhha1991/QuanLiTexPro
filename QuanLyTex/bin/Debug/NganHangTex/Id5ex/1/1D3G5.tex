@@ -1,0 +1,20 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Lý Thái Tổ - Bắc Ninh, 2019]%[Nguyện Ngô, 12EX7]%[1D3G5-2]
+Cho tập $A=\{0;1;2;3;4;5;6;7\}$, gọi $S$ là tập hợp các số có $8$ chữ số đôi một khác nhau được lập từ tập $A$. Chọn ngẫu nhiên một số từ tập $S$, xác suất để số được chọn có tổng $4$ chữ số đầu bằng tổng $4$ chữ số cuối bằng
+\choice
+{$\dfrac{3}{35}$}
+{\True $\dfrac{4}{35}$}
+{$\dfrac{12}{245}$}
+{$\dfrac{1}{10}$}
+\loigiai{
+Gọi $\Omega$ là không gian mẫu, ta có $n(\Omega)=7\cdot7!$.
+Gọi biến cố $A$: \lq\lq Số được chọn có tổng $4$ chữ số đầu bằng tổng $4$ chữ số cuối \rq\rq.
+\begin{itemize}		
+\item TH1: Trong $4$ số đầu có $0$: Tổng của $8$ chữ số là $1+2+3+\cdots+7=28\Rightarrow $ tổng $4$ chữ số đầu là $14$. Ta tìm các cặp $4$ số mà tổng $=14$ lập thành từ $A$ là $\{(0;1;6;7);(0;2;5;7);(0;3;4;7);(0;3;5;6)\}$, $4$ số đằng sau được lập từ $4$ số còn lại trong $A$.
+    Suy ra TH1 có $4\cdot 3\cdot 3!\cdot 4!$ số thỏa mãn.
+\item TH2: Trong $4$ số đầu không có $0$, tức là số $0$ nằm ở $4$ số sau, làm như trường hợp 1 thì rõ ràng $4$ số sau được lập từ cặp số $\{(0;1;6;7);(0;2;5;7);(0;3;4;7);(0;3;5;6)\}$ và $4$ số đằng trước được lập từ $4$ số còn lại trong $A$.
+    Suy ra TH2 có $4\cdot 4!\cdot 4!$ số thỏa mãn.
+\item Vậy $n(A)=4\cdot 3\cdot 3!\cdot 4!+4\cdot 4!\cdot 4! \Rightarrow P(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{4}{35}$.
+\end{itemize}	
+}
+\end{ex}

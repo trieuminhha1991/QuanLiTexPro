@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Giải và biện luận phương trình bậc nhất hai ẩn" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Giải và biện luận hệ phương trình bậc nhất hai ẩn" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Giải hệ phương trình bậc nhất hai ẩn, ba ẩn" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Giải hệ phương trình bậc nhất hai ẩn, ba ẩn" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Toán thực tế giải phương trình, hệ phương trình" }

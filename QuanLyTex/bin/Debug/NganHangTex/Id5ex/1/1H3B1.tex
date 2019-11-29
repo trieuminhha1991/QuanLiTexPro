@@ -1,0 +1,32 @@
+%!Cau!%
+\begin{ex}%[Hải Phòng, 2018]%[Phan Anh Tiến, 12-EX-05]%[1H3B1-5]
+	Cho lăng trụ $ABC.A'B'C'$. Gọi $M,\,M'$ lần lượt là trung điểm của $BC$ và $B'C'$; $G,\,G'$ lần lượt là trọng tâm của các tam giác $ABC$ và $A'B'C'$. Bốn điểm nào sau đây là đồng phẳng?
+	\choice
+	{$ A,\,G,\,G',\,C' $}
+	{$ A,\,G,\,M',\,B' $}
+	{\True $ A,\, G',\, M',\, G $}
+	{$ A',\,G',\,M,\,C $}
+	\loigiai{\immini{$MM'$ là đường trung bình trong hình bình hành $BB'C'C$ nên $MM'=BB'=AA'$, $MM'\parallel BB'\parallel AA'$. Do đó $AA'M'M$ là hình bình hành, hay bốn điểm $ A,\, G',\, M',\, G $ đồng phẳng.}
+		{\begin{tikzpicture}[scale=0.7, line join = round, line cap = round]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A,5/0/C,2/-3/B}
+			\coordinate (A') at ($(A)+(1.5,5)$);
+			\tkzDefPointsBy[translation = from A to A'](B,C){B'}{C'}
+			\coordinate (M) at ($(B)!0.5!(C)$);
+			\coordinate (M') at ($(B')!0.5!(C')$);
+			\coordinate (G) at ($(A)!2/3!(M)$);
+			\coordinate (G') at ($(A')!2/3!(M')$);
+			\tkzDrawPolygon(A,B,C,C',B',A')
+			\tkzDrawSegments(A',C' B',B A',M' M,M')
+			\tkzDrawSegments[dashed](A,C A,M)
+			\tkzDrawPoints(A,C,B,A',B',C',M,M',G,G')
+			%\tkzLabelPoints[above](B')
+			\tkzLabelPoints[below](B,M,G')
+			\tkzLabelPoints[below right](M')
+			\tkzLabelPoints[below left](B',G)
+			\tkzLabelPoints[left](A',A)
+			\tkzLabelPoints[right](C',C)
+		\end{tikzpicture}
+}		
+	}
+\end{ex}

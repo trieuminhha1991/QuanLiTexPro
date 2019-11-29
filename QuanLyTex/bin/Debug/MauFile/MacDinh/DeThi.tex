@@ -1,0 +1,75 @@
+%UsePackage
+	\documentclass[12pt,a4paper]{article}
+	%\usepackage{fourier}
+	%\usepackage{yhmath}
+	\usepackage{amsmath,amssymb,makecell,fancyhdr,enumerate,arcs,physics,tasks,mathrsfs,graphics}
+	\usepackage{tikz,tikz-3dplot,tkz-euclide,tkz-tab,tkz-linknodes,tabvar,pgfplots,esvect}
+	\usepackage[top=1.5cm, bottom=1.5cm, left=2cm, right=1.5cm]{geometry}
+	\usepackage[hidelinks,unicode]{hyperref}
+	\usepackage[utf8]{vietnam}
+	\usepackage[book]{ex_test}
+	\usetikzlibrary{shapes.geometric,shadings,calc,snakes,patterns,arrows,intersections,angles}
+	\usetkzobj{all}
+	\usepgfplotslibrary{fillbetween}
+	\pgfplotsset{compat=newest}
+%EndUsePackage
+%DefCommand
+	\def\vec{\overrightarrow}
+%EndDefCommand
+%NewCommand
+	\newcommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+	\newcommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+	\newcommand{\hetde}{\centerline{\rule[0.5ex]{2cm}{1pt} HẾT \rule[0.5ex]{2cm}{1pt}}}
+%EndNewCommand
+%Title
+	\newcommand{\tentruong}{Trường THPT A}
+	\newcommand{\tengv}{Tổ Toán}
+	\newcommand{\tenkythi}{Kiểm tra định kỳ, năm học 2018 - 2019}
+	\newcommand{\tenmonthi}{Môn: Giải tích, lớp 12}
+	\newcommand{\thoigian}{45}
+%EndTitle
+%Minipage
+	\newcommand{\tieude}[3]{
+		\noindent
+		%Trái
+		\begin{minipage}[b]{7cm}
+			\centerline{\textbf{\fontsize{13}{0}\selectfont \tentruong}}
+			\centerline{\textbf{\fontsize{13}{0}\selectfont \tengv}}
+			\centerline{(\textit{Đề thi có #1\ trang})}
+		\end{minipage}\hspace{1.5cm}
+		%Phải
+		\begin{minipage}[b]{9cm}
+			\centerline{\textbf{\fontsize{13}{0}\selectfont \tenkythi}}
+			\centerline{\textbf{\fontsize{13}{0}\selectfont \tenmonthi}}
+			\centerline{\textit{\fontsize{12}{0}\selectfont Thời gian làm bài \thoigian\ phút (#2 câu trắc nghiệm)}}
+		\end{minipage}
+		\begin{minipage}[b]{10cm}
+			\textbf{Họ và tên thí sinh: }{\tiny\dotfill}
+		\end{minipage}
+		\begin{minipage}[b]{8cm}
+			\hspace*{4cm}\fbox{\bf Mã đề thi #3}
+		\end{minipage}\vspace{3pt}
+	}
+%EndMinipage
+%HeaderFooter
+	\pagestyle{fancy}
+	\lhead{\scriptsize\color{black} \emph{Giáo án môn Toán 10}}
+	\rhead{\scriptsize\color{black} \rightmark}
+	\lfoot{\href{https://www.facebook.com/caothanhthai.ag}{{\color{blue!50!black}\faFacebookSquare}~Cao Thành Thái \faRegistered}}
+	\cfoot{\small {\thepage}}
+	\rfoot{{\color{black}\faPhone}~0939.855.004}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+%EndHeaderFooter
+%Lệnh dùng cho trắc nghiệm chấm tay
+\newcommand*\circletext[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=0.5pt] (char) {\fontsize{10}{0}\selectfont\textcolor{gray!40}#1};}}
+\newcommand*\fillcircletext[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,fill=black,inner sep=0.6pt] (char) {\fontsize{10}{0}\selectfont#1};}}
+%chân trang
+\newcommand{\chantrang}[2]{\rfoot{Trang \thepage/#1 $-$ Mã đề #2}}
+%
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}

@@ -1,0 +1,88 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD - ĐT tỉnh Quảng Bình, 2019]%[Nguyễn Tiến, dự án 12EX5]%[1H2B1-1]
+	Cho hai đường thẳng phân biệt $a$; $b$ và mặt phẳng $\left(\alpha\right)$. Hãy chọn mệnh đề \textbf{đúng} trong các mệnh đề sau
+	\choice
+	{Nếu $a \parallel\left(\alpha\right)$ và $b \parallel\left(\alpha\right)$ thì $a\parallel b$}
+	{\True Nếu $a \parallel\left(\alpha\right)$ và $b \perp\left(\alpha\right)$ thì $a\perp b$}
+	{Nếu $a \parallel\left(\alpha\right)$ và $b \perp a$ thì $b\perp \left(\alpha\right)$}
+	{Nếu $a \parallel\left(\alpha\right)$ và $b \perp a$ thì $b\parallel \left(\alpha\right)$}
+	\loigiai{
+		\item[-] Với $\heva{& a \parallel\left(\alpha\right)\\& b \parallel\left(\alpha\right)}$ thì $a$ chưa chắc song song với $b$, vì khi $a$, $b$ cùng nằm trong một mặt phẳng thì chúng có thể cắt nhau $\Rightarrow$ đáp án sai.
+		\item[-] Với $\heva{& a \parallel\left(\alpha\right)\\& b \perp a}$ thì $b$ chưa chắc vuông góc với $\left(\alpha\right)$, vì khi $b$ cùng nằm trong một mặt phẳng với $a$ thì $b\parallel\left(\alpha\right)$ $\Rightarrow$ đáp án sai.
+		\item[-] Với $\heva{& a \parallel\left(\alpha\right)\\& b \perp a}$ thì $b$ chưa chắc song song với $\left(\alpha\right)$, vì $b$ có thể nằm trong mặt phẳng $\left(\alpha\right)$\\
+		$\Rightarrow$ đáp án sai.
+		\item[-] Với $\heva{& a \parallel\left(\alpha\right)\\& b \perp\left(\alpha\right)} \Rightarrow a\perp b$ $\Rightarrow$ đáp án đúng.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn Sở Ninh Bình, 2019]%[Nguyễn Văn Hải, dự án(12EX-5-2019)]%[1H2B1-4]
+Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Gọi $M$, $N$, $P$ lần lượt là trung điểm của $BC$, $CD$, $SA$. Mặt phẳng $\left(MNP\right)$ cắt hình chóp theo thiết diện  là hình
+\choice
+{Tam giác}
+{Lục giác}
+{\True Ngũ giác}
+{Tứ giác}
+\loigiai{
+\immini{
+Gọi $I$, $J$ lần lượt là giao của đường thẳng $MN$ và $AB$, $AD$.\\
+Gọi $F=SB\cap PI$; $E=SD\cap PJ$.\\
+Khi đó thiết diện của hình chóp cắt bởi mặt phẳng $\left(MNP\right)$ là ngũ giác $MNEPF$.}
+{
+\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth,yscale=1, xscale=1.5]
+% định nghĩa các điểm
+\tkzDefPoints{0/0/A,-1/-1/B,2/-1/C,3/0/D,0/3/S}
+\tkzDefMidPoint(B,C) \tkzGetPoint{M}
+\tkzDefMidPoint(D,C) \tkzGetPoint{N}
+\tkzDefMidPoint(S,A) \tkzGetPoint{P}
+\tkzInterLL(M,N)(A,B) \tkzGetPoint{I}
+\tkzInterLL(M,N)(A,D) \tkzGetPoint{J}
+\tkzInterLL(S,B)(P,I) \tkzGetPoint{F}
+\tkzInterLL(S,D)(P,J) \tkzGetPoint{E}
+% vẽ các đường
+\tkzDrawSegments[dashed](S,A A,I A,J P,F P,E F,B B,M E,D D,N M,N)
+\fill[fill=green,opacity=0.2](P)--(E)--(N)--(M)--(F)--cycle;% tô màu
+\tkzDrawSegments(S,E S,F S,C E,N E,J F,M F,I M,I M,C N,J N,C)
+% Viết tên các điểm
+\tkzDrawPoints(S,A,B,C,D,M,N,P,E,F,I,J)
+\tkzLabelPoints[below](A,B,C,D,M,N)
+\tkzLabelPoints[left](S,F,I)
+\tkzLabelPoints[above right](P,E,J)
+\end{tikzpicture}
+}}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề Tập Huấn -4, Sở GD và ĐT - Hải Phòng, 2019]%[Trần Xuân Thiện, 12EX5]%[1H2B1-1]
+	Cho hình lăng trụ $ABC.A'B'C'$. Gọi $M,M'$ lần lượt là trung điểm của $B$C và $B'C'$ ; $G,G'$ lần lượt là trọng tâm tam giác $ABC$ và $A'B'C'$. Bốn điểm nào sau đây đồng phẳng?
+	\choice
+	{$ A,G,G',C' $}
+	{$ A,G,M',B' $}
+	{$ A',G',M,C $}
+	{\True $ A,G',M',G $}
+	\loigiai{
+		\immini[0.05]{
+			Do $MM'$ là đường trung bình trong hình bình hành $BB'C'C$ nên $\heva{&MM' = BB' = AA'\\&MM' \parallel BB' \parallel AA'.}$\\ 
+			Do đó $AA'M'M$ là hình bình hành hay $4$ điểm $A,G',M',G$ đồng phẳng.
+		             }{
+\begin{tikzpicture}[scale=0.6, font=\footnotesize,line join=round, line cap=round,>=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A,7/0/C,4/-3/B}
+\coordinate (A') at ($(A)+(2,6)$);
+\tkzDefPointsBy[translation = from A to A'](B,C){B'}{C'}
+\coordinate (M) at ($(B)!0.5!(C)$);
+\coordinate (M') at ($(B')!0.5!(C')$);
+\coordinate (N) at ($(B)!0.5!(A)$);
+\coordinate (N') at ($(B')!0.5!(A')$);
+\tkzInterLL(A,M)(C,N)
+\tkzGetPoint{G}
+\tkzInterLL(A',M')(C',N')
+\tkzGetPoint{G'}
+\tkzDrawPolygon(A,B,C,C',B',A')
+\tkzDrawSegments(A',C' B',B M,M' A',M' C',N')
+\tkzDrawSegments[dashed](A,C A,M C,N G,G')
+\tkzDrawPoints[fill=black](A,C,B,A',B',C',M,M',N,N',G,G')
+\tkzLabelPoints[above](B',M',G')
+\tkzLabelPoints[below](B,M,G)
+\tkzLabelPoints[left](A',A)
+\tkzLabelPoints[right](C',C)
+\end{tikzpicture}
+		}
+	}
+\end{ex}

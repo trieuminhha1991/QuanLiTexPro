@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Diện tích xung quanh, diện tích toàn phần của khối đa diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tính thể tích các khối đa diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Tỉ số thể tích" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Các bài toán khác(góc, khoảng cách,...) liên quan đến thể tích " }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Bài toán thực tế về khối đa diện" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Bài toán cực trị" }

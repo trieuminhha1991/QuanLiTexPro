@@ -1,0 +1,23 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Trị, 2018]%[Nguyễn Văn Nay, 12EX10]%[1D4G1-5]
+	Dãy số $(u_n)$ xác định bởi $\heva{&u_1=\dfrac{1}{3}\\&u_{n+1}=\dfrac{n+1}{3n} \cdot u_n}$ và dãy số $(v_n)$ xác định bởi $\heva{&v_1=u_1\\&v_{n+1}=v_n+\dfrac{u_n}{n}}$. Tính $\lim v_n$.
+	\choice
+	{$1$}
+	{\True $\dfrac{5}{6}$}
+	{$\dfrac{1}{6}$}
+	{$\dfrac13$}
+	\loigiai{
+		Từ $u_{n+1}=\dfrac{n+1}{3n} \cdot u_n \Leftrightarrow \dfrac{u_{n+1}}{n+1}=\dfrac{1}{3}\cdot\dfrac{u_n}{n}$ nên dãy $\left(\dfrac{u_n}{n}\right)$ là cấp số nhân với công bội $q=\dfrac 13$.\\
+		Lại có $v_{n+1}=v_n+\dfrac{u_n}{n} \Leftrightarrow v_{n+1}-v_n=\dfrac{u_n}{n}$.\\
+		Suy ra
+		\begin{eqnarray*}
+			&v_2-v_1=\dfrac{u_1}{1}\\
+			&v_3-v_2=\dfrac{u_2}{2}\\
+			&\vdots\\
+			&v_{n+1}-v_n=\dfrac{u_n}{n}.
+		\end{eqnarray*}
+		Cộng vế theo vế ta được $v_{n+1}-v_1=\dfrac{u_1}{1}+\dfrac{u_2}{2}+\cdots+\dfrac{u_n}{n}=\dfrac{u_1\left[1-\left(\dfrac{1}{3}\right)^n\right]}{1-\dfrac{1}{3}}.$\\
+		Do đó $v_{n+1}=\dfrac{1}{2}\left[1-\left(\dfrac{1}{3}\right)^n\right]+v_1=\dfrac{1}{2}\left[1-\left(\dfrac{1}{3}\right)^n\right]+\dfrac{1}{3}$.\\
+		Từ đó ta được $\lim v_n=\lim \left[ \dfrac{1}{2}\left[1-\left(\dfrac{1}{3}\right)^n\right]+\dfrac{1}{3}\right] =\dfrac{1}{2}+\dfrac{1}{3}=\dfrac{5}{6}$.
+	}
+\end{ex}

@@ -1,0 +1,102 @@
+%UsePackage
+	\documentclass[12pt,a4paper,oneside]{book}
+	%\usepackage{fouriernc}
+	\usepackage{amsmath,amssymb}
+	\usepackage{mathrsfs}
+	\usepackage{fancyhdr}
+	\usepackage{enumerate}
+	\usepackage{enumitem}
+	\usepackage{framed}
+	\usepackage{tikz,tkz-tab,tkz-linknodes}
+	\usepackage{tkz-euclide}
+	\usepackage{tikz-3dplot}
+	\usepackage{wasysym}
+	\usepackage[most]{tcolorbox}
+	\usepackage[tikz]{bclogo}
+	\usetkzobj{all}
+	\usetikzlibrary{arrows,calc,intersections,angles,quotes,shapes.geometric}
+	\usetikzlibrary{snakes}
+	\usepackage{tabvar}
+	\usepackage{venndiagram}
+	\usepackage{pgfplots}
+	\usepgfplotslibrary{fillbetween}
+	\usetikzlibrary{patterns}
+	\pgfplotsset{compat=1.9}
+	\usepackage[top=2cm, bottom=2cm, left=2cm, right=1.5cm] {geometry}
+	\usepackage[hidelinks,unicode]{hyperref}
+	\usepackage{fontawesome}
+	\usepackage{currfile}
+	\usepackage{stackengine}
+	\usepackage{scalerel}
+	\usepackage{pifont}
+	\usepackage{txfonts}
+	\usepackage{esvect}
+	\usepackage[framemethod=tikz]{mdframed}
+	\usetikzlibrary{shadows}
+	\usepackage[loigiai]{ex_test}
+%EndUsePackage
+%DefCommand
+	\def\colorEX{\color{blue}}
+
+	\def\vec{\vv}
+	\def\overrightarrow{\vv}
+	\DeclareSymbolFont{largesymbols}{OMX}{yhex}{m}{n}
+	\DeclareMathAccent{\wideparen}{\mathord}{largesymbols}{"F3}
+%EndDefCommand
+%NewCommand
+	\newcommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+	\newcommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+	\newcommand\dangersign[1][2ex]{%
+		\renewcommand\stacktype{L}%
+		\scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\fontsize{4}{0}\selectfont !}}{#1}
+	\newcommand*\circledtikz[1]{\tikz[baseline=(char.base)]{
+				\node[shape=circle,shading=ball,ball color=white,inner sep=1.4pt](char) {#1};}}}
+	\newcommand{\nocontentsline}[3]{}
+	\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
+%EndNewCommand
+%ReCommand
+	\renewcommand{\baselinestretch}{1.4}
+	\renewcommand{\labelitemi}{$\text{\ding{79}}$}
+	\renewcommand\labelitemii{\textcolor{red}{\faPencilSquare}}
+	\makeatletter
+	\renewcommand{\labelenumi}{\color{black}\protect\circledtikz{\arabic*}}
+	\renewcommand\thesubsection{\fcolorbox{yellow}{green!30}{{\Huge \Alph{subsection}}}}
+	\renewcommand \thesection { \@arabic\c@section}
+%EndReCommand
+%NewTheorem
+	\newtheorem{dl}{Định lí}
+	\setcounter{dl}{0}
+	\newtheorem{vd}{VD}
+%NewTheorem
+%ReTheorem
+	%\renewtheorem{ex}{\color{violet}Câu}
+%EndReTheorem
+%NewCounter
+	\newtcolorbox[auto counter]{bt}[1]{
+		colframe=blue,colback=blue!2, coltitle=black, colbacktitle=blue!8!white,fonttitle=\bfseries, breakable,
+		title={Bài~\thetcbcounter.\ #1}}
+	\newtcolorbox[auto counter]{dang}[1]{
+		enhanced,frame style image=blueshade.png,
+		opacityback=0.55,opacitybacktitle=0.25,
+		colback=blue!3!white,colframe=blue,fonttitle=\bfseries,coltitle=black,colbacktitle=blue!5!white,
+		title={Dạng~\thetcbcounter.\ #1}}
+%EndNewCounter
+%NewBegin
+	\newenvironment{name}[3]{\begin{bclogo}[logo =\bcbook, arrondi =0.1, couleur = red!20, barre = motif , motifBarre =$\star $]
+		{\textcolor{green}{#1}}\vspace*{-5pt}
+		{\Large{\textcolor{blue}{#2}}\vspace*{-5pt}}
+		\section{\textbf{#3}}	
+				\end{bclogo}}
+%EndNewBegin
+%HeaderFooter
+%EndHeaderFooter
+
+\begin{document}
+	\begin{name}
+		{Trung tâm Đức Minh - Lớp 9 nâng cao}
+		{ThS. Triệu Minh Hà.}
+		{Lời giải buổi 2: HỆ THỨC LƯỢNG TRONG TAM GIÁC VUÔNG.}
+	\end{name}
+\Opensolutionfile{ans}[ans1]
+%PhanDau
+

@@ -1,0 +1,12 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Tập hợp Q các số hữu tỉ" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Cộng, trừ số hữu tỉ" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Nhân, chia số hữu tỉ" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Giá trị tuyệt đối của một số hữu tỉ. Cộng, trừ, nhân, chia số thập phân" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Lũy thừa của một số hữu tỉ" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Lũy thừa của một số hữu tỉ (tiếp)" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275dc" }, "SectionId" : 7, "SectionName" : "Tỉ lệ thức" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275de" }, "SectionId" : 8, "SectionName" : "Tính chất của dãy tỉ số bằng nhau" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 9, "SectionName" : "Số thập phân hữu hạn. Số thập phân vô hạn tuần hoàn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 10, "SectionName" : "Làm tròn số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 11, "SectionName" : "Số vô tỉ. Khái niệm về căn bậc hai" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275df" }, "SectionId" : 12, "SectionName" : "Số thực" }

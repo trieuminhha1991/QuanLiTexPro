@@ -1,0 +1,116 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD - ĐT tỉnh Quảng Bình, 2019]%[Nguyễn Tiến, dự án 12EX5]%[1D2B1-3]
+	Có bao nhiêu số chẵn mà mỗi số có $4$ chữ số đôi một khác nhau?
+	\choice
+	{$2520$}
+	{$5000$}
+	{$4500$}
+	{\True $2296$}
+	\loigiai{
+		Gọi số cần tìm có dạng $\overline{abcd}$ $\left(\right.$với $a\neq0$; $a,b,c,d\in\mathbb{Z}$; $0\le a,b,c,d\le9\left.\right)$.\\
+		\textbf{TH1:} Với $d=0$ thì $a$ có $9$ cách chọn, $b$ có $8$ cách chọn, $c$ có $7$ cách chọn.\\
+		Do đó, số các số chẵn cần tìm trong trường hợp này là $9\cdot8\cdot7=504$ số.\\
+		\textbf{TH2:} Với $d\neq0 \Rightarrow d\in\{2;4;6;8\}$ thì $d$ có $4$ cách chọn, $a$ có $8$ cách chọn, $b$ có $8$ cách chọn, $c$ có $7$ cách chọn.\\
+		Do đó, số các số chẵn cần tìm trong trường hợp này là $4\cdot8\cdot8\cdot7=1792$ số.\\
+		Vậy số các số chẵn thỏa mãn yêu cầu bài toán là $504+1792=2296$ số.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD - ĐT tỉnh Quảng Bình, 2019]%[Nguyễn Tiến, dự án 12EX5]%[1D2B1-3]
+	Đội văn nghệ của nhà trường gồm $4$ học sinh lớp $12\mathrm{A}$, $3$ học sinh lớp $12\mathrm{B}$ và $2$ học sinh lớp $12\mathrm{C}$. Chọn ngẫu nhiên $5$ học sinh từ đội văn nghệ để biểu diễn trong lễ bế giảng. Hỏi có bao nhiêu cách chọn sao cho lớp nào cũng có học sinh được chọn?
+	\choice
+	{$120$}
+	{\True $98$}
+	{$150$}
+	{$360$}
+	\loigiai{
+		Ta xét các trường hợp sau:\\
+		\textbf{TH1:} Chọn $1$ học sinh lớp $12\mathrm{A}$, $2$ học sinh lớp $12\mathrm{B}$ và $2$ học sinh lớp $12\mathrm{C}$\\
+		$\Rightarrow \mathrm{C}_4^1\cdot\mathrm{C}_3^2\cdot\mathrm{C}_2^2=12$ cách chọn.\\
+		\textbf{TH2:} Chọn $2$ học sinh lớp $12\mathrm{A}$, $1$ học sinh lớp $12\mathrm{B}$ và $2$ học sinh lớp $12\mathrm{C}$\\
+		$\Rightarrow \mathrm{C}_4^2\cdot\mathrm{C}_3^1\cdot\mathrm{C}_2^2=18$ cách chọn.\\
+		\textbf{TH3:} Chọn $2$ học sinh lớp $12\mathrm{A}$, $2$ học sinh lớp $12\mathrm{B}$ và $1$ học sinh lớp $12\mathrm{C}$\\
+		$\Rightarrow \mathrm{C}_4^2\cdot\mathrm{C}_3^2\cdot\mathrm{C}_2^1=36$ cách chọn.\\
+		\textbf{TH4:} Chọn $3$ học sinh lớp $12\mathrm{A}$, $1$ học sinh lớp $12\mathrm{B}$ và $1$ học sinh lớp $12\mathrm{C}$\\
+		$\Rightarrow \mathrm{C}_4^3\cdot\mathrm{C}_3^1\cdot\mathrm{C}_2^1=24$ cách chọn.\\
+		\textbf{TH5:} Chọn $1$ học sinh lớp $12\mathrm{A}$, $3$ học sinh lớp $12\mathrm{B}$ và $1$ học sinh lớp $12\mathrm{C}$\\
+		$\Rightarrow \mathrm{C}_4^1\cdot\mathrm{C}_3^3\cdot\mathrm{C}_2^1=8$ cách chọn.\\
+		Vậy tổng số cách chọn là $12+18+36+24+8=98$ cách.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[HK2, THPT Nguyễn Huệ, Vĩnh Phúc, 2019]%[Thịnh Trần, dự án(12EX-5-2019)]%[1D2B1-3]
+	Từ các chữ số $0$, $1$, $2$, $7$, $8$, $9$ tạo được bao nhiêu số chẵn có $5$ chữ số khác nhau?
+	\choice
+	{$120$}
+	{$216$}
+	{\True $312$}
+	{$360$}
+	\loigiai{
+		Gọi số chẵn có $5$ chữ số khác nhau thỏa mãn đề bài là $\overline{abcde}$.
+		\begin{itemize}
+			\item Nếu $e = 0$ thì $a$ có $5$ cách chọn, $b$ có $4$ cách chọn, $c$ có $3$ cách chọn, $d$ có $2$ cách chọn. Suy ra có tất cả $5\cdot 4\cdot 3\cdot 2	= 120$ số.
+			\item Nếu $e\in\{2;8\}$ thì $a$ có $4$ cách chọn, $b$ có $4$ cách chọn, $c$ có $3$ cách chọn, $d$ có $2$ cách chọn. Suy ra có tất cả $2\cdot 4\cdot 4\cdot 3\cdot 2= 192$ số
+		\end{itemize}
+		Vậy số các số có $5$ chữ số thỏa mãn đề bài là $120 + 192 = 312$ số.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Tập huấn, Sở GD và ĐT - Bắc Giang, 2019]%[Nguyễn Anh Tuấn, 12EX5]%[1D2B1-2]
+	Số các số tự nhiên có ba chữ số là
+	\choice
+	{\True $ 900 $}
+	{$ 648 $}
+	{$ 504 $}
+	{$ 1000 $}
+	\loigiai{
+		Gọi số tự nhiên cần tìm là $ m=\overline{abc} $ với $ a $, $ b $, $ c  \in \{0,1,2,3,4,5,6,7,8,9\} $, $ a\ne 0 $.\\
+		Chọn $ a $ có $ 9 $ cách chọn.\\
+		Chọn $ b $ có $10$ cách chọn.\\
+		Chọn $ c $ có $ 10 $ cách chọn.\\
+		Theo quy tắc nhân, số các số tự nhiên thỏa mãn yêu cầu bài toán là $ 9\cdot 10 \cdot 10=900 $. 
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề ĐK 12 Nguyễn Khuyến, HCM, ngày 24 tháng 03 năm 2019]%[Vinh Vo, 12EX7-2019]%[1D2B1-2]
+	Có bao nhiêu số tự nhiên có ba chữ số đôi một khác nhau?
+	\choice
+	{$ 1000 $}
+	{$ 720 $}
+	{$ 729 $}
+	{\True $ 648 $}
+	\loigiai{
+	Số các số tự nhiên có ba chữ số đôi một khác nhau là $ 9 \cdot 9 \cdot 8 = 648 $.	
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Lê Quý Đôn - Quảng Trị, 2019]%[Nguyễn Tiến, dự án 12EX-8]%[1D2B1-1]
+	Một chiếc vòng đeo tay gồm $20$ hạt giống nhau. Hỏi có bao nhiêu cách cắt chiếc vòng đó thành $2$ phần mà số hạt ở mỗi phần đều là số lẻ? 
+	\choice
+	{$90$}
+	{\True $5$}
+	{$180$}
+	{$10$}
+	\loigiai{
+		Ta có $20=1+19=3+17=5+15=7+13=9+11$.\\
+		Nên có $5$ cách cắt chiếc vòng đó thành $2$ phần mà số hạt ở mỗi phần đều là số lẻ.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử lần 1, THPT Văn Giang - Hưng Yên, 2019]%[Đỗ Đường Hiếu, 12EX-8-2019]%[1D2B1-2]
+	Có bao nhiêu số tự nhiên có $3$ chữ số đôi một khác nhau?
+	\choice
+	{$729$}
+	{$1000$}
+	{\True $648$}
+	{$720$}
+	\loigiai{
+		Có $9\cdot 9\cdot 8=648$ số tự nhiên có $3$ chữ số đôi một khác nhau.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử lần 4 ĐHSP Hà Nội, Đoàn Minh Tân, dự án 12-EX-9-2019]%[1D2B1-3] 
+	Cuối năm học trường Chuyên Sư phạm tổ chức $3$ tiết mục văn nghệ chia tay khối $12$ ra trường. Tất cả các học sinh lớp $12A$ đều tham gia nhưng mỗi người chỉ được đăng kí không quá $2$ tiết mục. Biết lớp $12A$ có $44$ học sinh, hỏi có bao nhiêu cách để lớp lựa chọn?
+	\choice
+	{$2^{44}$}
+	{$2^{44}+3^{44}$}
+	{$3^{44}$}
+	{\True $6^{44}$}
+	\loigiai{
+		Mỗi học sinh có thể chọn $1$ tiết mục hoặc $2$ tiết mục trong $3$ tiết mục. Do đó, mỗi học sinh có $6$ cách chọn.
+		Vậy lớp $12A$ có $6^{44}$ cách lựa chọn.
+	}
+\end{ex}

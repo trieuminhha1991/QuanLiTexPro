@@ -1,0 +1,38 @@
+%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Lương Thế Vinh Đồng Nai, 2019]%[Nguyễn Tất Thu, dự án(12EX-7)]%[1H3Y2-4]
+	Cho hình hộp chữ nhật  $ABCD.A'B'C'D'$. Đường thẳng $AB$  vuông góc với đường thẳng nào sau đây?
+	\choice
+	{\True $B'C$}
+	{$CD$}
+	{$B'D'$}
+	{$BD'$}
+	\loigiai{
+	\immini{Ta có $AB\perp BC,\ AB\perp BB'$ nên $AB\perp (BCC'B')$, do đó $AB\perp B'C$.}
+	{\begin{tikzpicture}[scale=.4, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A,8/0/B,-3/-2/D}
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (A') at ($(A) - (0,5)$);
+\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+\tkzDrawPolygon(A,B,B',C',D',D)
+\tkzDrawSegments(C,B C,D C,C')
+\tkzDrawSegments[dashed](A',A A',B' A',D')
+\tkzDrawPoints(A,B,D,C,A',B',C',D')
+\tkzLabelPoints[above](A,B,C)
+\tkzLabelPoints[below](D',C')
+\tkzLabelPoints[left](A',D)
+\tkzLabelPoints[right](B')
+\end{tikzpicture}
+}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L2, Đoàn Thượng  Hải Dương, 2019]%[Nguyễn Tất Thu, dự án EX8]%[1H3Y2-3]%Câu 13
+		Cho hình chóp tứ giác $S.ABCD$ có đáy $ABCD$ là hình bình hành, tam giác $SBC$ là tam giác đều. Tính góc giữa $2$ đường thẳng $AD$ và $SB$.
+		\choice
+		{\True $60^\circ$}
+		{$30^\circ$}
+		{$120^\circ$}
+		{$90^\circ$}
+		\loigiai{
+			Do $AD \parallel BC \Rightarrow \widehat{(AD,SB)}=\widehat{(BC,SB)}=\widehat{SBC}=60^\circ$ (vì tam giác $SBC$  đều).}
+	\end{ex}

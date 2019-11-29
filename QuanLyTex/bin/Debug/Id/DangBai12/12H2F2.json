@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Bài toán sử dụng định nghĩa, tính chất, vị trí tương đối" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Khối cầu ngoại tiếp khối đa diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Khối cầu nội tiếp khối đa diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Bài toán thực tế về khối cầu" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Bài toán cực trị về khối cầu" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Bài toán tổng hợp về khối nón, khối trụ, khối cầu" }

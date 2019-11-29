@@ -1,0 +1,3 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tính giá trị của biểu thức chứa lũy thừa" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Biến đổi, rút gọn, biểu diễn các biểu thức chứa lũy thừa" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "So sánh các lũy thừa" }

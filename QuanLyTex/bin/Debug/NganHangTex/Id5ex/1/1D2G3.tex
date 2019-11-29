@@ -1,0 +1,103 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Trị, 2018]%[Nguyễn Văn Nay, 12EX10]%[1D2G3-3]
+	Tính tổng $\mathrm{C}_{39}^1+\mathrm{C}_{39}^2+\mathrm{C}_{39}^3+\cdots+\mathrm{C}_{39}^{19}.$
+	\choice
+	{$2^{39}-1$}
+	{$2^{19}-1$}
+	{$2^{20}-1$}
+	{\True $2^{38}-1$}
+	\loigiai{
+		Ta có $\mathrm{C}_{39}^0+\mathrm{C}_{39}^1+\mathrm{C}_{39}^2+\cdots+\mathrm{C}_{39}^{39}=2^{39} \Leftrightarrow \mathrm{C}_{39}^1+\mathrm{C}_{39}^2+\mathrm{C}_{39}^3+\cdots+\mathrm{C}_{39}^{38}=2^{39}-2$.\\
+		Mặt khác vì $\mathrm{C}_{39}^k=\mathrm{C}_{39}^{39-k}$, với mọi $1 \le k \le 38$.\\
+		Do đó $S=\mathrm{C}_{39}^1+\mathrm{C}_{39}^2+\mathrm{C}_{39}^3+\cdots+\mathrm{C}_{39}^{19}=\dfrac{2^{39}-2}{2}=2^{38}-1$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, THPT Ngô Quyền - Hà Nội, 2019]%[Phan Ngọc Toàn, dự án EX7]%[1D2G3-2]
+	Tìm hệ số của số hạng chứa $x^5$ trong khai triển $\left(1+x+x^2+x^3\right)^{10}$.
+	\choice
+	{\True $1902 $}
+	{$ 7752 $}
+	{$252 $}
+	{$ 582 $}
+	\loigiai{
+	Ta có 
+\begin{eqnarray*}
+\left(1+x+x^2+x^3\right)^{10} &= & \left(1+x\right)^{10} \left(1+x^2\right)^{10}\\
+&= &\left(\sum\limits_{k=0}^{10}\mathrm{C}_{10}^kx^k \right) \left(\sum\limits_{m=0}^{10}\mathrm{C}_{10}^mx^{2m}\right) \\
+&= & \sum\limits_{k=0}^{10}\sum\limits_{m=0}^{10}\mathrm{C}_{10}^k \mathrm{C}_{10}^m x^{k+2m}
+\end{eqnarray*}
+Số hạng chứa $x^5$ ứng với $k$, $m$ nguyên thỏa mãn $\heva{&0 \le k, m \le 10\\ &k+2m=5.}$\\
+ Từ đó suy ra hoặc ($k=5$, $m=0$) hoặc ($k=3$, $m=1$) hoặc ($k=1$, $m=2$).\\
+Vậy hệ số của $x^5$ bằng $\mathrm{C}_{10}^5 \mathrm{C}_{10}^0+\mathrm{C}_{10}^3 \mathrm{C}_{10}^1 +\mathrm{C}_{10}^1 \mathrm{C}_{10}^2=1902$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L4, THPT  Chuyên Thái Bình-Thái Bình, 2019]%[KV Thanh, 12EX8]%[1D2G3-3]
+Có bao nhiêu số tự nhiên có $30$ chữ số sao cho mỗi số chỉ có mặt hai chữ số $0$ và $1$, đồng thời số chữ số $1$ có mặt trong số tự nhiên đó là số lẻ?
+\choice
+{$3\cdot 2^{27}$}
+{$2^{27}$}
+{$2^{29}$}
+{\True $2^{28}$}
+\loigiai{
+Số cần lập có dạng $\overline{1a_2a_3\ldots a_{30}}$. Suy ra số cần lập có số chữ số $1$ lẻ khi và chỉ khi số chữ số $1$ xuất hiện trong số tự nhiên đang xét là chẵn.
+\begin{itemize}
+\item TH$1$: Không có chữ số $1$, ta có $\mathrm{C}_{29}^0$ số.
+\item TH$2$: Có hai chữ số $1$, có $\mathrm{C}_{29}^2$ số.
+\item $\ldots$
+\item TH$15$: Có $28$ chữ số $1$, có $\mathrm{C}_{29}^{28}$ số.
+\end{itemize}
+Do đó, có tất cả $\mathrm{C}_{29}^0+\mathrm{C}_{29}^2+\mathrm{C}_{29}^4+\cdots+\mathrm{C}_{29}^{28}$ số.\\
+Ta có
+$$(1+x)^{29}=\mathrm{C}_{29}^0+x\mathrm{C}_{29}^1+x^2\mathrm{C}_{29}^2+\cdots+x^{29}\mathrm{C}_{29}^{29}\quad (*).$$
+Lần lượt thay $x=1, x=-1$ vào $(*)$, ta được
+$$\heva{&\mathrm{C}_{29}^0-\mathrm{C}_{29}^1+\mathrm{C}_{29}^2+\cdots -\mathrm{C}_{29}^{29}=0\quad (1)\\&\mathrm{C}_{29}^0+\mathrm{C}_{29}^1+\mathrm{C}_{29}^2+\cdots+\mathrm{C}_{29}^{29}=2^{29}\quad (2).}$$
+Cộng vế với vế của $(1)$ và $(2)$, ta có
+$$2\left(\mathrm{C}_{29}^0+\mathrm{C}_{29}^2+\mathrm{C}_{29}^4+\cdots+\mathrm{C}_{29}^{28}\right)=2^{29}.$$
+Vậy có tất cả $\mathrm{C}_{29}^0+\mathrm{C}_{29}^2+\mathrm{C}_{29}^4+\cdots+\mathrm{C}_{29}^{28}=2^{28}$ số.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Nguyễn Trãi, Hải Dương, 2019]%[Đinh Thanh Hoàng, dự án EX6]%[1D2G3-3]
+	Cho$n\in \mathbb{N}^*$ và $\mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8\mathrm{C}_n^{n-8}=2\mathrm{C}_n^2\mathrm{C}_n^{n-8}$. Tính $T=1^2\mathrm{C}_n^1+2^2\mathrm{C}_n^2+\cdots+n^2\mathrm{C}_n^n$.
+	\choice
+	{\True $55\cdot 2^9$}
+	{$55\cdot 2^{10}$}
+	{$5\cdot 2^{10}$}
+	{$55\cdot 2^8$}
+	\loigiai{
+		Ta có $\mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8\mathrm{C}_n^{n-8}=2\mathrm{C}_n^2\mathrm{C}_n^{n-8}\Leftrightarrow \mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8C_n^{n-8}-2\mathrm{C}_n^2\mathrm{C}_n^{n-8}=0$\\
+		\phantom{Ta có $\mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8\mathrm{C}_n^{n-8}=2\mathrm{C}_n^2\mathrm{C}_n^{n-8}$} $\Leftrightarrow \mathrm{C}_n^{n-2}\mathrm{C}_n^{n-2}+\mathrm{C}_n^{n-8}\mathrm{C}_n^{n-8}-2\mathrm{C}_n^{n-2}\mathrm{C}_n^{n-8}=0$\\
+		\phantom{Ta có $\mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8\mathrm{C}_n^{n-8}=2\mathrm{C}_n^2\mathrm{C}_n^{n-8}$} $\Leftrightarrow \left(\mathrm{C}_n^{n-2}-\mathrm{C}_n^{n-8}\right)^2=0$\\
+		\phantom{Ta có $\mathrm{C}_n^2\mathrm{C}_n^{n-2}+\mathrm{C}_n^8\mathrm{C}_n^{n-8}=2\mathrm{C}_n^2\mathrm{C}_n^{n-8}$} $\Leftrightarrow \mathrm{C}_n^{n-2}=\mathrm{C}_n^{n-8}\Leftrightarrow n=10$.\\
+		Ta có $(1+x)^n=\mathrm{C}_n^0+\mathrm{C}_n^1x+\mathrm{C}_n^2x^2+\cdots+\mathrm{C}_n^nx^n$.\\
+		Đạo hàm hai vế ta được $n(1+x)^{n-1}=\mathrm{C}_n^1+2\mathrm{C}_n^2x+\cdots+n\mathrm{C}_n^n{x}^{n-1}$.\\
+		$\Rightarrow nx(1+x)^{n-1}=x\mathrm{C}_n^1+2\mathrm{C}_n^2x^2+\cdots+n\mathrm{C}_n^nx^n$.\\
+		Đạo hàm hai vế ta được $n\left[(1+x)^{n-1}+x(n-1)(1+x)^{n-2}\right]=\mathrm{C}_n^1+2^2\mathrm{C}_n^2x+\cdots+n^2\mathrm{C}_n^n{x}^{n-1}$.\\
+		Thay $x=1$ vào hai vế ta được $n\left[2^{n-1}+(n-1)2^{n-2}\right]=\mathrm{C}_n^1+2^2\mathrm{C}_n^2+\cdots+n^2\mathrm{C}_n^n=T$.\\
+		Với $n=10$, ta có $T=10\left(2^9+9\cdot 2^8\right)=2\cdot 5\left(2\cdot 2^8+9\cdot 2^8\right)=55\cdot 2^9$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Dự án 12EX9, Huỳnh Quy]%[Chuyên Lương Thế Vình Đồng Nai - lần 2 - 2019]%[1D2G3-2]
+	Khai triển 
+	\[
+	(2x+1)^{10}=A_0+A_1x+A_2x^2+\cdots+A_{10}x^{10},
+	\]
+	trong đó $A_0$, $A_1$,\ldots, $A_{10}$ là các số thực. Số lớn nhất trong các số $A_0$, $A_1$, \ldots, $A_{10}$ là
+	\choice
+	{$A_{10}$}
+	{\True $A_7$}
+	{$A_8$}
+	{$A_9$}
+	\loigiai{
+		\[
+		(2x+1)^{10}=(1+2x)^{10}=\sum\limits_{k=0}^{10}\mathrm{C}_{10}^{k}1^{10-k}(2x)^k
+		\]
+		Hệ số của số hạng chứa $x^k$ là $A_k=\mathrm{C}_{10}^{k}2^k$.
+		\begin{itemize}
+			\item Xét $\dfrac{A_k}{A_{k+1}}<1\Leftrightarrow\dfrac{\mathrm{C}_{10}^k\cdot 2^{k}}{\mathrm{C}_{10}^{k+1}\cdot 2^{k+1}}<1\Leftrightarrow \dfrac{k+1}{10-k}\cdot\dfrac{1}{2}<1\Leftrightarrow k<\dfrac{19}{3}\approx 6{,}3$.\\
+			Suy ra $A_0<A_1<A_2<A_3<A_4<A_5<A_6$.
+			\item Xét $\dfrac{A_k}{A_{k+1}}>1\Leftrightarrow\dfrac{\mathrm{C}_{10}^k\cdot 2^{k}}{\mathrm{C}_{10}^{k+1}\cdot 2^{k+1}}>1\Leftrightarrow \dfrac{k+1}{10-k}\cdot\dfrac{1}{2}>1\Leftrightarrow k>\dfrac{19}{3}\approx 6{,}3$.\\
+			Suy ra $A_7>A_8>A_9>A_{10}$.
+			\item Mặt khác $\dfrac{A_6}{A_7}=\dfrac{\mathrm{C}_{10}^{6}\cdot 2^{6}}{\mathrm{C}_{10}^{7}\cdot 2^{7}}=\dfrac{7}{8}<1\Rightarrow A_6<A_7$.
+		\end{itemize}
+		Vậy $\max\limits_{i=0,...,10}\{A_{i}\}=A_7$.}
+\end{ex}

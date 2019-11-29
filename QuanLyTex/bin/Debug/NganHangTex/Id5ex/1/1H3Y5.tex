@@ -1,0 +1,24 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT -Lạng Sơn, 2019]%[Trần Duy Khương, 12EX5-2019]%[1H3Y5-3]
+		Cho khối chóp $S.ABC$ có đáy $ABC$ là tam giác đều cạnh $a$, $SA$ vuông góc với mặt phẳng đáy, $SA=\dfrac{a\sqrt{3}}{2}$. Khoảng cách từ $A$ đến $(SBC)$ là 
+		\choice
+		{\True $\dfrac{a\sqrt{6}}{4}$}
+		{$\dfrac{a\sqrt{3}}{2}$}
+		{$\dfrac{a\sqrt{6}}{3}$}
+		{$\dfrac{a\sqrt{2}}{2}$}
+		\loigiai{	\immini{
+				Gọi $M$ là trung điểm của $BC$ thì $AM\perp BC, AM=\dfrac{a\sqrt{3}}{2}$. Gọi $H$ là hình chiếu vuông góc của $A$ lên $SM$, ta có $AH\perp (SBC)$. Trong tam giác vuông $SAM$, ta có: $$\dfrac{1}{AH^2}=\dfrac{1}{AS^2}+\dfrac{1}{AM^2}\Rightarrow AH=\dfrac{a\sqrt{6}}{4}.$$
+				Vậy $\mathrm{d}(A,(SBC))=AH=\dfrac{a\sqrt{6}}{4}$.
+			}{\vspace{-0.5cm}	\begin{tikzpicture}[scale=0.7, font=\footnotesize,line join=round, line cap=round,>=stealth]
+				\tkzDefPoints{0/0/A,6/0/C,4/-2/B,5/-1/M,2.5/2/H}
+				\coordinate (S) at ($(A)+(0,5)$);
+				\tkzDrawSegments(S,C S,B C,B A,B S,M S,A S,M)
+				\tkzDrawSegments[dashed](A,C A,M A,H)
+				\tkzDrawPoints[fill=black](M,C,A,B,S,H)
+				\tkzLabelPoints[above](S)
+				\tkzLabelPoints[right](H,M)
+				\tkzLabelPoints[below](A,B,C)
+				\tkzMarkRightAngles(S,H,A A,M,C)
+				\end{tikzpicture}
+		}}
+	\end{ex}

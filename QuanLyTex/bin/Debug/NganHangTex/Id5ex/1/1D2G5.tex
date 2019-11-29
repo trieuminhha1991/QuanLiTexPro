@@ -1,0 +1,673 @@
+%!Cau!%
+\begin{ex}%[Thi thử lần I, Sở GD&ĐT Sơn La 2019]%[Nguyễn Anh Quốc,  dự án EX5]%[1D2G5-3]
+	Cho $(H)$ là đa giác đều $2n$ đỉnh nội tiếp đường tròn tâm $\left(O\right)$ $(n \in \mathbb{N}^{*}, n \geq 2)$. Gọi $S$ là tập hợp các tam giác có ba đỉnh là các đỉnh của đa giác $(H)$. Chọn ngẫu nhiên một tam giác thuộc tập $S$, biết rằng xác suất chọn được một tam giác vuông trong tập $S$ là $\dfrac{3}{29}$. Tìm $n$?
+	\choice
+	{\True $15$}
+	{$10$}
+	{$20$}
+	{$12$}
+	\loigiai{
+		Số phần tử của tập hợp $S$ là $\mathrm{C}_{2 n}^3$, số phần tử không gian mẫu $n(\Omega)=\mathrm{C}_{2 n}^3$.\\
+		Gọi A là biến cố \lq\lq Chọn được tam giác vuông\rq\rq.\\
+		Đa giác đều $2n$ đỉnh có $n$ đường chéo qua tâm $O$.\\
+		Mỗi tam giác vuông được tạo bởi hai đỉnh nằm trên cùng một đường chéo qua tâm $O$  và một đỉnh trong $2n-2$ đỉnh còn lại.\\
+		Suy ra số tam giác vuông tạo thành là $\mathrm{C}_n^1 \cdot \mathrm{C}_{2 n-2}^1$.\\
+		Theo bài ra ta có $P(A)=\dfrac{\mathrm{C}_n^1 \cdot \mathrm{C}_{2 n-2}^1}{\mathrm{C}_{2 n}^3}=\dfrac{3}{29} \Rightarrow n=15$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn Sở Ninh Bình, 2019]%[Nguyễn Văn Hải, dự án(12EX-5-2019)]%[1D2G5-2]
+Một đa giác đều $n$ đỉnh ($n$ lẻ, $n\ge 3$). Chọn ngẫu nhiên $3$ đỉnh của đa giác đó. Gọi $\mathrm{P}$ là xác suất sao cho $3$ đỉnh đó tạo thành một tam giác tù. Biết $\mathrm{P}=\dfrac{45}{62}$. Số các ước nguyên dương của $n$ là
+\choice
+{\True $4$}
+{$3$}
+{$6$}
+{$5$}
+\loigiai{
+Cố định $1$ đỉnh làm đỉnh của tam giác tù ứng với góc tù, có $n$ cách chọn như vậy.\\
+Với tam giác tù có đỉnh cố định ở trên, ta gọi $x,y$ $(x,y\in \Bbb N^*)$ là số cạnh của đa giác đều lần lượt nằm trong hai cạnh bên của tam giác tù. Điều kiện cần và đủ của $x,y$ để tam giác tù là $x+y < \dfrac{n}2$ (tổng số đo cung hai cạnh bên chưa được nửa đường tròn).\\
+Do $n$ lẻ nên với $x,y\in \Bbb N^*$, $x+y < \dfrac{n}2\Leftrightarrow x+y\le \dfrac{n-1}2\ (*)$.\\
+Bây giờ ta chỉ cần đi tìm số nghiệm nguyên dương của $(*)$. Hơn nữa, số nghiệm nguyên dương của $(*)$ bằng số nghiệm nguyên dương của phương trình $x+y+z=\dfrac{n-1}2+1\ (**)$ ($z$ chính là phần bù nguyên dương để bất phương trình $(*)$ thành phương trình).\\
+Theo bài toán chia kẹo Euler, $\dfrac{n-1}2+1$ mà đem chia thành ba phần kẹo $x,y,z$ có $\mathrm{C}^2_{\frac{n-1}2}$ cách chia, hay $(**)$ có $\mathrm{C}^2_{\frac{n-1}2}$ nghiệm nguyên dương.\\
+Vậy có tất cả $n\mathrm{C}^2_{\frac{n-1}2}=\dfrac{n(n-1)(n-3)}8$ tam giác tù.\\
+Trong khi đó, có tất cả $\mathrm{C}^3_n=\dfrac{n(n-1)(n-2)}6$ tam giác.\\
+Vậy có $\mathrm{P}=\dfrac{3(n-3)}{4(n-2)}=\dfrac{45}{62}$ $\Leftrightarrow n=33$ $\Rightarrow n$ có $4$ ước nguyên dương.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn số 2, Sở GD và ĐT Quảng Ninh, 2019]%[Đỗ Đường Hiếu, 12EX5-19]%[1D2G5-2]
+	Cho một đa giác $(H)$ có $60$ đỉnh nội tiếp một đường tròn $(O)$. Người ta lập một tứ giác tùy ý có bốn đỉnh là các đỉnh của $(H)$. Xác suất để lập được một tứ giác có bốn cạnh đều là đường chéo của $(H)$ gần nhất với số nào trong các số sau đây?
+	\choice
+	{$85{,}40$\%}
+	{$13{,}45$\%}
+	{$40{,}35$\%}
+	{\True $80{,}70$\%}
+	\loigiai{
+		Gọi $A$ là biến cố \lq\lq Lập được một tứ giác có bốn đỉnh là đỉnh của $(H)$ và cả bốn cạnh đều là đường chéo của $(H)$\rq\rq.\\
+		Số phần tử của không gian mẫu là $n(\Omega)=\mathrm{C}^4_{60}$.\\
+		Để đếm số phần tử của $A$, ta đặt thứ tự các đỉnh theo chiều kim đồng hồ. Chọn đỉnh đầu tiên của tứ giác có $60$ cách. Đánh số các đỉnh của đa giác lần lượt là $1$, $2$, $3$, ..., $60$ trong đó số $1$ là đỉnh đã chọn. Cần chọn thêm $3$ đỉnh nữa ứng với bộ $(a, b, c)$ thuộc từ $3$ đến $59$, theo yêu cầu $3\le a<b-1<c-2\le 57$, nên có $60\cdot\mathrm{C}^3_{55}$, theo cách đếm này các tứ giác bị lặp lại $4$ lần nên kết quả là $\dfrac{60\cdot\mathrm{C}^3_{55}}{4}=15\cdot\mathrm{C}^3_{55}$.\\
+		Xác suất cần tìm $\mathrm{P}=\dfrac{15\cdot\mathrm{C}^3_{55}}{\mathrm{C}^4_{60}}\approx 0{,}807$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Hải Phòng, 2018]%[Phan Anh Tiến, 12-EX-05]%[1D2G5-5]
+	Trong mặt phẳng $Oxy$, cho hình chữ nhật $OMNP$ với $M(0;10)$, $N(100;10)$ và $P(100;0)$. Gọi $S$ là tập hợp tất cả các điểm $A(x;y)$ với $x,y\in \mathbb{Z}$ nằm bên trong (kể cả trên cạnh) của $OMNP$. Lấy ngẫu nhiên một điểm $A(x;y)\in S$. Xác suất để $x+y\le 90$ bằng
+	\choice
+	{$ \dfrac{845}{1111}$}
+	{$ \dfrac{473}{500}$}
+	{\True $ \dfrac{86}{101} $}
+	{$ \dfrac{169}{200} $}
+	\loigiai{Điểm $A(x;y)$ nằm bên trong (kể cả trên cạnh) của $OMNP$ suy ra $0\le x\le 100,\,0\le y\le 10$.\\
+		Có $101$ cách chọn $x$, $11$ cách chọn $y$. Do đó, số cách chọn điểm $A$ là $101\cdot 11$.\\
+		Để điểm $A(x;y)$ thỏa điều kiện $x+y\le 90$ ta chỉ rõ từng trường hợp cụ thể
+		\begin{itemize}
+			\item Với $y=0$ thì chọn $x\in \left\lbrace 0;1;2;\ldots;90\right\rbrace$.
+			\item  Với $y=1$ thì chọn $x\in \left\lbrace 0;1;2;\ldots;89\right\rbrace$.
+			\item ...
+			\item Với $y=10$ thì chọn $x\in \left\lbrace 0;1;2;\ldots;80\right\rbrace$.
+		\end{itemize}
+		Do đó, số cách chọn điểm $A(x;y)$ thỏa điều kiện $x+y\le 90$ là $81+82+\cdots+91=946$.\\ Vậy xác suất cần tìm là $P=\dfrac{946}{101\cdot 11}=\dfrac{86}{101}.$
+		}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Quảng Ninh, 2019]%[Lê Hồng Phi, 12EX5]%[1D2G5-2]
+	Cho một đa giác $(H)$ có $60$ đỉnh nội tiếp đường tròn $(O)$. Người ta lập một tứ giác tùy ý có bốn đỉnh  là các đỉnh của $(H)$. Xác suất để lập được một tứ giác có bốn cạnh đều là đường chéo của $(H)$ gần với số nào nhất trong các số sau?
+	\choice
+	{$85{,}40\%$}
+	{$13{,}45\%$}
+	{$40{,}35\%$}
+	{\True $80{,}70\%$}
+	\loigiai
+	{Gọi các đỉnh của đa giác là $A_1, A_2, \dots , A_{60}$. 
+		Ta đi tìm các tứ giác lồi có ít nhất một cạnh là cạnh của đa giác. Ta xét các trường hợp sau:
+		\begin{enumerate}
+			\item[TH1:] Tứ giác có một cạnh là cạnh của đa giác
+			\begin{enumerate}
+				\item[•] Tứ giác có ba đỉnh $A_1A_2 A_4$, số cách chọn đỉnh còn lại là $\mathrm{\,C}_{54}^1$.
+				\item[•] Tứ giác có ba đỉnh $A_1A_2 A_5$, số cách chọn đỉnh còn lại là $\mathrm{\,C}_{53}^1$.
+				
+				\dots
+				
+				\item[•] Tứ giác có ba đỉnh $A_1A_2 A_{57}$, số cách chọn đỉnh còn lại là $\mathrm{\,C}_{1}^1$.
+			\end{enumerate}
+			Tương tự với cạnh còn lại.
+			
+			Vậy trường hợp này có $60\left (\mathrm{\,C}_{54}^1+\mathrm{\,C}_{53}^1+\dots +\mathrm{\,C}_{1}^1\right ) =89100$ (tứ giác).
+			\item[TH2:]Tứ giác có hai cạnh là hai cạnh của đa giác. Xét hai khả năng xảy ra
+			\begin{enumerate}
+				\item[•] Nếu hai cạnh đó là hai cạnh kề nhau khi đó có $60\cdot\mathrm{\,C}_{55}^1$ ( tứ giác).
+				\item[•] Nếu hai cạnh đó không kề nhau, thì mỗi cạnh $A_1A_2$  có $\mathrm{\,C}_{55}^1$ cách chọn cạnh còn lại. Do đó có $\dfrac{60\cdot\mathrm{\,C}_{55}^1}{2}$ ( tứ giác). 
+			\end{enumerate}
+			\item[TH3:] Tứ giác có 3 cạnh là ba cạnh của tứ giác. Khi đó ta có $60$ tứ giác.
+		\end{enumerate}		
+		Vậy số tứ giác lồi có ít nhất một cạnh là cạnh của đa giác là $89100+60\cdot\mathrm{\,C}_{55}^1+\dfrac{60\cdot\mathrm{\,C}_{55}^1}{2}+60 =94110. $\\		
+		Số tứ giác có 4 cạnh là đường chéo của đa giác là $$\mathrm{\,C}_{60}^4-94110=393525.$$		
+		Vậy xác suất cần tìm là $P(A)=\dfrac{393525}{\mathrm{C}_{60}^4}=0.807$.		
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề Tập Huấn -4, Sở GD và ĐT - Hải Phòng, 2019]%[Trần Xuân Thiện, 12EX5]%[1D2G5-2]
+	Trong mặt phẳng $Oxy$, cho hình chữ nhật $OMNP$ với $M (0;10 ), N (100;10)$ và $P(100;0)$. Gọi $S$ là tập hợp tất cả các điểm $A(x; y), (x, y \in \mathbb{R})$ nằm bên trong (kể cả trên cạnh) của $OMNP$. Lấy ngẫu nhiên một điểm $A(x; y)\in S$. Xác suất để $x + y \leq 90$ bằng:
+	\choice
+	{$ \dfrac{845}{1111} $}
+	{$ \dfrac{473}{500} $}
+	{$ \dfrac{169}{200} $}
+	{\True $ \dfrac{86}{101} $}
+	\loigiai{
+		Điểm $A(x; y), (x, y \in \mathbb{R})$ nằm bên trong (kể cả trên cạnh) của $OMNP$.\\
+		Có $101$ cách chọn $x$, $11$ cách chọn $y$.\\
+		Không gian mẫu là tập hợp các điểm có tọa độ nguyên nằm trên hình chữ nhật $OMNP$.\\
+		Vậy số phần tử của không gian mẫu là $n(\Omega) = 101 \cdot 11$.\\
+		Gọi $X$ là biến cố: “Các điểm $A(x; y)$ thỏa mãn $x + y \leq  90$.\\
+		Vì $x \in [0;100], y \in [0;10]$ và $x + y \leq  90 \Rightarrow \hoac{&y = 0 \Rightarrow x = \{0; 1; 2;...;90\}\\&...\\&y = 1 \Rightarrow x = \{0; 1; 2;...;89\}.}$\\
+		Khi đó $91 + 90 +...+ 81 = \dfrac{(81 + 91)11 }{2} = 946 $ cặp $(x;y)$ thỏa mãn.\\
+		Vậy xác suất cần tính là $\mathrm{P} = \dfrac{n(X)}{n(\Omega)} = \dfrac{946}{101 \cdot 11} = \dfrac{86}{101}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Tập huấn, Sở GD và ĐT - Bắc Giang, 2019]%[Nguyễn Anh Tuấn, 12EX5]%[1D2G5-2]
+	Gọi $X$ là tập hợp gồm $27$ số tự nhiên từ $1$ đến $27$. Chọn ngẫu nhiên ba phần tử của tập $X$. Tính xác suất để ba phần tử được chọn luôn hơn kém nhau ít nhất $3$ đơn vị.
+	\choice
+	{\True $ \dfrac{1771}{2925} $}
+	{$ \dfrac{92}{117} $}
+	{$ \dfrac{2024}{2925} $}
+	{$ \dfrac{1773}{2925} $}
+	\loigiai{
+		Đặt $T=\left\{\left(a_1;a_2;a_3\right)|a_1, a_2, a_3\in A; a_1<a_2<a_3;a_2-a_1\geq 3; a_3-a_2\geq 3 \right\}$.\\
+		Với mỗi bộ $\left(a_1,a_2,a_3\right)$, xét tương ứng với bộ 
+		$\left(b_1,b_2,b_3\right)$ cho bởi $b_1=a_1$; $b_2=a_2-3$; $b_3=a_3-4$.\\
+		Lúc này ta có: $1\le b_1<b_2<b_3 \le 23$ và tương ứng này là tương ứng $1-1$ do
+		\begin{itemize}
+			\item Với mỗi bộ $\left(a_1;a_2;a_3\right)$ cho tương ứng với một bộ $\left(b_1,b_2,b_3\right)$ bởi công thức $b_1=a_1$; $b_2=a_2-3$; $b_3=a_3-4$.
+			\item Ngược lại, với mỗi bộ $\left(b_1,b_2,b_3\right)$  cho tương ứng với một bộ $\left(a_1;a_2;a_3\right)$ bởi công thức $a_1=b_1$; $a_2=b_2+3$; $a_3=b_3+4$.
+		\end{itemize}
+		Đặt $B=\{1;2;3;4;5;6;7;\ldots;22;23\}$. Tập các bộ $\left(b_1,b_2,b_3\right)$ là các tập con có $3$ phần tử của $B$.\\ Vậy số tập con $\left(a_1;a_2;a_3\right)$ cần tìm là $\mathrm{C}_{23}^3$.
+		Xác suất cần tìm là $ \dfrac{\mathrm{C}_{23}^3}{\mathrm{C}_{29}^3}=\dfrac{1771}{2925} $.}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề ĐK 12 Nguyễn Khuyến, HCM, ngày 24 tháng 03 năm 2019]%[Vinh Vo, 12EX7-2019]%[1D2G5-2]
+	Gọi $ S $ là tập hợp các số tự nhiên, mỗi số không có quá $ 3 $ chữ số và tổng các chữ số bằng $ 9 $. Lấy ngẫu nhiên một số từ $ S $. Tính xác suất để số lấy ra có chữ số hàng trăm là $ 4 $.
+	\choice
+	{\True $ \dfrac{6}{55} $}
+	{$ \dfrac{3}{11} $}
+	{$ \dfrac{1}{11} $}
+	{$ \dfrac{4}{55} $}
+	\loigiai{
+	Cách 1: Liệt kê.\\
+	\begin{itemize}
+		\item Trường hợp 1: số có $ 1 $ chữ số lấy từ $ \{9\} $ có $ 1 $ số.
+		\item Trường hợp 2: số có $ 2 $ chữ số lấy từ
+			\begin{itemize}
+				\item[-] $ \{0;9\} $ có $ 1 $ số.
+				\item[-] $ \{1;8\}, \{2;7\}, \{3;6\}, \{4;5\} $ có $ 2 \cdot 4 = 8 $ số.
+			\end{itemize}	
+		\item Trường hợp 3: số có $ 3 $ chữ số lấy từ
+			\begin{itemize}
+				\item[-] $ \{0;0;9\}, \{3;3;3\} $ có $ 2 $ số.
+				\item[-] $ \{0;1;8\}, \{0;2;7\}, \{0;3;6\}, \{0;4;5\} $ có $ 4 \cdot 4 = 16 $ số.
+				\item[-] $ \{1;1;7\}, \{2;2;5\}, \{4;4;1\} $ có $ 3 \cdot 3 = 9 $ số.
+				\item[-] $ \{1;2;6\}, \{1;3;5\}, \{2;3;4\} $ có $ 3 \cdot 6 = 18 $ số
+			\end{itemize}
+	\end{itemize}	
+	Ta có không gian mẫu $ n \left (\Omega \right ) = 1  + 1 + 8 + 2 + 16 + 9 + 18 = 55 $ số.\\
+	Gọi $ A $ là biến cố “Số được lấy ra là số tự nhiên có $ 3 $ chữ số, tổng các chữ số bằng $ 9 $ và chữ số hàng trăm bằng $ 4 $''.\\
+	Ta được $ n(A) = 6 $.\\
+	Vậy ta có $ \mathrm{P}(A) = \dfrac{6}{55} $.\\
+	Cách 2: dùng vách ngăn.\\
+	Ta có $ n\left (\Omega \right ) = 1 + \mathrm{C}^1_9 + \mathrm{C}^2_9 + \mathrm{C}^1_9 = 55  $.\\
+	Ta có $ n(A) = \mathrm{C}^1_6 = 6 $.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Bình Phước lần 1, 2019]%[Lê Thanh Nin, 12EX7]%[1D2G5-2]
+	Gọi $S$ là tập hợp gồm các số tự nhiên có $5$ chữ số đôi một khác nhau. Lấy ngẫu nhiên một số trong tập $S$. Xác suất để số lấy ra có dạng $\overline{a_1a_2a_3a_4a_5}$ thỏa mãn $a_1<a_2<a_3$ và $a_3>a_4>a_5$ bằng
+	\choice
+	{$\dfrac{1}{36}$}
+	{$\dfrac{1}{48}$}
+	{\True $\dfrac{1}{24}$}
+	{$\dfrac{1}{30}$}
+	\loigiai{
+		Sắp số $a_1, (a_1\ne 0)$ có $9$ cách.\\
+		Sắp $4$ số còn lại có $\mathrm{A}_9^4$ cách.\\
+		Do đó, tập $S$ có $9\cdot \mathrm{A}_9^4=27216$ phần tử $\Rightarrow n\left(\Omega \right)=27216$.\\
+		Gọi $A$ là biến cố số lấy ra có dạng $\overline{a_1a_2a_3a_4a_5}$ thỏa mãn $a_1<a_2<a_3$ và $a_3>a_4>a_5$.\\
+		\textbf{TH1:} Chọn $5$ số khác nhau và khác $0$ có $\mathrm{C}_9^5$ cách chọn.\\
+		Từ yêu cầu bài toán, ta có $a_3$ là số lớn nhất nên sắp $a_3$ có $1$ cách.\\
+		Chọn $2$ trong $4$ số còn lại và sắp theo thứ tự $a_1<a_2$ có $\mathrm{C}_4^2$ cách.\\
+		Sắp 2 số còn lại vào vị trí $a_4$, $a_5$ có 1 cách.\\
+		Nên có $\mathrm{C}_9^5\cdot\mathrm{C}_4^2$ cách sắp.\\
+		\textbf{TH2:} Chọn $5$ số khác nhau, trong đó có số $0$ có $\mathrm{C}_9^4$ cách.\\
+		Từ điều kiện suy ra $a_5=0$.\\
+		Sắp $a_3$ có $1$ cách.\\
+		Chọn $2$ trong $3$ số còn lại sắp vào $a_1$, $a_2$ có $\mathrm{C}_3^2$ cách.\\
+		Sắp $a_4$ còn lại có $1$ cách.\\
+		Nên có $\mathrm{C}_9^4\cdot\mathrm{C}_3^2$.\\
+		Suy ra $n(A)=\mathrm{C}_9^5\cdot\mathrm{C}_4^2+\mathrm{C}_9^4\cdot\mathrm{C}_3^2=1134$.\\
+		Vậy $\mathrm{P}(A)=\dfrac{n(A)}{n\left(\Omega \right)}=\dfrac{1}{24}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[THPT Đức Thọ - Hà Tĩnh - Lần 1 - 2019]%[Phan Anh - EX7]%[1D2G5-2]
+Cho các số $0$, $1$, $2$, $3$, $4$, $5$, $6$ lập một số tự nhiên có $6$ chữ số đôi một khác nhau dạng $\overline{abcdef}$. Tính xác suất để số lập được thỏa mãn $a+b=c+d=e+f$?
+	\choice
+	{$\dfrac{4}{85}$}
+	{$\dfrac{5}{158}$}
+	{$\dfrac{3}{20}$}
+	{\True $\dfrac{4}{135}$}
+	\loigiai{Lập một số tự nhiên có $6$ chữ số đôi một khác nhau, có không gian mẫu là $n_{(\Omega)}=6\times\mathrm{A}_6^5=4320$.\\
+		Gọi $A$ là biến cố lấy một số tự nhiên có $6$ chữ số đôi một khác nhau thỏa mãn bài toán.
+		\begin{itemize}
+			\item Trường hợp 1: các cặp số thỏa mãn điều kiện $a+b=c+d=e+f$ là $(0;6)$, $(1;5)$, $(2;4)$.
+			\begin{itemize}
+				\item Với $(a;b)=(0;6)$, ta có 
+				\begin{itemize}
+					\item $(c;d)=(1;5)$ và $(e;f)=(2;4)$ có $1\times2\times2=4$ (số).
+					\item $(c;d)=(2;4)$ và $(e;f)=(1;5)$ có $1\times2\times2=4$ (số).
+				\end{itemize}
+				Vậy có $8$ cách.
+				\item Với $(a;b)=(1;5)$, ta có
+				\begin{itemize}
+					\item $(c;d)=(0;6)$ và $(e;f)=(2;4)$ có $2\times2\times2=8$ (số).
+					\item $(c;d)=(2;4)$ và $(e;f)=(0;6)$ có $2\times2\times2=8$ (số).
+				\end{itemize}
+				Vậy có $16$ cách.
+				\item Tương tự với cặp số $(a;b)=(2;4)$ ta cũng có $16$ cách.
+			\end{itemize}
+		\item Trường hợp 2: các cặp số thỏa mãn điều kiện $a+b=c+d=e+f$ là $(2;5)$, $(3;4)$, $(1;6)$.\\
+		Tương tự với trường hợp $(a;b)=(1;5)$, trường hợp 2 có $16\times3=48$ (số).
+		\item Trường hợp 3: các cặp số thỏa mãn điều kiện $a+b=c+d=e+f$ là $(2;3)$, $(1;4)$, $(0;5)$.\\
+		Tương tự trường hợp 1, trường hợp 3 cũng có $40$ (số).
+		\end{itemize}
+		Vậy có $128$ số tự nhiên có $6$ chữ số đôi một khác nhau thỏa mãn $a+b=c+d=e+f$.\\
+		Suy ra xác xuất để lập được một số có $6$ chữ số thỏa mãn $a+b=c+d=e+f$ là $\mathrm{P}(A)=\dfrac{128}{4320}=\dfrac{4}{135}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, THPT Hậu Lộc 2, Thanh Hoá, 2019]%[Dương Phước Sang, 12EX-5-2019]%[1D2G5-2]
+	Hai bạn $A$ và $B$ mỗi bạn lên bảng viết ngẫu nhiên một số tự nhiên gồm ba chữ số đôi một khác nhau. Xác suất để các chữ số có mặt ở hai số đó giống nhau đồng thời tổng lập phương các chữ số đó chia hết cho $3$ là
+	\choice
+	{$\dfrac{41}{5823}$}
+	{$\dfrac{7}{1944}$}
+	{\True $\dfrac{53}{17496}$}
+	{$\dfrac{29}{23328}$}
+	\loigiai{
+		Đặt $M=\{3;6;9\}$, $N=\{1;4;7\}$ và $P=\{2;5;8\}$.\\
+		Xét số $\overline{abc}$, với $a\neq 0$; $a,b,c$ phân biệt và $(a^3+b^3+c^3)\,\vdots\, 3$.\\
+		Ta có $a^3+b^3+c^3=(a+b+c)^3-3(a+b)(b+c)(c+a)$.\\
+		Do đó
+		$(a^3+b^3+c^3)\,\vdots\, 3 \Leftrightarrow (a+b+c)^3\,\vdots\, 3 \Leftrightarrow (a+b+c)\,\vdots\, 3.$\\
+		Không gian mẫu đề bài cung cấp có số phần tử là: $n(\Omega)=(9\cdot9\cdot8)^2$.\\
+		Gọi $X$ là biến cố ``$A$ và $B$ viết được các số có $3$ chữ số $\overline{abc}$, $\overline{def}$ sao cho $\{a;b;c\}=\{d;e;f\}$''.
+		\begin{itemize}
+			\item Nếu $\{a;b;c\}$ có chứa số $0$ và $2$ phần tử còn lại:
+			\begin{itemize}
+				\item[+] cùng thuộc $M$ thì số cách chọn là: $(\mathrm{C}_3^2)\cdot 4^2$.
+				\item[+] có $1$ phần tử thuộc $N$, $1$ phần tử thuộc $P$ thì số cách chọn là: $(\mathrm{C}_3^1\mathrm{C}_3^1)\cdot 4^2$.
+			\end{itemize}
+			\item Nếu $\{a;b;c\}$ không chứa số $0$, có $2$ khả năng xảy ra:
+			\begin{itemize}
+				\item[+] $a,b,c$ cùng thuộc $M$ hoặc $N$ hoặc $P$ thì số cách chọn là: $(3!)^2+(3!)^2+(3!)^2$.
+				\item[+] Mỗi số $a;b;c$ thuộc $1$ tập khác nhau trong $M$, $N$, $P$ thì số cách chọn là: $(\mathrm{C}_3^1\mathrm{C}_3^1\mathrm{C}_3^1)\cdot(3!)^2$.
+			\end{itemize}
+		\end{itemize}
+		Vậy $n(X)=(\mathrm{C}_3^2)\cdot 4^2+(\mathrm{C}_3^1\mathrm{C}_3^1)\cdot 4^2+3(3!)^2+(\mathrm{C}_3^1\mathrm{C}_3^1\mathrm{C}_3^1)\cdot(3!)^2=1272 \Rightarrow \mathrm{P}(X)=\dfrac{n(X)}{n(\Omega)}=\dfrac{53}{17496}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT Trần Phú - Hà Tĩnh, lần 2, 2019]%[Đỗ Đường Hiếu, 12-EX-7-2019]%[1D2G5-2]
+	Một hộp chứa $6$ quả bóng đỏ (được đánh số từ $1$ đến $6$), $5$ quả bóng vàng (được đánh số từ $1$ đến $5$), $4$ quả bóng xanh (được đánh số từ $1$ đến $4$). Xác suất để $4$ quả bóng lấy ra có đủ ba màu mà không có hai quả bóng nào có số thứ tự trùng nhau bằng 
+	\choice
+	{$\dfrac{43}{91}$}
+	{$\dfrac{381}{455}$}
+	{\True $\dfrac{74}{455}$}
+	{$\dfrac{48}{91}$}
+	\loigiai{
+		Gọi $A$ là biến cố \lq\lq Lấy được $4$ quả bóng lấy ra có đủ ba màu mà không có hai quả bóng nào có số thứ tự trùng nhau\rq\rq.\\
+		Có tất cả $6+5+4=15$ quả bóng, nên không gian mẫu có số phần tử là $n\left(\Omega \right)=\mathrm{C}_{15}^4=1365$.\\
+		Để chọn được $4$ quả bóng lấy ra có đủ ba màu mà không có hai quả bóng nào có số thứ tự trùng nhau, ta xét các khả năng sau
+		\begin{enumerate}
+			\item Chọn $2$ quả bóng xanh, $1$ quả bóng vàng và $1$ quả bóng đỏ:
+			\begin{itemize}
+				\item Chọn $2$ quả bóng xanh, có $\mathrm{C}_{4}^2$ cách chọn.
+				\item 	Chọn $1$ quả bóng vàng, có $3$ cách chọn (bỏ đi các quả bóng vàng có số trùng với các số của $2$ quả bóng xanh đã chọn).
+				\item 	Chọn $1$ quả bóng đỏ, có $3$ cách chọn (bỏ đi các quả bóng đỏ có số trùng với các số của $2$ quả bóng xanh và $1$ quả bóng vàng đã chọn).
+				Trường hợp này có $\mathrm{C}_{4}^2\cdot 3\cdot 3=54$ cách chọn.
+			\end{itemize}
+			\item Chọn $1$ quả bóng xanh, $2$ quả bóng vàng và $1$ quả bóng đỏ. Trường hợp này có $4\cdot\mathrm{C}_{4}^2\cdot 3=72$ cách chọn.
+			\item Chọn $1$ quả bóng xanh, $1$ quả bóng vàng và $2$ quả bóng đỏ. Trường hợp này có $4\cdot 4\cdot \mathrm{C}_{4}^2=96$ cách chọn.
+		\end{enumerate}
+		Suy ra $n\left(A\right)=54+72+96=222$. 
+		Do đó $\mathrm{P}(A)=\dfrac{n\left(A\right)}{n\left(\Omega \right)}=\dfrac{222}{1365}=\dfrac{74}{455}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[TT, Hội 8 trường chuyên - Khu vực đông bằng sông Hồng, 2019-L2]%[ Nguyễn Quang Dũng, dự án 12-EX-7-2019]%[1D2G5-2]
+Cho tứ diện đều $ABCD$. Trên mỗi cạnh của tứ diện, ta đánh dấu $3$ điểm chia đều các cạnh tương ứng thành các phần bằng nhau. Gọi $S$ là tập hợp tất cả các tam giác có $3$ đỉnh lấy từ $18$ điểm đã đánh dấu. Lấy ra từ $S$ một tam giác, xác suất để mặt phẳng chứa tam giác đó song song với đúng một cạnh của tứ diện đã cho bằng
+\choice
+{\True $\dfrac{2}{15}$}
+{$\dfrac{4}{15}$}
+{$\dfrac{2}{5}$}
+{$\dfrac{9}{34}$}
+\loigiai{
+\immini{Số phần tử của không gian mẫu là $n\left(\Omega\right)=\mathrm{C}_{18}^3-6$.\\
+Xét trường hợp mặt phẳng chứa tam giác song song với $BC$
+\begin{itemize}
+\item Số mặt phẳng chỉ song song với $BC$ đồng thời cắt hai mặt $(ABC),(DBC)$ là $2\times 3=6$ mặt.
+\item Số mặt chỉ song song với $BC$ và cắt $AD$ là $3\times 2 +3\times 2 =12$ mặt.
+\end{itemize}
+Suy ra có đúng $18$ mặt chứa tam giác chỉ song song với cạnh $BC$.\\
+Tương tự với các cạnh còn lại của tứ diện, mỗi cạnh đều có đúng $18$ mặt chỉ song song với đúng cạnh đó.\\
+Gọi $A$ là biến cố:\ \lq\lq Mặt phẳng chứa tam giác được chọn song song với đúng một cạnh của tứ diện\rq\rq.\\
+Ta có $n(A)=6\times 18= 108$.\\
+Xác suất của $A$ là $\mathrm{P}\left(A\right)=\dfrac{n(A)}{n(\Omega)}=\dfrac{108}{\mathrm{C}_{18}^3-6}=\dfrac{2}{15}$.
+ }
+{\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\def\r{4}
+\draw (0,0) coordinate (D)++(0:{\r})coordinate (B)--++(-135:{0.5*\r})coordinate (C)--(D);
+\coordinate (M) at ($(D)!0.5!(B)$);
+\coordinate (N) at ($(B)!0.5!(C)$);
+\coordinate (G) at ($(M)!1/3!(C)$);
+\coordinate (A) at ($(G)+(0,{\r})$);
+\coordinate (P) at ($(D)!0.5!(C)$);
+\draw (A)--(D)--(C)--(B)--(A)--(C);
+\draw [dashed](D)--(B);
+%% Các điểm a_i trên AB
+\foreach \x/\y/\i in {A/B/1,A/B/2,A/B/3}{
+\coordinate (a_{\i}) at ($(\x)!{0.25*\i}!(\y)$);
+\draw [fill=black](a_{\i}) circle (1pt);}
+%% Các điểm b_i trên AC
+\foreach \x/\y/\i in {A/C/1,A/C/2,A/C/3}{
+\coordinate (b_{\i}) at ($(\x)!{0.25*\i}!(\y)$);
+\draw [fill=black](b_{\i}) circle (1pt);}
+%% Các điểm c_i trên AD
+\foreach \x/\y/\i in {A/D/1,A/D/2,A/D/3}{
+\coordinate (c_{\i}) at ($(\x)!{0.25*\i}!(\y)$);
+\draw [fill=black](c_{\i}) circle (1pt);}
+%% Các điểm d_i trên DB
+\foreach \x/\y/\i in {D/B/1,D/B/3}{
+\coordinate (d_{\i}) at ($(\x)!{0.25*\i}!(\y)$);
+\draw [fill=black](d_{\i}) circle (1pt);}
+%% Các điểm e_i trên DC
+\foreach \x/\y/\i in {D/C/1,D/C/3
+}{
+\coordinate (e_{\i}) at ($(\x)!{0.25*\i}!(\y)$);
+\draw [fill=black](e_{\i}) circle (1pt);}
+\draw (a_{3})--(b_{3})(c_{1})--(b_{3})--(P)(b_{3})--(c_{1}) (b_{3})--(c_{2})(b_{3})--(e_{1});
+\draw [dashed] (a_{3})--(M)(a_{3})--(d_{1})(a_{3})--(c_{2})(a_{3})--(c_{1})(e_{1})--(d_{1})(M)--(P);
+\foreach \d/\g in {D/180,B/0,C/-90,A/90}
+\draw [fill=black](\d) circle(1pt) node [shift={({\g}:0.25)}] {$\d$};
+\foreach \n in {M,N,P}
+\draw (\n) circle (1pt);
+\end{tikzpicture}}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Lê Quý Đôn,Lai Châu, 2019]%[Nguyễn Tài Tuệ, dự án EX7]%[1D2G5-2]
+	Có $8$ người ngồi xung quanh một bàn tròn, mỗi người cầm một đồng xu như nhau. Tất cả $8$ người cùng tung một đồng xu của họ, người có đồng xu ngửa thì đứng, còn người có đồng xu xấp thì ngồi. Hỏi xác suất mà không có hai người liền kề cùng đứng là bao nhiêu?
+	\choice
+	{$\dfrac{49}{256}$}
+	{$\dfrac{25}{128}$}
+	{$\dfrac{3}{16}$}
+	{\True $\dfrac{47}{256}$}
+	\loigiai{
+		Gọi $\Omega=$ \lq\lq Tất cả $8$ người cùng tung một đồng xu\rq\rq.\\
+		Số phần tử của không gian mẫu $n(\Omega)=2^8=256$.\\
+		Gọi $A$ là biến cố: \lq\lq Không có hai người liền kề cùng đứng\rq\rq\\
+		$A_1$ là biến cố: \lq\lq Có $0$ người chơi được mặt ngửa\rq\rq.\\
+		$A_2$ là biến cố: \lq\lq Có $1$ người chơi được mặt ngửa\rq\rq.\\
+		$A_3$ là biến cố: \lq\lq Có $2$ người chơi được mặt ngửa và $2$ người này không ngồi cạnh nhau\rq\rq.\\
+		$A_4$ là biến cố: \lq\lq Có $3$ người chơi được mặt ngửa, trong đó không có 2 người nào ngồi cạnh nhau\rq\rq.\\
+		$A_5$ là biến cố: \lq\lq Có $4$ người chơi được mặt ngửa, trong đó không có 2 người nào ngồi cạnh nhau\rq\rq.\\
+		$\begin{aligned}
+		\text{Suy ra }
+		n(A)
+		&=n(A_1)+n(A_2)+n(A_3)+n(A_4)+n(A_5)\\
+		&=1+8+\left(\mathrm{C}_5^1+\mathrm{C}_6^2\right) +\left(\mathrm{C}_4^2+\mathrm{C}_5^3\right) +\left(\mathrm{C}_3^3+\mathrm{C}_4^4\right).
+		\end{aligned}$\\
+		Vậy xác suất cần tìm là $\mathrm{P}(A)=\dfrac{57}{256}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Quảng Nam, 2019]%[Nguyện Ngô, 12EX8]%[1D2G5-2]
+Gọi $X$ là tập hợp tất cả các số tự nhiên có $8$ chữ số được lập từ các chữ số $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$. Lấy ngẫu nhiên một số trong tập hợp $X$. Gọi $A$ là biến cố lấy được số có đúng hai chữ số $1$, có đúng hai chữ số $2$, bốn chữ số còn lại đôi một khác nhau, đồng thời các chữ số giống nhau không đứng liền kề nhau. Xác suất của biến cố $A$ bằng
+\choice
+{$\dfrac{176400}{9^8}$}
+{$\dfrac{151200}{9^8}$}
+{$\dfrac{5}{9}$}
+{\True $\dfrac{201600}{9^8}$}
+\loigiai{
+Gọi $\Omega$ là không gian mẫu. Ta có $n(\Omega)=9^8$.\\
+Gọi $B$ là biến cố lấy được số có đúng hai chữ số $1$, có đúng hai chữ số $2$, bốn chữ số còn lại đôi một khác nhau.\\
+Gọi $C$ là biến cố lấy được số có đúng hai chữ số $1$, có đúng hai chữ số $2$, bốn chữ số còn lại đôi một khác nhau, đồng thời hai chữ số $1$ hoặc hai chữ số $2$ đứng liền kề nhau.\\
+Khi đó $n(A)=n(B)-n(C)$.
+\begin{itemize}
+\item Xác định số phần tử của $B$: Trước hết, chọn vị trí cho $2$ chữ số $1$ có $\mathrm{C}^2_8$ cách. Tiếp theo, chọn vị trí cho $2$ chữ số $2$ có $\mathrm{C}^2_6$ cách. Cuối cùng chọn $4$ chữ số cho $4$ vị trí còn lại có $\mathrm{A}^4_7$ cách.
+    Vậy $n(B)=\mathrm{C}^2_8\cdot \mathrm{C}^2_6\cdot \mathrm{A}^4_7=352800$.
+\item Xác định số phần tử của $C$ qua các bước:\\
+- Bước $1$: Xác định số phần tử của $C$ có $2$ chữ số $1$ đứng liền kề nhau, $2$ chữ số $2$ tùy ý: Chọn vị trí cho $2$ chữ số $1$ có $7$ cách, chọn vị trí cho $2$ chữ số $2$ có $\mathrm{C}^2_6$ cách, chọn $4$ chữ số cho $4$ vị trí còn lại có $\mathrm{A}^4_7$ cách. Vậy có $7\cdot\mathrm{C}^2_6\cdot\mathrm{A}^4_7$ số thỏa mãn.\\
+- Bước $2$: Xác định số phần tử của $C$ có $2$ chữ số $2$ đứng liền kề nhau, $2$ chữ số $1$ tùy ý: Chọn vị trí cho $2$ chữ số $2$ có $7$ cách, chọn vị trí cho $2$ chữ số $1$ có $\mathrm{C}^2_6$ cách, chọn $4$ chữ số cho $4$ vị trí còn lại có $\mathrm{A}^4_7$ cách. Vậy có $7\cdot\mathrm{C}^2_6\cdot\mathrm{A}^4_7$ số thỏa mãn.\\
+- Bước $3$: Xác định số phần tử của $C$ có $2$ chữ số $1$ đứng liền kề nhau, $2$ chữ số $2$ đứng liền kề nhau: Ghép $2$ chữ số $1$ thành số $X$, $2$ chữ số $2$ thành số $Y$. Chọn vị trí cho $X$ có $6$ cách, chọn vị trí cho $Y$ có $5$ cách, chọn $4$ chữ số cho $4$ chữ số còn lại có $\mathrm{A}^4_7$ cách.
+Vậy có $6\cdot 5\cdot\mathrm{A}^4_7$ số thỏa mãn.\\
+- Bước $4$: Vì các số thỏa mãn ở bước $3$ vừa nằm trong các số thỏa mãn ở bước $1$ vừa nằm trong các số thỏa mãn ở bước $2$ nên ta có
+$n(C)=7\cdot\mathrm{C}^2_6\cdot\mathrm{A}^4_7+7\cdot\mathrm{C}^2_6\cdot\mathrm{A}^4_7-6\cdot 5\cdot\mathrm{A}^4_7=151200$.
+\item Suy ra $n(A)=352800-151200=201600$.
+\end{itemize}
+Vậy $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{201600}{9^8}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Điện Biên, 2019]%[Tô Ngọc Thy, dự án EX8]%[1D2G5-2]
+	Lấy ngẫu nhiên một số tự nhiên có $9$ chữ số khác nhau. Tính xác suất để số đó chia hết cho $3$.
+	\choice
+	{$\dfrac{17}{81}$}
+	{\True $\dfrac{11}{27}$}
+	{$\dfrac{1}{9}$}
+	{$\dfrac{5}{18}$}
+	\loigiai{
+		Ta có $\text{X}=\left\{{0;1;2;3;4;5;6;7;8;9}\right\}$.\\
+		Gọi $\Omega$ là không gian mẫu của phép thử$\colon$ \lq\lq Lấy ngẫu nhiên một số tự nhiên có $9$ chữ số khác nhau \rq\rq. \\
+		Ta có $n(\Omega)=9\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2=9\cdot 9!$.\\
+		Gọi biến cố $A\colon$ \lq\lq lấy được số tự nhiên chia hết cho $3$ \rq\rq.\\
+		Gọi $n=\overline{a_1a_2a_3a_4a_5a_6a_7a_8a_9}$.\\
+		Trường hợp $1\colon$ Trong các số $a_i,i\in\left\{1,2,\ldots,9\right\}$ không chứa số $0$.\\
+		Số cách chọn $ n$ là $9!$.\\
+		Trường hợp $2\colon$ Trong các số $a_i,i\in\left\{1,2,\ldots,9\right\}$ có chứa số $0$.\\
+		Khi đó$\colon$ để số $n$ chia hết cho $3$ thì các số $a_i,i\in\left\{1,2,\ldots,9\right\}$ buộc phải có $7$ số $\left\{0;1;2;4;5;7;8\right\}$ và $2$ trong $3$ số $\left\{3;6;9\right\}$.\\
+		Số cách chọn $n$ là $\mathrm{C}_3^2\cdot 8\cdot 8!$.\\
+		Do đó$\colon$ số cách chọn được số chia hết cho $3$ là $n(A)=9!+\mathrm{C}_3^2\cdot 8\cdot 8!=33\cdot 8!$.\\
+		Vậy xác suất để chọn được số chia hết cho $3$ là $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{33\cdot 8!}{9\cdot 9!}=\dfrac{11}{27}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử L2, Liên trường Nghệ An, 2019]%[Nguyễn Đắc Giáp, dự án 12EX8]%[1D2G5-2]
+	Trong một hộp có chứa các tấm bìa dạng hình chữ nhật có kích thước đôi một khác nhau, các cạnh của hình chữ nhật có kích thước là $m$ và $n$ ($m,n \in \mathbb{N};1 \leqslant m,\ n \leqslant 20$, đơn vị là cm). Biết rằng mỗi bộ kích thước $(m,n)$ đều có tấm bìa tương ứng. Ta gọi một tấm bìa là “tốt” nếu tấm bìa đó có thể được lắp ghép từ các miếng bìa dạng hình chữ L gồm $4$ ô vuông, mỗi ô có độ dài cạnh là $1$ cm để tạo thành nó (Xem hình vẽ minh họa một tấm bìa “tốt” bên dưới)
+	\begin{center}
+		\begin{tikzpicture}[line join = round, line cap = round,>=stealth,scale=1.5]
+		\tkzDefPoints{0/0/A,5/0/A3}
+		\coordinate (B) at ($(A)+(1,0)$);
+		\coordinate (D) at ($(A)-(0,1)$);
+		\coordinate (C) at ($(B)+(D)-(A)$);
+		\tkzDefPointsBy[translation = from D to A](A,B){A'}{B'}
+		\tkzDefPointsBy[translation = from A to B](B){B1}
+		\tkzDefPointsBy[translation = from A to B](C){C1}
+		\tkzDefPointsBy[translation = from A to B](B1){B2}
+		\tkzDefPointsBy[translation = from A to B](C1){C2}
+		\tkzDrawPolygon(A,B,C,D)    
+		\tkzDrawPolygon(B,C,C1,B1) 
+		\tkzDrawPolygon(B1,C1,C2,B2) 
+		\tkzDrawPolygon(A,B,B',A') 
+		\tkzDefPointsBy[translation = from A to A3](B){B3}
+		\tkzDefPointsBy[translation = from A to A3](C){C3}
+		\tkzDefPointsBy[translation = from A to A3](D){D3}
+		\tkzDefPointsBy[translation = from A to A3](A'){A'3}
+		\tkzDefPointsBy[translation = from A to A3](B'){B'3}
+		\tkzDrawPolygon(A3,B3,C3,D3)\tkzFillPolygon[pattern = north west lines](A3,B3,C3,D3)
+		\tkzDrawPolygon(A3,B3,B'3,A'3)\tkzFillPolygon[pattern = north west lines](A3,B3,B'3,A'3)
+		
+		\tkzDefPointsBy[translation = from A to B](B3){B4}
+		\tkzDefPointsBy[translation = from A to B](C3){C4}
+		\tkzDefPointsBy[translation = from A to B](A'3){A'4}
+		\tkzDefPointsBy[translation = from A to B](B'3){B'4}
+		\tkzDrawPolygon(B3,C3,C4,B4)\tkzFillPolygon[pattern = north west lines](B3,C3,C4,B4)
+		\tkzDrawPolygon(B3,B4,B'4,A'4)\tkzFillPolygon[pattern=north east lines,dashed](B3,B4,B'4,A'4)
+		
+		\tkzDefPointsBy[translation = from A to B](B4){B5}
+		\tkzDefPointsBy[translation = from A to B](C4){C5}
+		\tkzDefPointsBy[translation = from A to B](A'4){A'5}
+		\tkzDefPointsBy[translation = from A to B](B'4){B'5}
+		\tkzDrawPolygon(B4,C4,C5,B5)\tkzFillPolygon[pattern = north west lines](B4,C4,C5,B5)
+		\tkzDrawPolygon(B4,B5,B'5,A'5)\tkzFillPolygon[pattern=north east lines,dashed](B4,B5,B'5,A'5)
+		
+		\tkzDefPointsBy[translation = from A to B](B5){B6}
+		\tkzDefPointsBy[translation = from A to B](C5){C6}
+		\tkzDefPointsBy[translation = from A to B](A'5){A'6}
+		\tkzDefPointsBy[translation = from A to B](B'5){B'6}
+		\tkzDrawPolygon(B5,C5,C6,B6)\tkzFillPolygon[pattern=north east lines,dashed](B5,C5,C6,B6)
+		\tkzDrawPolygon(B5,B6,B'6,A'6)\tkzFillPolygon[pattern=north east lines,dashed](B5,B6,B'6,A'6)
+		\draw (1.5,-1) node [below] {\text{Một miếng bìa chữ L}};
+		\draw (7,-1) node [below] {\text{Một tấm bìa tốt kích thước $(2,4)$}};
+		\end{tikzpicture}
+		
+	\end{center}
+	Rút ngẫu nhiên một tấm bìa từ hộp, tính xác suất để tấm bìa vừa rút được là tấm bìa “tốt”.
+	\choice
+	{$\dfrac{29}{95}$}
+	{$\dfrac{2}{7}$}
+	{\True $\dfrac{29}{105}$}
+	{$\dfrac{9}{35}$}
+	\loigiai{
+		Trước tiên, ta đi chứng minh bài toán đếm cặp số $(m,n)$ với $m,n>1$ và $m \cdot n \vdots 8$.
+		\begin{itemize}
+			\item Giả sử tấm bìa tốt kích cỡ $m\times n$ phủ bằng $N$ miếng bìa hình chữ L. Lúc đó diện tích tấm bìa tốt sẽ là $m\times n=4N$.
+			\item Rõ ràng $m,n>1$. Giả sử $m$ chẵn, ta tiến hành tô màu các dòng của tấm bìa tốt bằng cách đam xen xanh – đỏ với quy tắc dòng lẻ tô xanh, dòng chẵn tô đỏ. Khi đó mỗi chữ L có số ô được tô xanh là lẻ, đồng thời trên bảng số ô xanh sẽ bằng số ô đỏ. Vì thế $N$ chẵn Từ đây ta có $m \cdot n \vdots 8$.
+			\item Nếu $m \vdots 4$ và $n \vdots 2$ thế thì ta phân hoạch tấm bìa cỡ $m\times n$ thành $\left(\dfrac{m}{4}\right)\times \left(\dfrac{n}{2}\right)$ hình chữ nhật $4\times 2$, các hình chữ nhật này mỗi hình phủ được bằng hai chữ hai chữ L. Còn nếu $m \vdots 8$ và $n$ là số lẻ thì do $n>1$ nên viết $n=2l+3$. Ta phân hoạch tấm bìa cỡ $m\times n$ thành $\left(\dfrac{m}{4}\right)\times l$ tấm bìa kích cỡ $4\times 2$ cùng một kích cỡ $8\times 3$, tấm bìa kích cỡ $8\times 3$ có thể phủ bằng $6$ chữ L.
+		\end{itemize}
+		Tóm lại, một tấm bìa tốt khi và chỉ khi nó có kích cỡ $m\times n$ với $m,n>1$ và $m \cdot n \vdots 8$. \\
+		Chọn cặp $(m,n)$ với $m \ne n$ thuộc tập $\{1,2,3,\ldots,20\}$, có $\mathrm{C}_{20}^2$ cách.\\
+		Chọn cặp $(m,n)$ với $m=n$ thuộc tập $\{1;2;3;\ldots;20\}$, có $20$ cách.\\
+		Suy ra số phần tử của không gian mẫu là $n\left( \Omega \right)=\mathrm{C}_{20}^2+20=210$.\\
+		Gọi $A$ là biến cố: \lq\lq tấm bìa rút được là tấm bìa “tốt”\rq\rq\. \\
+		Do hình chữ nhật có bộ kích thước $(m,n)$ cũng chính là hình chữ nhật có bộ kích thước $(n,m)$ nên ta chỉ cần xét với kích thước $m>2$.\\
+		Ta cần đếm các bộ $(m,n)$ mà $m,n \geqslant 2$ đồng thời $m \cdot n \vdots 8$.
+		\begin{itemize}
+			\item $m \in \{8,16\}$ khi đó ta chọn $n$ bất kì thuộc tập $\left\{2,3,\ldots 20\}\right. $ suy ra có $19+ 18 = 37$ tấm bìa “tốt”.
+			\item $m \in \{4,12,20\}$. Do $4=4 \cdot 1;12=4 \cdot 3;20=4 \cdot 5$ nên muốn $m\cdot n$ chia hết cho $8$ thì $n$ phải chẵn.\\
+			Tập $\left\{2,4,6,10,12,14,18,20\}\right. $ có $8$ phần tử.
+			\begin{itemize}
+				\item Với $m = 4$, có $8$ cách chọn $n$.
+				\item Với $m = 12$, có $7$ cách chọn $n$.
+				\item Với $m = 20$, có $6$ cách chọn $n$.
+			\end{itemize}
+			Trong trường hợp này có $8 + 7 + 6 = 21$ cách chọn.
+		\end{itemize}
+		Suy ra $n(A)=37+21=58$.\\
+		Vậy xác suất để rút được tấm bìa “tốt” là $\mathrm{P}(A)=\dfrac{58}{210}=\dfrac{29}{105}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề THTT số 5, 2019]%[Vinh Vo, 12EX8-2019]%[1D2G5-2]
+	Chọn ngẫu nhiên hai số $ a $, $ b $ khác nhau từ tập hợp $ A = \left \{ 2; 2^2; 2^3; \ldots; 2^{25} \right \} $. Xác suất để $ \log_a b $ là số nguyên bằng
+	\choice
+	{$ \dfrac{2}{200} $}
+	{\True $ \dfrac{31}{300} $}
+	{$ \dfrac{13}{300} $}
+	{$ \dfrac{7}{50} $}
+	\loigiai{
+	Đặt $ \log_ab = t $, ta được $ b = a^t $.\\
+	Đặt $ \heva{& a = 2^x \\ & b = 2^y} \Rightarrow \left ( 2^x \right )^t = 2^y \Leftrightarrow y = x \cdot t \Rightarrow y \ \vdots \ x$.\\
+	Vì $ t \in \mathbb{Z} $ và $ x, y \in \{ 1; 2; \ldots; 25 \} $ nên ta có  bảng sau\\
+	\begin{tabular}{l|c|c|c|c|c|c|c|c|c|c|c|c}
+	Giá trị của $ x $	& $ 1 $ & $ 2 $ & $ 3 $ & $ 4 $ & $ 5 $ & $ 6 $ & $ 7 $ & $ 8 $ & $ 9 $ & $ 10 $ & $ 11 $ &  $ 12 $  \\ \hline
+	Số cách chọn $ y $	& $ 24 $ & $ 11 $ & $ 7 $ & $ 5 $ & $ 4 $ & $ 3 $ & $ 2 $ & $ 2 $ & $ 1 $ & $ 1 $ & $ 1 $ &  $ 1 $
+	\end{tabular} \\	
+	Ta có $ \heva{& n\left ( A \right ) = 62  \\ & n\left ( \Omega \right ) = \mathrm{A}^2_{25}. } $\\
+	Vậy $ \mathrm{P}(A) = \dfrac{31}{300}  $. 	\\
+	Cách khác:\\
+	Ta có $ n \left (A \right ) = \displaystyle \sum \limits^{12}_{x=1} \left [ \dfrac{25}{x} - 1 \right ] = 24 + 11 + 5 + 4 + 3 + 2 + 2 + 1 + 1 + 1 + 1 = 62$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Nguyễn Tài Tuệ, Đề Thi THPT QG lần 4 trường THPT Yên Khánh A, Ninh Bình, Dự án 12EX8-2019]%[1D2G5-2]
+	Gọi $X$ là tập hợp tất cả các số tự nhiên có $6$ chữ số đôi một khác nhau. Lấy ngẫu nhiên một số thuộc tập $X$. Tính xác suất để số lấy được luôn chứa đúng ba số thuộc tập $Y = \left\{1; 2; 3; 4; 5\right\}$ và ba số đứng cạnh nhau, số chẵn đúng giữa hai số lẻ. 
+	\choice
+	{$ P = \dfrac{37}{63}$}
+	{$ P = \dfrac{25}{189}$}
+	{$ P = \dfrac{25}{378}$}
+	{\True $ P = \dfrac{17}{945}$}
+	\loigiai{
+		Gọi $\overline{abcdef}$ là số có $6$ chữ số đôi một khác nhau cần tìm.\\
+		Chọn $a\ne 0$ có $9$ cách. Chọn $b,c,d,e,f\in\{0,1,2,\ldots,9\}\setminus\{a\}$ có $\mathrm{A}^5_9$ cách. Vậy $n(\Omega)=9\cdot \mathrm{A}_9^5=136080$.\\
+		Gọi $A$ là biến cố số lấy được luôn chưa đúng ba số thuộc tập $Y=\{1,2,3,4,5\}$ và ba số đứng cạnh nhau, só chẵn đứng giữa hai số lẻ.\\
+		Gọi $y=\overline{b_1b_2b_3}$ với $b_2\in\{2,4\}$, $b_3\in\{1,3,5\}$, $b_1\ne b_2\ne b_3$. Thì số các số $y$ là $2\cdot 3\cdot 2=12$ số.\\
+		Gọi $x$ là số thuộc $X$, chưa đúng ba số thuộc $Y$ và ba chữ số thuộc $Y$ đứng cạnh nhau, số chẵn đứng giữa hai số lẻ.\\
+		Ta có các trường hợp sau: $x=\overline{ya_1a_2a_3}$, $x=\overline{a_1ya_2a_3}$, $x=\overline{a_1a_2ya_3}$, $x=\overline{a_1a_2a_3y}$.\\
+		\textbf{TH1:} $x=\overline{ya_1a_2a_3}$ với $a_1,a_2,a_3\in\{0,6,7,8,9\}$, suy ra số các số là $12\cdot \mathrm{A}_5^3=720$ số.	\\
+		\textbf{TH2:} $x=\overline{a_1ya_2a_3}$ có số các số là $12\cdot 4\cdot 4\cdot 3=576$ số.\\
+		\textbf{TH3, TH4} tương tự \textbf{TH2}.\\
+		Do đó, $n(A)=720+3\cdot 576=2448$.\\
+		Như vậy, $P(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{2448}{136080}=\dfrac{17}{945}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%[1D2G5-2] 
+	Cho đa giác đều $ 20 $ đỉnh. Lấy ngẫu nhiên $ 4 $ đỉnh trong các đỉnh của đa giác. Tính xác suất để $ 4 $ đỉnh lấy được tạo thành tứ giác có $ 2 $ góc ở $ 2 $ đỉnh kề chung một cạnh của tứ giác là 2 góc tù.
+	\choice
+	{$ \dfrac{112}{323} $}
+	{$ \dfrac{14}{323} $}
+	{$ \dfrac{14}{19} $}
+	{\True $ \dfrac{16}{19} $}
+	\loigiai{
+		Lấy ngẫu nhiên $ 4 $ đỉnh trong các đỉnh cảu đa giác đều có $ C_{20}^4=4845 $ cách.\\
+		\textit{Nhận xét:} Tổng hai góc đối của tứ giác nội tiếp là $ 180^\circ $. Do đó, tứ giác có hai góc ở hai đỉnh kề chung một cạnh của tứ giác là hai góc tù nhau khi và chỉ khi tứ giác đó không có góc vuông.\\
+		Đa giác đều $ 20 $ đỉnh có $ 10 $ đường chéo qua tâm. Tứ giác có góc vuông phải có ít nhất một đường chéo qua tâm. Suy ra có $ 10.9 .9-C_{10}^2 $ tứ giác có góc vuông.\\
+		Vậy số cách chọn tứ giác không có góc vuông là $ C_{20}^4-\left(10.9 .9-C_{10}^2\right)=4080 $ (cách).\\
+		Xác suất cần tìm là $ P=\dfrac{4080}{4845}=\dfrac{16}{19} $.
+		
+		
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%
+[1D2G5-2] 
+	Cho đa giác đều $ 20 $ đỉnh. Lấy ngẫu nhiên $ 4 $ đỉnh trong các đỉnh của đa giác. Tính xác suất để $ 4 $ đỉnh lấy được tạo thành tứ giác có $ 2 $ góc ở $ 2 $ đỉnh kề chung một cạnh của tứ giác là 2 góc tù.
+	\choice
+	{$ \dfrac{112}{323} $}
+	{$ \dfrac{14}{323} $}
+	{$ \dfrac{14}{19} $}
+	{\True $ \dfrac{16}{19} $}
+	\loigiai{
+		Lấy ngẫu nhiên $ 4 $ đỉnh trong các đỉnh cảu đa giác đều có $ C_{20}^4=4845 $ cách.\\
+		\textit{Nhận xét:} Tổng hai góc đối của tứ giác nội tiếp là $ 180^\circ $. Do đó, tứ giác có hai góc ở hai đỉnh kề chung một cạnh của tứ giác là hai góc tù nhau khi và chỉ khi tứ giác đó không có góc vuông.\\
+		Đa giác đều $ 20 $ đỉnh có $ 10 $ đường chéo qua tâm. Tứ giác có góc vuông phải có ít nhất một đường chéo qua tâm. Suy ra có $ 10.9 .9-C_{10}^2 $ tứ giác có góc vuông.\\
+		Vậy số cách chọn tứ giác không có góc vuông là $ C_{20}^4-\left(10.9 .9-C_{10}^2\right)=4080 $ (cách).\\
+		Xác suất cần tìm là $ P=\dfrac{4080}{4845}=\dfrac{16}{19} $.
+		
+		
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử,Quảng Xương 1-Thanh Hóa-L3, 2019]%[Lê Quốc Hiệp, 12EX8-2019]%[1D2G5-2]
+	Gieo đồng thời ba con súc sắc. Bạn là người thắng cuộc nếu xuất hiện ít nhất hai mặt $6$ chấm. Xác suất để trong $6$ lần chơi thắng ít nhất bốn lần gần nhất với giá trị nào dưới đây?
+	\choice
+	{$1{,}24\cdot10^{-5}$}
+	{$3{,}87\cdot10^{-4}$}
+	{\True $4\cdot10^{-4}$}
+	{$1{,}65\cdot10^{-7}$}
+	\loigiai
+	{
+		Trong một lần chơi
+		\begin{itemize}
+			\item Xác suất để hai trong ba con súc sắc xuất hiện mặt $6$ chấm là $\dfrac{1}{6}\cdot\dfrac{1}{6}\cdot\dfrac{5}{6}\cdot3=\dfrac{5}{72}$
+			\item Xác suất để cả ba con súc sắc xuất hiện mặt $6$ chấm là $\left(\dfrac{1}{6}\right)^3=\dfrac{1}{216}$.
+		\end{itemize}
+		Vậy xác suất thắng trong một lần chơi là $\dfrac{5}{72}+\dfrac{1}{216}=\dfrac{2}{27}$. Do đó, xác suất thua trong một lần chơi là $\dfrac{25}{27}$.\\
+		Trong $6$ lần chơi
+		\begin{itemize}
+			\item Xác suất để thắng $4$ lần là $\mathrm{C}_6^4\cdot\left(\dfrac{2}{27}\right)^4\cdot\left(\dfrac{25}{27}\right)^2$.
+			\item Xác suất để thắng $5$ lần là $\mathrm{C}_6^5\cdot\left(\dfrac{2}{27}\right)^5\cdot\left(\dfrac{25}{27}\right)$.
+			\item Xác suất để thắng $6$ lần là $\left(\dfrac{2}{27}\right)^6$.
+		\end{itemize}
+		Vậy xác suất cần tính là
+		\[\mathrm{C}_6^4\cdot\left(\dfrac{2}{27}\right)^4\cdot\left(\dfrac{25}{27}\right)^2+\mathrm{C}_6^5\cdot\left(\dfrac{2}{27}\right)^5\cdot\left(\dfrac{25}{27}\right)+\left(\dfrac{2}{27}\right)^6\approx 4\cdot10^{-4}.\]
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử THPT Chuyên Bến Tre, năm học 2018-2019]%[Tuan Nguyen, dự án 12-EX-9-2019]%[1D2G5-2]
+	Trong kỳ thi chọn học sinh giỏi tỉnh có $105$ em dự thi, có $10$ em tham gia buổi gặp mặt trước kỳ thi. Biết
+	các em đó có số thứ tự trong danh sách lập thành một cấp số cộng. Các em ngồi ngẫu nhiên vào hai dãy bàn đối
+	diện nhau, mỗi dãy có năm ghế và mỗi ghế chỉ ngồi được một học sinh. Tính xác suất để tổng các số thứ tự của hai
+	em ngồi đối diện nhau là bằng nhau.
+	\choice{$\dfrac{1}{126}$}{\True $\dfrac{1}{945}$}{$\dfrac{1}{954}$}{$\dfrac{1}{252}$}
+	\loigiai{
+Mỗi cách xếp $10$ học sinh vào $10$ chiếc ghế là một hoán vị của $10$ phần tử, vì vậy số phần tử của không gian mẫu là $|\Omega|=10 !=3628800$.\\
+Gọi $A$ là biến cố: \lq\lq Tổng số thứ tự của các học sinh ngồi đối diện nhau là bằng nhau\ \rq\rq\ .\\
+Giả sử số vị trí của $10$ học sinh trên là $u_{1}, u_{2}, \ldots , u_{10}$. Theo tính chất của cấp số cộng, ta có các cặp số có tổng sau đây: $u_1+u_{10}=u_2+u_9=u_3+u_8=u_4+u_7=u_5+u_6$.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline 10 cách & 8 cách & 6 cách & 4 cách & 2 cách\\
+		\hline 1 cách & 1 cách & 1 cách & 1 cách & 1 cách\\ \hline
+	\end{tabular}
+\end{center}
+Theo cách này ta có $|A|=10\cdot 8\cdot 6 \cdot 4 \cdot 2=3840$.\\
+Do đó xác suất của biến cố là $\mathrm{P}(A)=\dfrac{3840}{3628800}=\dfrac{1}{945}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[12-EX-ĐHVinh-L3]%[Nguyễn Minh Hiếu]%[1D2G5-2]
+	Gọi $A$ là tập hợp gồm các số tự nhiên có hai chữ số phân biệt. Chọn ngẫu nhiên hai số từ $A$. Tính xác suất để hai số được chọn có đúng một chữ số giống nhau.
+	\choice
+	{\True $\dfrac{88}{243}$}
+	{$\dfrac{263}{729}$}
+	{$\dfrac{2}{81}$}
+	{$\dfrac{208}{729}$}
+	\loigiai{
+		Số các số tự nhiên có hai chữ số phân biệt là $9\times 9 =81$ số, suy ra $A$ có $81$ phần tử. Do đó số phần tử của không gian mẫu là $81^2=6561$.\\
+		Gọi $\overline{ab}$ và $\overline{cd}$ lần lượt là hai số được chọn.\\
+		Xét trường hợp hai số được chọn không có chữ số nào chung. Khi đó vì $a\neq 0$ nên $a$ có $9$ cách chọn; $c\neq 0 $ và $c\neq a$ nên $c$ có 8 cách chọn; $b,d$ chọn từ 8 số còn lại (trừ $a,c$) nên có $\mathrm{A}_8^2$ cách chọn. Suy ra có $9\times 8\times\mathrm{A}_8^2=4032$ cách chọn hai số không có chữ số nào chung.\\
+		Xét trường hợp hai số được chọn có cả hai chữ số chung. Khi đó nếu hai số được chọn giống nhau có 81 cách; nếu hai số được chọn có chữ số đảo nhau có $81-9=72$ cách. Suy ra có $81+72=153$ cách chọn hai số có cả hai chữ số chung.\\
+		Từ đó suy ra có $6561-(4032+153)=2376$ cách viết ra hai số có đúng một chữ số chung.\\
+		Vậy xác suất cần tìm là $\dfrac{2376}{6561}=\dfrac{88}{243}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[12-EX-ĐHVinh-L3]%[Nguyễn Minh Hiếu]%[1D2G5-2]
+	Gọi $A$ là tập hợp gồm các số tự nhiên có ba chữ số phân biệt. Chọn ngẫu nhiên hai số từ $A$. Tính xác suất để hai số được chọn không có chữ số nào giống nhau.
+	\choice
+	{$\dfrac{35}{108}$}
+	{\True $\dfrac{70}{243}$}
+	{$\dfrac{175}{486}$}
+	{$\dfrac{35}{243}$}
+	\loigiai{
+		Số các số tự nhiên có ba chữ số phân biệt là $9\times 9\times 8 =648$ số, suy ra $A$ có $81$ phần tử. Do đó số phần tử của không gian mẫu là $648^2=419904$.\\
+		Gọi $\overline{abc}$ và $\overline{def}$ lần lượt là hai số được chọn. Khi đó vì $a\neq 0$ nên chọn $a$ có $9$ cách; $d\neq 0 $ và $d\neq a$ nên chọn $d$ có 8 cách; $b,c,d,e,f$ chọn từ 8 số còn lại (trừ $a,d$) nên có $\mathrm{A}_8^4$ cách chọn. Suy ra có $9\times 8\times \mathrm{A}_8^4=120960$ cách chọn hai số không có chữ số nào giống nhau.\\
+		Vậy xác suất cần tìm là $\dfrac{120960}{419904}=\dfrac{70}{243}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Phát triển đề 36-50]%[Huỳnh Xuân Tín, 12EX8]%[1D2G5-2] 
+	Cho đa giác đều $4n$ đỉnh ($n\ge2$). Chọn ngẫu hiên bốn đỉnh từ các đỉnh của đa giác đã cho. Biết rằng xác suất để bốn đỉnh được chọn là bốn đỉnh của một hình chữ nhật không phải là hình vuông bằng $\dfrac{6}{455}$. Khi đó $n$ bằng
+	\choice 
+	{$n=6$}
+	{$n=8$}
+	{$n=10$}
+	{\True $n=4$}
+	\loigiai{Gọi $A$ là biến cố để $4$ đỉnh được chọn là bốn đỉnh của một hình chữ nhật không phải là hình vuông.\\
+		Số phần tử của không gian mẫu $n(\Omega)=\mathrm{C}_{4 n}^{4}$.\\
+		Đa giác đều $4n$ đỉnh có $2n$ đường chéo là đường kính nên sẽ có $\mathrm{C}_{2n}^2$ cách chọn hai đường kính và đó cũng là số cách chọn bốn đỉnh trên là bốn đỉnh của một hình chữ nhật.\\
+		Trong $2n$ đường kính đó có chỉ có $n$ cặp đường chéo vuông góc với nhau nên trong số hình chữ nhật trên có đúng $n$ hình vuông.\\
+		Do đó số hình chữ nhật không phải là hình vuông là $n(A)=\mathrm{C}_{2n}^2-n$.\\
+		Theo đề bài ta có
+		$$\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{\mathrm{C}_{2n}^2-n}{\mathrm{C}_{4 n}^{4}}=\dfrac{6}{455} \Leftrightarrow 455 \left(n-1\right) =(4n-1)(2n-1)(4n-3).$$
+		$$\Leftrightarrow 32n^3-48n^2-433n+452=0\Rightarrow n=4.$$
+		Vậy $n=4$.}
+\end{ex}

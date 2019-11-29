@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Phương trình bậc n theo một hàm số lượng giác" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Phương trình đẳng cấp bậc n đối với sinx và cosx" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Phương trình bậc nhất đối với sinx và cosx" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Phương trình đối xứng, phản đối xứng" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Phương trình lượng giác không mẫu mực" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Phương trình lượng giác có chứa ẩn ở mẫu số" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Phương trình lượng giác có chứa tham số" }
+{ "_id" : { "$oid" : "5d1e0c4e3fb9391a8c5b7510" }, "FormId" : 8, "FormName" : "Bài toán thực tế" }

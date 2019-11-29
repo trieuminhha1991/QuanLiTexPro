@@ -1,0 +1,311 @@
+%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT -Lạng Sơn, 2019]%[Trần Duy Khương, 12EX5-2019]%[1D2B3-2]
+		Tìm hệ số của $x^5$ trong khai triển $(x+1)^{12}$.
+		\choice
+		{\True $792$}
+		{$586$}
+		{$710$}
+		{$184$}
+		\loigiai{Số hạng tổng quát của khai triển $(x+1)^{12}$ là $\mathrm{C}_{12}^kx^k$. 
+			Vậy hệ số của $x^5$ là $\mathrm{C}_{12}^5=792$.}
+	\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD - ĐT tỉnh Quảng Bình, 2019]%[Nguyễn Tiến, dự án 12EX5]%[1D2B3-3]
+	Tính tổng $S=\mathrm{C}_{10}^{0}+2\cdot\mathrm{C}_{10}^{1}+2^2\cdot\mathrm{C}_{10}^{2}+\cdots+2^{10}\cdot\mathrm{C}_{10}^{10}$.
+	\choice
+	{$S=2^{10}$}
+	{\True $S=3^{10}$}
+	{$S=4^{10}$}
+	{$S=3^{11}$}
+	\loigiai{
+		Xét khai triển $\left(1+x\right)^{10}=\displaystyle\sum\limits_{k=0}^{10}\mathrm{C}_{10}^{k}\cdot x^k=\mathrm{C}_{10}^{0}\cdot x^{0}+\mathrm{C}_{10}^{1}\cdot x^{1}+\mathrm{C}_{10}^{2}\cdot x^{2}+\cdots+\mathrm{C}_{10}^{10}\cdot x^{10}$.\\
+		Thay $x=2$ ta có
+		\begin{eqnarray*}
+			& & \left(1+2\right)^{10}=\mathrm{C}_{10}^{0}\cdot 2^{0}+\mathrm{C}_{10}^{1}\cdot 2^{1}+\mathrm{C}_{10}^{2}\cdot 2^{2}+\cdots+\mathrm{C}_{10}^{10}\cdot 2^{10}\\
+			&\Leftrightarrow & 3^{10}=\mathrm{C}_{10}^{0}+2\cdot\mathrm{C}_{10}^{1}+2^2\cdot\mathrm{C}_{10}^{2}+\cdots+2^{10}\cdot\mathrm{C}_{10}^{10}.
+		\end{eqnarray*}
+		Vậy $S=3^{10}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex} %[Thi thử, Chuyên Sơn La, 2018]%[Nguyễn Thanh Tâm, 12-EX-5-2019]%[1D2B3-2]
+	Với $n$ là số nguyên dương thỏa mãn $\mathrm{A}_n^3+2\mathrm{A}_n^2=100$ ($\mathrm{A}_n^k$ là số các chỉnh hợp chập $k$ của tập hợp có $n$ phần tử). Số hạng chứa $x^5$ trong khai triển của biểu thức ${\left(1+3x\right)}^{2n}$ là
+	\choice
+	{$61236$}
+	{$256x^5$}
+	{$252$}
+	{\True $61236x^5$}
+	\loigiai
+	{
+		Điều kiện:
+		$\heva{
+			&n\in \mathbb{N}\\
+			&n\geqslant 3}$.\\
+		Ta có: $\mathrm{A}_n^3+2\mathrm{A}_n^2=100$
+		$\Leftrightarrow n(n-1)(n-2)+2n(n-1)=100$
+		$\Leftrightarrow n^3-3n^2+2n+2n^2-2n=100 \Leftrightarrow n=5$.\\
+		Do đó: ${\left(1+3x\right)}^{2n}$=${\left(1+3x\right)}^{10}$=$\displaystyle\sum\limits_{k=0}^{10}{\mathrm{C}_{10}^k}1^{10-k}{\left(3x\right)}^k$=$\displaystyle\sum\limits_{k=0}^{10}{\mathrm{C}_{10}^k}3^kx^k$.\\
+		Số hạng chứa $x^5$ trong khai triển tương ứng với $k=5$.\\
+		Vậy số hạng chứa $x^5$ trong khai triển là: $\mathrm{C}_{10}^5 \cdot 3^5\cdot x^5=61236x^5.$
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề Tập Huấn -4, Sở GD và ĐT - Hải Phòng, 2019]%[Trần Xuân Thiện, 12EX5]%[1D2B3-1]
+	Trong khai triển nhị thức $ (a + 2)^{n+6}, n \in \mathbb{N}$. Có tất cả $17$ số hạng. Vậy $n$ bằng:
+	\choice
+	{$ 17 $}
+	{$ 11 $}
+	{\True $ 10 $}
+	{$ 12 $}
+	\loigiai{
+		Trong khai triển nhị thức $ (a + 2)^{n+6}, n \in \mathbb{N}$ có tất cả $ n + 7 $ số hạng. \\ 
+		Do đó $ n + 7 = 17 \Leftrightarrow n = 10 $.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Bắc Kạn, 2018-2019]%[Cao Thành Thái, 12EX5-2019]%[1D2B3-2]
+ Tìm hệ số của $x^7$ trong khai triển $\left(x-\dfrac{1}{x}\right)^{13}$, với $x\neq 0$.
+ \choice
+  {$-\mathrm{C}_{13}^4$}
+  {$\mathrm{C}_{13}^4$}
+  {\True $-\mathrm{C}_{13}^3$}
+  {$\mathrm{C}_{13}^3$}
+ \loigiai
+  {
+  Với $x \neq 0$, ta có
+  \allowdisplaybreaks
+  \begin{eqnarray*}
+   \left(x-\dfrac{1}{x}\right)^{13} = \sum\limits_{k=0}^{13}\mathrm{C}_{13}^k x^{13-k} \cdot \left(-\dfrac{1}{x}\right)^k = \sum\limits_{k=0}^{13} (-1)^k \mathrm{C}_{13}^k x^{13-2k}.
+  \end{eqnarray*}
+  Só hạng chứa $x^7$ ứng với $13-2k=7$ hay $k=3$.\\
+  Vậy hệ số của $x^7$ là $-\mathrm{C}_{13}^3$
+  }
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn tỉnh Lai Châu,2019]%[Nguyễn Trung Kiên, dự án 12-EX-5-2019]%[1D2B3-2]
+	Khai triển của nhị thức $(x-y)^n$ có tất cả $14$ hạng tử. Tìm $n$?
+	\choice
+	{$n=14$}
+	{$n=16$}
+	{$n=15$}
+	{\True $n=13$}
+	\loigiai
+	{Khai triển của nhị thức $(x-y)^n$ có $n+1$ hạng tử. Do đó $n+1=14 \Leftrightarrow n=13$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Star Education HCM, 2019]%[Nguyễn Ngọc Dũng, dự án 12EX6]%[1D2B3-2]
+Có bao nhiêu số tự nhiên $m$ không vượt quá $2019$ thỏa $(1+i)^m$ là số thực?
+\choice
+{$1008$}
+{$504$}
+{\True $505$}
+{$1010$}
+\loigiai{
+Ta có $(1+i)^m = \left[ (1+i)^2\right] ^ {\frac{m}{2}} = (2i)^{\frac{m}{2}} = 2^{\frac{m}{2}}\cdot i^{\frac{m}{2}}$. Suy ra
+\begin{center}
+$(1+i)^m$ là số thực $\Leftrightarrow \dfrac{m}{2}=2k \Leftrightarrow m =4k$.
+\end{center}
+Ta có $0\leq m \leq 2019 \Leftrightarrow 0\leq 4k \leq 2019 \Leftrightarrow 0\leq k\leq 504{,}75$.\\
+Vậy có $505$ số tự nhiên $m$ thỏa bài toán.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Star Education HCM, 2019]%[Nguyễn Ngọc Dũng, dự án 12EX6]%[]%[1D2B3-2]
+Tìm số hạng không chứa $x$ trong khai triển $\left(x - \dfrac{1}{x^2}\right)^{45}$.
+\choice
+{$-\mathrm{C}_{45}^5 $}
+{$ \mathrm{C}_{45}^{15}$}
+{\True $-\mathrm{C}_{45}^{15}$}
+{$\mathrm{C}_{45}^{30}$}
+\loigiai{
+Số hạng tổng quát $\mathrm{C}^k_{45} x^{45-k} \cdot \left( -x^{-2}\right) ^ k = \mathrm{C}^k_{45} (-1)^k \cdot x^{45-3k}$.\\
+Số hạng không chứa $x$ tương ứng với $45-3k=0\Leftrightarrow k=15$.	\\
+Vậy số hạng không chứa $x$ trong khai triển là $-\mathrm{C}_{45}^{15}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử lần 2, THPT Nguyễn Đức Cảnh, 2019]%[Nguyễn Anh Tuấn, 12EX7]%[1D2B3-3]
+	Một tập $ A $ có $ n $ phần tử, số tập con khác rỗng của tập $ A $ là?
+	\choice
+	{$ n! $}
+	{$ n!-1 $}
+	{\True $ 2^n-1 $}
+	{$ 2^n $}
+	\loigiai{
+		\begin{itemize}
+			\item Số tập con $ 1 $ phần tử của tập $ A $ là $ \mathrm{C}_n^1 $.
+			\item Số tập con $ 2 $ phần tử của tập $ A $ là $ \mathrm{C}_n^2 $.
+			\item Số tập con $ 3 $ phần tử của tập $ A $ là $ \mathrm{C}_n^3 $.
+			\item ...
+			\item Số tập con $ k $ phần tử của tập $ A $ là $ \mathrm{C}_n^k $.
+			\item ...
+			\item Số tập con $ n $ phần tử của tập $ A $ là $ \mathrm{C}_n^n $.
+			\end{itemize}
+		Số tập con khác tập rỗng của tập $ A $ là
+		$$\mathrm{C}_n^1+\mathrm{C}_n^2+\cdots +\mathrm{C}_n^k+\cdots +\mathrm{C}_n^n=(1+1)^n-1=2^n-1.$$
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Dự án EX-7-2019]%[Phạm Tuấn]%[1D2B3-2]
+Hệ số của $x^7$ trong khai triển của $(x+2)^{10}$ là 
+\choice
+{$-\mathrm{C}_{10}^7 2^3$}
+{\True $\mathrm{C}_{10}^3 2^3$}
+{ $\mathrm{C}_{10}^3 2^7$}
+{$\mathrm{C}_{10}^3$}
+\loigiai{
+Ta có $\displaystyle (x+2)^{10} = \sum_{k=0}^{10} \mathrm{C}_{10}^k x^k2^{10-k}$. Do đó số hạng tổng quát của khai triển là $\mathrm{C}_{10}^k x^k2^{10-k}$. \\
+Vậy hệ số của $x^7$ trong khai triển  là $\mathrm{C}_{10}^7 2^3 =\mathrm{C}_{10}^3 2^3$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Lý Thái Tổ - Bắc Ninh, 2019]%[Nguyện Ngô, 12EX7]%[1D2B3-2]
+Số hạng chứa $x^{31}$ trong khai triển $\left(x+\dfrac{1}{x^2}\right)^{40}$ là
+\choice
+{\True $\mathrm{C}_{40}^3 x^{31}$}
+{$\mathrm{C}_{40}^{37}$}
+{$\mathrm{C}_{40}^2$}
+{$\mathrm{C}_{40}^2 x^{31}$}
+\loigiai{
+\begin{itemize}
+\item Số hạng tổng quát của khai triển là
+\[\mathrm{C}_{40}^{k}x^{40-k}\left(\dfrac{1}{x^2}\right)^k=\mathrm{C}_{40}^{k}x^{40-k}x^{-2k}= \mathrm{C}_{40}^{k}x^{40-3k}.\]
+\item Ta có $40-3k=31 \Leftrightarrow k=3$. Vậy số hạng cần tìm là $\mathrm{C}_{40}^3 x^{31}$.
+\end{itemize}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT Chuyên Ngoại Ngữ - Hà Nội, 2019]%[Trần Nhân Kiệt, 12EX7-2019]%[1D2B3-2]
+Tìm hệ số của số hạng chứa $x^5$ trong khai triển $(3x-2)^8$.
+	\choice
+	{$1944\mathrm{C}_8^3$}
+	{\True $-1944\mathrm{C}_8^3$}
+	{$-864\mathrm{C}_8^3$}
+	{$864\mathrm{C}_8^3$}
+	\loigiai{
+Ta có $(3x-2)^8=\sum\limits_{k=0}^8\mathrm{C}_8^k\cdot (3x)^{8-k} \cdot (-2)^k=\sum\limits_{k=0}^8\mathrm{C}_8^k\cdot 3^{8-k} \cdot (-2)^k\cdot x^{8-k}$.\\
+Số hạng chứa $x^5$ tương ứng với $8-k=5\Leftrightarrow k=3$.\\
+Vậy hệ số của số hạng chứa $x^5$ là $\mathrm{C}_8^3\cdot 3^5 \cdot (-2)^3=-1944\mathrm{C}_8^3$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Quảng Nam, 2019]%[Nguyện Ngô, 12EX8]%[1D2B3-2]
+Hệ số của $x^{4}$ trong khai triển $(x+3)^{6}$ là
+\choice
+{$1215$}
+{$54$}
+{\True $135$}
+{$15$}
+\loigiai{
+\begin{itemize}
+\item Số hạng tổng quát của khai triển là $\mathrm{C}_{6}^{k}\cdot x^{6-k}\cdot 3^k$. Ta có $6-k=4\Leftrightarrow k=2$.
+\item Vậy hệ số của $x^{4}$ trong khai triển $(x+3)^{6}$ là $\mathrm{C}_{6}^{2}\cdot 3^2=135$.
+\end{itemize}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L4, THPT  Chuyên Thái Bình-Thái Bình, 2019]%[KV Thanh, 12EX8]%[1D2B3-2]
+Trong khai triển $(1-2x)^{20}=a_0+a_1x+a_2x^2+\cdots+a_{20}x^{20}$. Giá trị của $a_0-a_1+a_2$ bằng
+\choice
+{$800$}
+{\True $801$}
+{$721$}
+{$1$}
+\loigiai{
+Ta có $$(1-2x)^{20}=\mathrm{C}_{20}^0\cdot 1^{20}\cdot (-2x)^0+\mathrm{C}_{20}^1\cdot 1^{19}\cdot (-2x)^1+\mathrm{C}_{20}^2\cdot 1^{18}\cdot (-2x)^2+\cdots +\mathrm{C}_{20}^{20}\cdot 1^0\cdot (-2x)^{20}.$$
+Suy ra $a_0=\mathrm{C}_{20}^0=1,a_1=\mathrm{C}_{20}^1\cdot (-2)^1,a_2=\mathrm{C}_{20}^2\cdot (-2)^2=760$.\\
+Vậy $a_0-a_1+a_2=801$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Kinh Môn - Hải Dương, 2019]%[Lê Vũ Hải, 12EX8]%[1D2B3-2]
+	Hệ số của $x^{6}$ trong khai triển $\left(2-3x\right)^{10}$ là
+	\choice
+	{$ \mathrm{C}^{4}_{10} 2^{6} \left(-3\right)^{4} $}
+	{$ -\mathrm{C}^{6}_{10} 2^{4} 3^{6} $}
+	{\True $ \mathrm{C}^{6}_{10} 2^{4} \left(-3\right)^{6} $}
+	{$ \mathrm{C}^{6}_{10} 2^{6} \left(-3\right)^{4} $}
+	\loigiai{
+		Ta có $\left(2-3x\right)^{10} = \displaystyle\sum\limits_{k=0}^{10} \mathrm{C}^{k}_{10} 2^{10-k} \left(-3x\right)^{k} = \displaystyle\sum\limits_{k=0}^{10} \mathrm{C}^{k}_{10} 2^{10-k} \left(-3\right)^{k} x^{k}$.\\
+		Ứng với $x^{6}$ thì $k=6$, vậy hệ số tương ứng của $x^{6}$ trong khai triển là $\mathrm{C}^{k}_{10} 2^{10-k} \left(-3\right)^{k} = \mathrm{C}^{6}_{10} 2^{4} \left(-3\right)^{6}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề THTT số 5, 2019]%[Vinh Vo, 12EX8-2019]%[1D2B3-2]
+	Số hạng không chứa $ x $ trong khai triển $ \left (x - \dfrac{2}{x^3} \right )^{12}, x \neq 0 $ là
+	\choice
+	{\True $ - 1760 $}
+	{$ 1760 $}
+	{$ 220 $}
+	{$ -220 $}
+	\loigiai{
+	Ta có $  \left (x - \dfrac{2}{x^3} \right )^{12} = \displaystyle \sum \limits^{12}_{k = 0} \mathrm{C}^k_{12} x^{12 - k} \left ( - \dfrac{2}{ x^3 } \right )^k = \sum \limits^{12}_{k = 0} \mathrm{C}^k_{12} (-2)^k x^{12 - 4k} $.\\
+	Với số hạng không chứa $ x $ thì $ 12 - 4k = 0 \Leftrightarrow k = 3 $.\\
+	Vậy hệ số của số hạng không chứa $ x $ là $ \mathrm{C}^3_{12}(-2)^3 = - 1760 $.	
+}
+\end{ex}%!Cau!%
+\begin{ex}%[thi thử, THPT Triệu Thái, Vĩnh Phúc]%[Phan Quốc Trí, dự án 12EX-8-2019]%[1D2B3-2]
+	Số hạng không chứa $x$ trong khai triển $\left(\dfrac{x}{2} + \dfrac{4}{x}\right)^{20}$, $x\ne 0$ bằng	
+	\choice
+	{$2^8\mathrm{C}_{20}^{12}$}
+	{$2^9\mathrm{C}_{20}^9$}
+	{\True $2^{10}\mathrm{C}_{20}^{10}$}
+	{$2^{10}\mathrm{C}_{20}^{11}$}
+	\loigiai{
+		Số hạng tổng quát trong khai triển là 	$\mathrm{C}_{20}^k \left( \dfrac{x}{2} \right)^{20-k} \left( \dfrac{4}{x} \right)^k =\mathrm{C}_{20}^k 2^{3k-20}x^{20-2k} $.\\
+		Số hạng không chứa $x$ ứng với $20-2k=0\Leftrightarrow k=10$.\\
+		Do đó số hạng không chứa $x$ trong khai triển là   $2^{10}\mathrm{C}_{20}^{10}$.	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử lần 1, THPT Văn Giang - Hưng Yên, 2019]%[Đỗ Đường Hiếu, 12EX-8-2019]%[1D2B3-2]
+	Tìm số hạng không chứa $x$ trong khai triển $\left(2x-\dfrac{1}{x^2}\right)^6$, $x\ne 0$.
+	\choice
+	{$-240$}
+	{$15$}
+	{\True $240$}
+	{$-15$}
+	\loigiai{
+		Số hạng tổng quát của khai triển $\left(2x-\dfrac{1}{x^2}\right)^6$ là $T_{k+1=}\mathrm{C}_6^k\left(2x\right)^{6-k}\cdot\left(-\dfrac{1}{x^2}\right)^k=\mathrm{C}_6^k(-1)^k\cdot2^{6-k}\cdot x^{6-3k}$.\\
+		Số hạng không chứa $x$ ứng với $6-3k=0\Leftrightarrow k=2$.\\
+		Vậy, số hạng không chứa $x$ trong khai triển $\left(2x-\dfrac{1}{x^2}\right)^6$ là $\mathrm{C}_6^2(-1)^2\cdot2^4=240$. 
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L2, Thanh Chương 1 Nghệ An, 2019]%[Nguyễn Văn Nay, dự án EX8]%[1D2B3-2]
+	Hệ số của số hạng chứa $x^4$ trong khai triển $(2+3x)^5$
+	\choice
+	{$270$}
+	{\True $810$}
+	{$81$}
+	{$1620$}
+	\loigiai{
+		Ta có $(2+3x)^5=\displaystyle\sum\limits_{k=0}^5\mathrm{C}_5^k\cdot2^k\cdot(3x)^{5-k}=\displaystyle\sum\limits_{k=0}^5\mathrm{C}_5^k\cdot2^k\cdot3^{5-k}\cdot x^{5-k}$.\\
+		Số hạng chứa $x^4$ nên ta có $5-k=4 \Leftrightarrow k=1$. Hệ số của số hạng chứa $x^4$ là 	$\mathrm{C}_5^1 \cdot 2^1\cdot 3^4=810$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[đề khảo sát chất lượng SGD Phú Thọ, 2018-2019]%[nguyenhoangthanh, 12-EX9-2019]%[1D2B3-2]
+	Cho $ n $ là số nguyên dương thỏa mãn $ C^2_n-C^1_n=44 $. Hệ số của số hạng chứa $ x^9 $ trong khai triển biểu thức $ \left(x^4-\dfrac{2}{x^3} \right) ^n $bằng
+	\choice
+	{14784}
+	{29568}
+	{-1774080}
+	{\True -14784}
+	\loigiai{
+		\begin{itemize}
+			\item Ta có $ C^2_n-C^1_n=44 \Leftrightarrow n^2-3n-88=0 \Leftrightarrow \hoac{& n=11\ \mbox{(nhận)}\\& n=-8\  \mbox{(loại)}}.$
+			\item Số hạng thứ $ k+1 $ trong khai triển là $ T_{k+1}=C_n^kx^{4k}\dfrac{(-2)^{n-k}}{x^{3(n-k)}}=C^k_n(-2)^{n-k}x^{7k-3n}. $
+			\item Cho $ 7k-3n=9\Leftrightarrow k=\dfrac{9+3n}{7}=6. $ Vậy hệ số của số hạng chứa $ x^9 $ là $ C^6_{11}(-2)^5=-14784. $
+		\end{itemize}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Bình Thuận, 2019]%[Huỳnh Xuân Tín, 12EX9]%[1D2B3-2] 
+	Hệ số $x^7$ trong khai triển nhị thức $(1+x)^{12}$ bằng
+	\choice
+	{$820$}
+	{$220$}
+	{\True $792$}
+	{$210$}
+	\loigiai{
+		Số	hạng tổng quát của khai triển nhị thức $(1+x)^{12}$ là $\mathrm{C}_{12}^k x^k$, $(k \leq 12, k \in \mathbb N)$.\\
+		Số hạng chứa $x^7$ trong khai triển $\Leftrightarrow k=7$.\\
+		Vậy hệ số của $x^7$ trong khai triển nhị thức $(1+x)^{12}$ là $\mathrm{C}_{12}^7=792$.
+	} 
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử Lần 2, THPT Lương Thế Vinh - Hà Nội, 2019]%[Dương BùiĐức, dự án 12EX6]%[1D2B3-2]
+Tìm hệ số của $x^9$ trong khai triển nhị thức Newton của biểu thức $(3+x)^{11}$.
+\choice
+{$55$}
+{\True $495$}
+{$9$}
+{$110$}
+\loigiai{
+Ta có $ (3+x)^{11}=\sum\limits_{k=0}^{11}\mathrm{C}_{11}^{k}3^{11-k}x^{k} $, do đó hệ số của $ x^{9} $ trong khai triển nhị thức Newton là
+\[
+\mathrm{C}_{11}^{9}3^{2}=495.
+\]
+}
+\end{ex}

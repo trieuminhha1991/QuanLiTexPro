@@ -1,0 +1,77 @@
+%!Cau!%
+\begin{ex}%[Đề tập huấn tỉnh Lai Châu,2019]%[Nguyễn Trung Kiên, dự án 12-EX-5-2019]%[1H2B5-1]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang với đáy lớn $AB$ gấp đôi đáy nhỏ $CD$, $E$ là trung điểm cạnh $AB$. Trong các hình vẽ sau đây, hình vẽ nào là đúng quy tắc?
+	\choice
+	{\True \begin{tikzpicture}[scale=0.7,line join=round,line cap=round]
+		\tikzset{label style/.style={font=\footnotesize}}
+		\tkzDefPoints{4/0/A,0/0/B,0.5/-1/C}
+		\coordinate (E) at ($(A)!1/2!(B)$);
+		\coordinate (D) at ($(E)+(C)$);
+		\coordinate (S) at ($(B)+(0,2.5)$);
+		\coordinate (M) at ($(C)!1/2!(D)$);
+		\node at (M) [below = 8pt]{\footnotesize Hình $1$};
+		\tkzDrawPolygon(S,B,C,D,A)
+		\tkzDrawSegments(S,C S,D)
+		\tkzDrawSegments[dashed](A,B)
+		\tkzDrawPoints[fill=black,size=4](S,A,B,C,D,E)
+		\tkzLabelPoints[above](S,E)
+		\tkzLabelPoints[below](C,D)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[right](A)
+		\end{tikzpicture}}
+	{\begin{tikzpicture}[scale=0.7,line join=round,line cap=round]
+		\tikzset{label style/.style={font=\footnotesize}}
+		\tkzDefPoints{4/0/A,0/0/B,0.5/-1/C}
+		\coordinate (E) at ($(A)!1/2!(B)$);
+		\coordinate (D) at ($(E)+(C)$);
+		\coordinate (S) at ($(B)+(0,2.5)$);
+		\coordinate (M) at ($(C)!1/2!(D)$);
+		\node at (M) [below = 8pt]{\footnotesize Hình $2$};
+		\tkzDrawPolygon(S,B,C,D,A)
+		\tkzDrawSegments(S,C S,D A,B)
+		\tkzDrawPoints[fill=black,size=4](S,A,B,C,D,E)
+		\tkzLabelPoints[above](S,E)
+		\tkzLabelPoints[below](C,D)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[right](A)
+		\end{tikzpicture}}
+	{\begin{tikzpicture}[scale=0.7,line join=round,line cap=round]
+		\tikzset{label style/.style={font=\footnotesize}}
+		\tkzDefPoints{4/0/A,0/0/B,0.5/-1/C}
+		\coordinate (E) at ($(A)!1/3!(B)$);
+		\coordinate (D) at ($0.75*(E)+(C)$);
+		\coordinate (S) at ($(B)+(1.5,2.5)$);
+		\coordinate (M) at ($(C)!1/2!(D)$);
+		\node at (M) [below = 8pt]{\footnotesize Hình $3$};
+		\tkzDrawPolygon(S,B,C,D,A)
+		\tkzDrawSegments(S,C S,D)
+		\tkzDrawSegments[dashed](A,B)
+		\tkzDrawPoints[fill=black,size=4](S,A,B,C,D,E)
+		\tkzLabelPoints[above](S,E)
+		\tkzLabelPoints[below](C,D)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[right](A)
+		\end{tikzpicture}}
+	{\begin{tikzpicture}[scale=0.7,line join=round,line cap=round]
+		\tikzset{label style/.style={font=\footnotesize}}
+		\tkzDefPoints{4/0.75/A,0/0/B,0.5/-1/C}
+		\coordinate (E) at ($(A)!1/2!(B)$);
+		\coordinate (D) at ($(C)+(2.2,0)$);
+		\coordinate (S) at ($(B)+(2,2.5)$);
+		\coordinate (M) at ($(C)!1/2!(D)$);
+		\node at (M) [below = 8pt]{\footnotesize Hình $4$};
+		\tkzDrawPolygon(S,B,C,D,A)
+		\tkzDrawSegments(S,C S,D)
+		\tkzDrawSegments[dashed](A,B)
+		\tkzDrawPoints[fill=black,size=4](S,A,B,C,D,E)
+		\tkzLabelPoints[above](S,E)
+		\tkzLabelPoints[below](C,D)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[right](A)
+		\end{tikzpicture}}
+	\loigiai
+	{Hình $1$ là hình vẽ đúng quy tắc.\\
+	Hình $2$ biểu thị đường không nhìn thấy bằng nét liền nên không đúng quy tắc.\\
+	Hình $3$ biểu diễn sai trung điểm.\\
+	Hình $4$ biểu diễn sai quan hệ song song và tỉ lệ của $AB$ và $CD$.}
+\end{ex}

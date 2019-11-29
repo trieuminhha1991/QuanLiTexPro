@@ -1,0 +1,334 @@
+%!Cau!%
+\begin{ex}%[DTH, Sở GD và ĐT - Hà Nam, 2019]%[Đào-V- Thủy, 12EX5]%[1D2B5-2]
+	Một lớp có $20$ nam sinh và $15$ nữ sinh. Giáo viên chọn ngẫu nhiên $4$ học sinh lên bảng giải bài tập. Tính xác suất để $4$ học sinh được chọn có cả nam và nữ.
+	\choice
+	{\True $\dfrac{4615}{5236}$}
+	{$\dfrac{4651}{5236}$}
+	{$\dfrac{4615}{5236}$}
+	{$\dfrac{4610}{5236}$}
+	\loigiai{
+		Số cách chọn $4$ học sinh lên bảng là $n(\Omega)= \mathrm{C}_{35}^4$.\\
+		Số cách chọn $4$ học sinh chỉ có nam hoặc chỉ có nữ là $\mathrm{C}_{20}^4+ \mathrm{C}_{15}^4$.\\
+		Vậy xác suất để $4$ học sinh được gọi có cả nam và nữ là $1- \dfrac{\mathrm{C}_{20}^4+ \mathrm{C}_{15}^4}{\mathrm{C}_{35}^4}= \dfrac{4615}{5236}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Vĩnh Phúc, 2019]%[Mai Sương, EX-5-2019]%[1D2B5-2]
+Một hộp chứa $11$ quả cầu gồm $5$ quả màu xanh và $6$ quả cầu màu đỏ. Chọn ngẫu nhiên đồng thời $2$ quả cầu từ hộp đó. Xác suất để $2$ quả cầu chọn ra cùng màu bằng
+	\choice
+	{$\dfrac{5}{22}$}
+	{$\dfrac{6}{11}$}
+	{\True $\dfrac{5}{11}$}
+	{$\dfrac{8}{11}$}
+	\loigiai{
+	Số phần tử của không gian mẫu $n(\Omega) = \mathrm{C}_{11}^2$.\\
+	Gọi $A$ là biến cố lấy được $2$ quả cùng màu. Suy ra  $n(A) = \mathrm{C}_5^2+\mathrm{C}_6^2$.\\
+	Xác suất của biến cố $A$ là $P(A) =\dfrac{\mathrm{C}_5^2+\mathrm{C}_6^2}{\mathrm{C}_{11}^2}=\dfrac{5}{11}$.
+	}
+	
+	\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Chuyên Sơn La, 2018]%[Nguyễn Thanh Tâm, 12-EX-5-2019]%[1D2B5-2]
+	Trong một lớp có $15$ học sinh nam và $10$ học sinh nữ. Giáo viên gọi ngẫu nhiên $4$ học sinh lên bảng. Xác suất để $4$ học sinh được gọi có cả nam và nữ là
+	\choice
+	{$\dfrac{219}{232}$}
+	{\True $\dfrac{443}{506}$}
+	{$\dfrac{218}{323}$}
+	{$\dfrac{442}{506}$}
+	\loigiai{
+		Ta có không gian mẫu có số phần tử là $n(\Omega)=\mathrm{C}_{25}^4=12650$.\\
+		Đặt $A$ là biến cố “$4$ học sinh gọi lên bảng có cả nam và nữ”.\\
+		Xét các trường hợp sau:\\
+		TH1. Bốn học sinh gọi lên đều là nữ có $\mathrm{C}_{10}^4$ cách chọn.\\
+		TH2. Bốn học sinh gọi lên đều là nam có $\mathrm{C}_{15}^4$ cách chọn.\\
+		Như vậy số cách chọn bốn học sinh có cả nam và nữ là $n(A)=\mathrm{C}_{25}^4-\mathrm{C}_{10}^4-\mathrm{C}_{15}^4=11075$.\\
+		Vậy $\mathrm{P}(A)=\dfrac{11075}{12650}=\dfrac{443}{506}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, THPT chuyên KHTN Hà Nội, 2019]%[KV Thanh, 12EX5]%[1D2B5-2]
+	Gieo con xúc xắc được chế tạo cân đối và đồng chất hai lần. Gọi $a$ là số chấm xuất hiện trong lần gieo thứ nhất, $b$ là số chấm trong lần gieo thứ hai. Xác suất để phương trình $x^2 + ax + b = 0$ có nghiệm bằng
+	\choice
+	{$\dfrac{17}{36}$}
+	{\True $\dfrac{19}{36}$}
+	{$\dfrac{1}{2}$}
+	{$\dfrac{4}{9}$}
+	\loigiai{
+	Không gian mẫu $\Omega=\{(i;j)\mid 1\leq i\leq 6,1\leq j\leq 6\}$.\\
+	Suy ra số phần tử của không gian mẫu $n(\Omega)=36$.\\
+	$x^2+ax+b=0$ có nghiệm khi và chỉ khi $a^2-4b\geq 0\Leftrightarrow a^2\geq 4b$.\\
+	Do $a,b\in\{1;2;3;4;5;6\}$ nên $a^2\geq 4b$ trong các trường hợp sau:
+	\begin{itemize}
+	\item $b=1\Rightarrow a\in\{2;3;4;5;6\}$;
+	\item $b=2\Rightarrow a\in\{3;4;5;6\}$;
+	\item $b=3\Rightarrow a\in\{4;5;6\}$;
+	\item $b=4\Rightarrow a\in\{4;5;6\}$;
+	\item $b=5\Rightarrow a\in\{5;6\}$;
+	\item $b=6\Rightarrow a\in\{5;6\}$.
+	\end{itemize}
+	Gọi $A$ là biến cố ``Phương trình $x^2+ax+b=0$ có nghiệm'', suy ra $n(A)=19$.\\
+	Vậy xác suất để phương trình đã cho có nghiệm là $\dfrac{n(A)}{n(\Omega)}=\dfrac{19}{36}$.
+	} 
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử THPTQG lần 2 THPT Thoại Ngọc Hầu, An Giang, năm 2019]%[Nguyễn Thành Khang, dự án 2019-Ex-7]%[1D2B5-2]
+	Một chi đoàn có $n>3$ đoàn viên, trong đó có $3$ nữ và một số đoàn viên nam. Cần lập một đội thanh niên tình nguyện gồm $4$ người. Biết xác suất để trong $4$ người được chọn có $3$ nữ bằng $\dfrac{2}{5}$ lần xác suất $4$ người được chọn toàn nam. Hỏi $n$ thuộc đoạn nào sau đây?
+	\choice
+	{$[11;13]$}
+	{$[14;16]$}
+	{$[16;20]$}
+	{\True $[7;10]$}
+	\loigiai{		
+		Số phần tử của không gian mẫu là $n(\Omega)=\mathrm{C}_n^4$.\\
+		Gọi $A$ là biến cố ``trong $4$ người được chọn có $3$ nữ'', $B$ là biến cố ``trong $4$ người được chọn gồm toàn nam''.\\
+		Số trường hợp thuận lợi cho biến cố $A$ là $n(A)=\mathrm{C}_3^3\cdot \mathrm{C}_{n-3}^1=n-3$.\\
+		Số trường hợp thuận lợi cho biến cố $B$ là $n(B)=\mathrm{C}_{n-3}^4$.\\
+		Từ đó suy ra $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{n-3}{\mathrm{C}_n^4}$ và $P(B)=\dfrac{n(B)}{n(\Omega)}=\dfrac{\mathrm{C}_{n-3}^4}{\mathrm{C}_n^4}$.\\
+		Theo bài ra ta có
+		\begin{eqnarray*}
+			\dfrac{n-3}{\mathrm{C}_n^4}=\dfrac{2}{5}\cdot\dfrac{\mathrm{C}_{n-3}^4}{\mathrm{C}_n^4} &\Leftrightarrow& n-3=\dfrac{2}{5}\cdot\dfrac{(n-3)(n-4)(n-5)(n-6)}{24}\\
+			&\Leftrightarrow& (n-4)(n-5)(n-6)=60\\
+			&\Leftrightarrow& (n-9)(n^2-6n+20)=0\\
+			&\Leftrightarrow& n=9.
+		\end{eqnarray*}
+		Vậy $n\in[7;10]$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề thi thử THPTQG lần 2 THPT Thoại Ngọc Hầu, An Giang, năm 2019]%[Nguyễn Thành Khang, dự án 2019-Ex-7]%[1D2B5-2]
+	Có $13$ tấm thẻ phân biệt trong đó có $1$ tấm thẻ ghi chữ Đỗ, $1$ tấm thẻ ghi chữ Đại, $1$ tấm thẻ ghi chữ Học và 10 tấm thẻ được đánh số lần lượt từ $0$ đến $9$. Lấy ngẫu nhiên $7$ thẻ, tính xác suất để rút được $7$ thẻ: Đỗ, Đại, Học, $2$, $0$, $1$, $9$.
+	\choice
+	{$\dfrac{7}{13}$}
+	{$\dfrac{1}{13}$}
+	{\True $\dfrac{1}{1716}$}
+	{$\dfrac{7}{1716}$}
+	\loigiai{
+		Số phần tử của không gian mẫu là $n(\Omega)=\mathrm{C}_{13}^7=1716$.\\
+		Gọi $A$ là biến cố ``rút được $7$ thẻ: Đỗ, Đại, Học, $2$, $0$, $1$, $9$''.\\
+		Số trường hợp thuận lợi cho biến cố $A$ là $n(A)=1$.\\
+		Từ đó suy ra xác suất cần tìm là $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{1}{1716}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử Lần 1, THPT Chuyên Lê Khiết - Quảng Ngãi, 2019]%[Dương BùiĐức, dự án 12EX7]%[1D2B5-5] 
+	Cho đa giác đều $P$ gồm $16$ đỉnh. Chọn ngẫu nhiên một tam giác có ba đỉnh là đỉnh của $P$. Tính xác suất để tam giác chọn được là tam giác vuông.
+	\choice
+	{$\dfrac{6}{7}$}
+	{$\dfrac{2}{3}$}
+	{$\dfrac{3}{14}$}
+	{\True $\dfrac{1}{5}$}
+	\loigiai{
+		Số phần tử không gian mẫu là $\mathrm{C}_{16}^3$.\\
+		Theo giả thiết, đa giác có đều 16 cạnh nên có 16 đỉnh do đó có 8 đường chéo xuyên tâm. Cứ mỗi hai đường chéo xuyên tâm sẽ cho 4 tam giác vuông. Vậy số cách chọn một tam giác vuông có 3 đỉnh là đỉnh của đa giác sẽ là $4\mathrm{C}_8^2$.\\
+		Xác suất cần tìm là $P=\dfrac{4\mathrm{C}_8^2}{\mathrm{C}_{16}^3}=\dfrac{1}{5}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[2-TT-26- Đề thi thử Toán THPT Quốc gia 2019, Trường THPT Nam Tiền Hải – Thái Bình]%[Nguyễn Thế Anh, dự án EX7]%[1D2B5-2]
+Một lô hàng gồm $30$ sản phẩm trong đó có $20$ sản phẩm tốt và $10$ sản phẩm xấu. Lấy ngẫu nhiên $3$ sản phẩm trong lô hàng. Tính xác suất để $3$ sản phẩm lấy ra có ít nhất một sản phẩm tốt.
+\choice
+{$\dfrac{6}{203}$}
+{$\dfrac{57}{203}$}
+{$\dfrac{153}{203}$}
+{\True $\dfrac{197}{203}$}
+\loigiai{
+Gọi $A$ là biến cố \lq \lq Ba sản phẩm lấy ra có ít nhất một sản phẩm tốt.\rq\rq\\
+Suy ra $\overline{A}$ là biến cố ba sản phẩm lấy ra không có sản phẩm tốt do đó có $n(\overline{A})=\mathrm{C}^3_{10}$.\\
+Số phần tử của không gian mẫu $n(\Omega)=\mathrm{C}^3_{30}\Rightarrow\mathrm{P}(A)=1-\mathrm{P}(\overline{A})=1-\dfrac{n(\overline{A})}{n(\Omega)}=\dfrac{197}{203}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L2, THPT  Ngô Quyền-Hải Phòng, 2019]%[KV Thanh, 12EX7]%[1D2B5-2]
+Sắp xếp $5$ quyển sách Toán và $4$ quyển sách Văn lên một kệ sách dài. Tính xác suất để các quyển sách cùng một môn nằm cạnh nhau.
+\choice
+{$\dfrac{1}{181440}$}
+{$\dfrac{125}{126}$}
+{\True $\dfrac{1}{63}$}
+{$\dfrac{1}{126}$}
+\loigiai{
+Sắp xếp $5$ quyển sách Toán và $4$ quyển sách Văn lên kệ dài theo hàng ngang từ trái sang phải có $9!=362880$ cách.\\
+Sắp xếp $5$ quyển sách Toán và $4$ quyển sách Văn sao cho các quyển cùng một môn nằm cạnh nhau có $2$ trường hợp:
+\begin{itemize}
+\item TH1. $5$ quyển Toán bên trái, $4$ quyển Văn bên phải: Có $5!\cdot 4!=2880$ cách.
+\item TH2. $4$ quyển Văn bên trái, $5$ quyển Toán bên phải: Có $4!\cdot 5!=2880$ cách.
+\end{itemize}
+Suy ra có $2880+2880=5760$ cách.\\
+Vậy xác suất để các quyển sách cùng một môn nằm cạnh nhau là $\dfrac{5760}{362880}=\dfrac{1}{63}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ, 2019-2]%[Nguyễn Trường Sơn, 12-EX-5-2019]%[1D2B5-2]
+	Một nhóm học sinh gồm $6$ bạn nam và $4$ bạn nữ đứng ngẫu nhiên thành một hàng. Xác suất để có đúng $2$ trong $4$ bạn nữ đứng cạnh nhau là
+	\choice
+	{$\dfrac{1}{4}$}
+	{$\dfrac{1}{3}$}
+	{$\dfrac{2}{3}$}
+	{\True $\dfrac{1}{2}$}
+	\loigiai{Số phần tử của không gian mẫu là $n(\Omega)=10!$.\\
+		Gọi biến cố $A$ là "có đúng $2$ bạn nữ đứng cạnh nhau".
+		\begin{itemize}
+			\item Sắp xếp vị trí cho $6$ bạn nam có $6!$, khi đó $6$ bạn nam tạo ra $7$ vách ngăn.
+			\item Sắp xếp bốn bạn nữ vào $7$ vách ngăn, trong đó có hai bạn nữ ngồi gần nhau có $  \mathrm{C}_4^2 \cdot \mathrm{A}_7^3 \cdot 2!$.
+		\end{itemize}
+		Suy ra $n(A)=6! \cdot  \mathrm{C}_4^2 \cdot \mathrm{A}_7^3 \cdot 2!$.\\
+		Xác suất của biến cố $A$ bằng $\mathrm{P}(A)=\dfrac{1}{2}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Hưng Yên-Lần 1, 2019]%[Duong Xuan Loi, 12-EX-8]%[1D2B5-2]
+	Đội tuyển học sinh giỏi văn lớp $12$ của trường THPT X có $7$ học sinh trong đó có bạn Minh Anh. Lực học của các học sinh là như nhau. Nhà trường chọn ngẫu nhiên $4$ học sinh đi thi. Tính xác suất để Minh Anh được chọn đi thi.
+	\choice
+	{$\dfrac{1}{2}$}
+	{$\dfrac{1}{7}$}
+	{\True $\dfrac{4}{7}$}
+	{$\dfrac{3}{7}$}
+	\loigiai{
+		Chọn ngẫu nhiên $4$ bạn trong $7$ bạn ta có $\mathrm{C}_7^4$ cách $ \Rightarrow n\left( \Omega \right)=\mathrm{C}_7^4$. \\
+		Gọi $A$ là biến cố Minh Anh được chọn đi thi $ \Rightarrow n(A)=\mathrm{C}_6^3$. \\
+		Xác suất Minh Anh được chọn đi thi là $\mathrm{P}(A)=\dfrac{n(A)}{n\left( \Omega \right)} =\dfrac{\mathrm{C}_6^3}{\mathrm{C}_7^4}=\dfrac{4}{7}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L2, Đoàn Thượng  Hải Dương, 2019]%[Nguyễn Tất Thu, dự án EX8]%[1D2B5-5]%Câu 32
+	Đề kiểm tra $15$ phút có $10$ câu trắc nghiệm, mỗi câu có bốn phương án trả lời, trong đó có một phương án đúng, mỗi câu trả lời đúng được $1{,}0$ điểm. Một thí sinh làm cả $10$ câu, mỗi câu chọn ngẫu nhiên một phương án. Tính xác suất để thí sinh đó đạt từ $8{,}0$ điểm trở lên.
+	\choice
+	{\True $\dfrac{436}{4^{10}}$}
+	{$\dfrac{463}{4^{10}}$}
+	{$\dfrac{436}{10^4}$}
+	{$\dfrac{463}{10^4}$}
+	\loigiai{
+		Thí sinh đó đạt từ $8{,}0$ điểm trở lên nghĩa là thí sinh đó trả từ đúng $8$ câu hoặc $9$ câu hoặc $10$ câu.
+		\begin{itemize}
+			\item [TH 1]: Nếu trả lời đúng 8 câu thì xác xuất là $\mathrm{C}_{10}^8 \cdot \left(\dfrac{1}{4}\right)^8 \cdot \left(\dfrac{3}{4}\right)^2$.
+			\item [TH 2]: Nếu trả lời đúng 9 câu thì xác xuất là $\mathrm{C}_{10}^9 \cdot \left(\dfrac{1}{4}\right)^9 \cdot \left(\dfrac{3}{4}\right)$.
+			\item [TH 3]: Nếu trả lời đúng 10 câu thì xác xuất là $\mathrm{C}_{10}^{10} \cdot \left(\dfrac{1}{4}\right)^{10}$.
+		\end{itemize}
+		Xác suất để thí sinh đó đạt từ $8{,}0$ điểm trở lên là
+		\[\mathrm{C}_{10}^8 \cdot \left(\dfrac{1}{4}\right)^8 \cdot \left(\dfrac{3}{4}\right)^2+\mathrm{C}_{10}^9 \cdot \left(\dfrac{1}{4}\right)^9 \cdot \left(\dfrac{3}{4}\right)+\mathrm{C}_{10}^{10} \cdot \left(\dfrac{1}{4}\right)^{10}=\dfrac{436}{4^{10}}.\]}
+\end{ex}%!Cau!%
+\begin{ex}%[2-TT-5- Đề thi tháng 2-2019, Toán 12 trường THPT chuyên Bắc Giang- 2019]%[Nguyễn Thế Anh-EX6]%[1D2B5-2]
+	Lớp $11$A có hai tổ. Tổ I có $5$ bạn nam, $3$ bạn nữ và tổ II có $4$ bạn nam và $4$ bạn nữ. Lấy ngẫu nhiên mỗi tổ ra $2$ bạn để đi lao động. Tính xác suất để trong các bạn đi lao động có đúng $3$ bạn nữ.
+	\choice
+	{$\dfrac{1}{364}$}
+	{\True $\dfrac{69}{392}$}
+	{$\dfrac{1}{14}$}
+	{$\dfrac{9}{52}$}
+	\loigiai{
+		Để lấy $2$ bạn trong tổ I ta có $\mathrm{C}_8^2$.\\
+		Để lấy $2$ bạn trong tổ II ta có $\mathrm{C}_8^2$.\\
+		Vậy số phần tử của không gian mẫu là $\mathrm{n}{(\Omega)}=\mathrm{C}_8^2\cdot\mathrm{C}_8^2 =784$.\\
+		Gọi $\mathrm{A}\colon$``Các bạn đi lao động có đúng $3$ bạn nữ''.\\
+		Vậy số phần tử của biến cố $\mathrm{A}$ là $\mathrm{n(A)}=\mathrm{C}_3^1\cdot\mathrm{C}_5^1\cdot\mathrm{C}_4^2 + \mathrm{C}_3^2\cdot\mathrm{C}_4^1\cdot\mathrm{C}_4^1=138$.\\
+		Vậy xác suất của biến cố $\mathrm{A}$ là $\mathrm{P(A)}=\dfrac{138}{784}=\dfrac{69}{392}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử L1, Chuyên Nguyễn Trãi, Hải Dương, 2019]%[Đinh Thanh Hoàng, dự án EX6]%[1D2B5-2]
+	Một hộp có $10$ quả cầu xanh, $5$ quả cầu đỏ. Lấy ngẫu nhiên $5$ quả từ hộp đó. Xác suất để được $5$ quả có đủ hai màu là
+	\choice
+	{$\dfrac{13}{143}$}
+	{$\dfrac{132}{143}$}
+	{$\dfrac{12}{143}$}
+	{\True $\dfrac{250}{273}$}
+	\loigiai{
+		Số phần tử của không gian mẫu: $n(\Omega )=\mathrm{C}_{15}^5=3003$.\\
+		Gọi $A$ là biến cố ``$5$ quả lấy ra có đủ hai màu''. Suy ra biến cố $\overline{A}$ là ``$5$ quả lấy ra chỉ có $1$ màu''.\\
+		\begin{itemize}
+			\item Lấy ra từ hộp $5$ quả cầu xanh, có $\mathrm{C}_{10}^5=252$ cách.
+			\item Lấy ra từ hộp $5$ quả cầu đỏ, có $\mathrm{C}_5^5=1$ cách.
+		\end{itemize}
+		Suy ra: $n\left(\overline{A}\right)=252+1=253$.\\
+		Xác suất để được $5$ quả có đủ hai màu là $\mathrm{P}(A)=1-\mathrm{P}\left(\overline{A}\right)=1-\dfrac{n\left(\overline{A}\right)}{n(\Omega)}=1-\dfrac{253}{3003}=\dfrac{250}{273}$.\\
+		Vậy xác suất cần tìm là $\dfrac{250}{273}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex} %[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%[1D2B5-2] 
+		Từ một hộp chứa $11$ quả cầu đỏ và $4$ quả cầu màu xanh, lấy ngẫu nhiên đồng thời $3$ quả cầu. Xác suất để lấy được $3$ quả cầu màu xanh bằng
+		\choice
+		{\True $\dfrac{4}{455}$}
+		{$\dfrac{33}{91}$}
+		{$\dfrac{4}{165}$}
+		{$\dfrac{24}{455}$}
+		\loigiai{
+		Số phần tử không gian mẫu $n\left(\Omega\right)=C_15^3=455$.\\
+		Gọi $A$ là biến cố: \lq\lq Lấy được $3$ quả cầu màu xanh\rq\rq.\\
+		Ta có  $n(A)=\mathrm{C}_4^3=4$.\\
+		Vậy $\mathrm{P}(A)=\dfrac{4}{455}$.}
+	\end{ex}%!Cau!%
+\begin{ex} %[Thi Thử L1, Trường THPT Phụ Dực- Thái Bình, 2019 ]%[Nguyễn Thế Anh, 12EX8-2019]%
+	[1D2B5-2] 
+		Từ một hộp chứa $11$ quả cầu đỏ và $4$ quả cầu màu xanh, lấy ngẫu nhiên đồng thời $3$ quả cầu. Xác suất để lấy được $3$ quả cầu màu xanh bằng
+		\choice
+		{\True $\dfrac{4}{455}$}
+		{$\dfrac{33}{91}$}
+		{$\dfrac{4}{165}$}
+		{$\dfrac{24}{455}$}
+		\loigiai{
+		Số phần tử không gian mẫu $n\left(\Omega\right)=C_15^3=455$.\\
+		Gọi $A$ là biến cố: \lq\lq Lấy được $3$ quả cầu màu xanh\rq\rq.\\
+		Ta có  $n(A)=\mathrm{C}_4^3=4$.\\
+		Vậy $\mathrm{P}(A)=\dfrac{4}{455}$.}
+	\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Trần Đại Nghĩa - Đắc Lắk, 2019]%[Trần Nhân Kiệt, 12EX8-2019]%[1D2B5-2]
+	Gieo một con súc sắc cân đối, đồng chất một lần. Tính xác suất để xuất hiện mặt chẵn chấm.
+	\choice
+	{$\dfrac{1}{6}$}
+	{$\dfrac{1}{4}$}
+	{\True $\dfrac{1}{2}$}
+	{$\dfrac{1}{3}$}
+\loigiai{
+Không gian mẫu là $\Omega=\{1;2;3;4;5;6\}\Rightarrow n(\Omega)=6$.\\
+Gọi $A$ là biến cố xuất hiện mặt chẵn chấm.\\
+Suy ra $A=\{2;4;6\}\Rightarrow n(A)=3$.\\
+Xác suất của biến cố $A$ là $\mathrm{P}=\dfrac{n(A)}{n(\Omega)}=\dfrac{3}{6}=\dfrac{1}{2}$.
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Nguyễn Trung Kiên, dự án 12-EX-6-2019]%[1D2B5-2]
+	Một lớp học có $20$ học sinh nam và $18$ học sinh nữ. Chọn ngẫu nhiên một học sinh. Tính xác suất để chọn được một học sinh nữ.
+	\choice
+	{$\dfrac{1}{38}$}
+	{$\dfrac{10}{19}$}
+	{\True $\dfrac{9}{19}$}
+	{$\dfrac{19}{9}$}
+	\loigiai
+	{Phép thử \lq\lq Chọn ngẫu nhiên một học sinh\rq\rq. Số phần tử của không gian mẫu là $n(\Omega)=38$.\\
+		Biến cố \lq\lq Chọn được một học sinh nữ\rq\rq\ có số thuận lợi $n(A)=18$.\\
+		Xác suất cần tìm $p(A)=\dfrac{18}{38}=\dfrac{9}{19}$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề-thi-thử-THPT-Quốc-gia-2019-môn-Toán-hội-các-trường-chuyên-lần-3]%[Tuấn Nguyễn,12EX9]%[1D2B5-2]
+	Xếp ngẫu nhiên $21$ học sinh, trong đó có đúng một bạn tên Thêm và đúng một bạn tên Quý vào ba bàn tròn có số chỗ ngồi lần lượt là $6$, $7$, $8$. Xác suất để hai bạn Thêm và Quý ngồi cạnh nhau bằng
+	\choice
+	{\True$\dfrac{1}{10}$}
+	{$\dfrac{2}{19}$}
+	{$\dfrac{12}{35}$}
+	{$\dfrac{1}{6}$}
+	\loigiai{
+		Số phần tử không gian mẫu là $n(\Omega)=\mathrm{C}_{21}^6\cdot 5!\cdot \mathrm{C}_{15}^7\cdot 6!\cdot 7!$.\\
+		Gọi $A$ là biến cố \lq\lq Hai bạn Quý và Thêm ngồi cạnh nhau \rq\rq. Có ba trường hợp:
+		\begin{enumerate}[TH 1.]
+			\item Xếp hai bạn Quý và Thêm vào bàn tròn có số chỗ ngồi là $6$, suy ra có $2\cdot \mathrm{C}_{19}^4\cdot 4!\cdot  \mathrm{C}_{15}^7\cdot 6!\cdot 7!$ cách xếp.
+			\item Xếp hai bạn Quý và Thêm vào bàn tròn có số chỗ ngồi là $7$, suy ra có $\mathrm{C}_{14}^6\cdot 5!\cdot 2\cdot 5!\cdot \mathrm{C}_{19}^5\cdot 7!$ cách xếp.
+			\item Xếp hai bạn Quý và Thêm vào bàn tròn có số chỗ ngồi là $8$, suy ra có $\mathrm{C}_{13}^6\cdot 5!\cdot 6!\cdot 2\cdot 6! \cdot \mathrm{C}_{1}^6$ cách xếp.
+		\end{enumerate}
+		Suy ra $n(A)=2\cdot \mathrm{C}_{19}^4\cdot 4!\cdot  \mathrm{C}_{15}^7\cdot 6!\cdot 7!+\mathrm{C}_{14}^6\cdot 5!\cdot 2\cdot 5!\cdot \mathrm{C}_{19}^5\cdot 7!+\mathrm{C}_{13}^6\cdot 5!\cdot 6!\cdot 2\cdot 6! \cdot \mathrm{C}_{19}^6$.\\
+		Vậy xác suất để hai bạn Thêm và Quý ngồi cạnh nhau là $\mathrm{P}(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{1}{10}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán học tuổi trẻ - Đề số 6, 2019]%[Phạm An Bình, 12EX9]%[1D2B5-2]
+	Có $13$  tấm thẻ phân biệt trong đó có một tấm thẻ ghi chữ ĐỖ, một tấm thẻ ghi chữ ĐẠI, một tấm thẻ ghi chữ HỌC và mười tấm thẻ đánh số từ $0$ đến $9$. Lấy ngẫu nhiên từ đó ra $7$ tấm thẻ. Tính xác suất để rút được $7$ tấm thẻ theo thứ tự: ĐỖ, ĐẠI, HỌC, $2$, $0$, $1$, $9$.
+	\choice
+	{$\dfrac{1}{1260}$}
+	{$\dfrac{1715}{1716}$}
+	{\True $\dfrac{1}{\mathrm{A}_{13}^7}$}
+	{$\dfrac{1}{1716}$}
+	\loigiai{
+		Ta có $|\Omega|=\mathrm{A}_{13}^7$.\\
+		Gọi $A$ là biến cố rút như yêu cầu bài toán, suy ra $|A|=1$.\\
+		Vậy $\mathrm{P}(A)=\dfrac{1}{\mathrm{A}_{13}^7}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi Thử Lần 2, THPT Lương Thế Vinh - Hà Nội, 2019]%[Dương BùiĐức, dự án 12EX6]%[1D2B5-5]
+Cho một hộp có chứa $ 5 $ bóng xanh, $ 6 $ bóng đỏ và $ 7 $ bóng vàng. Lấy ngẫu nhiên $ 4 $ bóng từ hộp, tính xác suất để có đủ $ 3 $ màu.
+\choice
+{$\dfrac{35}{1632}$}
+{\True $\dfrac{35}{68}$}
+{$\dfrac{175}{5832}$}
+{$\dfrac{35}{816}$}
+\loigiai{
+Xét các trương hợp
+\begin{enumerate}[TH1.]
+\item Lấy được $ 1 $ bóng xanh, $ 1 $ bóng đỏ, $ 2 $ bóng vàng: số cách chọn là $ \mathrm{C}_{5}^{1}\cdot \mathrm{C}_{6}^{1}\cdot \mathrm{C}_{7}^{2}=630 $ cách.
+\item Lấy được $ 1 $ bóng xanh, $ 2 $ bóng đỏ, $ 1 $ bóng vàng: số cách chọn là $ \mathrm{C}_{5}^{1}\cdot \mathrm{C}_{6}^{2}\cdot \mathrm{C}_{7}^{1}=525 $ cách.
+\item Lấy được $ 2 $ bóng xanh, $ 1 $ bóng đỏ, $ 1 $ bóng vàng: số cách chọn là $ \mathrm{C}_{5}^{2}\cdot \mathrm{C}_{6}^{1}\cdot \mathrm{C}_{7}^{1}=420 $ cách.
+\end{enumerate}
+Suy ra số cách chọn $ 4 $ quả bóng có đủ $ 3 $ màu là $ 420+525+630=1575 $ cách.\\
+Số cách chọn $ 4 $ quả bóng bất kỳ trong $ 18 $ quả là $ \mathrm{C}_{18}^{4}=3060 $ cách. Do đó xác suất để chọn được $ 4 $ quả bóng có đủ $ 3 $ màu là $ \dfrac{1575}{3060}=\dfrac{35}{68} $.
+}
+\end{ex}

@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e1" }, "SectionId" : 1, "SectionName" : "Bất đẳng thức" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e2" }, "SectionId" : 2, "SectionName" : "Bất phương trình và hệ bất phương trình một ẩn" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e3" }, "SectionId" : 3, "SectionName" : "Dấu của nhị thức bậc nhất" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e4" }, "SectionId" : 4, "SectionName" : "Bất phương trình bậc nhất hai ẩn" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e5" }, "SectionId" : 4, "SectionName" : "Dấu của tam thức bậc hai" }

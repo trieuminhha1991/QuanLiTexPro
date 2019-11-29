@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e1" }, "SectionId" : 1, "SectionName" : "Bảng phân bố tần số và tần suất" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e2" }, "SectionId" : 2, "SectionName" : "Biểu đồ" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e3" }, "SectionId" : 3, "SectionName" : "Số trung bình cộng. Số trung vị. Mốt" }
+{ "_id" : { "$oid" : "5d1cbd613fb9391a74f275e4" }, "SectionId" : 4, "SectionName" : "Phương sai và độ lệch chuẩn" }

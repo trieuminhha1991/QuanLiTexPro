@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Xác định véc-tơ ka, tính độ dài véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Chứng minh các đẳng thức véc-tơ, thu gọn biểu thức" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Xác định vị trí của một điểm nhờ đẳng thức véc-tơ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Phân tích một véc-tơ theo hai véc-tơ không cùng phương" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Chứng minh ba điểm thẳng hàng, hai đường thẳng song song, hai điểm" }
+{ "_id" : { "$oid" : "5d1cdcd03fb939115cc7c1e4" }, "FormId" : 6, "FormName" : "Tập hợp điểm" }
+{ "_id" : { "$oid" : "5d1cdcd03fb939115cc7c1e5" }, "FormId" : 7, "FormName" : "Cực trị" }

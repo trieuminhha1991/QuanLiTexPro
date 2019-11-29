@@ -1,0 +1,9 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ObjectName" : "D", "ChapterName" : "Mệnh đề. Tập hợp" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ObjectName" : "D", "ChapterName" : "Hàm số bậc nhất và bậc hai" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ObjectName" : "D", "ChapterName" : "Phương trình - Hệ phương trình" }
+{ "_id" : { "$oid" : "5d1cb77e3fb9391a74f275d0" }, "ChapterId" : 4, "ObjectName" : "D", "ChapterName" : "Bất đẳng thức - Bất phương trình" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d1" }, "ChapterId" : 5, "ObjectName" : "D", "ChapterName" : "Thống kê" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d2" }, "ChapterId" : 6, "ObjectName" : "D", "ChapterName" : "Cung và góc lượng giác. Công thức lượng giác" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ObjectName" : "H", "ChapterName" : "Vec-Tơ" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ObjectName" : "H", "ChapterName" : "Tích vô hướng của hai véc-tơ và ứng dụng" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d5" }, "ChapterId" : 3, "ObjectName" : "H", "ChapterName" : "Phương pháp tọa độ trong mặt phẳng" }

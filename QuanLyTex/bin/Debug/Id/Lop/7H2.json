@@ -1,0 +1,9 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Tổng ba góc của một tam giác" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Hai tam giác bằng nhau" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Trường hợp bằng nhau thứ nhất của tam giác: cạnh - cạnh - canh" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Trường hợp bằng nhau thứ hai của tam giác: cạnh - góc - cạnh" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Trường hợp bằng nhau thứ ba của tam giác: góc - cạnh - góc" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 6, "SectionName" : "Tam giác cân" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 7, "SectionName" : "Định lí Py-ta-go" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 8, "SectionName" : "Các trường hợp bằng nhau của tam giác vuông" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275db" }, "SectionId" : 9, "SectionName" : "Thực hành ngoài trời" }

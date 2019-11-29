@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Nhận diện cấp số nhân" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tìm công thức của cấp số nhân" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Tìm hạng tử trong cấp số nhân" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tìm điều kiện và chứng minh một dãy số là cấp số nhân" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Tính tổng liên quan cấp số nhân" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Kết hợp cấp số nhân và cấp số cộng" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Các bài toán thực tế" }

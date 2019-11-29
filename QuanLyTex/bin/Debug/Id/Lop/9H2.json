@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Sự xác định đường tròn. Tính chất đối xứng của đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Đường kính và dây của đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Liên hệ giữa dây và khoảng cách từ tâm đến dây" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Vị trí tương đối của đường thẳng và đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Dấu hiệu nhận biết tiếp tuyến của đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 6, "SectionName" : "Tính chất của hai tiếp tuyến cắt nhau" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 7, "SectionName" : "Vị trí tương đối của hai đường tròn" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 8, "SectionName" : "Vị trí tương đối của hai đường tròn (tiếp)" }

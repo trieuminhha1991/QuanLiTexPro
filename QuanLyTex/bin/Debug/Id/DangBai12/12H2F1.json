@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Thể tích khối nón, khối trụ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Diện tích xung quanh, diện tích toàn phần, độ dài đường sinh, chiều cao,\nbán kính đáy, thiết diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Khối tròn xoay nội tiếp, ngoại tiếp khối đa diện" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Bài toán thực tế về khối nón, khối trụ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : " Bài toán cực trị về khối nón, khối trụ" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Câu hỏi lý thuyết" }

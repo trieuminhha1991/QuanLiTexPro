@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tìm tọa độ của một điểm và độ dài đại số của một véc-tơ trên trục" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tìm tọa độ các véc-tơ a+b và a-b" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Xác định tọa độ của véc-tơ và của một điểm trên mặt phẳng tọa độ Oxy" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : " Phân tích một véc-tơ theo hai véc-tơ không cùng phương" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Chứng minh ba điểm thẳng hàng, véc-tơ cùng phương, hai đường thẳng" }

@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Xét dấu của các giá trị lượng giác" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tính giá trị lượng giác của một cung" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Giá trị lượng giác của các cung có liên quan đặc biệt" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tìm giá trị lớn nhất, giá trị nhỏ nhất của biểu thức lượng giác" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Rút gọn biểu thức lượng giác. Đẳng thức lượng giác" }
+{ "_id" : { "$oid" : "5d1cdb763fb939115cc7c1db" }, "FormId" : 6, "FormName" : "Các bài toán có yếu tố thực tế, liên môn" }
+{ "_id" : { "$oid" : "5d1cdb763fb939115cc7c1dc" }, "FormId" : 7, "FormName" : "Câu hỏi lý thuyết" }

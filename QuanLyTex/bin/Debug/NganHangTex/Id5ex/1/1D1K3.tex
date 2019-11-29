@@ -1,0 +1,72 @@
+%!Cau!%
+\begin{ex}%[KSCL, Sở GD và ĐT - Thanh Hóa, 2018]%[Bùi Ngọc Diệp, 12EX-5]%[1D1K3-7]
+	Có tất cả bao nhiêu giá trị nguyên của tham số $m$ để phương trình $\cos^32x - \cos^2 2x = m \sin^2 x$ có nghiệm thuộc khoảng $\left(0; \dfrac{\pi}{6}\right)$?
+	\choice
+	{$0$}
+	{\True  $1$}
+	{ $2$}
+	{ $3$}
+	\loigiai{
+		Phương trình tương đương với $$\cos^32x - \cos^2 2x - m \cdot \dfrac{1 - \cos 2x}{2} = 0 \Leftrightarrow (\cos 2x - 1)(2 \cos^2 2x + m) = 0 \Leftrightarrow \hoac{& \cos 2x = 1\quad (1) \\& \cos^2 2x = - \dfrac{m}{2} \quad (2).} $$
+		Giải $(1) \Leftrightarrow x = k \pi$ $(k \in \mathbb{Z})$, các nghiệm này không thuộc $\left(0; \dfrac{\pi}{6}\right)$. \\
+		Giải $(2)$, do $x \in \left(0; \dfrac{\pi}{6}\right)$ nên $2x \in \left(0; \dfrac{\pi}{3}\right)$ $\Rightarrow \dfrac{1}{2} < \cos 2x < 1 \Leftrightarrow \dfrac{1}{4} < \cos^2 2x < 1$. \\
+		Vậy $(2)$ có nghiệm $x \in \left(0; \dfrac{\pi}{6}\right) \Leftrightarrow \dfrac{1}{4} < - \dfrac{m}{2} < 1 \Leftrightarrow - 2 < m < - \dfrac{1}{2}$. \\
+		Vậy có một giá trị nguyên của $m$  là $-1$.}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử lần I, Sở GD&ĐT Sơn La 2019]%[Nguyễn Anh Quốc,  dự án EX5]%[1D1K3-5]
+	Gọi $S$ là tập hợp các nghiệm của phương trình $\sqrt {3}\tan\left(\dfrac{\pi}{6}-x\right)+ \tan x\cdot\tan\left(\dfrac{\pi}{6}-x\right)=\tan 2x$ trên đoạn $[0;10\pi]$. Số phần tử của $S$ là
+	\choice
+	{$19$}
+	{\True $20$}
+	{$21$}
+	{$22$}
+	\loigiai{
+		Áp dụng công thức với $a+b+c=\dfrac{\pi}{2}$, ta có $\tan a\tan b+\tan b\tan c +\tan c\tan a=1$.\\
+		Khi đó phương trình đã cho tương đương
+		\begin{eqnarray*}
+		&&\tan \dfrac{\pi}{3}\tan \left(\dfrac{\pi}{6}-x \right)+\tan x\tan \left( \dfrac{\pi}{6}-x\right)+\tan \dfrac{\pi}{3}\tan x  =\tan 2x\\
+		&\Leftrightarrow&\tan2x=1\\
+		&\Leftrightarrow& x=\dfrac{\pi}{8}+\dfrac{k\pi}{2},\ k\in\mathbb{Z}.
+		\end{eqnarray*}
+		Vì $0\leq x\leq 10\pi\Rightarrow 0\leq\dfrac{\pi}{8}+\dfrac{k\pi}{2}\leq 10\pi\Rightarrow k\in\left\{0;1;2;\cdots;19\right\}$.\\
+		Suy ra có $20$ giá trị $k$ thỏa mãn nên số phần tử của $S$ bằng $20$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Chuyên Sơn La, 2018]%[Nguyễn Thanh Tâm, 12-EX-5-2019]%[1D1K3-5]
+	Gọi $S$ là t hợp các nghiệm của phương trình
+	$$\sqrt{3}\tan\left(\dfrac{\pi}{6}-x\right)+\tan x\cdot\tan\left(\dfrac{\pi}{6}-x\right)+\sqrt{3}\tan x=\tan{2x}\quad\quad (1)$$
+	trên đoạn $[0;10\pi]$. Số phần tử của $S$ là
+	\choice
+	{$19$}
+	{\True $20$}
+	{$21$}
+	{$22$}
+	\loigiai{
+		ĐK: $\cos x\cdot\cos 2x\cdot\cos\left(\dfrac{\pi}{6}-x\right)\ne 0. \quad\quad (*)$\\
+		Có $\tan\left(\dfrac{\pi}{6}-x\right)=\dfrac{\dfrac{1}{\sqrt{3}}-\tan x}{1+\dfrac{1}{\sqrt{3}}\tan x}=\dfrac{1-\sqrt{3}\tan x}{\sqrt{3}+\tan x}$.\\
+		$\sqrt{3}\tan\left(\dfrac{\pi}{6}-x\right)+\tan x\cdot\tan\left(\dfrac{\pi}{6}-x\right)+\sqrt{3}\tan x$\\
+		$$=\sqrt{3}\cdot\dfrac{1-\sqrt{3}\tan x}{\sqrt{3}+\tan x}+\tan x\cdot\dfrac{1-\sqrt{3}\tan x}{\sqrt{3}+\tan x}+\sqrt{3}\tan x\\
+		=\dfrac{\sqrt{3}+\tan x}{\sqrt{3}+\tan x}=1.$$
+		$(1)\Leftrightarrow \tan{2x}=1\Leftrightarrow x=\dfrac{\pi}{8}+\dfrac{k\pi}{2}\quad (k\in\mathbb{Z})\quad(\text{thỏa mãn} (*))$.\\
+		Do $x\in[0;10\pi]\Leftrightarrow 0\le\dfrac{\pi}{8}+\dfrac{k\pi}{2}\le10\pi\quad(k\in\mathbb{Z})\Leftrightarrow -\dfrac{1}{4}\le k\le\dfrac{79}{4}\quad(k\in\mathbb{Z})$.\\
+		Vậy tập $S$ có số phần tử là $20$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Nguyễn Tài Tuệ, Đề Thi THPT QG lần 4 trường THPT Yên Khánh A, Ninh Bình, Dự án 12EX8-2019]%[1D1K3-5]
+	Phương trình $ 9^{\sin^2 x} + 9^{\cos^2x} = 10$ có bao nhiêu nghiệm trên đoạn $ \left[ - 2019; 2019\right]$? 
+	\choice
+	{\True $ 2571$}
+	{$ 1927$}
+	{$ 2570$}
+	{$ 1929$}
+	\loigiai{
+		Ta có
+		$$9^{\sin^2x}+9^{\cos^2x}=10 \Leftrightarrow 9^{1-\cos^2x}+9^{\cos^2x}=10 \Leftrightarrow \frac{9}{9^{\cos^2x}}+9^{\cos^2x}-10=0\,\,(*)$$
+		Đặt $t=9^{\cos ^2x}$, $(1\le t\le 9)$. Khi đó $$(*)\Leftrightarrow \frac{9}{t}+t-10=0 \Leftrightarrow t^2-10 t+9=0 \Leftrightarrow \hoac{&t=9\\&t=1.}$$
+		Với $t=1 \Rightarrow 9^{\cos^2x}=1 \Leftrightarrow 9^{\cos^2x}=9^{0}\Leftrightarrow \cos x=0 \Leftrightarrow x=\dfrac{\pi}{2}+k\pi\,\,(k\in\mathbb{Z}).$\\
+		Với $t=9 \Rightarrow 9^{\cos^2x}=9 \Leftrightarrow \cos^2x=1 \Leftrightarrow \sin x=0 \Leftrightarrow x=k\pi\,\,(k\in\mathbb{Z}).$\\
+		Nếu $x=\dfrac{\pi}{2}+k\pi$ và $x\in[-2019;2019]$ thì $$-2019 \leq \dfrac{\pi}{2}+k \pi \leq 2019 \Rightarrow-\dfrac{2019}{\pi}-\dfrac{1}{2}\leq k \leq \dfrac{2019}{\pi}+\dfrac{1}{2}.$$ Do đó, $k=-643,-642, \ldots, 642$. Vậy có $1286$ nghiệm thỏa mãn.\\
+		Nếu $x=k\pi$ và $x\in[-2019;2019]$ thì $$-2019 \leq k \pi \leq 2019 \Rightarrow-\dfrac{2019}{\pi}\leq k \leq \dfrac{2019}{\pi}.$$ Do đó, $k=-642,-641, \ldots, 642$. Vậy có $1285$ nghiệm thỏa mãn.\\
+		Vậy có tất cả $2571$ nghiệm thỏa mãn.
+	}
+\end{ex}

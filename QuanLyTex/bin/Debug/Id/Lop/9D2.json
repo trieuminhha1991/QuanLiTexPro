@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d6" }, "SectionId" : 1, "SectionName" : "Nhắc lại và bổ sung các khái niệm về hàm số" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d7" }, "SectionId" : 2, "SectionName" : "Hàm số bậc nhất" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d8" }, "SectionId" : 3, "SectionName" : "Đồ thị của hàm số 𝑦 = 𝑎𝑥 + 𝑏 (𝑎 ̸= 0)" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275d9" }, "SectionId" : 4, "SectionName" : "Đường thẳng song song và đường thẳng cắt nhau" }
+{ "_id" : { "$oid" : "5d1cbab43fb9391a74f275da" }, "SectionId" : 5, "SectionName" : "Hệ số góc của đường thẳng 𝑦 = 𝑎𝑥 + 𝑏 (𝑎 ̸= 0)" }

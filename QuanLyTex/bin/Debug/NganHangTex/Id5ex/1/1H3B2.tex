@@ -1,0 +1,129 @@
+%!Cau!%
+\begin{ex}%[DTH, Sở GD và ĐT - Hà Nam, 2019]%[Đào-V- Thủy, 12EX5]%[1H3B2-3]
+	\immini
+	{
+		Cho hình lập phương $ABCD.A'B'C'D'$ (hình vẽ bên). Góc giữa hai đường thẳng $AC$ và $A'D$ bằng
+		\choice
+		{$45^{\circ}$}
+		{$30^{\circ}$}
+		{\True $60^{\circ}$}
+		{$90^{\circ}$}
+	}
+	{
+		\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+		\coordinate (v) at (0,4);
+		\coordinate (A) at (0,0);
+		\coordinate (B) at (4,0);
+		\coordinate (D) at (-1,-1.5);
+		\coordinate (C) at ($(B)+(D)-(A)$);
+		\coordinate (A') at ($(A)+(v)$);
+		\coordinate (B') at ($(B)+(v)$);
+		\coordinate (C') at ($(C)+(v)$);
+		\coordinate (D') at ($(D)+(v)$);
+		\draw (A')--(B')--(C')--(D')--cycle;
+		\draw (B)--(C)--(D)--(D') (C')--(C) (B')--(B) (A')--(C')--(D);
+		\draw[dashed] (A')--(D') (A')--(A) (B)--(A)--(D) (A')--(D) (A)--(C);
+		\foreach \p/\pos in {A/left, B/right, C/below, D/below, A'/above, B'/above, C'/right, D'/left}
+		\fill (\p) circle (1pt) node[\pos] {$\p$};
+		\end{tikzpicture}
+	}
+	\loigiai{
+		Ta có $(AC, A'D)= (A'C', A'D)= \widehat{DA'C'}= 60^{\circ}$ (vì $A'D= A'C'= C'D$).
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Dự án EX-8 2019]%[Phạm Tuấn]%[1H3B2-3]
+Cho tứ diện $ABCD$ với đáy $BCD$ là tam giác vuông cân tại $C$. Các điểm $M$, $N$, $P$, $Q$ lần lượt là
+trung điểm của $AB$, $AC$, $BC$, $CD$. Góc giữa $MN$ và $PQ$ bằng 
+\choice
+{$0^\circ$}
+{$60^\circ$}
+{\True $45^\circ$}
+{$30^\circ$}
+\loigiai{
+\immini{
+Ta có $MN$ là đường trung bình tam giác $ABC$ nên $MN \parallel BC$, do đó 
+\[
+(MN,PQ) = (BC,PQ).
+\]
+Mặt khác $PQ$ là đường trung bình tam giác vuông cân $BCD$ suy ra $(BC,PQ) = 45^\circ$. Do đó $(MN,PQ) =45^\circ$. 
+}
+{
+\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzDefPoints{1/2/B,3/0/C,6/2/D,1/6/A}
+\tkzDefMidPoint(A,B)  \tkzGetPoint{M}
+\tkzDefMidPoint(A,C) \tkzGetPoint{N}
+\tkzDefMidPoint(B,C) \tkzGetPoint{P}
+ \tkzDefMidPoint(C,D) \tkzGetPoint{Q}
+\tkzDrawSegments(A,B A,C A,D B,C C,D M,N)
+\tkzDrawSegments[dashed](B,D P,Q)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](C)
+\tkzLabelPoints[left](B,M)
+\tkzLabelPoints[right](D,N)
+\tkzLabelPoints[below right =-3pt](Q)
+\tkzLabelPoints[below left =-3pt](P)
+\tkzDrawPoints[fill,size=6pt](D,A,B,C,M,N,P,Q)
+\tkzMarkRightAngle(B,C,D)
+\end{tikzpicture}
+}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[2-TT-5- Đề thi tháng 2-2019, Toán 12 trường THPT chuyên Bắc Giang- 2019]%[Nguyễn Thế Anh-EX6]%[1H3B2-4]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Mặt phẳng $(SAD)\perp (ABCD)$, tam giác $SAD$ đều. Góc giữa $BC$ và $SA$ là
+	\choice
+	{$90^\circ$}
+	{$45^\circ$}
+	{\True $60^\circ$}
+	{$30^\circ$}
+	\loigiai{
+	\immini{		Vì $AD\parallel BC$ nên $(BC,SA)=(AD,SA)=\widehat{SAD}=60^\circ$.}{\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzDefPoints{0/0/A,-1.4/-1.6/B,2.5/-1.6/C}
+			\coordinate (D) at ($(A)+(C)-(B)$);
+			\coordinate (H) at ($(A)!1/2!(D)$);
+			\coordinate (S) at ($(H)+(0,3.5)$);
+			\tkzDrawPolygon(S,B,C,D)
+			\tkzDrawSegments(S,C)
+			\tkzDrawSegments[dashed](A,S A,B A,D S,H)
+			\tkzDrawPoints[fill=black,size=4](D,C,A,B,S,H)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](A,B,C,H)
+			\tkzLabelPoints[right](D)
+			\end{tikzpicture}}
+	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[KTCL 12 L4, Ninh Bình - Bạc Liêu, 2018-2019]%[Vũ Nguyễn Hoàng Anh, 12EX8-19]%[1H3B2-3]
+	Cho tứ diện $ABCD$. Gọi $P$, $Q$ lần lượt là trung điểm của các cạnh $BC$, $AD$. Giả sử $AB=CD=a$ và $PQ=\dfrac{a\sqrt{3}}{2}$. Số đo góc giữa hai đường thẳng $AB$ và $CD$ là
+	\choice
+	{$90^\circ$}
+	{$45^\circ$}
+	{$30^\circ$}
+	{\True $60^\circ$}
+	\loigiai{	
+		\immini
+		{Gọi $ M $ là trung điểm của $ AC $, khi đó $MP \parallel AB$, $MQ\parallel CD$ nên $(AB,CD)=(MP,MQ)$. Xét $ \triangle MPQ $ có
+			\[MP=MQ=\dfrac{a}{2},\ PQ=\dfrac{a\sqrt{3}}{2}.\]
+			Áp dụng định lí cô-sin ta có
+			
+		}
+		{
+			\begin{tikzpicture}[line join=round,scale=0.65,label style/.style={font=\footnotesize}]
+			\tkzDefPoints{2.3/3/A, 0/0/B, 1/-2/C, 6/0/D}
+			\tkzDefMidPoint(B,C)\tkzGetPoint{P}
+			\tkzDefMidPoint(A,D)\tkzGetPoint{Q}
+			\tkzDefMidPoint(C,A)\tkzGetPoint{M}
+			\tkzDrawSegments[dashed](B,D P,Q)
+			\tkzDrawSegments(A,B B,C C,D D,A A,C P,M M,Q)
+			\tkzDrawPoints[fill=black](A,B,C,D,Q,P,M)
+			\tkzLabelPoints[left](B,P)
+			\tkzLabelPoints[right](D,Q)
+			\tkzLabelPoints[above](A)
+			\tkzLabelPoints[above left](M)
+			\tkzLabelPoints[below](C)
+			%\tkzMarkRightAngles(B,A,C A,B,D)
+			\end{tikzpicture}	
+		}
+		\[ \cos\widehat{PMQ}=\dfrac{\dfrac{a^2}{2}-\dfrac{3a^2}{4}}{2\cdot \dfrac{a^2}{4}}=-\dfrac{1}{2}\Rightarrow \widehat{PMQ}=120^\circ.\]
+		Vậy $(AB,CD)=(MP,MQ)=180^\circ-\widehat{PMQ}=60^\circ$.
+	}
+\end{ex}

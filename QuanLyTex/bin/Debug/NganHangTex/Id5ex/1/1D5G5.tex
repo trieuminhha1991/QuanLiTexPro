@@ -1,0 +1,44 @@
+%!Cau!%
+\begin{ex}%[KSCL, Sở GD và ĐT - Thanh Hóa, 2018]%[Bùi Ngọc Diệp, 12EX-5]%[1D5G5-1]
+	Cho hàm số $f(x)=(3x^2-2x-1)^9$. Tính đạo hàm cấp $6$ của hàm số tại điểm $x=0$.
+	\choice
+	{\True $f^{(6)}(0)=-60480$}
+	{$f^{(6)}(0)=60480$}
+	{$f^{(6)}(0)=34560$}
+	{$f^{(6)}(0)=-34560$}
+	\loigiai{
+		Khai triển $f(x)=a_0+a_1x+\cdots+ a_{18}x^{18}$.\\
+		Khi đó $f^{(6)}(x)=6!a_6+b_1x+b_2x^2+\cdots+ b_{12}x^{12}$. Suy ra $f^{(6)}(0)=6!a_6$.\\
+		Ta có $(3x^2-2x-1)^9=-(1+2x-3x^2)^9=-\sum\limits_{k=0}^9 C^k_9 (2x-3x^2)^k=-\sum\limits_{k=0}^9 C^k_9 \sum\limits_{i=0}^kC^i_k(2x)^{k-i}(-3x^2)^i$\\
+		$=-\sum\limits_{k=0}^9 \sum\limits_{i=0}^k C^k_9 C^i_k2^{k-i}(-3)^ix^{k+i}$.\\
+		Số hạng chứa $x^6$ ứng với $k$, $i$ thỏa mãn
+		$
+		\heva{&0\leq i \leq k\leq 9\\
+			& k+i=6}$.
+		Ta thấy $6=k+i\geq 2i$ hay $i\leq 3$.\\ Từ đó ta có bảng
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				$i$&$0$&$1$&$2$&$3$\\
+				\hline
+				$k$&$6$&$5$&$4$&$3$\\
+				\hline
+			\end{tabular}
+		\end{center}
+		Do đó $a_6=-\left[C_9^6C_6^0(-3)^0+ C_9^5C^1_5 2^4 (-3)+C_9^4 C^2_4 2^2 (-3)^2+C^3_9C^3_32^0(-3)^3 \right]=-84$.\\
+		Suy ra $f^{(6)}(0)=-84\cdot 6!=-60480$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Toán Học và Tuổi Trẻ (Đề số 3), 2019]%[Đặng Tân Hoài, 12-EX-6-2019]%[1D5G5-2]
+	Cho $f(x)=(1-3x+x^6)^{2018}$. Tính $$S=\dfrac{f(0)}{0!}+\dfrac{f'(0)}{1!}+\dfrac{f''(0)}{2!} +\cdots +\dfrac{f^{(n)}(0)}{n!},$$
+	trong đó $n=6 \times 2018$.
+	\choice
+	{$ 16054 $}
+	{$ 16055 $}
+	{$ -1 $}
+	{\True $ 1 $}
+	\loigiai{
+		Đặt $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots + a_0$. Suy ra $f^{(k)}(0)=k!\cdot a_k,~k=\overline{1,n}$, hay $\dfrac{f^{(k)}(0)}{k!}=a_k$.\\
+		Vậy $S=f(1)=(1-3 \cdot 1 + 1^6)^{2018}=1$.
+	}
+\end{ex}

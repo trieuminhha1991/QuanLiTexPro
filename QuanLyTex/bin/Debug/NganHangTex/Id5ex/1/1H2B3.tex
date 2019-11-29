@@ -1,0 +1,39 @@
+%!Cau!%
+\begin{ex}%[HK2, THPT Nguyễn Huệ, Vĩnh Phúc, 2019]%[Thịnh Trần, dự án(12EX-5-2019)]%[1H2B3-4]
+	Cho hình hộp $ABCD.A'B'C'D'$. Mặt phẳng $(\alpha)$ qua $AB$ cắt hình hộp theo thiết diện là hình gì?
+	\choice
+	{\True Hình bình hành}
+	{Hình thang}
+	{Hình lục giác}
+	{Hình chữ nhật}
+	\loigiai{
+		\immini{
+			Giả sử $(\alpha)$ qua $AB$ cắt $(A'B'C'D')$ theo giao tuyến $MN$, khi đó thiết diện là tứ giác $ABNM$.\\
+			Vì $AB \parallel (A'B'C'D')$ nên $MN \parallel AB$.\\
+			Mặt khác $MN=A'B'=AB$ nên $ABNM$ là hình bình hành.\\
+			Lập luận tương tự cho trường hợp $(\alpha)$ qua $AB$ cắt $(DCC'D')$ theo giao tuyến $MN$.
+		}{
+			\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tikzset{label style/.style={font=\footnotesize}}
+			\tkzDefPoints{0/0/A,3/0/B,-1.2/-1/D}
+			\coordinate (C) at ($(B)+(D)-(A)$);
+			\coordinate (A') at ($(A) - (0.5,2.2)$);
+			\tkzDefPointsBy[translation = from A to A'](B,C,D){B'}{C'}{D'}
+			\coordinate (M) at ($(A')!0.45!(D')$);
+			\coordinate (N) at ($(B')!0.45!(C')$);
+			\tkzFillPolygon[color=gray!20!white, fill opacity=0.5](A,B,N,M)
+			\tkzDrawPolygon(A,B,B',C',D',D)
+			\tkzDrawSegments(C,B C,D C,C' B,N)
+			\tkzDrawSegments[dashed](A,M M,N)
+			\tkzDrawSegments[dashed](A',A A',B' A',D')
+			\tkzDrawPoints[fill=black](A,B,D,C,A',B',C',D',M,N)
+			\tkzLabelPoints[above](A,B,C)
+			\tkzLabelPoints[below](D',C')
+			\tkzLabelPoints[left](D)
+			\tkzLabelPoints[above right](A')
+			\tkzLabelPoints[above left=-4pt](M)
+			\tkzLabelPoints[right](B',N)
+			\end{tikzpicture}
+		}
+	}
+\end{ex}

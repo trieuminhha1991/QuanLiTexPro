@@ -1,0 +1,389 @@
+%!Cau!%
+\begin{ex}%[De tap huan, So GD&DT Dien Bien, 2019]%[Ngoc Diep, dự án EX5]%[1H3G4-3]
+	Cho hình chóp $S.ABC$ có $SC \perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Biết $AB=a$, $AC= a \sqrt{3}$, $SC= 2a \sqrt{6}$. Tính $\sin$ của góc giữa hai mặt phẳng $(SAB)$ và $(SAC)$.
+	\choice
+	{$\sqrt{\dfrac{2}{3}}$}
+	{\True $\dfrac{2}{ \sqrt{13}}$}
+	{$1$}
+	{$\sqrt{\dfrac{5}{7}}$}
+	\loigiai{\immini{
+		Trong mặt phẳng $(SAC)$ từ $C$ kẻ $CI \perp SA$, trong mặt phẳng $(SAB)$ từ $I$ kẻ $IH \perp SA$, cắt $SB$ tại $H$, với cách vẽ này $SA \perp (CIH) $, suy ra góc giữa hai mặt phẳng $(SAB)$, $(SAC)$ là $\widehat{CIH}$.\\
+		Với cách dựng trên ta cũng suy ra $CH \perp SA$.\\
+		Ta có $AB \perp SC$, $AB \perp BC$, do đó $AB \perp (SBC)$,\\
+		suy ra $AB \perp CH$. Lại có $CH \perp SA$ nên $CH \perp (SAB)$,\\ suy ra $CH \perp SB$ và $CH \perp HI$ hay tam giác $\triangle CHI $ vuông tại $H$.\\
+		Xét tam giác vuông $SAC$ ta có}{
+		
+		\begin{tikzpicture}[>=stealth,scale=0.8, line join=round, line cap=round,thick,font=\footnotesize]
+		\tkzDefPoints{0/0/C, 3/-2/B, 6/0/A}
+		\coordinate (S) at ($(C)+(0,5)$);
+		\coordinate (H) at ($(B)!.5!(S)$);
+		\coordinate (I) at ($(S)!.3!(A)$);  
+		\tkzDrawSegments[dashed](A,C C,I)
+		\tkzDrawPolygon(S,B,C)
+		\tkzDrawSegments(S,A A,B C,H H,I)
+		\tkzLabelPoints[left](C)
+		\tkzLabelPoints[right](A,H)
+		\tkzLabelPoints[below](B)
+		\tkzLabelPoints[above](S,I)
+		\tkzMarkRightAngles(B,C,S A,B,C C,I,S C,H,B H,I,A)
+	
+		\end{tikzpicture}
+	} 
+			$$CI = \dfrac{SC \cdot CA}{\sqrt{SC^2 +CA^2}} = \dfrac{2a \sqrt{6}}{3}.$$
+		Xét tam giác vuông $SBC$ ta có 
+			$$CH =\dfrac{SC \cdot CB}{\sqrt{SC^2 +CB^2}} = \dfrac{SC \cdot \sqrt{CA^2 - AB^2}}{\sqrt{SC^2 + CA^2 -AB^2}} =\dfrac{2a \sqrt{78}}{13}. $$
+		Khi đó góc giữa hai mặt phẳng $(SAB)$, $(SAC)$ là $\widehat{CIH}$ nên $\sin \widehat{CIH} = \dfrac{CH}{CI} = \dfrac{3}{ \sqrt{13}}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn, Sở GD và ĐT - Vĩnh Phúc, 2019]%[Mai Sương, EX-5-2019]%[1H3G4-3]
+Cho hình lăng trụ tam giác đều $ABC.A'B'C'$ có $AB=2\sqrt{3}$ và $AA'=2$. Gọi $M$, $N$, $P$ lần lượt là trung điểm các cạnh $A'B'$, $A'C'$ và $BC$. Cô-sin của góc tạo bởi hai mặt
+phẳng $(AB'C')$ và $(MNP)$ bằng
+	\choice
+	{$\dfrac{6\sqrt{13}}{65}$}
+	{\True $\dfrac{\sqrt{13}}{65}$}
+	{$\dfrac{17\sqrt{13}}{65}$}
+	{$\dfrac{18\sqrt{13}}{65}$}
+	\loigiai{
+	\begin{center}
+	\begin{tikzpicture}[scale=1]
+\tkzDefPoints{0/0/A, 1.5/-2/B, 5/0/C, 0/6/z}
+\coordinate (A') at ($(A)+(z)$);
+\coordinate (B') at ($(B)+(z)$);
+\coordinate (C') at ($(C)+(z)$);
+\coordinate (M) at ($(A')!0.5!(B')$);
+\coordinate (N) at ($(A')!0.5!(C')$);
+\coordinate (P) at ($(B)!0.5!(C)$);
+\coordinate (Q) at ($(B')!0.5!(C')$);
+\tkzInterLL(B,M)(A,B') \tkzGetPoint{I}
+\tkzInterLL(C,N)(A,C') \tkzGetPoint{J}
+\tkzInterLL(M,N)(A',Q) \tkzGetPoint{E}
+\tkzInterLL(I,J)(P,E) \tkzGetPoint{K}
+\tkzDrawPolygon(A',B',C')
+\tkzDrawSegments(A,A' A,B B,C B,B' C,C' A,B' M,N B,M A',Q P,Q)
+\tkzDrawSegments[dashed](A,C M,P N,P A,C' C,N I,J P,E A,Q)
+\tkzLabelPoints[below right](B, C,C',P)
+\tkzLabelPoints[above](N,Q,E,B')
+\tkzLabelPoints[right](J)
+\tkzLabelPoints[left](A, A',I)
+\tkzLabelPoints[above left](K)
+\tkzLabelPoints[below left](M)
+\tkzDrawPoints(A,B,C,A',B',C',M,N,P,I,J,Q,E,K)
+\end{tikzpicture}
+	\end{center}
+	Gọi $P$, $Q$ lần lượt là trung điểm của $BC$ và $B'C'$; $I = BM\cap AB'$, $J = CN\cap AC'$, $E = MN\cap A'Q$.\\
+	Suy ra $(MNP)\cap\left(AB'C'\right) =(MNCB)\cap\left(AB'C'\right) = IJ$ và gọi $K = IJ\cap PE\Rightarrow K\in AQ$, với $E$ là trung điểm của $MN$.\\
+	$\left(AA'QP\right)\perp IJ\Rightarrow AQ\perp IJ , PE\perp IJ\Rightarrow\left((MNP) ,\left(AB'C'\right)\right) =(AQ , PE) =\alpha$.\\
+	Ta có $AP = 3 , PQ = 2\Rightarrow AQ =\sqrt{13}\Rightarrow QK =\dfrac{\sqrt{13}}{3}; PE =\dfrac{5}{2}\Rightarrow PK =\dfrac{5}{3}$.\\
+	$\cos\alpha = |\cos \widehat{QKP} | =\dfrac{\left| KQ^2 + KP^2 - PQ^2\right|}{2KQ\cdot KP}=\dfrac{\sqrt{13}}{65}$.
+	}
+	
+	\end{ex}%!Cau!%
+\begin{ex}%[Phát triển đề Lương Thế Vinh, Hà Nội; Nguyễn Xuân Quý]%[1H3G4-3]
+	\immini{Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác đều với $AB=2$, hình chiếu vuông góc của đỉnh $S$ trên mặt phẳng $(ABC)$ là một điểm $H$ nằm trên đoạn thẳng $BC$. Mặt phẳng $(SAB)$ tạo với $(SBC)$ một góc $\alpha$  và mặt phẳng $(SAC)$ tạo với $(SBC)$ một góc $\beta$ thỏa mãn $\tan\alpha=3$, $\tan\beta=6$. Tính chiều cao $SH$ của hình chóp $S.ABC$.
+		\choice
+		{$SH=\dfrac{1}{3}$}
+		{$SH=\dfrac{2\left(\sqrt{11}+\sqrt{2}\right)}{9}$}
+		{\True $SH=\dfrac{2\left(\sqrt{11}-\sqrt{2}\right)}{9}$}
+		{$SH=\sqrt{22}$} 	
+	}{
+		\begin{tikzpicture}[thick,scale=0.8]
+		\coordinate (b) at (0,0);
+		\coordinate (c) at (6,0);
+		\coordinate (a) at (2.4,-2);
+		\coordinate (h) at ($(b)!0.24!(c)$);
+		\coordinate (s) at ($(h)+(0,4)$);
+		\draw[dashed] (b) node[left]{$B$}--(c) node[right]{$C$} 
+		(s) node[above]{$S$}--(h) node[below]{$H$};
+		\draw (s)-- (b)--(a) node[below]{$A$} (s)--(c)--(a)--(s);
+		\tkzMarkRightAngle[size=.35](c,h,s)
+		\end{tikzpicture}		
+	}
+	\loigiai{Gọi $K$ là trung điểm $BC$ thì $AK\perp (SBC)$. Dễ thấy $\alpha=\widehat{SAH}$.
+		\immini{
+			- Kẻ $KE\perp SB$, $KF\perp SC$ thì $\widehat{AEK}=\alpha$ là góc giữa hai mặt phẳng $(SAB)$, $(SBC)$ và  $\widehat{AFK}=\beta$ là góc giữa hai mặt phẳng $(SAC)$, $(SBC)$.\\
+			- Ta có $AK=\sqrt{3}=\sqrt{3}BK=\sqrt{3}CK$, do đó
+			$$\dfrac{EK}{AK}=\cot\alpha=\dfrac{1}{3}\Rightarrow \dfrac{EK}{BK}=\dfrac{1}{\sqrt{3}}$$ hay $\sin\widehat{SBC}=\dfrac{1}{\sqrt{3}}$. 
+			Tương tự tính được $\sin\widehat{SCB}=\dfrac{1}{2\sqrt{3}}$.\\
+			- Đặt $SH=x$ thì $SB=x\sqrt{3}$, $SC=2x\sqrt{3}$. Sử dụng Pi-ta-go ta tính dược $BH=x\sqrt{2}$ và $CH=x\sqrt{11}$.\\
+			- Suy ra $BC=x\sqrt{2}+x\sqrt{11}=2$, tức là $x=\dfrac{2}{\sqrt{11}+\sqrt{2}}=\dfrac{2\left(\sqrt{11}-\sqrt{2}\right)}{9}$.		
+		}{
+			\begin{tikzpicture}[thick]
+			\coordinate (b) at (0,0);
+			\coordinate (c) at (6,0);
+			\coordinate (a) at (2,-2);
+			\coordinate (k) at ($(b)!1/2!(c)$);
+			\coordinate (h) at ($(b)!0.27!(c)$);
+			\coordinate (s) at ($(h)+(0,4)$);
+			\coordinate (e) at ($(s)!0.63!(b)$);
+			\coordinate (f) at ($(c)!0.24!(s)$);
+			\draw[dashed] 
+			(b) node[left]{$B$}--(h) node[below]{$H$}--(c) node[right]{$C$}
+			(s) node[above]{$S$}--(h)
+			(a) node[below]{$A$}--(k) node[above]{$K$}--(e) node[left]{$E$}
+			(k)--(f) node[right]{$F$};
+			\draw (e)-- (a)--(f) (b)--(a)--(c)--(s)--(b) (s)--(a);
+			\tkzMarkRightAngle[size=.35](c,h,s)
+			\tkzMarkRightAngle(a,k,b)
+			\tkzMarkRightAngle(k,e,s)
+			\tkzMarkRightAngle(s,f,k)
+			\end{tikzpicture}		    	
+		}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Lý Thái Tổ - Bắc Ninh, 2019]%[Nguyện Ngô, 12EX7]%[1H3G4-3]
+Cho hình chóp $S.ABCD$ có đáy $ABCD$ là nửa lục giác đều và $AB=BC=CD=a$. Hai mặt phẳng $(SAC)$ và $(SBD)$ cùng vuông góc với mặt phẳng $(ABCD)$, góc giữa $SC$ và $(ABCD)$ bằng $60^\circ$. Tính sin góc giữa đường thẳng $SC$ và mặt phẳng $(SAD)$.
+\choice
+{\True $\dfrac{3\sqrt{3}}{8}$}
+{$\dfrac{\sqrt{6}}{6}$}
+{$\dfrac{\sqrt{3}}{8}$}
+{$\dfrac{\sqrt{3}}{2}$}
+\loigiai{
+\begin{center}
+\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzInit[xmin=-4,ymin=-4,xmax=4,ymax=4]
+\tkzDefPoints{-3/0/A,-2/-2/B,1/-2/C,3/0/D}
+\tkzInterLL(A,C)(B,D)
+\tkzGetPoint{I}
+\tkzDefPointBy[projection = onto A--D](I)
+\tkzGetPoint{i}
+\tkzDefBarycentricPoint(I=-4,i=5)
+\tkzGetPoint{S}
+\tkzDefMidPoint(A,D)
+\tkzGetPoint{M}
+\tkzDefBarycentricPoint(S=1,M=2)
+\tkzGetPoint{K}
+\tkzDrawSegments(A,B B,C C,D S,A S,B S,C S,D)
+\tkzDrawSegments[dashed](A,D S,I I,M A,C B,D S,M I,K)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](S)
+\tkzLabelPoint[below](I){{\small $I$}}
+\tkzLabelPoints[below right](M)
+\tkzLabelPoints[right=0.3](K)
+\tkzLabelPoints[left](A)
+\tkzDrawPoints[fill=black](A,B,C,D,S,I,M,K)
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item Gọi $I$ là giao của $AC$ và $BD$, vì mặt phẳng $(SAC)$ và $(SBD)$ cùng vuông góc với mặt phẳng $(ABCD)\Rightarrow SI\perp (ABCD)$.
+\item Góc giữa $SC$ và $ABCD$ là góc $\widehat{SCI}=60^\circ$.
+\item Có $ABCD$ là nửa lục giác đều nên có $AD=2a$, $\widehat{ACD}=90^\circ\Rightarrow AC=\sqrt{AD^2-CD^2}=\sqrt{3}a$.
+\item Vì $BC\parallel AB\Rightarrow \dfrac{BC}{AD}=\dfrac{CI}{AI}=\dfrac{1}{2}\Rightarrow CI=\dfrac{\sqrt{3}}{3}a$; $AI=\dfrac{2\sqrt{3}}{3}a$; $SI=IC\cdot\tan\widehat{SCI}=a$; $SC=\sqrt{SI^2+IC^2}=\dfrac{2\sqrt{3}}{3}a$.
+\item Gọi $M$ là trung điểm của $AB$, dễ thấy $IM\perp AD$ và
+\[IM=AM\cdot \tan\widehat{DAI}=a\tan 30^\circ=\dfrac{\sqrt{3}}{3}a.\]
+\item Kẻ $IK\perp SM$. Có $\triangle SIM$ vuông tại $I$ có đường cao $IK\Rightarrow \dfrac{1}{IK^2}=\dfrac{1}{SI^2}+\dfrac{1}{IM^2}\Rightarrow IK=\dfrac{a}{2}$.
+\item Có $\dfrac{\mathrm{d}(C;(SAD))}{\mathrm{d}(I;(SAD))}=\dfrac{CA}{IA}=\dfrac{3}{2}\Rightarrow \mathrm{d}(C;(SAD))=\dfrac{3}{4}a$.
+\item Gọi $\alpha$ là góc tạo bởi $SC$ và $(SAD)\Rightarrow \sin\alpha=\dfrac{\mathrm{d}(C;(SAD))}{SC}=\dfrac{3\sqrt{3}}{8}$.
+\end{itemize}
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - BRVT, 2019]%[Phan Văn Thành, 12EX8]%[1H3G4-3]
+	Cho hình chóp $S.ABC$ có tam giác $ABC$ vuông tại $B$ và $\widehat{ACB} = 30^\circ$. Tam giác $SAC$ là tam giác đều và thuộc mặt phẳng vuông góc với $(ABC)$. Xét điểm $M$ thuộc cạnh $SC$ sao cho mặt phẳng $(MAB)$ tạo với hai mặt phẳng $(SAB)$; $(ABC)$ góc bằng nhau. Tỉ số $\dfrac{MS}{MC}$ có giá trị bằng 
+	\choice
+	{\True $ \dfrac{\sqrt{5}}{2} $}
+	{$ \dfrac{\sqrt{3}}{2} $}
+	{$  1 $}
+	{$  \dfrac{\sqrt{2}}{2} $}
+	\loigiai{Gọi $H$ là trung điểm của $AC$, suy ra $SH \perp (ABC)$.\\
+		Gọi $N$ là trung điểm của $AB$, suy ra $AB \perp (SHN)$.\\
+		Lấy $K$ là giao điểm của $AM$, $SH$. Do đó $\heva{&((ABM),(ABC)) = \widehat{HNK}\\&((ABM),(SAB)) = \widehat{KNS}.}$\\
+		Theo giả thiết, $NK$ là phân giác của $\widehat{SNH}$.
+\immini{
+	Giả sử $AB = 1 \Rightarrow BC = \sqrt{3} \Rightarrow AC = 2 \Rightarrow SH = \sqrt{3}$.\\
+	Mặt khác $HN = \dfrac{1}{2}BC = \dfrac{\sqrt{3}}{2}$.\\
+	Ta có $SN = \sqrt{HN^2 + SH^2} = \dfrac{\sqrt{15}}{2} \Rightarrow \dfrac{KH}{KS} = \dfrac{HN}{SN} = \dfrac{\sqrt{5}}{5}$ (tính chất phân giác).\\
+	Gọi $E$ là trung điểm của $CM$, theo định lí Ta-lét thì 
+	$$\dfrac{ME}{MS} = \dfrac{KH}{KS} = \dfrac{1}{\sqrt{5}} \Rightarrow \dfrac{MC}{MS} = \dfrac{2ME}{MS} = \dfrac{2}{\sqrt{5}} \Rightarrow \dfrac{MS}{MC} = \dfrac{\sqrt{5}}{2}.$$}
+	{\begin{tikzpicture}[scale=0.7, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/A,7/0/C,2/-3/B}
+\coordinate (H) at ($(A)!0.5!(C)$);
+\coordinate (S) at ($(H)+(0,6)$);
+\coordinate (N) at ($(A)!0.5!(B)$);
+\coordinate (M) at ($(S)!0.6!(C)$);
+\coordinate (E) at ($(M)!0.5!(C)$);
+\tkzInterLL(A,M)(S,H)    \tkzGetPoint{K}
+\tkzDrawPolygon(S,A,B,C)
+\tkzDrawSegments(S,B B,M S,N)
+\tkzDrawSegments[dashed](A,C S,H H,N A,M N,K H,E)
+\tkzDrawPoints[fill=black](A,B,C,S,H,N,M,E,K)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[below](B,N)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](C,M,E)
+\tkzLabelPoints[above right](H,K)
+\tkzMarkRightAngles[fill=gray!50](S,H,A)
+\tkzMarkRightAngles[fill=gray!50](H,N,B)
+\end{tikzpicture}}
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Điện Biên, 2019]%[Tô Ngọc Thy, dự án EX8]%[1H3G4-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật, $AB=3$, $BC=4$. Tam giác $SAC$ nằm trong mặt phẳng vuông góc với đáy, khoảng cách từ điểm $C$ đến đường thẳng $SA$ bằng $4$. Côsin của góc giữa hai mặt phẳng $(SAB)$ và $(SAC)$ bằng
+	\choice
+	{$\dfrac{3\sqrt{17}}{17}$}
+	{\True $\dfrac{3\sqrt{34}}{34}$}
+	{$\dfrac{2\sqrt{34}}{17}$}
+	{$\dfrac{5\sqrt{34}}{17}$}
+	\loigiai{
+		\immini{Xét $\triangle ABC$ vuông tại $B$ ta có \\ $AC=\sqrt{AB^2+BC^2}=\sqrt{3^2+4^2}=5$.\\
+			Gọi $K$ là chân đường vuông góc kẻ từ $C$ xuống $SA$. Xét $\triangle CAK$ vuông tại $K$ ta có \\
+			$AK=\sqrt{CA^2-CK^2}=\sqrt{5^2-4^2}=3$.\\
+			Kẻ $SH\perp AC$, $H\in AC$.\\
+			Vì $(SAC)\perp (ABCD)$ và $(SAC)\cap (ABCD)=AC$ nên $SA\perp (ABCD)$.\\
+			Kẻ $SH\perp AC$, $H\in AC$ và $KP//SH$, $P\in AC$ thì $KP\perp (ABCD)$.}
+		{\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzInit[ymin=-4,ymax=7,xmin=-3,xmax=7]
+			\tkzClip
+			\tkzDefPoints{-2.5/-2/B, 6/0/D, 0/0/A, 0.7/6/S}
+			\coordinate (C) at ($(B)+(D)-(A)$);
+			\coordinate (K) at ($(A)!0.6!(S)$);
+			\coordinate (M) at ($(A)!0.3!(S)$);
+			\coordinate (H) at ($(A)!0.6!(C)$);
+			\coordinate (P) at ($(A)!0.3!(C)$);
+			\tkzDrawSegments(S,B S,C S,D B,C C,D)
+			\tkzDrawSegments[dashed](A,D A,B S,A A,C C,K B,M B,K S,P S,H)	
+			\tkzDrawPoints[fill=black](S,A,B,C,D,K,M,P,H)
+			\tkzLabelPoints[above](S)
+			\tkzLabelPoints[below](A,B,H,P)
+			\tkzLabelPoints[right](C,D,M)
+			\tkzLabelPoints[left](K)
+			\end{tikzpicture}}
+		\noindent
+		Xét $\triangle BAC$ vuông tại $B$ và $\triangle KAC$ vuông tại $K$ ta thấy các cạnh tương ứng bằng nhau và $KP$ là đường cao của $\triangle KAC$ nên $BP$ là đường cao của $\triangle BAC$.\\
+		Kẻ $PM\perp KA$, $M\in KA$. Vì $KA\perp PB$ và $KA\perp PM$ nên $KA\perp (PMB)$. Suy ra $KA\perp MB$.\\
+		Như vậy, góc giữa mặt phẳng $(SAC)$ và $(SAB)$bằng góc $\widehat{PMB}$.\\
+		Xét $\triangle KAC$ vuông tại $K$ ta có $KP\cdot AC=KA\cdot KC\Rightarrow KP=\dfrac{KA\cdot KC}{AC}=\dfrac{3\cdot 4}{5}=\dfrac{12}{5}$.\\
+		Suy ra $BP=KP=\dfrac{12}{5}$.\\
+		Xét $\triangle KPA$ vuông tại $P$ ta có $PA=\sqrt{KA^2-KP^2}=\sqrt{3^2-\left(\dfrac{12}{5}\right)^2}=\dfrac{9}{5}$.\\
+		Lại có $PM\cdot AK=PA\cdot PK\Rightarrow PM=\dfrac{PA\cdot PK}{AK}=\dfrac{36}{25}$.\\
+		Xét $\triangle PMB$ vuông tại $P$ ta có $MB=\sqrt{PB^2+PM^2}=\sqrt{\left(\dfrac{12}{5}\right)^2+\left(\dfrac{36}{25}\right)^2}=\dfrac{12\sqrt{34}}{25}$.\\
+		Ta có $\cos\widehat{PMB}=\dfrac{MP}{MB}=\dfrac{36}{25}\cdot\dfrac{25}{12\sqrt{34}}=\dfrac{3\sqrt{34}}{34}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Sở GD và ĐT - Hà Tĩnh, 2019]%[Nguyễn Anh Tuấn, 12-EX8-19]%[1H3G4-3]
+	Cho hình chóp $ S.ABCD $ có đáy là hình vuông, $ SA \perp (ABCD)$, $ SA=\sqrt{3}AB $. Gọi $ \alpha $ là góc giữa hai mặt phẳng $ (SBC) $ và $ (SCD) $, giá trị $ \cos \alpha $ bằng
+	\choice
+	{\True $ \dfrac{1}{4} $}
+	{$ 0 $}
+	{$ \dfrac{1}{2} $}
+	{$ \dfrac{1}{3} $}
+	\loigiai{
+		\immini{Gọi $ O $ là giao điểm của $ AC $ và $ BD $. Kẻ $ OM \perp SC$, suy ra $ DB\perp (SAC) \Rightarrow BD \perp SC \Rightarrow SC \perp (BDM)$.\\
+			Góc $ \alpha $ bằng hoặc bù với $ \widehat{DMB} $ với
+			$$BM^2=\dfrac{SB^2 \cdot BC^2}{SB^2+BC^2}=\dfrac{4}{5}.$$
+			Xét tam giác $ BMD $, có $$ \cos \widehat{DMB}=-\dfrac{1}{4} <0 \Rightarrow \cos \alpha =\left|\cos \widehat{DMB}\right|=\dfrac{1}{4}.$$ }
+		{\begin{tikzpicture}[line join=round,line cap=round,line width=.6pt,font=\footnotesize,scale=1]
+			\coordinate[label=below left:$B$] (B) at (0,0);
+			\coordinate[label=above left:$A$] (A) at (1,.8);
+			\coordinate[label=below right:$C$] (C) at (4,0);
+			\coordinate[label=above right:$D$] (D) at ($(C)-(B)+(A)$);
+			\coordinate[label=above left:$S$] (S) at ($(A)+(90:4)$);
+			
+			\draw ($ (A)!5pt!(D)$)--($(A)!2!($($(A)!5pt!(D)$)!.5!($(A)!5pt!(S)$)$)$)--($(A)!5pt!(S)$);
+			\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+			\tkzLabelPoints[below left,color=black](O)
+			\coordinate[label=above right:$M$] (M) at ($(S)!0.7!(C)$);
+			\draw (B)--(M)--(D);
+			\draw (B)--(C)--(D)--(S)--cycle (S)--(C);
+			\draw[dashed] (C)--(A)--(D)--(B) (S)--(A)--(B) (O)--(M);
+			\fill (A)circle(2pt) (B)circle(2pt) (C)circle(2pt) (D)circle(2pt) (S)circle(2pt) (O)circle(2pt) (M)circle(2pt);
+			\end{tikzpicture}
+		}	
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử, Kinh Môn - Hải Dương, 2019]%[Lê Vũ Hải, 12EX8]%[1H3G4-3]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $5a$, cạnh bên $SA=10a$ và vuông góc với mặt phẳng đáy. Gọi $M$ là trung điểm cạnh $SD$. Tan của góc tạo bởi hai mặt phẳng $(AMC)$ và $(SBC)$ bằng
+	\choice
+	{$ \dfrac{\sqrt{3}}{2} $}
+	{$ \dfrac{2\sqrt{3}}{3} $}
+	{$ \dfrac{\sqrt{5}}{5} $}
+	{\True $ \dfrac{2\sqrt{5}}{5} $}
+	\loigiai{
+		\immini{
+			Qua $S$ kẻ đường thẳng song song $BC$, cắt $AM$ tại $K$. Dễ thấy $KSAD$ và $KSBC$ là các hình chữ nhật.\\
+			Vậy ta có $KC = (AMC) \cap (SBC)$.\\
+			Từ $A$ dựng $AN \perp SB$, $N \in SB$.\\
+			Ta có $BC \perp AB$, $BC \perp AB$ suy ra $BC \perp (SAB)$ $\Rightarrow BC \perp AN$.\\
+			Ta có $AN \perp BC$, $AN \perp SB$ $\Rightarrow AN \perp (SBC)$.\\
+			Từ $N$ dựng $NP\perp KC$, $N \in KC$.\\
+			Khi đó $\widehat{\left[(AMC), (SBC)\right]} = \widehat{\left[ AP, NP\right]} = \widehat{ APN}$.
+		}{
+			\begin{tikzpicture}[scale=0.9, font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\begin{scope}[scale=0.6]
+			\tkzDefPoints{0/0/A, 5/0/B, -1.5/-2/D, 0/7/S}
+			\tkzDefPointBy[translation=from A to D](B) \tkzGetPoint{C}
+			\tkzDefMidPoint(S,D) \tkzGetPoint{M}
+			\tkzDefPointBy[projection=onto S--B](A) \tkzGetPoint{N}
+		
+			\tkzDefLine[parallel=through S](B,C)\tkzGetPoint{S1}	
+			\tkzInterLL(S,S1)(A,M) \tkzGetPoint{K}
+			\tkzDefLine[parallel=through N](B,C)\tkzGetPoint{N1}	
+			\tkzInterLL(K,C)(N,N1) \tkzGetPoint{P}
+			\tkzInterLL(K,C)(S,D) \tkzGetPoint{D1}
+			
+			\tkzDrawSegments(B,C C,D S,B S,C K,C K,S M,K N,P D,D1)
+			\tkzDrawSegments[dashed](A,D A,B S,A A,C A,M A,N D1,S A,P)   
+			\tkzMarkRightAngles[size=0.4](A,N,S N,P,C)
+			\tkzLabelPoints[above](S,P)
+			\tkzLabelPoints[right](B)
+			\tkzLabelPoints[above right](N)
+			\tkzLabelPoints[left](A,M,K)
+			\tkzLabelPoints[below](C,D)
+			\tkzLabelPoints[above left]()
+			\tkzDrawPoints[fill=black](A,B,C,D,S,M,N,K,P)
+			\end{scope}
+			\end{tikzpicture}
+		} ~\\[-3em]
+		\begin{itemize}
+			\item Tính $AN$ \\
+				Xét $\triangle SAB$ vuông ở $A$, đường cao $AN$ suy ra $\dfrac{1}{AN^{2}} = \dfrac{1}{SA^{2}} + \dfrac{1}{AB^{2}} = \dfrac{1}{(10a)^{2}} + \dfrac{1}{(5a)^{2}}$ \\
+				$\Rightarrow AN = 2\sqrt{5}a$.
+			\item Tính $PN$ \\
+				Ta có $PN \perp KC$ $\Rightarrow PNBC$ là hình chữ nhật, suy ra $PN = CB = 5a$.
+		\end{itemize}
+		Xét $\triangle ANP$ vuông ở $N$ có $\tan \widehat{APN} = \dfrac{AN}{PN} = \dfrac{2\sqrt{5}a}{5a} = \dfrac{2\sqrt{5}}{5}$.
+	}
+\end{ex}%!Cau!%
+\begin{ex}%[Thi thử THPT-QG lần 3 THCS-THPT Lương-Thế-Vinh-Hà-Nội]%[Ex 9 - 2019, Dũng Lê]%[1H3G4-3]
+	Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông cân tại $A$, hình chiếu vuông góc của đỉnh $S$ trên mặt phẳng $(ABC)$ là một điểm nằm trên đoạn thẳng $BC$. Mặt phẳng $(SAB)$ tạo với $(SBC)$ một góc $60^\circ$ và mặt phẳng $(SAC)$ tạo với $(SBC)$ một góc $\varphi$ thỏa mãn $\cos\varphi=\dfrac{\sqrt{2}}{4}$. Gọi $\alpha$ là góc tạo bởi $SA$ và mặt phẳng $(ABC)$, tính $\tan\alpha$.
+	\choice
+	{$\dfrac{\sqrt{3}}{3}$}
+	{$\dfrac{\sqrt{2}}{2}$}
+	{\True $\dfrac{1}{2}$}
+	{$\sqrt{3}$}
+	\loigiai{
+		\immini{
+			Dựng hình chữ nhật $HNAM$, suy ra $\triangle HNC$ vuông cân tại $N$ và $\triangle HMB$ vuông cân tại $M$, suy ra $AC\perp(SHN)$ và $AB\perp(SHM)$.\\
+			Kẻ $HE\perp SB$ và $HF\perp SC$, $HP\perp SN$ và $HK\perp SM$, suy ra $HP\perp(SAC)$, $HK\perp(SAB)$. \\
+			Ta có $\widehat{HFP}=\alpha$, $\cos\alpha=\dfrac{\sqrt{2}}{4}$, suy ra $\sin\alpha=\sqrt{\dfrac{7}{8}}$.\\
+			$\widehat{HEK}$ là góc giữa $(SAB)$ và $(SBC)$ bằng $60^\circ$. Suy ra\\
+			$\sin\alpha=\dfrac{HP}{HF}=\dfrac{SH\cdot HN}{SN}\cdot\dfrac{SC}{SH\cdot HC}=\dfrac{SC}{SN\sqrt{2}}=\sqrt{\dfrac{7}{8}}$.\\
+			$\sin\widehat{HEK}=\dfrac{HK}{HE}=\dfrac{SH\cdot MH}{SM}\cdot\dfrac{SB}{SH\cdot BH}=\dfrac{SB}{SM\sqrt{2}}=\dfrac{\sqrt{3}}{2}$.\\
+		}{
+			\begin{tikzpicture}[scale=1,font=\footnotesize, line join=round, line cap=round, >=stealth]
+			\tkzInit[ymin=-2.5,ymax=4,xmin=-.5,xmax=4.5]
+			\tkzClip
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (1,-2);
+			\coordinate (C) at (4,0);
+			\coordinate (H) at ($(B)!.6!(C)$);
+			\coordinate (S) at ($(H)+(0,4)$);
+			\coordinate (E) at ($(B)!.3!(S)$);
+			\coordinate (F) at ($(C)!.3!(S)$);
+			\tkzDefLine[parallel=through H](A,B)\tkzGetPoint{h}
+			\tkzInterLL(H,h)(A,C)\tkzGetPoint{N}
+			\tkzDefLine[parallel=through H](A,C)\tkzGetPoint{n}
+			\tkzInterLL(H,n)(A,B)\tkzGetPoint{M}
+			\coordinate (P) at ($(N)!.3!(S)$);
+			\coordinate (K) at ($(M)!.3!(S)$);
+			\draw[dashed] (A)node[left]{$A$}--(C)node[right]{$C$} (N)node[above left]{$N$}--(H)--(M)node[left]{$M$} (S)--(N) (K)node[left]{$K$}--(H)--(P)node[left]{$P$}--(F);
+			\draw (S)node[above]{$S$}--(A)--(B)node[below]{$B$}--(S)--(C)--(B) (S)--(H)node[right]{$H$} (F)node[right]{$F$}--(H)--(E)node[left]{$E$} (S)--(M) (E)--(K);
+			\tkzDrawPoints(S,A,B,C,H,M,N,E,F,P,K)
+			\tkzMarkRightAngles(N,A,M A,M,H S,H,C S,K,H S,P,H)
+			\tkzMarkAngles[size=.3cm](P,F,H H,E,K)
+			\end{tikzpicture}
+		}\noindent
+		Suy ra $\heva{&\dfrac{SC^2}{SN^2}=\dfrac{7}{4}\\&\dfrac{SB^2}{SM^2}=\dfrac{3}{2}}\Leftrightarrow\heva{&\dfrac{SH^2+HC^2}{SH^2+HN^2}=\dfrac{SH^2+2NH^2}{SH^2+NH^2}=\dfrac{7}{4}\\&\dfrac{SH^2+BH^2}{SH^2+MH^2}=\dfrac{SH^2+2MH^2}{SH^2+MH^2}=\dfrac{3}{2}}\Leftrightarrow\heva{&3SH^2=NH^2\\&SH^2=MH^2}\\
+		\Rightarrow MH^2+NH^2=4SH^2$.\\
+		Suy ra $AH^2=4SH^2\Rightarrow \tan(SA,(ABC))=\dfrac{AH}{SH}=\dfrac{1}{2}$.
+	}
+\end{ex}

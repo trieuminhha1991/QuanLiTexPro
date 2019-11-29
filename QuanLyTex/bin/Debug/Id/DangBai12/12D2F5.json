@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Phương trình cơ bản" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Phương pháp đưa về cùng cơ số" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Phương pháp đặt ẩn phụ" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Phương pháp lô-ga-rít hóa, mũ hóa" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Phương pháp hàm số, đánh giá" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Bài toán thực tế" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Hệ phương trình mũ, lô-ga-rít" }

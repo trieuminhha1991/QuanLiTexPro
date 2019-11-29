@@ -1,0 +1,55 @@
+%!Cau!%
+\begin{ex}%[2-DTH-14-NINHBINH-19]%[Nguyễn Thế Anh, dự án EX5]%[1H2Y3-2]
+	 Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Đường thẳng $AD$ song song với mặt phẳng nào trong  các mặt phẳng dưới đây?
+	\choice
+	{\True $(SBC)$}
+	{$(ABCD)$}
+	{$(SAC)$}
+	{$(SAB)$}
+\loigiai{
+\immini
+{
+Do $AD \parallel BC$, $AD \not\subset (SBC) $ và $BC\subset (SBC)$ nên $AD\parallel (SBC).$
+}
+{
+\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=.5]
+\tkzDefPoints{0/0/A}
+\coordinate (B) at ($(A)+(5,0)$);
+\tkzDefShiftPoint[A](-140:2.5){D}
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (S) at ($(A)+(1,4)$);
+\tkzDrawPolygon(S,B,C,D)
+\tkzDrawSegments(S,C)
+\tkzDrawSegments[dashed](A,B A,S A,D)
+\tkzDrawPoints[fill=black](A,B,D,C,S)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](B,C)
+\tkzLabelPoints[above right](A)
+\end{tikzpicture}
+}	
+}
+\end{ex}%!Cau!%
+\begin{ex}%[Đề tập huấn Sở Ninh Bình, 2019]%[Nguyễn Văn Hải, dự án(12EX-5-2019)]%[1H2Y3-2]
+Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Đường thẳng $AD$ song song với mặt phẳng nào trong các mặt phẳng dưới đây?
+\choice
+{\True $\left(SBC\right)$}
+{$\left(ABCD\right)$}
+{$\left(SAC\right)$}
+{$\left(SAB\right)$}
+\loigiai{
+\begin{center}
+\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth,yscale=0.8]
+\tkzDefPoints{0/0/A,-1/-1/B,2/-1/C,3/0/D,0/3/S}
+\tkzDrawSegments[dashed](S,A A,B A,D)
+\tkzDrawSegments(B,C C,D S,C S,D S,B)
+\tkzDrawPoints(S,A,B,C,D)
+\tkzLabelPoints[above](S)
+\tkzLabelPoints[left](A,B)
+\tkzLabelPoints[right](C,D)
+\end{tikzpicture}
+\end{center}
+\noindent
+Do $AD\parallel BC$ và $AD \not\subset \left(SBC\right)$ nên $AD\parallel \left(SBC\right)$.
+}
+\end{ex}

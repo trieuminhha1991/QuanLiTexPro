@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "5d1cb37135f7931908804b02" }, "ChapterId" : 1, "ObjectName" : "D", "ChapterName" : "Ôn tập và bổ túc về số tự nhiên" }
+{ "_id" : { "$oid" : "5d1cb5a93fb93918284b2ffe" }, "ChapterId" : 2, "ObjectName" : "D", "ChapterName" : "Số nguyên" }
+{ "_id" : { "$oid" : "5d1cb6593fb9391a74f275cf" }, "ChapterId" : 3, "ObjectName" : "D", "ChapterName" : "Phân số" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d3" }, "ChapterId" : 1, "ObjectName" : "H", "ChapterName" : "Đoạn thẳng" }
+{ "_id" : { "$oid" : "5d1cb8f23fb9391a74f275d4" }, "ChapterId" : 2, "ObjectName" : "H", "ChapterName" : "Góc" }

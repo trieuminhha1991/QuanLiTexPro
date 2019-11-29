@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Tập xác định, tập giá trị của hàm số mũ, hàm số lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Tính đạo hàm hàm số mũ, hàm số lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Khảo sát sự biến thiên và đồ thị của hàm số mũ, lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Tìm giá trị lớn nhất, nhỏ nhất của biểu thức chứa hàm mũ, hàm lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Bài toán thực tế" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Giới hạn, liên tục liên quan hàm số mũ, lô-ga-rít" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Lý thuyết tổng hợp hàm số lũy thừa, mũ, lô-ga-rít" }

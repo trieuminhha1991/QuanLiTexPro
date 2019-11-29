@@ -1,0 +1,8 @@
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c162" }, "FormId" : 1, "FormName" : "Xác định VTCP" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c163" }, "FormId" : 2, "FormName" : "Viết phương trình đường thẳng" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c164" }, "FormId" : 3, "FormName" : "Tìm tọa độ điểm liên quan đến đường thẳng" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c165" }, "FormId" : 4, "FormName" : "Góc" }
+{ "_id" : { "$oid" : "5d1ccf123fb939115cc7c166" }, "FormId" : 5, "FormName" : "Khoảng cách" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e3" }, "FormId" : 6, "FormName" : "Vị trí tương đối giữa hai đường thẳng, giữa đường thẳng và mặt phẳng" }
+{ "_id" : { "$oid" : "5d1e08983fb9391a8c5b74e4" }, "FormId" : 7, "FormName" : "Bài toán liên quan giữa đường thẳng - mặt phẳng - mặt cầu" }
+{ "_id" : { "$oid" : "5d1e1db43fb9391a8c5b7579" }, "FormId" : 8, "FormName" : "Các bài toán cực trị" }

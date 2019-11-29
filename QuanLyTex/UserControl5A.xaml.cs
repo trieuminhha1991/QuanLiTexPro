@@ -312,7 +312,10 @@ namespace QuanLyTex
 							{
 								Visible = true
 							};
-							TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app,Five, dic);
+                            if (!File.Exists(path2 + ".docx"))
+                            {
+                                TexTo.addTextToWord(list, path2, toogleTex1, toogleTex2, Tiz, all, DeleteName, DeleteSchool, DeleteId, NameDuAn, AddTableCheck, AddFilePdf, RunTexToWord, app, Five, dic);
+                            }
 							app.Quit();
 							string path3 = Directory.GetCurrentDirectory() + @"\Bat";
 							string path4 = Directory.GetCurrentDirectory();
